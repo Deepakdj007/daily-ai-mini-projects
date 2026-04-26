@@ -1,0 +1,34 @@
+# Daily AI Mini Projects
+
+A collection of AI/ML mini projects exploring various AI capabilities.
+
+## Projects
+
+| Project | Description |
+|---------|-------------|
+| [github-mcp](github-mcp/) | GitHub MCP server implementation |
+| [graphrag-project](graphrag-project/) | Graph-based RAG with knowledge graphs |
+| [marketmind](marketmind/) | Multi-agent market analysis system |
+| [multimodal-agent](multimodal-agent/) | Agent with image understanding capabilities |
+| [self-healing-rag](self-healing-rag/) | RAG system with self-correction capabilities |
+| [telegram-bot](telegram-bot/) | Telegram bot with memory engine |
+| [voice-support-bot](voice-support-bot/) | Voice support bot with token server |
+
+## Getting Started
+
+Each project has its own setup instructions. Generally:
+
+```bash
+# Python projects
+cd <project-name>
+pip install -e .
+
+# Node.js projects
+cd <project>/frontend
+npm install
+```
+
+## Requirements
+
+- Python 3.10+
+- Node.js 18+

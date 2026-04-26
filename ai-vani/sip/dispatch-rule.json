@@ -1,0 +1,11 @@
+{
+  "dispatch_rule": {
+    "name": "ai-vani-dispatch",
+    "trunk_ids": ["ST_goALCz3Gwajo"],
+    "rule": {
+      "dispatchRuleIndividual": {
+        "roomPrefix": "call-"
+      }
+    }
+  }
+}

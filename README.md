@@ -6,10 +6,14 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 
 | Project | Description |
 |---------|-------------|
+| [ai-vani](ai-vani/) | AI voice assistant |
+| [chat-with-csv](chat-with-csv/) | Chat with CSV data |
+| [desibot](desibot/) | Desi-focused chatbot |
 | [github-mcp](github-mcp/) | GitHub MCP server implementation |
 | [graphrag-project](graphrag-project/) | Graph-based RAG with knowledge graphs |
 | [marketmind](marketmind/) | Multi-agent market analysis system |
 | [multimodal-agent](multimodal-agent/) | Agent with image understanding capabilities |
+| [sarvam-chatbot](sarvam-chatbot/) | Sarvam AI chatbot |
 | [self-healing-rag](self-healing-rag/) | RAG system with self-correction capabilities |
 | [telegram-bot](telegram-bot/) | Telegram bot with memory engine |
 | [voice-support-bot](voice-support-bot/) | Voice support bot with token server |

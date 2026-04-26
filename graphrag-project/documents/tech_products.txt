@@ -1,0 +1,5 @@
+GitHub Copilot is a coding assistant built on top of OpenAI models.
+Microsoft acquired GitHub in 2018 for $7.5 billion.
+GitHub was founded by Tom Preston-Werner and Chris Wanstrath.
+Visual Studio Code is the most popular code editor, made by Microsoft.
+GitHub Copilot integrates with Visual Studio Code.

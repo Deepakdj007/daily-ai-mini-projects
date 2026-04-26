@@ -1,0 +1,5 @@
+Machine learning is a subset of artificial intelligence that enables systems to learn from data.
+Supervised learning uses labeled training data to teach models to make predictions.
+Unsupervised learning finds hidden patterns in data without labeled examples.
+Neural networks are inspired by the structure of the human brain and are used for deep learning.
+Overfitting occurs when a model learns the training data too well and performs poorly on new data.

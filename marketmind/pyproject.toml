@@ -1,0 +1,20 @@
+[project]
+name = "marketmind"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fredapi>=0.5.2",
+    "langchain-core>=1.3.0",
+    "langchain-groq>=1.1.2",
+    "langgraph>=1.1.9",
+    "newsapi-python>=0.2.7",
+    "numpy>=2.4.4",
+    "pandas>=3.0.2",
+    "pycoingecko>=3.2.0",
+    "python-dotenv>=1.2.2",
+    "requests>=2.33.1",
+    "streamlit>=1.56.0",
+    "yfinance>=1.3.0",
+]

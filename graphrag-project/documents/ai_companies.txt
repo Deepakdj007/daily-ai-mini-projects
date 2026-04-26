@@ -1,0 +1,6 @@
+OpenAI was founded by Sam Altman and Elon Musk in 2015. 
+OpenAI created GPT-4, which is used by Microsoft in its Copilot products.
+Microsoft invested $10 billion in OpenAI in 2023.
+Google DeepMind developed Gemini, which competes with GPT-4.
+Anthropic was founded by former OpenAI employees including Dario Amodei.
+Anthropic created Claude, which is an AI assistant focused on safety.

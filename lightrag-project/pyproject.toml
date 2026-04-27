@@ -1,0 +1,11 @@
+[project]
+name = "lightrag-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "google-genai>=1.73.1",
+    "lightrag-hku==1.4.15",
+    "python-dotenv>=1.2.2",
+]

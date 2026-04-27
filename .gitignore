@@ -85,3 +85,6 @@ dmypy.json
 **/KMS/
 **/credentials.json
 **/token*.json
+
+#misc
+rag_storage/

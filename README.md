@@ -11,6 +11,7 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [desibot](desibot/) | Desi-focused chatbot |
 | [github-mcp](github-mcp/) | GitHub MCP server implementation |
 | [graphrag-project](graphrag-project/) | Graph-based RAG with knowledge graphs |
+| [hybrid-rag](hybrid-rag/) | Hybrid RAG combining vector search (ChromaDB) and graph traversal (NetworkX) |
 | [marketmind](marketmind/) | Multi-agent market analysis system |
 | [multimodal-agent](multimodal-agent/) | Agent with image understanding capabilities |
 | [sarvam-chatbot](sarvam-chatbot/) | Sarvam AI chatbot |

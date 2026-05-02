@@ -1,0 +1,40 @@
+{
+  "doc_id": "pi-cmonqfali00yc01qrvgagzpzf",
+  "status": "completed",
+  "retrieval_ready": false,
+  "result": [
+    {
+      "title": "NovaTech Solutions",
+      "node_id": "0000",
+      "page_index": 1,
+      "text": "# NovaTech Solutions\nAnnual Report\n2024\n\n|  REVENUE | NET PROFIT | CUSTOMERS | EMPLOYEES  |\n| --- | --- | --- | --- |\n|  $84.2M | $12.7M | 4,310 | 620  |\n|  \u25b2 18% YoY | \u25b2 24% YoY | \u25b2 31% YoY | \u25b2 12% YoY  |\n",
+      "nodes": [
+        {
+          "title": "Message from the CEO",
+          "node_id": "0001",
+          "page_index": 1,
+          "text": "## Message from the CEO\n\n2024 was a landmark year for NovaTech Solutions. We achieved record revenue of $84.2 million, expanded our customer base by 31%, and successfully launched two flagship AI-powered products that are already transforming how enterprises manage their operations.\n\nOur disciplined approach to product development, combined with a relentless focus on customer success, has cemented our position as a trusted technology partner. Looking ahead, we will continue to invest heavily in research, talent, and strategic partnerships.\n\n\"Innovation is not a department \u2014 it is a mindset that every NovaTech employee carries into work every single day.\"\n\n\u2014 Sarah Mitchell, Chief Executive Officer\n\n\u00a9 2024 NovaTech Solutions Ltd. - Annual Report 2024\n\nNOVATECH SOLUTIONS\nANNUAL REPORT 2024\n"
+        },
+        {
+          "title": "Financial Highlights",
+          "node_id": "0002",
+          "page_index": 2,
+          "text": "## Financial Highlights\n\nThe table below summarises our key financial results across the past three fiscal years, reflecting consistent growth in all major metrics.\n\n|  Metric | FY 2022 | FY 2023 | FY 2024 | YoY Change  |\n| --- | --- | --- | --- | --- |\n|  Revenue | $60.8M | $71.4M | $84.2M | +18%  |\n|  Gross Profit | $28.1M | $34.6M | $42.5M | +23%  |\n|  Operating Profit | $10.2M | $13.1M | $17.0M | +30%  |\n|  Net Profit | $7.8M | $10.2M | $12.7M | +24%  |\n|  R&D Spend | $5.5M | $7.1M | $9.8M | +38%  |\n"
+        },
+        {
+          "title": "Revenue by Segment",
+          "node_id": "0003",
+          "page_index": 2,
+          "text": "## Revenue by Segment\n\n|  Segment | Revenue | % of Total | Growth  |\n| --- | --- | --- | --- |\n|  Enterprise SaaS | $38.5M | 46% | +22%  |\n|  AI & Data Products | $27.1M | 32% | +41%  |\n|  Professional Services | $18.6M | 22% | +5%  |\n"
+        },
+        {
+          "title": "2025 Strategic Outlook",
+          "node_id": "0004",
+          "page_index": 2,
+          "text": "## 2025 Strategic Outlook\n"
+        }
+      ]
+    }
+  ],
+  "metadata": {}
+}

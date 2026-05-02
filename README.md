@@ -14,6 +14,7 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [hybrid-rag](hybrid-rag/) | Hybrid RAG combining vector search (ChromaDB) and graph traversal (NetworkX) |
 | [marketmind](marketmind/) | Multi-agent market analysis system |
 | [multimodal-agent](multimodal-agent/) | Agent with image understanding capabilities |
+| [pageindex-rag](pageindex-rag/) | Reasoning-based RAG over PDFs using PageIndex tree navigation (no vectors) |
 | [sarvam-chatbot](sarvam-chatbot/) | Sarvam AI chatbot |
 | [self-healing-rag](self-healing-rag/) | RAG system with self-correction capabilities |
 | [telegram-bot](telegram-bot/) | Telegram bot with memory engine |

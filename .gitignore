@@ -88,3 +88,5 @@ dmypy.json
 
 #misc
 rag_storage/
+videos/
+frames/

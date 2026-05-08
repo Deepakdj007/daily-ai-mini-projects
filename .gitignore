@@ -90,3 +90,6 @@ dmypy.json
 rag_storage/
 videos/
 frames/
+/pdfs
+vision-rag/index/
+vision-rag/pdfs/

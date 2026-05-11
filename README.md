@@ -23,6 +23,7 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [video-rag](video-rag/) | RAG system for querying video content via frame extraction and embeddings |
 | [vision-rag](vision-rag/) | Vision-based RAG over PDFs using image embeddings for visual document understanding |
 | [voice-support-bot](voice-support-bot/) | Voice support bot with token server |
+| [visual-search](visual-search/) | Visual product search using CLIP |
 
 ## Getting Started
 

@@ -93,3 +93,5 @@ frames/
 /pdfs
 vision-rag/index/
 vision-rag/pdfs/
+visual-search/data/images/
+visual-search/data/qdrant_db/

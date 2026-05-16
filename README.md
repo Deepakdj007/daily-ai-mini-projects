@@ -6,6 +6,7 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 
 | Project | Description |
 |---------|-------------|
+| [agent-memory-router](agent-memory-router/) | LLM-powered router that classifies queries to RAG, graph, or tabular backends |
 | [ai-vani](ai-vani/) | AI voice assistant |
 | [annual-report-ai](annual-report-ai/) | Vision AI for reading and analyzing annual reports |
 | [chat-with-csv](chat-with-csv/) | Chat with CSV data |

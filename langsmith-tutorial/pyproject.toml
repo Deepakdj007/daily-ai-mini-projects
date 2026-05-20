@@ -1,0 +1,16 @@
+[project]
+name = "langsmith-tutorial"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=1.3.1",
+    "langchain-community>=0.4.1",
+    "langchain-groq>=1.1.2",
+    "langgraph>=1.2.0",
+    "langsmith>=0.8.5",
+    "openevals>=0.2.0",
+    "python-dotenv>=1.2.2",
+    "tavily-python>=0.7.24",
+]

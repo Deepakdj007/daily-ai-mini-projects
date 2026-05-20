@@ -25,6 +25,7 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [vision-rag](vision-rag/) | Vision-based RAG over PDFs using image embeddings for visual document understanding |
 | [voice-support-bot](voice-support-bot/) | Voice support bot with token server |
 | [visual-search](visual-search/) | Visual product search using CLIP |
+| [langsmith-tutorial](langsmith-tutorial/) | LangSmith observability tutorial — tracing, datasets, and LLM-as-judge evaluations |
 
 ## Getting Started
 

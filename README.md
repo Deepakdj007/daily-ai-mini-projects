@@ -26,6 +26,7 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [voice-support-bot](voice-support-bot/) | Voice support bot with token server |
 | [visual-search](visual-search/) | Visual product search using CLIP |
 | [langsmith-tutorial](langsmith-tutorial/) | LangSmith observability tutorial — tracing, datasets, and LLM-as-judge evaluations |
+| [rag-eval](rag-eval/) | RAG evaluation pipeline using RAGAS v0.4 — faithfulness, answer relevancy, context precision, and recall scored via Gemini 2.5 Flash |
 
 ## Getting Started
 

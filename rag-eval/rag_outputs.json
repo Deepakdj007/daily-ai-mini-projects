@@ -1,0 +1,62 @@
+[
+  {
+    "question": "What is RAG and why does it reduce hallucinations?",
+    "answer": "RAG stands for Retrieval-Augmented Generation, a technique that combines a retrieval system with a language model. It reduces hallucinations because it first retrieves relevant documents from an external database and then generates an answer grounded in those documents, rather than relying only on the model's training data.",
+    "contexts": [
+      "RAG stands for Retrieval-Augmented Generation. It is a technique that combines a retrieval system with a language model. Instead of relying only on the model's training data, RAG first retrieves relevant documents from an external database and then generates an answer grounded in those documents. This reduces hallucinations and keeps the model's answers up to date.",
+      "RAGAS is a framework for evaluating RAG pipelines and LLM applications. In version 0.2, RAGAS moved to a new API where metrics are instantiated as class instances with an explicit evaluator LLM. The old lowercase imports like faithfulness are deprecated. The correct v0.2 pattern is to use class names like Faithfulness and ResponseRelevancy, and to pass an evaluator LLM at construction time.",
+      "LangChain is a framework for building LLM applications. It provides abstractions for document loaders, text splitters, vector stores, retrievers, and LLM chains. RAGAS integrates directly with LangChain, allowing you to wrap any LangChain-compatible LLM in a LangchainLLMWrapper and use it as the RAGAS evaluator."
+    ],
+    "reference": "RAG stands for Retrieval-Augmented Generation. It retrieves relevant documents from an external database before generating an answer, grounding the response in real content. This reduces hallucinations because the LLM answers from retrieved documents rather than memory."
+  },
+  {
+    "question": "What is ChromaDB and how does it find relevant documents?",
+    "answer": "ChromaDB is an open-source vector database designed for AI applications. It finds relevant documents by storing text as embedding vectors and querying them to find the documents whose embeddings are closest to the question's embedding.",
+    "contexts": [
+      "ChromaDB is an open-source vector database designed for AI applications. It stores text as embedding vectors — numerical representations that capture semantic meaning. When you query ChromaDB with a question, it finds the documents whose embeddings are closest to the question's embedding, even if the exact words don't match. ChromaDB can run entirely in memory, making it ideal for prototyping.",
+      "RAG stands for Retrieval-Augmented Generation. It is a technique that combines a retrieval system with a language model. Instead of relying only on the model's training data, RAG first retrieves relevant documents from an external database and then generates an answer grounded in those documents. This reduces hallucinations and keeps the model's answers up to date.",
+      "Retrieval evaluation in RAG measures whether the system is finding the right documents. The two main metrics are context precision (how focused the retrieved results are) and context recall (whether all necessary information was retrieved). Low precision means you're pulling irrelevant documents. Low recall means you're missing important ones."
+    ],
+    "reference": "ChromaDB is an open-source vector database. It stores text as embedding vectors and finds the documents whose embeddings are most similar to the query embedding, even without exact word matches."
+  },
+  {
+    "question": "What does Faithfulness measure in RAGAS?",
+    "answer": "Faithfulness measures whether the generated answer is supported by the retrieved context. It checks for \"hallucinations\", or claims that cannot be found in the retrieved documents.",
+    "contexts": [
+      "Faithfulness measures whether the generated answer is supported by the retrieved context. An unfaithful answer contains claims that cannot be found in the retrieved documents — in other words, hallucinations. RAGAS computes faithfulness by asking an evaluator LLM to verify each claim in the answer against the context.",
+      "RAGAS is a framework for evaluating RAG pipelines and LLM applications. In version 0.2, RAGAS moved to a new API where metrics are instantiated as class instances with an explicit evaluator LLM. The old lowercase imports like faithfulness are deprecated. The correct v0.2 pattern is to use class names like Faithfulness and ResponseRelevancy, and to pass an evaluator LLM at construction time.",
+      "Response relevancy measures whether the generated answer actually addresses the question that was asked. A highly faithful answer can still score low on relevancy if it answers the wrong question. RAGAS measures this by generating reverse questions from the answer and checking how similar they are to the original question."
+    ],
+    "reference": "Faithfulness measures whether every claim in the generated answer can be traced back to the retrieved context. An unfaithful answer contains hallucinations — claims not supported by what was retrieved."
+  },
+  {
+    "question": "How is AnswerRelevancy different from Faithfulness?",
+    "answer": "Answer relevancy is different from faithfulness because a highly faithful answer can still score low on relevancy if it answers the wrong question. In other words, faithfulness measures whether the answer is supported by the context, whereas relevancy measures whether the answer actually addresses the question that was asked.",
+    "contexts": [
+      "Faithfulness measures whether the generated answer is supported by the retrieved context. An unfaithful answer contains claims that cannot be found in the retrieved documents — in other words, hallucinations. RAGAS computes faithfulness by asking an evaluator LLM to verify each claim in the answer against the context.",
+      "Response relevancy measures whether the generated answer actually addresses the question that was asked. A highly faithful answer can still score low on relevancy if it answers the wrong question. RAGAS measures this by generating reverse questions from the answer and checking how similar they are to the original question.",
+      "A test dataset for RAG evaluation consists of question-answer-context triples. The question is what the user asked. The context is the list of retrieved chunks. The answer is what the RAG pipeline generated. The reference (sometimes called ground truth) is the correct answer, written by a human or generated by a capable LLM. Context precision and context recall require a reference answer; faithfulness and response relevancy do not."
+    ],
+    "reference": "Faithfulness checks whether the answer is grounded in the retrieved context. AnswerRelevancy checks whether the answer actually addresses the user's question. An answer can be faithful but still score low on relevancy if it answers the wrong question."
+  },
+  {
+    "question": "What changed in RAGAS v0.4 for initializing the evaluator LLM?",
+    "answer": "I don't know.",
+    "contexts": [
+      "RAGAS is a framework for evaluating RAG pipelines and LLM applications. In version 0.2, RAGAS moved to a new API where metrics are instantiated as class instances with an explicit evaluator LLM. The old lowercase imports like faithfulness are deprecated. The correct v0.2 pattern is to use class names like Faithfulness and ResponseRelevancy, and to pass an evaluator LLM at construction time.",
+      "LangChain is a framework for building LLM applications. It provides abstractions for document loaders, text splitters, vector stores, retrievers, and LLM chains. RAGAS integrates directly with LangChain, allowing you to wrap any LangChain-compatible LLM in a LangchainLLMWrapper and use it as the RAGAS evaluator.",
+      "RAG stands for Retrieval-Augmented Generation. It is a technique that combines a retrieval system with a language model. Instead of relying only on the model's training data, RAG first retrieves relevant documents from an external database and then generates an answer grounded in those documents. This reduces hallucinations and keeps the model's answers up to date."
+    ],
+    "reference": "In RAGAS v0.4, the evaluator LLM is initialized with llm_factory from ragas.llms, which uses the google-genai client for Gemini. LangchainLLMWrapper is rejected at runtime by v0.4 metrics."
+  },
+  {
+    "question": "What embedding model is used for the RAG pipeline and does it need an API key?",
+    "answer": "The all-MiniLM-L6-v2 model from HuggingFace is used, and it does not need an API key as it runs entirely locally.",
+    "contexts": [
+      "RAGAS is a framework for evaluating RAG pipelines and LLM applications. In version 0.2, RAGAS moved to a new API where metrics are instantiated as class instances with an explicit evaluator LLM. The old lowercase imports like faithfulness are deprecated. The correct v0.2 pattern is to use class names like Faithfulness and ResponseRelevancy, and to pass an evaluator LLM at construction time.",
+      "RAG stands for Retrieval-Augmented Generation. It is a technique that combines a retrieval system with a language model. Instead of relying only on the model's training data, RAG first retrieves relevant documents from an external database and then generates an answer grounded in those documents. This reduces hallucinations and keeps the model's answers up to date.",
+      "Embedding models convert text into vectors of floating-point numbers. Similar pieces of text produce similar vectors. The all-MiniLM-L6-v2 model from HuggingFace is a popular lightweight embedding model that runs entirely locally with no API key needed."
+    ],
+    "reference": "The all-MiniLM-L6-v2 model from HuggingFace is used. It runs entirely locally with no API key needed."
+  }
+]

@@ -27,6 +27,7 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [visual-search](visual-search/) | Visual product search using CLIP |
 | [langsmith-tutorial](langsmith-tutorial/) | LangSmith observability tutorial — tracing, datasets, and LLM-as-judge evaluations |
 | [rag-eval](rag-eval/) | RAG evaluation pipeline using RAGAS v0.4 — faithfulness, answer relevancy, context precision, and recall scored via Gemini 2.5 Flash |
+| [memory-agent](memory-agent/) | Persistent memory chat agent — stores and retrieves user facts across sessions using mem0, Groq, and local Qdrant |
 
 ## Getting Started
 

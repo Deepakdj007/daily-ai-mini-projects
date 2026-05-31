@@ -86,6 +86,9 @@ dmypy.json
 **/credentials.json
 **/token*.json
 
+# Claude Code local config
+.claude/
+
 #misc
 rag_storage/
 videos/

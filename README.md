@@ -29,6 +29,7 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [rag-eval](rag-eval/) | RAG evaluation pipeline using RAGAS v0.4 — faithfulness, answer relevancy, context precision, and recall scored via Gemini 2.5 Flash |
 | [memory-agent](memory-agent/) | Persistent memory chat agent — stores and retrieves user facts across sessions using mem0, Groq, and local Qdrant |
 | [parallel-news-agent](parallel-news-agent/) | LangGraph map-reduce pipeline that researches multiple news topics in parallel and assembles them into an executive briefing using Groq and Tavily |
+| [a2a-agents](a2a-agents/) | Multi-agent system on the A2A protocol — Research and Writer agents discover each other via Agent Cards and chain over JSON-RPC, powered by Groq |
 
 ## Getting Started
 

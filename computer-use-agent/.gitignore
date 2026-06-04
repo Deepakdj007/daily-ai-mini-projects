@@ -1,0 +1,17 @@
+# Secrets — never commit
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# uv / virtualenv
+.venv/
+
+# Paid guide deliverables — keep local, never push
+GUIDE.md
+*-guide.md
+
+# Screenshots captured at runtime
+screenshots/
+*.png

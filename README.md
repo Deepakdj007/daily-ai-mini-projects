@@ -31,6 +31,7 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [parallel-news-agent](parallel-news-agent/) | LangGraph map-reduce pipeline that researches multiple news topics in parallel and assembles them into an executive briefing using Groq and Tavily |
 | [a2a-agents](a2a-agents/) | Multi-agent system on the A2A protocol — Research and Writer agents discover each other via Agent Cards and chain over JSON-RPC, powered by Groq |
 | [computer-use-agent](computer-use-agent/) | Desktop control agent — Gemini Flash sees the screen and decides actions in a LangGraph See→Think→Act loop, executed with PyAutoGUI |
+| [self-healing-code-agent](self-healing-code-agent/) | Code agent that writes Python, runs it in a subprocess, reads its own tracebacks, and fixes its own bugs until self-written tests pass — built on Pydantic AI and Groq |
 
 ## Getting Started
 

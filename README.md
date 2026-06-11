@@ -32,6 +32,8 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [a2a-agents](a2a-agents/) | Multi-agent system on the A2A protocol — Research and Writer agents discover each other via Agent Cards and chain over JSON-RPC, powered by Groq |
 | [computer-use-agent](computer-use-agent/) | Desktop control agent — Gemini Flash sees the screen and decides actions in a LangGraph See→Think→Act loop, executed with PyAutoGUI |
 | [self-healing-code-agent](self-healing-code-agent/) | Code agent that writes Python, runs it in a subprocess, reads its own tracebacks, and fixes its own bugs until self-written tests pass — built on Pydantic AI and Groq |
+| [smolagents-code-agent](smolagents-code-agent/) | smolagents CodeAgent powered by Groq that solves any problem by writing and running Python — supports web search, custom tools, and pandas/numpy in generated code |
+| [live-vision-agent](live-vision-agent/) | Real-time agent that streams webcam + microphone to Gemini Live API over a single WebSocket session and responds in natural speech with live terminal transcript |
 
 ## Getting Started
 

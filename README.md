@@ -34,6 +34,8 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [self-healing-code-agent](self-healing-code-agent/) | Code agent that writes Python, runs it in a subprocess, reads its own tracebacks, and fixes its own bugs until self-written tests pass — built on Pydantic AI and Groq |
 | [smolagents-code-agent](smolagents-code-agent/) | smolagents CodeAgent powered by Groq that solves any problem by writing and running Python — supports web search, custom tools, and pandas/numpy in generated code |
 | [live-vision-agent](live-vision-agent/) | Real-time agent that streams webcam + microphone to Gemini Live API over a single WebSocket session and responds in natural speech with live terminal transcript |
+| [realtime-voice-translator](realtime-voice-translator/) | Speak any language into your mic — Gemini Live Translate API translates and speaks back in your chosen target language, live, with a Streamlit browser UI |
+| [interview-coach](interview-coach/) | Real-time AI interview coach powered by Gemini Live — watches you via webcam and coaches tone, pacing, filler words, body language, and content after each answer |
 
 ## Getting Started
 

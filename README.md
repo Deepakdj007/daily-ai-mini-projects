@@ -36,6 +36,8 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [live-vision-agent](live-vision-agent/) | Real-time agent that streams webcam + microphone to Gemini Live API over a single WebSocket session and responds in natural speech with live terminal transcript |
 | [realtime-voice-translator](realtime-voice-translator/) | Speak any language into your mic — Gemini Live Translate API translates and speaks back in your chosen target language, live, with a Streamlit browser UI |
 | [interview-coach](interview-coach/) | Real-time AI interview coach powered by Gemini Live — watches you via webcam and coaches tone, pacing, filler words, body language, and content after each answer |
+| [worldcup-analyst](worldcup-analyst/) | LangGraph parallel multi-agent World Cup 2026 analyst — three specialist agents fan out simultaneously with Send, each gather their own data slice, then a synthesizer assembles a match briefing using Groq and Tavily |
+| [supervisor-content-team](supervisor-content-team/) | LangGraph supervisor multi-agent content team — a routing supervisor coordinates researcher, writer, editor, and SEO specialists via shared state and structured output, powered by Gemini and Tavily |
 
 ## Getting Started
 

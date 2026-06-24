@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Generated at runtime
+qdrant_data/
+page_images/
+
+# Sample/scanned PDFs (regenerate with scripts/make_sample_pdf.py)
+pdfs/*.pdf

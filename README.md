@@ -38,6 +38,7 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [interview-coach](interview-coach/) | Real-time AI interview coach powered by Gemini Live — watches you via webcam and coaches tone, pacing, filler words, body language, and content after each answer |
 | [worldcup-analyst](worldcup-analyst/) | LangGraph parallel multi-agent World Cup 2026 analyst — three specialist agents fan out simultaneously with Send, each gather their own data slice, then a synthesizer assembles a match briefing using Groq and Tavily |
 | [supervisor-content-team](supervisor-content-team/) | LangGraph supervisor multi-agent content team — a routing supervisor coordinates researcher, writer, editor, and SEO specialists via shared state and structured output, powered by Gemini and Tavily |
+| [colpali-vision-rag](colpali-vision-rag/) | Multimodal RAG that answers questions about charts, tables, and scanned PDFs by looking at the pages — no OCR. ColPali (ColQwen2) embeds each page into patch-level multivectors, Qdrant ranks them with MaxSim late interaction, and Gemini 3.5 Flash reads the retrieved page images to answer, wired with LangGraph |
 
 ## Getting Started
 

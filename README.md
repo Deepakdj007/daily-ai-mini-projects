@@ -39,6 +39,7 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [worldcup-analyst](worldcup-analyst/) | LangGraph parallel multi-agent World Cup 2026 analyst — three specialist agents fan out simultaneously with Send, each gather their own data slice, then a synthesizer assembles a match briefing using Groq and Tavily |
 | [supervisor-content-team](supervisor-content-team/) | LangGraph supervisor multi-agent content team — a routing supervisor coordinates researcher, writer, editor, and SEO specialists via shared state and structured output, powered by Gemini and Tavily |
 | [colpali-vision-rag](colpali-vision-rag/) | Multimodal RAG that answers questions about charts, tables, and scanned PDFs by looking at the pages — no OCR. ColPali (ColQwen2) embeds each page into patch-level multivectors, Qdrant ranks them with MaxSim late interaction, and Gemini 3.5 Flash reads the retrieved page images to answer, wired with LangGraph |
+| [reflexion-self-correcting](reflexion-self-correcting/) | Reflexion self-correcting agent — a generator writes a cold email, a cheap critic scores it against a rubric, and a cyclical LangGraph loop feeds the critique back until quality passes or hits a revision cap, then a pro-tier adjudicator gives the final verdict and the run plots the diminishing-returns curve. Three-tier Gemini split (3.5-flash / 3.1-flash-lite / 3.1-pro) |
 
 ## Getting Started
 

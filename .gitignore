@@ -91,6 +91,7 @@ dmypy.json
 
 # Paid guide deliverables — keep local, never push
 **/GUIDE.md
+**/build-*-guide.md
 
 #misc
 rag_storage/

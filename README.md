@@ -40,6 +40,7 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [supervisor-content-team](supervisor-content-team/) | LangGraph supervisor multi-agent content team — a routing supervisor coordinates researcher, writer, editor, and SEO specialists via shared state and structured output, powered by Gemini and Tavily |
 | [colpali-vision-rag](colpali-vision-rag/) | Multimodal RAG that answers questions about charts, tables, and scanned PDFs by looking at the pages — no OCR. ColPali (ColQwen2) embeds each page into patch-level multivectors, Qdrant ranks them with MaxSim late interaction, and Gemini 3.5 Flash reads the retrieved page images to answer, wired with LangGraph |
 | [reflexion-self-correcting](reflexion-self-correcting/) | Reflexion self-correcting agent — a generator writes a cold email, a cheap critic scores it against a rubric, and a cyclical LangGraph loop feeds the critique back until quality passes or hits a revision cap, then a pro-tier adjudicator gives the final verdict and the run plots the diminishing-returns curve. Three-tier Gemini split (3.5-flash / 3.1-flash-lite / 3.1-pro) |
+| [agent-eval-arena](agent-eval-arena/) | Head-to-head eval harness — the same tool-calling agent runs across three Groq models on a fixed test set, Langfuse traces every call, exact-match and an LLM judge score each answer, and a leaderboard ranks accuracy, cost, and latency |
 
 ## Getting Started
 

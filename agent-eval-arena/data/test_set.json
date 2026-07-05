@@ -1,0 +1,62 @@
+[
+  {
+    "id": "math-01",
+    "category": "math",
+    "question": "A warehouse had 128 boxes. It shipped 47 boxes on Monday and 39 boxes on Tuesday. How many boxes are left?",
+    "expected_output": "42"
+  },
+  {
+    "id": "math-02",
+    "category": "math",
+    "question": "A cafe sells cupcakes for 35 rupees each. If a customer buys 12 cupcakes, how much do they pay in total?",
+    "expected_output": "420"
+  },
+  {
+    "id": "math-03",
+    "category": "math",
+    "question": "A train travels at 84 km/h for 3 hours, then at 60 km/h for 2 hours. What is the total distance covered in km?",
+    "expected_output": "372"
+  },
+  {
+    "id": "math-04",
+    "category": "math",
+    "question": "Split a bill of 960 rupees equally among 8 friends. How much does each friend pay?",
+    "expected_output": "120"
+  },
+  {
+    "id": "math-05",
+    "category": "math",
+    "question": "A school had 540 students. 15% of them are on a field trip today. How many students are on the field trip?",
+    "expected_output": "81"
+  },
+  {
+    "id": "fact-01",
+    "category": "factual",
+    "question": "Read this note: 'The quarterly review is scheduled for the third week of March, led by Priya Nair from the finance team.' Who is leading the quarterly review?",
+    "expected_output": "Priya Nair"
+  },
+  {
+    "id": "fact-02",
+    "category": "factual",
+    "question": "Read this note: 'Server rack B7 overheated at 2:14 AM and was automatically shut down by the cooling system.' Which server rack overheated?",
+    "expected_output": "B7"
+  },
+  {
+    "id": "fact-03",
+    "category": "factual",
+    "question": "Read this note: 'The invoice number INV-88213 was paid in full on the 9th of the month via bank transfer.' What is the invoice number?",
+    "expected_output": "INV-88213"
+  },
+  {
+    "id": "reason-01",
+    "category": "reasoning",
+    "question": "If all bloops are razzles and all razzles are lazzles, are all bloops definitely lazzles? Answer with just yes or no.",
+    "expected_output": "yes"
+  },
+  {
+    "id": "reason-02",
+    "category": "reasoning",
+    "question": "Meera is taller than Ravi. Ravi is taller than Sunil. Is Sunil taller than Meera? Answer with just yes or no.",
+    "expected_output": "no"
+  }
+]

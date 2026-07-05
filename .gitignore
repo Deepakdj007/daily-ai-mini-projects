@@ -93,6 +93,12 @@ dmypy.json
 **/GUIDE.md
 **/build-*-guide.md
 
+# Instagram assets — keep local, never push
+**/*-instagram-assets.md
+
+# Per-project rules file — keep local, never push
+**/CLAUDE.md
+
 #misc
 rag_storage/
 videos/

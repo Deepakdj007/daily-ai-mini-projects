@@ -1,0 +1,15 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Generated state and artifacts (rebuilt from docs on every run)
+*.db
+FAQ.md
+CHANGELOG.md
+
+# Guide (premium vault content — not committed)
+GUIDE.md

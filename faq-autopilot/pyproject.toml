@@ -1,0 +1,12 @@
+[project]
+name = "faq-autopilot"
+version = "0.1.0"
+description = "Long-horizon agent that watches source docs, detects drift, and keeps a FAQ updated on its own with citations"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "groq>=1.5.0",
+    "pydantic>=2.13",
+    "python-dotenv>=1.2.2",
+    "rich>=13",
+]

@@ -1,0 +1,14 @@
+[project]
+name = "deep-research-team"
+version = "0.1.0"
+description = "Deep-research multi-agent team built on LlamaIndex Workflows: plan, parallel research, reflect, write."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ddgs>=9.14.4",
+    "llama-index-llms-google-genai>=0.9.6",
+    "llama-index-workflows>=2.22.2",
+    "pydantic>=2.13",
+    "python-dotenv>=1.2.2",
+    "rich>=13",
+]

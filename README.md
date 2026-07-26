@@ -47,6 +47,7 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [plan-and-execute-agent](plan-and-execute-agent/) | Plan-and-execute agent — a LangGraph planner drafts a multi-step plan, an executor works each step, and a replanner adapts as it goes, benchmarked against a plain ReAct agent over keyless Wikipedia and calculator tools on Groq |
 | [lora-finetune-kaggle](lora-finetune-kaggle/) | QLoRA fine-tune on free Kaggle GPUs — turns Qwen3-4B into "DesiTutor", a Hinglish coding tutor, with 4-bit quantization, PEFT LoRA adapters, and a before/after evaluation |
 | [faq-autopilot](faq-autopilot/) | Long-horizon agent that watches a docs folder, detects drift when a file changes, and updates a customer FAQ on its own — every answer cited back to its source, every action logged, with durable SQLite state, on free Groq gpt-oss-120b |
+| [deep-research-team](deep-research-team/) | Deep-research multi-agent team on LlamaIndex Workflows — a planner fans sub-questions out to four researchers running concurrently, a reflector spots gaps and sends the team back out, and a writer produces a cited report, on free Gemini with keyless DuckDuckGo search |
 
 ## Getting Started
 

@@ -24,6 +24,7 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [video-rag](video-rag/) | RAG system for querying video content via frame extraction and embeddings |
 | [vision-rag](vision-rag/) | Vision-based RAG over PDFs using image embeddings for visual document understanding |
 | [voice-support-bot](voice-support-bot/) | Voice support bot with token server |
+| [voice-ai-agent](voice-ai-agent/) | Real-time voice assistant on LiveKit Agents with swappable STT / LLM / TTS presets |
 | [visual-search](visual-search/) | Visual product search using CLIP |
 | [langsmith-tutorial](langsmith-tutorial/) | LangSmith observability tutorial — tracing, datasets, and LLM-as-judge evaluations |
 | [rag-eval](rag-eval/) | RAG evaluation pipeline using RAGAS v0.4 — faithfulness, answer relevancy, context precision, and recall scored via Gemini 2.5 Flash |
@@ -48,6 +49,7 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [lora-finetune-kaggle](lora-finetune-kaggle/) | QLoRA fine-tune on free Kaggle GPUs — turns Qwen3-4B into "DesiTutor", a Hinglish coding tutor, with 4-bit quantization, PEFT LoRA adapters, and a before/after evaluation |
 | [faq-autopilot](faq-autopilot/) | Long-horizon agent that watches a docs folder, detects drift when a file changes, and updates a customer FAQ on its own — every answer cited back to its source, every action logged, with durable SQLite state, on free Groq gpt-oss-120b |
 | [deep-research-team](deep-research-team/) | Deep-research multi-agent team on LlamaIndex Workflows — a planner fans sub-questions out to four researchers running concurrently, a reflector spots gaps and sends the team back out, and a writer produces a cited report, on free Gemini with keyless DuckDuckGo search |
+| [personal-ai-assistant](personal-ai-assistant/) | A real tool-calling agent that lives in Telegram — routes every message through an LLM to web search, notes, reminders, and article/YouTube/PDF summaries, messages you first with a durable morning briefing, and remembers across restarts via a SQLite-backed LangGraph checkpointer, on free Groq gpt-oss-120b |
 
 ## Getting Started
 

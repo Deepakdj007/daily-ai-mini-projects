@@ -50,6 +50,7 @@ A collection of AI/ML mini projects exploring various AI capabilities.
 | [faq-autopilot](faq-autopilot/) | Long-horizon agent that watches a docs folder, detects drift when a file changes, and updates a customer FAQ on its own — every answer cited back to its source, every action logged, with durable SQLite state, on free Groq gpt-oss-120b |
 | [deep-research-team](deep-research-team/) | Deep-research multi-agent team on LlamaIndex Workflows — a planner fans sub-questions out to four researchers running concurrently, a reflector spots gaps and sends the team back out, and a writer produces a cited report, on free Gemini with keyless DuckDuckGo search |
 | [personal-ai-assistant](personal-ai-assistant/) | A real tool-calling agent that lives in Telegram — routes every message through an LLM to web search, notes, reminders, and article/YouTube/PDF summaries, messages you first with a durable morning briefing, and remembers across restarts via a SQLite-backed LangGraph checkpointer, on free Groq gpt-oss-120b |
+| [mcp-host](mcp-host/) | An MCP host that keeps five Model Context Protocol servers connected at once and chains tool calls across all of them from a single sentence — built on the mcp 2.0 SDK's ClientSessionGroup, with three official uvx servers (time, fetch, git) plus a sandboxed files server and a sqlite notes server you write yourself, a per-server tool allowlist to stay inside the free-tier context budget, and a Streamlit UI over a background event loop, on free Groq gpt-oss-120b |
 
 ## Getting Started
 

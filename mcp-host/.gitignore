@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Local state — the notes server's database
+*.db
+
+# Files the agent writes through the files server
+workspace/*
+!workspace/.gitkeep

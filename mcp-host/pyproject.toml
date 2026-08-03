@@ -1,0 +1,13 @@
+[project]
+name = "mcp-host"
+version = "0.1.0"
+description = "An MCP host that orchestrates five MCP servers at once on mcp 2.0 ClientSessionGroup, three official and two you write, driven by free Groq gpt-oss-120b."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "groq>=1.5.0",
+    "mcp==2.0.0",
+    "python-dotenv>=1.2.2",
+    "rich>=13",
+    "streamlit>=1.60.0",
+]

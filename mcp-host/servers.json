@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "time": {
+      "command": "uvx",
+      "args": ["--with", "mcp<2", "mcp-server-time", "--local-timezone=Asia/Kolkata"]
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": ["--with", "mcp<2", "mcp-server-fetch"],
+      "env": { "PYTHONIOENCODING": "utf-8" }
+    },
+    "git": {
+      "command": "uvx",
+      "args": ["--with", "mcp<2", "mcp-server-git", "--repository", ".."],
+      "cwd": "..",
+      "tools": ["git_status", "git_log", "git_diff_unstaged", "git_show"]
+    },
+    "files": {
+      "command": "python",
+      "args": ["src/servers/files_server.py", "--root", "workspace"]
+    },
+    "notes": {
+      "command": "python",
+      "args": ["src/servers/notes_server.py", "--db", "notes.db"]
+    }
+  }
+}

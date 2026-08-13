@@ -1,0 +1,16 @@
+[project]
+name = "night-scout"
+version = "0.1.0"
+description = "An ambient agent that works while you sleep: it wakes on a clock through the night, scouts HackerNews, arXiv and RSS for what matters to you, drafts reading-list entries, and parks each one for your approval in a Streamlit inbox the next morning. LangGraph interrupt + SQLite checkpoints on Groq's free tier."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "feedparser>=6.0.14",
+    "httpx>=0.28.1",
+    "langchain-groq>=1.1.3",
+    "langgraph>=1.2.10",
+    "langgraph-checkpoint-sqlite>=3.1.1",
+    "pydantic>=2.13.4",
+    "python-dotenv>=1.2.2",
+    "streamlit>=1.61.1",
+]

@@ -1,0 +1,22 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+**/__pycache__/
+*.pyc
+.venv/
+
+# Generated state. WAL mode creates -wal and -shm siblings alongside each database,
+# and deleting a .db without them leaves a journal SQLite will try to replay.
+*.db
+*.db-wal
+*.db-shm
+
+# What the agent writes once you approve something
+output/
+
+# Guide (premium vault content — not committed)
+GUIDE.md
+build-*-guide.md
+*-instagram-assets.md

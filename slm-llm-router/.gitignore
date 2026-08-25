@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# The response cache is a local build artifact, not a result.
+output/cache.sqlite
+
+# The raw GSM8K download. data/queries.json holds the vendored slice we use,
+# together with data/LICENSE-gsm8k.
+data/_gsm8k_test.jsonl

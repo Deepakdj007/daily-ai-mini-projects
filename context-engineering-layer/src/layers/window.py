@@ -7,7 +7,7 @@ This is the layer everybody reaches for first, and it is the one that quietly
 breaks prefix caching. A window that evicts its oldest turn changes the front
 of the prompt, so every token after the eviction point has to be recomputed.
 Capping shrinks a message in place and stays cacheable; evicting does not. The
-prefix-stability curve in stability.py is what makes that visible.
+prefix-stability figure that plot.py draws is what makes that visible.
 
 Window also wins over retrieve. Retrieval predicts what will be dropped, but it
 spends budget too, so a turn it predicted would be dropped can end up kept -

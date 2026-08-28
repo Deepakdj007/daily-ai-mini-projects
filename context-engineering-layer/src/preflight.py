@@ -196,8 +196,8 @@ async def run(target_tokens: int = 0) -> dict[str, float]:
     if not (decided and exempt and cached_frac >= 0.80):
         console.print(
             "[bold yellow]Pre-registered fallback fires.[/bold yellow] Run "
-            "--profile lite (window / cap+pin+window / full, headline probes, "
-            "one model) and report the reduced n as reduced."
+            "--profile lite (none / raw / window / cap+pin+window / full / no-pin), "
+            "one model, and report the reduced n as reduced."
         )
     else:
         console.print("[bold green]Full profile is affordable.[/bold green]")

@@ -1,10 +1,10 @@
 """Expand the fact spec into a transcript, derive the zones, run every gate.
 
 Inputs:  data/scenario.json
-Outputs: 100 turns, 28 probes, the per-arm window-reach table, and a pass/fail
+Outputs: 100 turns, 31 probes, the per-arm window-reach table, and a pass/fail
          on the build gates - all at zero API cost
 
-The transcript is generated, never hand-authored. Twenty-eight probes with
+The transcript is generated, never hand-authored. Thirty-one probes with
 carriers, zones and entropy floors cannot be kept consistent by hand, and a
 spec that expands deterministically is the only version a reader can reproduce.
 

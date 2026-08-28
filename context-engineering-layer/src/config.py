@@ -186,7 +186,7 @@ REQUEST_SPACING_S = 1.0
 # Bumping either invalidates every cached response, so a prompt or assembler
 # edit can never silently shift a score.
 PROMPT_VERSION = "v1"
-ASSEMBLER_VERSION = "v3"  # v3: realistic filler prose - repeated-word padding made the model decline to read the context at all
+ASSEMBLER_VERSION = "v4"  # v4: block costing includes per-message framing  # v3: realistic filler prose - repeated-word padding made the model decline to read the context at all
 
 # tiktoken's o200k_harmony counts raw text; it does not see the Harmony chat
 # template's role headers and per-message framing. `cache-probe` measures the

@@ -24,7 +24,7 @@ from typing import Sequence
 from src.context import Context, new_context
 from src.layers import cap, pin, retrieve, summarize, window
 from src.layers.base import LayerDeps, PipelineConfig
-from src.tokens import common_prefix_tokens, count_text
+from src.tokens import PER_MESSAGE_OVERHEAD, common_prefix_tokens, count_text
 from src.types import Message, SummarizeFn, Turn
 
 LAYER_ORDER: tuple[tuple[str, object], ...] = (
@@ -37,9 +37,16 @@ LAYER_ORDER: tuple[tuple[str, object], ...] = (
 
 
 def make_deps(*, summarize_fn: SummarizeFn | None = None, fudge: float = 1.0) -> LayerDeps:
-    """Bundle the capabilities the layers are allowed to use."""
+    """Bundle the capabilities the layers are allowed to use.
+
+    The counter prices a string as a MESSAGE, framing included. Every string a
+    layer measures becomes exactly one message in the payload, and
+    split_by_budget already counts turns that way - a counter that priced raw
+    text would put the blocks and the window on two different scales and
+    quietly enforce a budget nobody chose.
+    """
     return LayerDeps(
-        count=lambda text: count_text(text, fudge),
+        count=lambda text: count_text(text, fudge) + PER_MESSAGE_OVERHEAD,
         summarize=summarize_fn,
     )
 

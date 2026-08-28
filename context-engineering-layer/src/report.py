@@ -162,6 +162,26 @@ def validity(rows: Sequence[dict]) -> list[tuple[str, bool, str]]:
             "the pinned probe still passes with pin off - pin is not being removed",
         ))
 
+    priced = [
+        r for r in rows
+        if r["usage"]["prompt_tokens"] and r["status"] != "oversized"
+    ]
+    if priced:
+        tail = 28  # the probe question plus the answer instruction
+        ratios = [
+            r["usage"]["prompt_tokens"] / max(r["assembled_tokens"] + tail, 1)
+            for r in priced
+        ]
+        mean = sum(ratios) / len(ratios)
+        worst = max(abs(x - 1) for x in ratios)
+        checks.append((
+            "tokenizer tracks the server",
+            worst <= 0.10,
+            f"local estimate vs Groq prompt_tokens: mean x{mean:.3f}, "
+            f"worst divergence {worst:.1%}. Every budget number, the headroom "
+            f"claim and the cost figure rest on this ratio being ~1.",
+        ))
+
     truncations = sum(1 for r in rows if r["status"] == "truncated")
     rate = truncations / max(len(rows), 1)
     checks.append((
@@ -273,6 +293,20 @@ def main(model: str = "") -> None:
     console.print(f"[bold]{manifest['model']}[/bold]  scenario {manifest['scenario']}  "
                   f"budget {manifest['context_budget']} tok  "
                   f"summary leakage {manifest.get('facts_in_summary')}")
+
+    stale = [
+        (k, manifest.get(k), getattr(config, k.upper()))
+        for k in ("assembler_version", "prompt_version")
+        if manifest.get(k) != getattr(config, k.upper())
+    ]
+    if stale:
+        console.print(
+            "[bold yellow]These results predate the current code.[/bold yellow] "
+            + "; ".join(f"{k}: run={was}, now={now}" for k, was, now in stale)
+            + "\n  The comparison between arms still holds - every arm was "
+            "measured the same way - but absolute token figures are from the "
+            "older assembler. Re-run to refresh; nothing else is cached."
+        )
 
     checks = validity(rows)
     vt = Table(title="validity gates - any failure voids the run")

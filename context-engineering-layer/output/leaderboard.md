@@ -14,6 +14,7 @@
 | recent zone is a clean sweep | pass | every arm answers every fact inside its own window |
 | null context scores zero | pass | no planted fact is guessable without the conversation |
 | no-pin control fails the pinned probe | pass | the pinned block really is removed when pin is off |
+| tokenizer tracks the server | **FAIL** | local estimate vs Groq prompt_tokens: mean x1.237, worst divergence 60.5%. Every budget number, the headroom claim and the cost figure rest on this ratio being ~1. |
 | truncation under ceiling | pass | 0.0% of rows lost their answer to the completion cap |
 
 ## The ladder

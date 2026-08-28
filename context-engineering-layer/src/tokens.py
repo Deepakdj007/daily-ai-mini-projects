@@ -25,10 +25,18 @@ from src.types import Message, Turn
 
 ENCODING_NAME = "o200k_harmony"
 
-# Rough per-message overhead in the chat template: role header, separators and
-# the end-of-message token. Calibration refines the whole estimate; this just
-# stops short messages being wildly under-counted before calibration runs.
-PER_MESSAGE_OVERHEAD = 4
+# Per-message overhead in the chat template: role header, separators and the
+# end-of-message token. MEASURED, not guessed - an 18-message payload whose
+# content summed to 858 tokens was billed at 963, which is 5.8 per message.
+#
+# This number is load-bearing and it was wrong once. Block costing originally
+# summed raw content and skipped it entirely, so an assembled context reported
+# 895 tokens against a real 963 - the budget was enforced 7% light on every
+# single call, and every absolute token figure in the project was optimistic.
+# The calibration gate in report.py exists so that can never drift unnoticed
+# again: it compares the local estimate against Groq's own prompt_tokens on
+# every row of a completed run, for free.
+PER_MESSAGE_OVERHEAD = 6
 
 ELISION = "\n[... {n} tokens elided ...]\n"
 

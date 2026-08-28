@@ -128,6 +128,35 @@ BM25 matches tokens. A value in a JSON field with a distinctive name is findable
 
 Six out of six deep facts the layer recovered were tool-carried. All eight prose facts failed. That is the argument for embeddings, and it is a measurement rather than an opinion.
 
+### One number in these tables is known to be wrong
+
+The committed run was measured with assembler `v3`, whose block costing summed
+raw message content and skipped the per-message chat-template framing. The
+local estimate therefore ran **about 7% light against Groq's own
+`prompt_tokens`**, and the assembled-token column above is optimistic by
+roughly that much — the "900-token budget" was really enforcing about 1,040.
+
+Every arm was measured the same way, so the recall comparison and the verdict
+are unaffected. The absolute token figures are not.
+
+`v4` fixes it: `PER_MESSAGE_OVERHEAD` is now measured (6 tokens per message,
+from an 18-message payload whose content summed to 858 and billed at 963), and
+block costing includes it. Validated live at 5.0% / 7.1% / 2.5% divergence
+across the three arms, inside the 10% gate.
+
+Two things now stop this recurring, and both are free:
+
+- **A calibration gate** compares the local estimate against Groq's reported
+  `prompt_tokens` on every row of a completed run. It fails the current
+  results file at mean ×1.24, which is the bug catching itself.
+- **A staleness notice** fires whenever the results were produced by an older
+  assembler than the code, so a number can never quietly outlive the thing
+  that made it.
+
+The re-run at the corrected count is pending the next daily refill — 47k
+headroom remained against the ~106k it needs, and a partial re-run would leave
+arms measured two different ways, which is worse than a disclosed caveat.
+
 ### Validity gates
 
 Checked before the verdict. Any failure voids the run.
@@ -139,6 +168,7 @@ Checked before the verdict. Any failure voids the run.
 | null context scores zero | pass — no planted fact is guessable without the conversation |
 | no-pin control fails the pinned probe | pass — the pinned block really is removed when pin is off |
 | truncation under ceiling | pass — 0.0% |
+| tokenizer tracks the server | **fail on this run** — mean ×1.24, see above. Fixed in `v4`, awaiting the re-run |
 
 Zero hallucinations: every arm answered `UNKNOWN` to both never-planted probes.
 

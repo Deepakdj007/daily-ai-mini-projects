@@ -1,0 +1,9 @@
+{
+  "text": "Ops‑desk, billing‑1 and SRE keep rotating SEV2 incidents on shard‑04 and reconciling a new batch on shard‑11; latency spikes remain isolated, queues stable. Merchant rate‑cap configs were logged with duplicate entries. Open: confirm edge‑queue latency fixes, verify downstream impact, finish any pending batch reconciliations, and close the two fresh SEV2 alerts. No new anomalies.",
+  "hash": "sha256:190b842676e3",
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0.0,
+  "budget_tokens": 80,
+  "fold_calls": 6,
+  "prompt": "You are keeping a running summary of a long incident-response session. Fold the new material below into the summary so far. Describe the SHAPE of the conversation for an engineer picking it up mid-shift: who is involved, what has been covered, what is still open. Do NOT restate specific identifiers, amounts, codes, timestamps or reference numbers - those stay in the transcript. Reply with the updated summary only, at most 80 tokens of prose."
+}

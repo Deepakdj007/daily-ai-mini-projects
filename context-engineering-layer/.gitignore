@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Model responses and the daily-spend ledger are local build artifacts,
+# not results. The results JSON, the leaderboard and both figures are.
+output/cache.sqlite
+output/ledger.sqlite
+output/run.log

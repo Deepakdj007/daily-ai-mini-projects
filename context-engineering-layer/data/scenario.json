@@ -1,0 +1,398 @@
+{
+  "_note": "One line per fact. scenario.py expands this into 100 turns, three tool schemas and every probe. Probes are written in the operator's vocabulary, never the transcript's, so BM25 has to do real work instead of matching the question back to its own wording.",
+  "system_prompt": "You are the PaySetu incident desk, an assistant for engineers running the PaySetu payments API in India. Product facts you always know: PaySetu has three plans, Starter, Growth and Scale. Payout webhooks retry with exponential backoff. Settlement runs at 19:00 IST every business day. The status page is status.paysetu.in. Support escalation goes through the on-call rotation, never directly to engineering. Amounts are quoted in paise unless stated otherwise. A merchant id always begins with M-, an incident id with INC-, and a settlement batch id with SB-.",
+  "pinned_facts": [
+    "This session is being run under change window CW-6208.",
+    "The declared blast radius for tonight is the Kolkata edge only."
+  ],
+  "tool_schemas": {
+    "ledger_query": [
+      "batch_id",
+      "opened_at",
+      "rows_scanned",
+      "unsettled_paise",
+      "reconciled",
+      "checksum",
+      "shard"
+    ],
+    "incident_timeline": [
+      "incident_id",
+      "detected_at",
+      "severity",
+      "p99_latency_ms",
+      "error_ratio",
+      "acked_by",
+      "region"
+    ],
+    "merchant_config": [
+      "merchant_id",
+      "plan",
+      "rate_cap_per_min",
+      "webhook_url",
+      "retry_window_ms",
+      "contact",
+      "region"
+    ]
+  },
+  "facts": [
+    {
+      "id": "f01",
+      "turn": 6,
+      "carrier": "tool_body",
+      "schema": "incident_timeline",
+      "field": "p99_latency_ms",
+      "value": "4712",
+      "answer_space": 10000,
+      "probe": "During the very first spike of the night, how many milliseconds did the slowest one call in a hundred take to come back?",
+      "anchor": "This is the record from the very first spike of the night."
+    },
+    {
+      "id": "f02",
+      "turn": 11,
+      "carrier": "prose",
+      "schema": "",
+      "field": "",
+      "value": "Nandita Rao",
+      "answer_space": 5000,
+      "probe": "Who was staffing the rotation when this whole thing started?",
+      "statement": "Nandita Rao had the pager when the first alert fired."
+    },
+    {
+      "id": "f03",
+      "turn": 17,
+      "carrier": "tool_head",
+      "schema": "merchant_config",
+      "field": "merchant_id",
+      "value": "M-88213",
+      "answer_space": 100000,
+      "probe": "Which account did the original complaint come in against?",
+      "anchor": "This is who first raised the ticket with support."
+    },
+    {
+      "id": "f04",
+      "turn": 23,
+      "carrier": "tool_body",
+      "schema": "ledger_query",
+      "field": "unsettled_paise",
+      "value": "18420355",
+      "answer_space": 100000,
+      "probe": "How much money had still not been squared away, counted in paise?",
+      "anchor": "Here is what was still outstanding on the books."
+    },
+    {
+      "id": "f05",
+      "turn": 29,
+      "carrier": "prose",
+      "schema": "",
+      "field": "",
+      "value": "3240",
+      "answer_space": 5000,
+      "probe": "What ceiling did the team lift the throughput to?",
+      "statement": "We took the cap up to 3240 for the duration."
+    },
+    {
+      "id": "f06",
+      "turn": 34,
+      "carrier": "tool_body",
+      "schema": "ledger_query",
+      "field": "checksum",
+      "value": "a91f3c7e",
+      "answer_space": 4000000000,
+      "probe": "What was the verification hash on the batch that came back clean?",
+      "anchor": "This is the batch that came back clean."
+    },
+    {
+      "id": "f07",
+      "turn": 39,
+      "carrier": "tool_head",
+      "schema": "ledger_query",
+      "field": "batch_id",
+      "value": "SB-70914",
+      "answer_space": 100000,
+      "probe": "Which settlement run was the one that had to be replayed?",
+      "anchor": "This is the run we had to replay."
+    },
+    {
+      "id": "f08",
+      "turn": 44,
+      "carrier": "prose",
+      "schema": "",
+      "field": "",
+      "value": "Pune",
+      "answer_space": 3000,
+      "probe": "Which city's data centre did the team rule out early on?",
+      "statement": "We cleared Pune from the picture in the first half hour."
+    },
+    {
+      "id": "f09",
+      "turn": 48,
+      "carrier": "tool_body",
+      "schema": "merchant_config",
+      "field": "retry_window_ms",
+      "value": "4703",
+      "answer_space": 10000,
+      "probe": "How many milliseconds does the gateway hold off before it retries a failed delivery?",
+      "anchor": "This is the delivery back-off setting for that endpoint."
+    },
+    {
+      "id": "f10",
+      "turn": 53,
+      "carrier": "tool_body",
+      "schema": "incident_timeline",
+      "field": "error_ratio",
+      "value": "0.0834",
+      "answer_space": 10000,
+      "probe": "What proportion of requests were coming back bad at the worst point?",
+      "anchor": "This is the worst point of the whole event."
+    },
+    {
+      "id": "f11",
+      "turn": 58,
+      "carrier": "prose",
+      "schema": "",
+      "field": "",
+      "value": "CHG-5517",
+      "answer_space": 100000,
+      "probe": "Which paperwork reference was raised to cover the rollback?",
+      "statement": "The rollback is tracked under CHG-5517."
+    },
+    {
+      "id": "f12",
+      "turn": 63,
+      "carrier": "tool_body",
+      "schema": "ledger_query",
+      "field": "rows_scanned",
+      "value": "612480",
+      "answer_space": 1000000,
+      "probe": "How many records did the reconciliation sweep have to walk through?",
+      "anchor": "This is the sweep that walked the full table."
+    },
+    {
+      "id": "f13",
+      "turn": 68,
+      "carrier": "tool_head",
+      "schema": "incident_timeline",
+      "field": "detected_at",
+      "value": "21:14",
+      "answer_space": 1440,
+      "probe": "At what clock time did monitoring first notice something was wrong?",
+      "anchor": "This is when monitoring first flagged it."
+    },
+    {
+      "id": "f14",
+      "turn": 72,
+      "carrier": "prose",
+      "schema": "",
+      "field": "",
+      "value": "Vikram Shenoy",
+      "answer_space": 5000,
+      "probe": "Who signed off on taking the shard out of rotation?",
+      "statement": "Vikram Shenoy approved pulling the partition."
+    },
+    {
+      "id": "f15",
+      "turn": 77,
+      "carrier": "tool_body",
+      "schema": "merchant_config",
+      "field": "webhook_url",
+      "value": "hooks-7t2q",
+      "answer_space": 1000000,
+      "probe": "What was the subdomain label on the callback endpoint being hammered?",
+      "anchor": "This is the destination that was taking all the traffic."
+    },
+    {
+      "id": "f16",
+      "turn": 82,
+      "carrier": "tool_body",
+      "schema": "ledger_query",
+      "field": "shard",
+      "value": "shard-19",
+      "answer_space": 4000,
+      "probe": "Which partition ended up carrying the blame?",
+      "anchor": "This partition is the one carrying the failures."
+    },
+    {
+      "id": "f17",
+      "turn": 87,
+      "carrier": "prose",
+      "schema": "",
+      "field": "",
+      "value": "1830",
+      "answer_space": 5000,
+      "probe": "How many merchants did the team estimate were touched by this?",
+      "statement": "Best estimate is 1830 accounts affected."
+    },
+    {
+      "id": "f18",
+      "turn": 91,
+      "carrier": "prose",
+      "schema": "",
+      "field": "",
+      "value": "HOTFIX-2294",
+      "answer_space": 100000,
+      "probe": "What build tag went out with the emergency patch?",
+      "statement": "The urgent fix shipped as HOTFIX-2294."
+    },
+    {
+      "id": "f19",
+      "turn": 92,
+      "carrier": "tool_body",
+      "schema": "incident_timeline",
+      "field": "acked_by",
+      "value": "Farhan Qureshi",
+      "answer_space": 5000,
+      "probe": "Who picked up the page once it escalated?",
+      "anchor": "This is who took the page after it escalated."
+    },
+    {
+      "id": "f20",
+      "turn": 93,
+      "carrier": "prose",
+      "schema": "",
+      "field": "",
+      "value": "2260",
+      "answer_space": 5000,
+      "probe": "What figure did throughput settle back down to afterwards?",
+      "statement": "Things levelled out at 2260 once the fix landed."
+    },
+    {
+      "id": "f21",
+      "turn": 94,
+      "carrier": "tool_body",
+      "schema": "ledger_query",
+      "field": "opened_at",
+      "value": "22:41",
+      "answer_space": 1440,
+      "probe": "When was the replacement run kicked off?",
+      "anchor": "This is the replacement run we started."
+    },
+    {
+      "id": "f22",
+      "turn": 95,
+      "carrier": "tool_head",
+      "schema": "incident_timeline",
+      "field": "incident_id",
+      "value": "INC-4471",
+      "answer_space": 100000,
+      "probe": "What is the reference for the ticket the team has been working?",
+      "anchor": "This is the ticket we have been working all night."
+    },
+    {
+      "id": "f23",
+      "turn": 96,
+      "carrier": "tool_body",
+      "schema": "merchant_config",
+      "field": "rate_cap_per_min",
+      "value": "5900",
+      "answer_space": 10000,
+      "probe": "What per-minute limit is the account now provisioned for?",
+      "anchor": "This is what the account is provisioned for now."
+    },
+    {
+      "id": "f24",
+      "turn": 97,
+      "carrier": "prose",
+      "schema": "",
+      "field": "",
+      "value": "Meghna Iyer",
+      "answer_space": 5000,
+      "probe": "Who is taking over for the next shift?",
+      "statement": "Meghna Iyer picks up the handover in the morning."
+    },
+    {
+      "id": "f25",
+      "turn": 98,
+      "carrier": "prose",
+      "schema": "",
+      "field": "",
+      "value": "SB-70988",
+      "answer_space": 100000,
+      "probe": "Which run is queued up to go next?",
+      "statement": "Next in the queue is SB-70988."
+    },
+    {
+      "id": "f26",
+      "turn": 99,
+      "carrier": "prose",
+      "schema": "",
+      "field": "",
+      "value": "WATCH-3318",
+      "answer_space": 100000,
+      "probe": "What tag was put on the extended monitoring period?",
+      "statement": "Extended monitoring is filed as WATCH-3318."
+    },
+    {
+      "id": "f27",
+      "turn": 100,
+      "carrier": "prose",
+      "schema": "",
+      "field": "",
+      "value": "Chennai",
+      "answer_space": 3000,
+      "probe": "Where is the follow-up review being held?",
+      "statement": "The post-incident review will be in Chennai."
+    }
+  ],
+  "distractors": [
+    {
+      "turn": 20,
+      "schema": "incident_timeline",
+      "overrides": {
+        "incident_id": "INC-4468",
+        "p99_latency_ms": "12050",
+        "acked_by": "Rohit Salvi"
+      }
+    },
+    {
+      "turn": 41,
+      "schema": "incident_timeline",
+      "overrides": {
+        "incident_id": "INC-4472",
+        "p99_latency_ms": "890",
+        "acked_by": "Ananya Bose"
+      }
+    },
+    {
+      "turn": 66,
+      "schema": "merchant_config",
+      "overrides": {
+        "merchant_id": "M-88109",
+        "rate_cap_per_min": "1400",
+        "retry_window_ms": "12"
+      }
+    },
+    {
+      "turn": 89,
+      "schema": "merchant_config",
+      "overrides": {
+        "merchant_id": "M-88477",
+        "rate_cap_per_min": "800",
+        "retry_window_ms": "90"
+      }
+    }
+  ],
+  "negatives": [
+    {
+      "id": "n01",
+      "probe": "What was the retry window on incident INC-9999, in seconds?"
+    },
+    {
+      "id": "n02",
+      "probe": "Which merchant id did the Guwahati edge report a mismatch for?"
+    }
+  ],
+  "doc_probes": [
+    {
+      "id": "d01",
+      "source": "system",
+      "value": "19:00",
+      "probe": "At what time of day does settlement normally run?"
+    },
+    {
+      "id": "d02",
+      "source": "pinned",
+      "value": "CW-6208",
+      "probe": "Which change window is this session running under?"
+    }
+  ]
+}

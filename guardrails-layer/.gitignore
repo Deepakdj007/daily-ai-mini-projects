@@ -1,0 +1,7 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Model responses are a local build artifact, not a result.
+output/cache.sqlite

@@ -85,8 +85,25 @@ def _insert(conn: sqlite3.Connection, plan: RepairPlan, at: int, **kw) -> int:
     return store.insert_memory(conn, fields, embed.embed_one(fields["text"]))
 
 
+def _inherit_key(plan: RepairPlan) -> None:
+    """A replacement must live on the same key as the fact it replaces.
+
+    The successor of a fact IS that fact, later. If it lands on a different
+    (topic, scope) the chain is severed: the old row is closed, the new one is
+    filed elsewhere, and a timeline query for the original key shows a fact that
+    ended and was never replaced. Observed for real when a document-sourced
+    update arrived with scope="employer" against a row stored with scope="".
+    """
+    before = plan.before or {}
+    if not before or plan.fact is None:
+        return
+    plan.fact.topic = plan.topic = before.get("topic", plan.topic)
+    plan.fact.scope = plan.scope = before.get("scope", plan.scope)
+
+
 def _supersede(conn: sqlite3.Connection, plan: RepairPlan, at: int, policy: WritePolicy) -> int:
     """Replace a fact. Keeps or destroys the old one, depending on the policy."""
+    _inherit_key(plan)
     new_id = _insert(conn, plan, at)
     starts = conn.execute("SELECT valid_from FROM memories WHERE id = ?", (new_id,)).fetchone()[0]
     if policy.history:
@@ -113,6 +130,7 @@ def _qualify(conn: sqlite3.Connection, plan: RepairPlan, at: int, policy: WriteP
     c: the same key held by two unrelated things, so the newcomer gets a scope.
     """
     if plan.case == "a":
+        _inherit_key(plan)  # a refinement is the same fact, sharpened
         before = plan.before or {}
         inherited = min(int(before.get("valid_from", at)), plan.fact.valid_from_epoch)
         if policy.history:

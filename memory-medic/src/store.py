@@ -323,6 +323,19 @@ def check_invariants(conn: sqlite3.Connection) -> list[str]:
     ).fetchall()
     problems += [f"row {r['id']} valid_to runs past its successor's valid_from" for r in chain]
 
+    # A successor on a different key is a severed chain: the old row reads as
+    # "ended and never replaced" and a point-in-time query for that key returns
+    # nothing, even though the fact is alive under another name.
+    split = conn.execute(
+        "SELECT a.id, a.topic, a.scope, b.topic AS t2, b.scope AS s2 FROM memories a "
+        "JOIN memories b ON a.superseded_by = b.id "
+        "WHERE a.user_id != b.user_id OR a.topic != b.topic OR a.scope != b.scope"
+    ).fetchall()
+    problems += [
+        f"row {r['id']} was superseded onto a different key: "
+        f"{r['topic']}/{r['scope']!r} -> {r['t2']}/{r['s2']!r}" for r in split
+    ]
+
     # valid_from == valid_to is allowed: a fact corrected before it was ever
     # true of an interval has a zero-length window, and the window filter
     # (valid_to > T) correctly never returns it.

@@ -227,7 +227,28 @@ stored row has no scope at all. And a fix validated only against the evaluation
 fixture is not validated: the demo path exercised different data and had to be
 re-run to catch it.
 
-## 19. A `*` in a URL is a 500 on Windows, not a 404
+## 19. A supersede that crosses keys severs the chain, and reads as "gone"
+
+The fix in 18 introduced a worse bug than the one it fixed. A document update
+arriving with `scope="employer"` superseded a row stored with `scope=""`, so the
+successor was filed under a different key. The store looked healthy and the
+agent answered correctly from the new row — but the timeline for the original
+key showed a fact that ended in August and was never replaced, and
+`as_of(employer, "")` returned **nothing**. A memory that is alive under another
+name is indistinguishable from one that is gone.
+
+The successor of a fact *is* that fact, later, so `supersede` and `qualify(a)`
+now inherit the old row's `(topic, scope)` rather than trusting whatever the
+extractor called the new one.
+
+The more useful outcome is the invariant: `check_invariants` now fails when
+`superseded_by` points at a row with a different key. It reproduces the bug on
+the broken database in one line, and it would have caught both this and the
+`scope="moved"` case in finding 6 the moment they happened. Three separate
+key-fragmentation bugs in this build argue that the *key* is the thing to guard,
+not each path that writes one.
+
+## 20. A `*` in a URL is a 500 on Windows, not a 404
 
 Streamlit 1.63's static route calls `os.stat` on the requested path. On Windows
 `*` is not a legal filename character, so a request for `/*` raises `OSError

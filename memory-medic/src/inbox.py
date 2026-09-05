@@ -61,7 +61,14 @@ def sidebar(conn, clock) -> None:
     columns[0].metric("superseded", counts.get("superseded", 0))
     columns[1].metric("ended", counts.get("expired", 0))
     problems = store.check_invariants(conn)
-    st.sidebar.success("store consistent") if not problems else st.sidebar.error(problems[0])
+    # Written as a statement, not a conditional expression. Streamlit's magic
+    # auto-renders any bare expression it does not recognise as an st.* call,
+    # and a ternary is not one - so the one-liner version printed a
+    # DeltaGenerator and its entire docstring into the middle of the page.
+    if problems:
+        st.sidebar.error(problems[0])
+    else:
+        st.sidebar.success("store consistent")
     if st.sidebar.button("refresh"):
         st.cache_resource.clear()
         st.rerun()

@@ -102,30 +102,36 @@ cp .env.example .env          # then paste a free key from console.groq.com/keys
 
 ```bash
 # the whole story, a year of decay in about a minute
-./demo.ps1
+bash demo.sh                      # PowerShell: .\demo.ps1
 
 # or step by step
-PYTHONPATH=. uv run python -m src.main --as-of 2026-06-01 seed --reset
-PYTHONPATH=. uv run python -m src.main --as-of 2026-06-10 say "I moved to Bengaluru last week."
-PYTHONPATH=. uv run python -m src.main --as-of 2026-08-01 sweep --once
-PYTHONPATH=. uv run python -m src.main --as-of 2026-08-03 timeline demo city
-PYTHONPATH=. uv run streamlit run src/inbox.py
+uv run python -m src.main --as-of 2026-06-01 seed --reset
+uv run python -m src.main --as-of 2026-06-10 say "I moved to Bengaluru last week."
+uv run python -m src.main --as-of 2026-08-01 sweep --once
+uv run python -m src.main --as-of 2026-08-03 timeline demo city
+
+# the review inbox. CLOCK_AT is not decoration: the demo data is written
+# against a frozen timeline, so without it the ages are measured from today.
+CLOCK_AT=2026-08-03 uv run streamlit run src/inbox.py
 
 # the measurement
-PYTHONPATH=. uv run python -m src.main run --profile lite --yes
-PYTHONPATH=. uv run python -m src.main report          # free, rebuilds from results
+uv run python -m src.main run --profile lite --yes
+uv run python -m src.main report          # free, rebuilds from the results file
 ```
+
+On Windows PowerShell an environment variable is set separately, in the same
+shell: `$env:CLOCK_AT="2026-08-03"` and then the `uv run` line.
 
 Every module is runnable on its own and asserts something real; several need no
 API key at all:
 
 ```bash
-PYTHONPATH=. uv run python -m src.store      # supersede keeps history, as_of picks by date
-PYTHONPATH=. uv run python -m src.matcher    # the substring bug that inflates every arm
-PYTHONPATH=. uv run python -m src.stats      # 8 one-way disagreements is the p<0.01 threshold
-PYTHONPATH=. uv run python -m src.ladder     # one switch per rung
-PYTHONPATH=. uv run python -m src.fixture    # the probe independence gates
-PYTHONPATH=. uv run python -m src.main check # nothing reads the wall clock behind clock.py
+uv run python -m src.store      # supersede keeps history, as_of picks by date
+uv run python -m src.matcher    # the substring bug that inflates every arm
+uv run python -m src.stats      # 8 one-way disagreements is the p<0.01 threshold
+uv run python -m src.ladder     # one switch per rung
+uv run python -m src.fixture    # the probe independence gates
+uv run python -m src.main check # nothing reads the wall clock behind clock.py
 ```
 
 ## The clock

@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+import uuid
 from typing import Any, Iterable, Sequence
 
 import sqlite_vec
@@ -89,6 +90,11 @@ CREATE TABLE IF NOT EXISTS repairs (
 CREATE INDEX IF NOT EXISTS repairs_status ON repairs(status, proposed_at);
 CREATE INDEX IF NOT EXISTS repairs_old    ON repairs(old_id);
 CREATE INDEX IF NOT EXISTS repairs_thread ON repairs(thread_id);
+
+CREATE TABLE IF NOT EXISTS meta (
+    key   TEXT PRIMARY KEY,
+    value TEXT NOT NULL
+);
 
 CREATE VIEW IF NOT EXISTS parked AS
 SELECT id AS repair_id, thread_id, user_id, topic, scope, op, detector, confidence, proposed_at
@@ -340,12 +346,33 @@ def check_invariants(conn: sqlite3.Connection) -> list[str]:
     return problems
 
 
+def generation(conn: sqlite3.Connection) -> str:
+    """An id for this incarnation of the store, minted on first use and on wipe.
+
+    Parked repairs are keyed by a thread id derived from their content, which is
+    what stops one problem parking twice. But a wipe resets the row-id sequence,
+    so a reseeded store regenerates thread ids identical to ones already decided
+    - and a finished checkpoint then short-circuits the new decision, leaving the
+    human gate silently not gating. Deleting the checkpoint file covers the
+    normal case; this covers the case where the file is locked by a running
+    inbox and the delete quietly fails.
+    """
+    row = conn.execute("SELECT value FROM meta WHERE key = 'generation'").fetchone()
+    if row is not None:
+        return row["value"]
+    minted = uuid.uuid4().hex[:8]
+    conn.execute("INSERT OR REPLACE INTO meta (key, value) VALUES ('generation', ?)", (minted,))
+    return minted
+
+
 def wipe(conn: sqlite3.Connection) -> None:
-    """Empty every table. Used between evaluation arms."""
+    """Empty every table, and mint a new generation. Used between eval arms."""
     for table in ("memories", "sources", "repairs"):
         conn.execute(f"DELETE FROM {table}")
     conn.execute("DELETE FROM memories_vec")
     conn.execute("DELETE FROM sqlite_sequence WHERE name IN ('memories','repairs')")
+    conn.execute("INSERT OR REPLACE INTO meta (key, value) VALUES ('generation', ?)",
+                 (uuid.uuid4().hex[:8],))
 
 
 def counts(conn: sqlite3.Connection) -> dict[str, int]:

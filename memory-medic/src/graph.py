@@ -28,16 +28,21 @@ from src.nodes import RepairState, apply_node, gate_node, reject_node, route_aft
 from src.policy import RepairPlan
 
 
-def make_thread_id(plan: RepairPlan, evidence: str = "") -> str:
+def make_thread_id(plan: RepairPlan, evidence: str = "", generation: str = "") -> str:
     """One thread per distinct repair, derived from its content.
 
     Content-derived rather than random so a re-detection of the same problem
     lands on the same thread instead of parking a second identical card. New
     evidence produces a new thread, which is the behaviour we want: that really
     is a different decision.
+
+    The store's generation is mixed in so a wiped-and-reseeded store can never
+    collide with a decision already made against the old rows. Without it, row
+    ids restart at 1, the ids match, and a finished checkpoint short-circuits
+    the new repair - the gate stops gating and nothing says so.
     """
     material = "|".join([
-        plan.user_id, plan.topic, plan.scope, str(plan.old_id), plan.detector,
+        generation, plan.user_id, plan.topic, plan.scope, str(plan.old_id), plan.detector,
         hashlib.sha256((evidence or plan.evidence).encode("utf-8")).hexdigest()[:8],
     ])
     return "repair-" + hashlib.sha256(material.encode("utf-8")).hexdigest()[:12]
@@ -89,7 +94,7 @@ def launch_repair(graph, conn, plan: RepairPlan, *, clock, policy, oracle_human=
     really did park. Writing it inside the gate node would duplicate it on
     every resume, because the node re-runs from the top.
     """
-    thread_id = make_thread_id(plan)
+    thread_id = make_thread_id(plan, generation=store.generation(conn))
     run_config = thread_config(thread_id, conn=conn, clock=clock)
 
     snapshot = graph.get_state(run_config)
@@ -186,7 +191,7 @@ if __name__ == "__main__":
     graph_a = build_graph(open_checkpointer(tmp / "checkpoints.db"))
     outcome = launch_repair(graph_a, conn, plan, clock=clock, policy=BITEMPORAL)
     assert outcome == "parked", outcome
-    thread_id = make_thread_id(plan)
+    thread_id = make_thread_id(plan, generation=store.generation(conn))
     assert len(parked_rows(conn)) == 1
     assert store.as_of(conn, "u", "city", "", clock.now())["value"] == "Pune", \
         "parking must not touch memory"
@@ -210,4 +215,12 @@ if __name__ == "__main__":
     resume_thread(graph_b, conn_b, thread_id, "approve", clock=clock)
     assert conn_b.execute("SELECT COUNT(*) FROM memories").fetchone()[0] == 2
     assert not store.check_invariants(conn_b), store.check_invariants(conn_b)
-    print("OK - parked in one process, approved in another, applied exactly once")
+
+    # A wiped store must not inherit that decision, even though the checkpoint
+    # file survives and the repair's content is byte-identical.
+    before = make_thread_id(plan, generation=store.generation(conn_b))
+    store.wipe(conn_b)
+    after = make_thread_id(plan, generation=store.generation(conn_b))
+    assert before != after, "a reseeded store must mint fresh thread ids"
+    print(f"OK - parked in one process, approved in another, applied exactly once; "
+          f"a wipe moves the thread id {before[-6:]} -> {after[-6:]}")

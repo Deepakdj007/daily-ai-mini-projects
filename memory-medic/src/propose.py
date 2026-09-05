@@ -76,13 +76,23 @@ async def reverify(conn: sqlite3.Connection, candidate: detect.Candidate, *,
     # may file "Office: ..." under `other` one day and `address` the next, and a
     # topic mismatch would read as "the source dropped this field".
     by_scope = {fact.scope: fact for fact in fresh.facts if fact.scope}
+    # Last resort: a stored row with no scope at all, against exactly one
+    # extracted fact on the same topic. Rows seeded before this project started
+    # labelling document facts by field have empty scopes, and without this they
+    # match nothing and are reported as "the source no longer states this" -
+    # which is how a working re-verification quietly became a no-op.
+    topic_counts: dict[str, int] = {}
+    for fact in fresh.facts:
+        topic_counts[fact.topic] = topic_counts.get(fact.topic, 0) + 1
+    by_topic = {fact.topic: fact for fact in fresh.facts if topic_counts[fact.topic] == 1}
     source_hash = candidate.payload.get("sha256", "")
 
     plans: list[RepairPlan] = []
     for row in rows:
         key = (row["topic"], row["scope"])
-        exact = by_key.get(key) or by_scope.get(row["scope"])
-        fact = exact or by_key.get((row["topic"], ""))
+        exact = by_key.get(key) or (by_scope.get(row["scope"]) if row["scope"] else None)
+        fact = exact or by_key.get((row["topic"], "")) or by_topic.get(row["topic"])
+        exact = exact or (fact if fact is not None and row["scope"] == "" else None)
         common = dict(detector="source_changed", user_id=row["user_id"], topic=row["topic"],
                       scope=row["scope"], old_id=int(row["id"]), before=store.row_to_dict(row),
                       evidence=candidate.evidence, policy=policy.name)

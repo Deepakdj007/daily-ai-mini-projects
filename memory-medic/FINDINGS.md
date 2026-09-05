@@ -176,3 +176,61 @@ The cheap rung is the one that pays: `freshness` - simply rendering how old a
 memory is - took the aged probes from 0/8 to 7/8 and the announced ones from
 2/4 to 4/4. The sweep's own contribution is real but narrow, and exactly what
 was predicted for it: the ten source-drift probes nothing else can see.
+
+## 15. Streamlit magic renders a bare expression, even inside a function
+
+The sidebar's store-consistency line was written as a conditional expression:
+
+    st.sidebar.success("ok") if not problems else st.sidebar.error(problems[0])
+
+Streamlit skips its auto-display magic for direct `st.*` calls, but a ternary is
+an `IfExp`, not a `Call`, so it did not match the exemption. The result was
+wrapped in `st.write` and the page rendered a `DeltaGenerator` object plus its
+entire docstring across the middle of the review screen. As an `if/else`
+statement it renders nothing.
+
+## 16. `streamlit run` does not put the project root on sys.path
+
+`python -m src.main` works and `streamlit run src/inbox.py` raises
+`ModuleNotFoundError: No module named 'src'`, because Streamlit puts the
+*script's* directory on `sys.path` rather than the project root. Setting
+PYTHONPATH is a workaround that has to be repeated by every reader; the entry
+point now inserts the root itself.
+
+Related, in the same session: `$env:VAR=...` is PowerShell and does nothing in
+Git Bash, where it is `VAR=value command`. The inbox now shows the date it is
+operating on, which is what made the missing `CLOCK_AT` obvious.
+
+## 17. A locked checkpoint file silently disabled the gate again
+
+Finding 9 came back through a different door. Deleting the checkpoint file on
+wipe fixes the ordinary case, but when a running inbox holds that file open the
+delete fails, prints a warning nobody reads, and the run continues with stale
+threads - so a change to a stable fact applied instead of parking.
+
+A warning must not be the only thing standing between a safety mechanism and
+silently not working. The store now mints a **generation** id on every wipe and
+mixes it into the thread id, so a reseeded store cannot collide with an earlier
+decision whether or not the file was deletable. Verified by running the whole
+demo with the inbox deliberately holding the checkpoint open.
+
+## 18. Fixing document scopes broke the demo, and only the demo
+
+Making document facts carry their field label as scope (finding 11) fixed the
+fixture and quietly broke `seed.py`, whose hand-written rows have empty scopes.
+Re-verification stopped matching them and reported "the source no longer states
+this" for the whole profile - the exact symptom finding 10 had already fixed
+once, from a different cause.
+
+Two lessons. Re-verification now falls back to an unambiguous topic match when a
+stored row has no scope at all. And a fix validated only against the evaluation
+fixture is not validated: the demo path exercised different data and had to be
+re-run to catch it.
+
+## 19. A `*` in a URL is a 500 on Windows, not a 404
+
+Streamlit 1.63's static route calls `os.stat` on the requested path. On Windows
+`*` is not a legal filename character, so a request for `/*` raises `OSError
+[WinError 123]` and returns 500 with a long ASGI traceback instead of a clean
+404. Harmless - every real asset serves 200 - but alarming in a log, and worth
+knowing before blaming the app.

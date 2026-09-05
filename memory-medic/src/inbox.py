@@ -11,9 +11,20 @@ overnight, exit, and still be waiting for an answer in the morning.
 
 from __future__ import annotations
 
-import streamlit as st
+import sys
+from pathlib import Path
 
-from src import config
+# `streamlit run src/inbox.py` puts src/ on sys.path, not the project root, so
+# `from src import ...` fails here even though it works for `python -m src.main`.
+# Putting the root on the path makes this file runnable from any directory and
+# without PYTHONPATH set.
+_ROOT = Path(__file__).resolve().parent.parent
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+
+import streamlit as st  # noqa: E402
+
+from src import config  # noqa: E402
 
 st.set_page_config(page_title="memory medic", page_icon="*", layout="wide")
 

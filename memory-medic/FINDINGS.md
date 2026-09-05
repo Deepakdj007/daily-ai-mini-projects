@@ -252,6 +252,13 @@ not each path that writes one.
 
 Streamlit 1.63's static route calls `os.stat` on the requested path. On Windows
 `*` is not a legal filename character, so a request for `/*` raises `OSError
-[WinError 123]` and returns 500 with a long ASGI traceback instead of a clean
-404. Harmless - every real asset serves 200 - but alarming in a log, and worth
-knowing before blaming the app.
+[WinError 123]` and returns a 500 with a long ASGI traceback instead of a clean
+404.
+
+Diagnosed rather than assumed: started the server headless and made no requests
+at all - zero errors. Requested `/`, `/favicon.png` and the JS bundle - all 200.
+Requested `/*` - the exact traceback. So it is a client asking for a literal
+`*` path (a browser extension is the usual culprit), not the app, and not
+anything this project can fix from its own code. Worth knowing before spending
+an evening on it, because the traceback names uvicorn, starlette and anyio and
+looks like a server fault.

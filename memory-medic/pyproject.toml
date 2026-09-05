@@ -1,0 +1,18 @@
+[project]
+name = "memory-medic"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "groq>=1.7.0",
+    "langgraph>=1.2.11",
+    "langgraph-checkpoint-sqlite>=3.1.1",
+    "numpy>=2.5.2",
+    "pydantic>=2.13.4",
+    "python-dotenv>=1.2.3",
+    "rich>=15.0.0",
+    "sentence-transformers>=6.0.1",
+    "sqlite-vec>=0.1.9",
+    "streamlit>=1.61.1",
+]

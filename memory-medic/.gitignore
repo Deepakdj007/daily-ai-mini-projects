@@ -1,0 +1,21 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Build artefacts: model replays, the local spend ledger, and both databases.
+# The results JSON and the leaderboard are results and stay committed.
+output/cache.sqlite
+output/ledger.sqlite
+output/*.db
+output/*.db-wal
+output/*.db-shm
+output/run.log
+
+# Written by `seed`, and rewritten by the demo to show a source drifting.
+data/sources/
+
+# Paid deliverables - keep local
+GUIDE.md
+build-*-guide.md
+*-instagram-assets.md

@@ -113,3 +113,80 @@ both were obvious to the gate.
 The general lesson: a control is only a control if it cannot influence the
 measurement. Being in a separate condition is not the same thing as being
 isolated, because everything shares one index.
+
+## 5. A rate-limit retry was silently moving the run off temperature zero
+
+The retry ladder for strict JSON output is `(0.0, strict)`, `(0.4, strict)`,
+`(0.4, best-effort)`. Retrying a schema failure at temperature 0 redraws the
+identical sample, so the temperature has to move for the retry to mean
+anything.
+
+The same counter was driving both the loop and the ladder. A 429 is not a
+schema failure - it is a statement about the rate limit, and the payload that
+caused it was fine - but hitting one incremented the counter, so the retry went
+out at temperature 0.4. On a free tier where 429s are routine, that is not an
+edge case. **198 of 442 cached responses, 45%, had been produced at a
+temperature the run does not claim to use.**
+
+Fixed by splitting the counters: a 429 sleeps and re-sends the identical
+payload, and only a `json_validate_failed` climbs the ladder.
+
+## 6. The gate that should have caught it could only see one call path in five
+
+The validity gate for this reported 8 of 110 rows, about 7%, against a real
+rate of 45%. It was not miscalibrated. It was reading `attempt` off the
+`Outcome`, and `Outcome.attempt` was only ever set on the stuffed-context path.
+The isolating arms build their answer from up to five separate calls, and none
+of those calls' attempt numbers were recorded anywhere.
+
+So the gate was measuring one call in five, and the four it could not see were
+the ones the headline result depends on.
+
+Fixed by giving `Claim` its own attempt and token counts and rolling them up
+onto the row, so the gate sees every call the pipeline makes.
+
+Worth stating in general: a validity gate reads a field, and the field is
+written by code that can have its own gaps. This one failed loudly enough to
+investigate, which is the only reason the bug above was found at all. A gate
+that had read 0 of 110 would have looked like a pass.
+
+## 7. The criterion and the scorer disagreed about what abstaining means
+
+The headline came in at +82 points, 31 discordant pairs to nothing, and zero
+cases where the attacker's value was asserted. The criterion still reads NOT
+MET, on a clause that has nothing to do with poison: on the `absent` condition,
+where the answer has been removed from the corpus, `provenance` abstains 40% of
+the time against the 80% the criterion demands.
+
+It is not answering wrongly in the other 60%. Of ten cases it abstained on four,
+hedged on four, and over-extracted on two. The four hedges are the resolver
+doing exactly what it was built to do: a forum post is the only source that
+speaks, so the value is offered with "only an unverified community source says
+this" attached rather than withheld.
+
+So two parts of this project disagree in public, and the leaderboard prints
+both numbers. The condition table shows `provenance` at **8 of 10** on
+`absent`, because `score.passed()` counts a flagged answer as correct behaviour
+where no answer exists - withholding what you read scores the same as knowing
+nothing. The criterion clause counts only silence and reads **4 of 10**. The
+bar is 80%. One definition lands exactly on it and the other lands at half of
+it, for identical behaviour.
+
+Both definitions were written by me, a week apart, and neither is obviously
+wrong.
+
+Neither has been changed. Editing either one now would be choosing the
+definition that produces the better headline, and the whole point of writing
+the criterion down first is that this is exactly the moment it stops being
+available. The run is reported NOT MET.
+
+Two things are worth separating for anyone reading the leaderboard. The
+headline comparison is complete at 38 of 38 questions and is not in doubt. The
+failing clause is at 10 of 38 and will be resampled - but the hedging that
+causes it is deterministic behaviour, not noise, so it is unlikely to move much.
+
+The remaining two of ten are a genuine weakness and not a definitional one.
+With the real answer gone, one sibling passage claiming a related quantity
+looks to the resolver exactly like unanimous agreement, and it answers
+confidently with "all sources agree". Nothing in the design distinguishes one
+source agreeing with itself from consensus.

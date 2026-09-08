@@ -32,8 +32,14 @@ from groq import AsyncGroq
 from src import cache, config
 
 # (temperature, strict). A retry at temperature 0 redraws the identical sample,
-# so each attempt must change the conditions. The last drops strict validation
-# and keeps a best-effort answer rather than losing the call entirely.
+# so a SCHEMA failure must change the conditions to have any chance. The last
+# rung drops strict validation and keeps a best-effort answer rather than
+# losing the call entirely.
+#
+# This ladder is climbed only for schema failures. A 429 is a statement about
+# the rate limit and says nothing about the sample, so retrying one at a
+# different temperature moves the run off temperature 0 for a reason that has
+# nothing to do with the model. See FINDINGS.md.
 _ATTEMPTS: tuple[tuple[float, bool], ...] = ((0.0, True), (0.4, True), (0.4, False))
 
 
@@ -67,9 +73,11 @@ class Completion:
     headers: Mapping[str, str] = field(default_factory=dict)
     reasoning_present: bool = False
     attempt: int = 0
-    """Which rung of _ATTEMPTS produced this. Anything above 0 ran at a
-    non-zero temperature, and a validity gate counts how many scored rows came
-    from one - an eval that quietly drifts off temperature 0 is not repeatable."""
+    """Which rung of the SCHEMA ladder produced this, not how many times the
+    call was sent. Anything above 0 ran at a non-zero temperature, and a
+    validity gate counts how many scored rows came from one - an eval that
+    quietly drifts off temperature 0 is not repeatable. Rate-limit retries do
+    not count, because they re-send the identical payload."""
 
     @property
     def ok(self) -> bool:
@@ -167,8 +175,9 @@ async def complete(
 
     last_error = ""
     headers: Mapping[str, str] = {}
+    schema_attempt = 0   # only a schema failure climbs the ladder
     for attempt in range(config.MAX_RETRIES + 1):
-        temperature, strict = _ATTEMPTS[min(attempt, len(_ATTEMPTS) - 1)]
+        temperature, strict = _ATTEMPTS[min(schema_attempt, len(_ATTEMPTS) - 1)]
         payload: dict[str, Any] = {
             "model": model,
             "messages": list(messages),
@@ -196,10 +205,14 @@ async def complete(
                 last_error = f"{type(exc).__name__}: {exc}"
                 headers = dict(getattr(getattr(exc, "response", None), "headers", {}) or {})
                 status = getattr(exc, "status_code", None)
-                retryable = status == 429 or "json_validate_failed" in last_error
+                schema_failure = "json_validate_failed" in last_error
+                retryable = status == 429 or schema_failure
                 if retryable and attempt < config.MAX_RETRIES:
                     if status == 429:
+                        # Same payload, same temperature. Wait and ask again.
                         await asyncio.sleep(_retry_after(headers, attempt))
+                    else:
+                        schema_attempt += 1
                     continue
                 _calls["failed"] += 1
                 reason = "rate_limited" if status == 429 else "api_error"
@@ -219,7 +232,7 @@ async def complete(
                 usage=usage,
                 headers=headers,
                 reasoning_present=True,
-                attempt=attempt,
+                attempt=schema_attempt,
                 error=f"empty content at max_completion_tokens={budget}; raise the budget",
             )
 
@@ -229,7 +242,7 @@ async def complete(
             usage=usage,
             headers=headers,
             reasoning_present=bool(getattr(choice.message, "reasoning", None)),
-            attempt=attempt,
+            attempt=schema_attempt,
         )
         if use_cache and cache_key and result.ok:
             cache.put(cache_key, {

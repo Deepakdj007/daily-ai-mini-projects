@@ -146,6 +146,13 @@ async def answer(conn, corpus: Corpus, adversarial: dict[str, Passage], question
     out.claims = list(claims)
     out.verdict = resolve.STRATEGIES[policy.resolve](out.claims)
     out.failed = out.verdict.status == "failed"
+
+    # Accounting for the isolating path. Reading it off the claims rather than
+    # off a single completion is the only way the temperature gate can see
+    # these calls at all - and they are four fifths of the calls the run makes.
+    out.prompt_tokens = sum(claim.prompt_tokens for claim in out.claims)
+    out.completion_tokens = sum(claim.completion_tokens for claim in out.claims)
+    out.attempt = max((claim.attempt for claim in out.claims), default=0)
     return out
 
 

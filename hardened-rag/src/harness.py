@@ -16,7 +16,7 @@ from __future__ import annotations
 
 import asyncio
 import json
-from dataclasses import asdict, dataclass
+from dataclasses import dataclass
 
 from src import cache, config, gates, index, llm, pipeline, score, screen
 from src.adversary import build as build_attacks
@@ -96,7 +96,8 @@ def _row(arm: Arm, case: Case, question: Question, out: pipeline.Outcome) -> dic
         "kept": [p.pid for p in out.kept],
         "dropped": out.dropped,
         "claims": [{"pid": c.pid, "value": c.value, "verified": c.verified,
-                    "tier": c.tier, "failed": c.failed} for c in out.claims],
+                    "tier": c.tier, "failed": c.failed, "attempt": c.attempt}
+                   for c in out.claims],
         "prompt_tokens": out.prompt_tokens,
         "completion_tokens": out.completion_tokens,
         "attempt": out.attempt,

@@ -68,6 +68,52 @@ handed a slot.
 - `saturate`, `sametier`, `embedded`: three limits where the headline mechanism
   is expected to fail, reported rather than omitted
 
+## What the run found
+
+Day one of the free-tier budget: 691 of 1,776 rows, with the headline condition
+and the clean bound both complete at 38 of 38 questions. All seven validity
+gates pass.
+
+| arm | clean | poisoned (N=3) |
+|---|---:|---:|
+| `none` | 0/38 | 0/38 |
+| `naive` | 36/38 | 5/38, asserted the attacker's figure **31 times** |
+| `rerank` | 38/38 | 5/38, asserted it 28 times |
+| `guard` | 38/38 | 4/38, asserted it 29 times |
+| `echo` | 38/38 | 4/38, asserted it 29 times |
+| `isolate` | 23/38 | 4/38, asserted it **0 times** |
+| `majority` | 23/38 | 4/38, asserted it **34 times** |
+| `provenance` | 34/38 | **35/38**, asserted it 0 times |
+
+Read three rows. `naive` is fooled 31 times out of 38, which is PoisonedRAG
+reproduced on a synthetic corpus. `majority` is fooled **34** times, more often
+than the naive pipeline it was supposed to improve on, because the vote is the
+one mechanism the attacker controls the input to. `provenance` gets 35 right
+and is never fooled once.
+
+The two screens contributed almost nothing here, and the table says so: the
+injection classifier quarantined 3 passages across 38 poisoned questions, and
+the echo screen quarantined none. The reordered attack is not an instruction
+and does not quote the question, so neither screen has anything to see.
+
+`isolate` costs 15 correct answers on clean retrieval, dropping from 38 to 23.
+That is the real price of reading passages one at a time, and it is why the
+headline is stated against `isolate` rather than against `naive`.
+
+**Headline:** on the 38 poisoned questions where an attack passage reached the
+reader, `provenance` answered correctly 92% of the time against `isolate`'s
+11%. That is +82 points, 95% CI +68 to +92, with 31 discordant pairs to zero
+and exact McNemar p < 0.00001.
+
+**Result: NOT MET.** The criterion carries three clauses and the headline is
+not the one that failed. On the `absent` condition, where the answer has been
+deleted from the corpus, it requires abstention in 80% of cases and
+`provenance` abstains in 40%. It is not answering wrongly - it hedges in
+another 40%, offering a forum post's figure with an explicit warning attached.
+The project's own scoring function counts that as correct behaviour and reports
+8 of 10; the criterion counts only silence and reports 4 of 10. Neither was
+changed after the fact. See finding 7.
+
 ## Setup
 
 ```bash

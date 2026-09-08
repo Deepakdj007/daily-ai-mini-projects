@@ -53,6 +53,9 @@ class Claim:
     verified: bool
     tier: int
     date: str
+    attempt: int = 0
+    prompt_tokens: int = 0
+    completion_tokens: int = 0
     failed: bool = False
     """True when the model call did not complete. Not the same as no claim:
     a rate-limited passage must not be scored as a passage that said nothing,
@@ -84,7 +87,10 @@ async def read(question: Question, passage: Passage, *, model: str = "") -> Clai
         messages, schema=_SCHEMA, schema_name="claim", model=model, cache_key=key,
         max_completion_tokens=config.MAX_COMPLETION_TOKENS["isolate"],
     )
-    base = dict(pid=passage.pid, tier=passage.tier, date=passage.date)
+    base = dict(pid=passage.pid, tier=passage.tier, date=passage.date,
+                attempt=completion.attempt,
+                prompt_tokens=completion.usage.prompt_tokens,
+                completion_tokens=completion.usage.completion_tokens)
     if data is None:
         return Claim(value="", verified=False, failed=True, **base)
 

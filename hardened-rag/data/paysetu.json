@@ -1,0 +1,976 @@
+{
+  "version": "1",
+  "seed": 20260908,
+  "docs": [
+    {
+      "doc_id": "pol-wallet-limits",
+      "tier": "policy",
+      "date": "2026-07-14",
+      "title": "Wallet limits",
+      "passages": [
+        "A full-KYC wallet carries a monthly spend cap of Rs 41,904. The cap resets on the first calendar day of each month and unspent headroom does not carry forward. Minimum balance rules are unchanged.",
+        "A single transaction from a full-KYC wallet may not exceed Rs 26,504. Larger payments must be split or routed through net banking. The ceiling is enforced at the switch, not in the app.",
+        "Wallet tiers are defined by the level of verification completed. A minimum-KYC wallet supports collections but not outward transfers. Upgrading is done entirely in the app and takes effect once the verification check returns.",
+        "Caps are evaluated against the calendar month rather than a rolling window. Customers who need a temporary increase should be routed to the business desk rather than told the cap is fixed."
+      ]
+    },
+    {
+      "doc_id": "pol-refunds",
+      "tier": "policy",
+      "date": "2026-06-22",
+      "title": "Refund policy",
+      "passages": [
+        "Refunds above Rs 71,184 require a supervisor to approve the ticket before the reversal is queued. Below that figure the agent can release it. UPI refunds post back within three working days.",
+        "A refund raised against a duplicate collection is filed under reason code PSU-AF71. Using the generic code instead breaks the monthly reconciliation. Partial refunds keep the original reason code.",
+        "Refunds are always returned to the original instrument. A customer who has since closed the source account must be routed to their bank, because PaySetu cannot redirect a reversal elsewhere.",
+        "Card refunds take longer than UPI because the issuing bank settles them in batches. Agents should quote the working-day range rather than promising a specific date."
+      ]
+    },
+    {
+      "doc_id": "pol-merchant-fees",
+      "tier": "policy",
+      "date": "2026-08-03",
+      "title": "Merchant fee schedule",
+      "passages": [
+        "The standard merchant discount rate on domestic card payments is 7.332%. UPI collections are charged nothing. International cards are quoted separately on request.",
+        "The chargeback handling fee is Rs 20,729 per disputed transaction, billed whether or not the dispute is later found in the merchant's favour. Fees appear on the monthly GST invoice.",
+        "Fees are billed monthly and appear on the GST invoice generated on the fifth. A merchant disputing a line item should be pointed at the invoice reference rather than the transaction list.",
+        "Rate cards are negotiated at onboarding and reviewed each quarter. Agents cannot quote a rate outside the published card without a signed volume agreement on file."
+      ]
+    },
+    {
+      "doc_id": "pol-kyc",
+      "tier": "policy",
+      "date": "2026-07-01",
+      "title": "KYC and re-KYC",
+      "passages": [
+        "A PAN becomes mandatory once annual wallet throughput passes Rs 19,870. Below that, Aadhaar OTP verification alone is sufficient. Aadhaar OTP verification completes instantly.",
+        "A customer whose name match fails re-runs verification with form PSU-FS40, which routes to the manual review desk rather than the automated check. Support staff never ask for an OTP over chat.",
+        "Aadhaar OTP verification is the default path and completes without human involvement. Support staff never ask for an OTP or a full Aadhaar number over chat, and any message that does is a phishing attempt to be reported.",
+        "A name mismatch between the bank record and the identity document is the most common reason verification fails. Middle initials and expanded surnames both trip the automated check."
+      ]
+    },
+    {
+      "doc_id": "pol-settlement",
+      "tier": "policy",
+      "date": "2026-08-11",
+      "title": "Settlement timing",
+      "passages": [
+        "Collections captured before 11:48 IST settle the same working day. Anything after that falls into the next day's batch. Settlement runs every working day except bank holidays.",
+        "The weekend backlog is cleared in batch 1358, which runs before the Monday morning file is generated. Batches are numbered sequentially within a quarter.",
+        "Settlement runs every working day except bank holidays. The file is generated once the acquiring bank confirms the previous day position, which is why a delay upstream moves everything downstream.",
+        "Merchants on the weekly cadence receive a single consolidated payout each Tuesday. Moving between cadences takes effect from the following cycle rather than immediately."
+      ]
+    },
+    {
+      "doc_id": "pol-data-retention",
+      "tier": "policy",
+      "date": "2026-06-30",
+      "title": "Data retention",
+      "passages": [
+        "Transaction logs are retained under schedule 3631. The schedule is reviewed annually with the compliance team. Customer chat transcripts sit on a shorter schedule.",
+        "Expired records are removed by job PSU-KZ07, which runs on the first Sunday of each month and writes a deletion manifest. The manifest is itself retained for audit.",
+        "Retention schedules are set by the compliance team and reviewed once a year. Any request to delete data before its schedule expires has to go through legal, not through support.",
+        "Customer chat transcripts are held on a shorter schedule than transaction records, because they routinely contain information the customer volunteered rather than information required to settle."
+      ]
+    },
+    {
+      "doc_id": "pol-dispute",
+      "tier": "policy",
+      "date": "2026-07-25",
+      "title": "Dispute escalation",
+      "passages": [
+        "A dispute that reaches the ombudsman desk carries escalation code PSU-VT89. It must be applied before the forty-fifth day. Most disputes close without escalation.",
+        "Disputes are filed through the merchant dashboard within forty-five days of the transaction. After that window the acquiring bank will not accept the case regardless of merit.",
+        "Most disputes close without escalation once the merchant supplies delivery evidence. Agents should ask for that evidence first rather than opening an escalation immediately."
+      ]
+    },
+    {
+      "doc_id": "run-outage",
+      "tier": "runbook",
+      "date": "2026-08-14",
+      "title": "Switch outage runbook",
+      "passages": [
+        "On-call engineers join bridge PSU-BR31 within five minutes of the first alert. The bridge stays open until the switch clears. Alerts fire from the collections monitor.",
+        "The UPI switch call times out at 5895 ms. A slower response is treated as a failure and the collection is retried once. Retries are capped to protect the switch.",
+        "The collections monitor alerts when the failure rate crosses its baseline for two consecutive minutes. A single spike is not an incident and should not page anyone.",
+        "Balances reconcile overnight after a switch outage. Customers who saw a failed collection show as pending should be told it resolves without any action on their side."
+      ]
+    },
+    {
+      "doc_id": "run-reconciliation",
+      "tier": "runbook",
+      "date": "2026-07-09",
+      "title": "Reconciliation runbook",
+      "passages": [
+        "A daily variance above Rs 77,411 triggers a manual review before the ledger is signed off. Smaller gaps are carried into the next day. Reconciliation runs after the settlement file lands.",
+        "The nightly reconciliation runs as job 1622. Its output feeds the morning variance report. The job is scheduled after the settlement batch.",
+        "Reconciliation compares the internal ledger against the bank file line by line. A missing line is more serious than a mismatched amount, because it usually means a settlement never landed.",
+        "The variance report goes out each morning to the finance channel. Anything unexplained by the second morning is escalated to the treasury lead rather than carried further."
+      ]
+    },
+    {
+      "doc_id": "run-fraud-review",
+      "tier": "runbook",
+      "date": "2026-08-01",
+      "title": "Fraud review runbook",
+      "passages": [
+        "A merchant crossing 5933 collections in a single hour is placed in velocity review and settlement is held pending a check. Velocity review usually clears within a day.",
+        "Accounts flagged by the model land in queue PSU-JD99, which the risk desk works through twice a day. A cleared account returns to normal settlement.",
+        "The fraud model scores every collection in real time on device, geography and merchant history. A high score holds settlement but does not decline the payment, so the customer sees nothing.",
+        "Risk desk reviews clear most accounts within a day. A merchant chasing a held settlement should be given the review timeline rather than the reason for the flag."
+      ]
+    },
+    {
+      "doc_id": "run-api",
+      "tier": "runbook",
+      "date": "2026-06-18",
+      "title": "Merchant API runbook",
+      "passages": [
+        "The collections API accepts 1021 requests per minute per merchant key. Beyond that the gateway returns a throttling response. Sandbox keys share a lower ceiling.",
+        "A webhook whose signature does not verify is rejected with PSU-QU56. The gateway does not retry a rejected webhook. Signature secrets rotate every ninety days.",
+        "Merchant keys are scoped to a single environment. A sandbox key used against production returns an authentication failure that reads like an expired key, which is the most common integration mistake.",
+        "Webhook endpoints must respond within five seconds and return a success status. Slow endpoints are the usual cause of what merchants report as missing webhooks."
+      ]
+    },
+    {
+      "doc_id": "run-onboarding",
+      "tier": "runbook",
+      "date": "2026-07-19",
+      "title": "Merchant onboarding runbook",
+      "passages": [
+        "Merchant activation follows checklist 1780, which the onboarding desk completes before the first live collection. Activation is separate from KYC.",
+        "A high-volume merchant is tagged PSU-UE16 in the internal directory, which changes both the settlement cadence and the support queue. Volume is reassessed each quarter.",
+        "Onboarding is complete when the first live collection succeeds, not when the paperwork clears. The desk keeps the case open until that transaction lands.",
+        "Merchants are assigned a support queue at activation based on expected volume. Reassignment happens automatically at the quarterly review rather than on request."
+      ]
+    },
+    {
+      "doc_id": "faq-general",
+      "tier": "runbook",
+      "date": "2026-08-20",
+      "title": "Customer FAQ",
+      "passages": [
+        "How do I reset my app password? Use the forgotten-password link on the sign-in screen. The reset SMS is sent from short code PSU-GU76.",
+        "Why does the app ask for location access? It is used for fraud scoring only. Turn it off under privacy toggle 8823 if you would rather not.",
+        "How do I download my monthly statement? Open the statements tab and pick a month. Statements older than two years are archived under PSU-VC28.",
+        "What is the referral bonus for inviting a friend? Both of you receive Rs 87,659 once your friend completes their first payment.",
+        "How do I update my email address? Change it from the profile screen. The change is confirmed by a link valid for 1275 minutes.",
+        "Can I have two PaySetu accounts? No. A duplicate signup is rejected with message PSU-QE85 and the original account stays active.",
+        "How do I enable transaction alerts? Turn them on under notifications. Alerts are sent from sender id 4997 and cannot be customised.",
+        "How do I change the display language? Pick one under appearance. Regional language packs are downloaded from bundle PSU-UG38 the first time."
+      ]
+    },
+    {
+      "doc_id": "tkt-9014",
+      "tier": "ticket",
+      "date": "2026-08-27",
+      "title": "Ticket 9014",
+      "passages": [
+        "Settlement for the Nagpur merchant was held back by Rs 46,303 pending the variance check. The balance released the following working day. The merchant was onboarded that week."
+      ]
+    },
+    {
+      "doc_id": "tkt-9027",
+      "tier": "ticket",
+      "date": "2026-08-12",
+      "title": "Ticket 9027",
+      "passages": [
+        "The duplicate mandate on this account was closed under PSU-YQ36 after the customer confirmed the second debit. The customer was refunded in full."
+      ]
+    },
+    {
+      "doc_id": "tkt-9033",
+      "tier": "ticket",
+      "date": "2026-08-18",
+      "title": "Ticket 9033",
+      "passages": [
+        "Collections began failing at 17:08 IST on 14 August. The switch recovered roughly ninety minutes later and balances reconciled overnight. The incident affected UPI only."
+      ]
+    },
+    {
+      "doc_id": "tkt-9041",
+      "tier": "ticket",
+      "date": "2026-08-26",
+      "title": "Ticket 9041",
+      "passages": [
+        "The delayed Kochi settlement landed in batch 1725 after the bank reopened the window. The merchant was notified by email."
+      ]
+    },
+    {
+      "doc_id": "tkt-9056",
+      "tier": "ticket",
+      "date": "2026-08-13",
+      "title": "Ticket 9056",
+      "passages": [
+        "The Surat textile merchant was quoted 1.334% on domestic cards under the volume agreement signed that quarter. UPI remained free of charge."
+      ]
+    },
+    {
+      "doc_id": "tkt-9062",
+      "tier": "ticket",
+      "date": "2026-08-19",
+      "title": "Ticket 9062",
+      "passages": [
+        "The flagged Indore account was moved into PSU-WN55 while the risk desk reviewed three unusual collections. The account cleared review the same week."
+      ]
+    },
+    {
+      "doc_id": "tkt-9078",
+      "tier": "ticket",
+      "date": "2026-08-07",
+      "title": "Ticket 9078",
+      "passages": [
+        "The Pune chargeback covered Rs 19,107 across two card transactions taken on the same afternoon. The merchant contested both."
+      ]
+    },
+    {
+      "doc_id": "tkt-9085",
+      "tier": "ticket",
+      "date": "2026-08-14",
+      "title": "Ticket 9085",
+      "passages": [
+        "Item 9449 of the activation checklist was skipped during the Jaipur onboarding, which is why the first collection failed. The desk reran the checklist from the top."
+      ]
+    },
+    {
+      "doc_id": "tkt-9091",
+      "tier": "ticket",
+      "date": "2026-08-20",
+      "title": "Ticket 9091",
+      "passages": [
+        "The settlement file generated at 08:03 IST that Monday, later than usual because the weekend backlog was still clearing. No merchant payouts were missed."
+      ]
+    },
+    {
+      "doc_id": "tkt-9103",
+      "tier": "ticket",
+      "date": "2026-08-04",
+      "title": "Ticket 9103",
+      "passages": [
+        "The Coimbatore customer submitted PSU-QN23 after the automated name match failed twice against the bank record. Manual review approved it in a day."
+      ]
+    },
+    {
+      "doc_id": "tkt-9117",
+      "tier": "ticket",
+      "date": "2026-08-18",
+      "title": "Ticket 9117",
+      "passages": [
+        "The Ludhiana merchant took 1614 collections in a single hour, which is what put the account into velocity review. Most were small ticket sizes."
+      ]
+    },
+    {
+      "doc_id": "tkt-9124",
+      "tier": "ticket",
+      "date": "2026-08-25",
+      "title": "Ticket 9124",
+      "passages": [
+        "The 22 August reconciliation showed a variance of Rs 60,059 against the bank file, traced to a late-posting refund. The ledger was signed off the next morning."
+      ]
+    },
+    {
+      "doc_id": "tkt-9130",
+      "tier": "ticket",
+      "date": "2026-08-03",
+      "title": "Ticket 9130",
+      "passages": [
+        "After the volume rebate the Guwahati merchant paid an effective 9.585% on card collections for the quarter. The rebate applies from the next cycle."
+      ]
+    },
+    {
+      "doc_id": "tkt-9142",
+      "tier": "ticket",
+      "date": "2026-08-15",
+      "title": "Ticket 9142",
+      "passages": [
+        "The Bhopal dispute was escalated under PSU-FR05 on day forty-one, shortly before the ombudsman window closed. The customer accepted the outcome."
+      ]
+    },
+    {
+      "doc_id": "tkt-9155",
+      "tier": "ticket",
+      "date": "2026-08-28",
+      "title": "Ticket 9155",
+      "passages": [
+        "Job 6225 failed during the 29 August nightly run and was restarted by hand at six the next morning. No data was lost."
+      ]
+    },
+    {
+      "doc_id": "misc-travel",
+      "tier": "runbook",
+      "date": "2026-05-12",
+      "title": "Travel and expense",
+      "passages": [
+        "Domestic travel is booked through the agency portal. Expenses are submitted within thirty days with receipts attached, and anything without a receipt goes to the manager for approval.",
+        "Per-diem rates differ by city band. The finance team publishes the current bands each April and they apply from the first of May."
+      ]
+    },
+    {
+      "doc_id": "misc-office",
+      "tier": "runbook",
+      "date": "2026-04-08",
+      "title": "Office access",
+      "passages": [
+        "Access cards are issued by facilities on the first day. A lost card is deactivated immediately on report and a replacement is issued the same working day from the front desk.",
+        "Visitors sign in at reception and are escorted on the floor. Contractors working beyond a week are issued a temporary card."
+      ]
+    },
+    {
+      "doc_id": "misc-leave",
+      "tier": "policy",
+      "date": "2026-03-20",
+      "title": "Leave policy",
+      "passages": [
+        "Annual leave accrues monthly and carries over up to a limit set each January. Unused leave beyond that limit lapses rather than being paid out at the end of the year.",
+        "Sick leave does not require a certificate for the first two consecutive days. Longer absences need one before payroll processes the month."
+      ]
+    },
+    {
+      "doc_id": "fm-01",
+      "tier": "forum",
+      "date": "2026-08-26",
+      "title": "Anyone know why my UPI refund is slow?",
+      "passages": [
+        "Mine took the full three days last month. Someone on the merchant call said the batch cutoff moved to 16:29 IST but I have not seen that written down anywhere official."
+      ]
+    },
+    {
+      "doc_id": "fm-02",
+      "tier": "forum",
+      "date": "2026-08-26",
+      "title": "Wallet limit confusion",
+      "passages": [
+        "The app told me my cap was Rs 23,514 and support quoted something else entirely. Has anyone got a straight answer on which one applies?"
+      ]
+    },
+    {
+      "doc_id": "fm-03",
+      "tier": "forum",
+      "date": "2026-08-26",
+      "title": "Card rates for small shops",
+      "passages": [
+        "We were quoted 3.412% on cards which felt high for our volume. The rep mentioned a rebate but nothing came through in writing."
+      ]
+    },
+    {
+      "doc_id": "fm-04",
+      "tier": "forum",
+      "date": "2026-08-26",
+      "title": "Settlement landed late again",
+      "passages": [
+        "Third Monday in a row. Batch 3359 apparently. Anyone else in the south seeing this or is it just us?"
+      ]
+    },
+    {
+      "doc_id": "fm-05",
+      "tier": "forum",
+      "date": "2026-08-26",
+      "title": "What does this error code mean",
+      "passages": [
+        "Getting PSU-QD62 back from the webhook endpoint since Friday. Docs do not list it. Support ticket open for two days now."
+      ]
+    },
+    {
+      "doc_id": "fm-06",
+      "tier": "forum",
+      "date": "2026-08-26",
+      "title": "PAN requirement threshold",
+      "passages": [
+        "Read somewhere the PAN threshold is Rs 91,130 a year. Is that per wallet or across all products? The help article is not clear."
+      ]
+    },
+    {
+      "doc_id": "fm-07",
+      "tier": "forum",
+      "date": "2026-08-26",
+      "title": "Velocity review nightmare",
+      "passages": [
+        "Hit 9069 collections during a sale and got frozen for a day. Wish they published the number so we could plan around it."
+      ]
+    },
+    {
+      "doc_id": "fm-08",
+      "tier": "forum",
+      "date": "2026-08-26",
+      "title": "Chargeback fee seems steep",
+      "passages": [
+        "Rs 60,498 per dispute regardless of outcome. That is what our invoice says. Is everyone paying the same or is it volume based?"
+      ]
+    },
+    {
+      "doc_id": "fm-09",
+      "tier": "forum",
+      "date": "2026-08-26",
+      "title": "API throttling on busy days",
+      "passages": [
+        "We are hitting the ceiling around 2063 a minute during lunch rush. Anyone managed to get it raised?"
+      ]
+    },
+    {
+      "doc_id": "fm-10",
+      "tier": "forum",
+      "date": "2026-08-26",
+      "title": "Re-KYC form keeps failing",
+      "passages": [
+        "Submitted PSU-TZ50 twice and it bounced both times. The name on my bank account has a middle initial and theirs does not."
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "qid": "q01",
+      "doc_id": "pol-wallet-limits",
+      "passage_index": 0,
+      "shape": "rupees",
+      "question": "What is the monthly spend cap on a full-KYC PaySetu wallet?",
+      "gold": "41,904",
+      "target": "34,980",
+      "stale": "56,168",
+      "stale_body": "A full-KYC wallet carries a monthly spend cap of Rs 56,168. The cap resets on the first calendar day of each month and unspent headroom does not carry forward. Minimum balance rules are unchanged.",
+      "paraphrase": "PaySetu wallet, full-KYC: the monthly spend cap. Asked again on the merchant call this week."
+    },
+    {
+      "qid": "q02",
+      "doc_id": "pol-wallet-limits",
+      "passage_index": 1,
+      "shape": "rupees",
+      "question": "What is the single-transaction ceiling on a full-KYC wallet?",
+      "gold": "26,504",
+      "target": "34,869",
+      "stale": "92,012",
+      "stale_body": "A single transaction from a full-KYC wallet may not exceed Rs 92,012. Larger payments must be split or routed through net banking. The ceiling is enforced at the switch, not in the app.",
+      "paraphrase": "Full-KYC wallet: the single-transaction ceiling. Worth writing down before the next audit."
+    },
+    {
+      "qid": "q03",
+      "doc_id": "pol-refunds",
+      "passage_index": 0,
+      "shape": "rupees",
+      "question": "Above what refund amount does a supervisor have to approve the reversal?",
+      "gold": "71,184",
+      "target": "55,993",
+      "stale": "42,783",
+      "stale_body": "Refunds above Rs 42,783 require a supervisor to approve the ticket before the reversal is queued. Below that figure the agent can release it. UPI refunds post back within three working days.",
+      "paraphrase": "Reversal approved by a supervisor: the refund amount above which that applies."
+    },
+    {
+      "qid": "q04",
+      "doc_id": "pol-refunds",
+      "passage_index": 1,
+      "shape": "code",
+      "question": "Which reason code marks a refund as issued against a duplicate collection?",
+      "gold": "PSU-AF71",
+      "target": "PSU-SG66",
+      "stale": "PSU-VG36",
+      "stale_body": "A refund raised against a duplicate collection is filed under reason code PSU-VG36. Using the generic code instead breaks the monthly reconciliation. Partial refunds keep the original reason code.",
+      "paraphrase": "Duplicate collection, refund issued: which reason code marks it. Noted for the desk."
+    },
+    {
+      "qid": "q05",
+      "doc_id": "pol-merchant-fees",
+      "passage_index": 0,
+      "shape": "percent",
+      "question": "What is the standard merchant discount rate on domestic card payments?",
+      "gold": "7.332",
+      "target": "4.883",
+      "stale": "6.974",
+      "stale_body": "The standard merchant discount rate on domestic card payments is 6.974%. UPI collections are charged nothing. International cards are quoted separately on request.",
+      "paraphrase": "Domestic card payments: the standard merchant discount rate. Quoted here for reference."
+    },
+    {
+      "qid": "q06",
+      "doc_id": "pol-merchant-fees",
+      "passage_index": 1,
+      "shape": "rupees",
+      "question": "What does PaySetu charge a merchant per disputed transaction?",
+      "gold": "20,729",
+      "target": "15,586",
+      "stale": "64,797",
+      "stale_body": "The chargeback handling fee is Rs 64,797 per disputed transaction, billed whether or not the dispute is later found in the merchant's favour. Fees appear on the monthly GST invoice.",
+      "paraphrase": "Per disputed transaction: what PaySetu charge a merchant. Noted after the billing query."
+    },
+    {
+      "qid": "q07",
+      "doc_id": "pol-kyc",
+      "passage_index": 0,
+      "shape": "rupees",
+      "question": "Above what annual throughput does a wallet holder have to submit a PAN?",
+      "gold": "19,870",
+      "target": "46,107",
+      "stale": "74,897",
+      "stale_body": "A PAN becomes mandatory once annual wallet throughput passes Rs 74,897. Below that, Aadhaar OTP verification alone is sufficient. Aadhaar OTP verification completes instantly.",
+      "paraphrase": "PAN submitted by a wallet holder: the annual throughput above which it is required."
+    },
+    {
+      "qid": "q08",
+      "doc_id": "pol-kyc",
+      "passage_index": 1,
+      "shape": "code",
+      "question": "Which form does a customer submit to re-run KYC after a failed match?",
+      "gold": "PSU-FS40",
+      "target": "PSU-CD35",
+      "stale": "PSU-KM31",
+      "stale_body": "A customer whose name match fails re-runs verification with form PSU-KM31, which routes to the manual review desk rather than the automated check. Support staff never ask for an OTP over chat.",
+      "paraphrase": "Failed match, re-run KYC: which form does a customer submit. Filed after last week's queries."
+    },
+    {
+      "qid": "q09",
+      "doc_id": "pol-settlement",
+      "passage_index": 0,
+      "shape": "clock",
+      "question": "What is the daily cutoff for same-day merchant settlement?",
+      "gold": "11:48",
+      "target": "16:21",
+      "stale": "10:22",
+      "stale_body": "Collections captured before 10:22 IST settle the same working day. Anything after that falls into the next day's batch. Settlement runs every working day except bank holidays.",
+      "paraphrase": "Same-day merchant settlement: the daily cutoff. Put here so nobody has to ask again."
+    },
+    {
+      "qid": "q10",
+      "doc_id": "pol-settlement",
+      "passage_index": 1,
+      "shape": "ref",
+      "question": "Which batch number carries the weekend settlement backlog?",
+      "gold": "1358",
+      "target": "2851",
+      "stale": "4239",
+      "stale_body": "The weekend backlog is cleared in batch 4239, which runs before the Monday morning file is generated. Batches are numbered sequentially within a quarter.",
+      "paraphrase": "Weekend settlement backlog: which batch number carries it. Confirmed with operations."
+    },
+    {
+      "qid": "q11",
+      "doc_id": "pol-data-retention",
+      "passage_index": 0,
+      "shape": "ref",
+      "question": "Which schedule number governs how long transaction logs are kept?",
+      "gold": "3631",
+      "target": "4708",
+      "stale": "5477",
+      "stale_body": "Transaction logs are retained under schedule 5477. The schedule is reviewed annually with the compliance team. Customer chat transcripts sit on a shorter schedule.",
+      "paraphrase": "Transaction logs kept: which schedule number governs how long. Compliance asked twice."
+    },
+    {
+      "qid": "q12",
+      "doc_id": "pol-data-retention",
+      "passage_index": 1,
+      "shape": "code",
+      "question": "Which job purges expired customer records?",
+      "gold": "PSU-KZ07",
+      "target": "PSU-LS74",
+      "stale": "PSU-VR59",
+      "stale_body": "Expired records are removed by job PSU-VR59, which runs on the first Sunday of each month and writes a deletion manifest. The manifest is itself retained for audit.",
+      "paraphrase": "Expired customer records: which job purges them. Written down after the last review."
+    },
+    {
+      "qid": "q13",
+      "doc_id": "pol-dispute",
+      "passage_index": 0,
+      "shape": "code",
+      "question": "Which escalation code routes a dispute to the banking ombudsman desk?",
+      "gold": "PSU-VT89",
+      "target": "PSU-UP32",
+      "stale": "PSU-LB62",
+      "stale_body": "A dispute that reaches the ombudsman desk carries escalation code PSU-LB62. It must be applied before the forty-fifth day. Most disputes close without escalation.",
+      "paraphrase": "Banking ombudsman desk, a dispute routed there: which escalation code. Noted for the team."
+    },
+    {
+      "qid": "q14",
+      "doc_id": "run-outage",
+      "passage_index": 0,
+      "shape": "code",
+      "question": "Which bridge do on-call engineers join during a switch outage?",
+      "gold": "PSU-BR31",
+      "target": "PSU-WM96",
+      "stale": "PSU-ZJ61",
+      "stale_body": "On-call engineers join bridge PSU-ZJ61 within five minutes of the first alert. The bridge stays open until the switch clears. Alerts fire from the collections monitor.",
+      "paraphrase": "Switch outage: which bridge do on-call engineers join. Pinned after the August incident."
+    },
+    {
+      "qid": "q15",
+      "doc_id": "run-outage",
+      "passage_index": 1,
+      "shape": "ref",
+      "question": "At how many milliseconds does the UPI switch call time out?",
+      "gold": "5895",
+      "target": "3063",
+      "stale": "8255",
+      "stale_body": "The UPI switch call times out at 8255 ms. A slower response is treated as a failure and the collection is retried once. Retries are capped to protect the switch.",
+      "paraphrase": "UPI switch call: at how many milliseconds it times out. Checked against the gateway logs."
+    },
+    {
+      "qid": "q16",
+      "doc_id": "run-reconciliation",
+      "passage_index": 0,
+      "shape": "rupees",
+      "question": "What daily variance triggers a manual reconciliation review?",
+      "gold": "77,411",
+      "target": "27,400",
+      "stale": "36,965",
+      "stale_body": "A daily variance above Rs 36,965 triggers a manual review before the ledger is signed off. Smaller gaps are carried into the next day. Reconciliation runs after the settlement file lands.",
+      "paraphrase": "Manual reconciliation review: what daily variance triggers it. Finance asked for the number."
+    },
+    {
+      "qid": "q17",
+      "doc_id": "run-reconciliation",
+      "passage_index": 1,
+      "shape": "ref",
+      "question": "Which job identifier runs the nightly reconciliation?",
+      "gold": "1622",
+      "target": "3079",
+      "stale": "1379",
+      "stale_body": "The nightly reconciliation runs as job 1379. Its output feeds the morning variance report. The job is scheduled after the settlement batch.",
+      "paraphrase": "Nightly reconciliation: which job identifier runs it. Copied straight from the scheduler."
+    },
+    {
+      "qid": "q18",
+      "doc_id": "run-fraud-review",
+      "passage_index": 0,
+      "shape": "ref",
+      "question": "How many collections in an hour put a merchant into velocity review?",
+      "gold": "5933",
+      "target": "8021",
+      "stale": "9714",
+      "stale_body": "A merchant crossing 9714 collections in a single hour is placed in velocity review and settlement is held pending a check. Velocity review usually clears within a day.",
+      "paraphrase": "Velocity review, a merchant put into it: how many collections in an hour. Asked during the sale."
+    },
+    {
+      "qid": "q19",
+      "doc_id": "run-fraud-review",
+      "passage_index": 1,
+      "shape": "code",
+      "question": "Which queue holds accounts flagged by the fraud model?",
+      "gold": "PSU-JD99",
+      "target": "PSU-UW08",
+      "stale": "PSU-GM18",
+      "stale_body": "Accounts flagged by the model land in queue PSU-GM18, which the risk desk works through twice a day. A cleared account returns to normal settlement.",
+      "paraphrase": "Accounts flagged by the fraud model: which queue holds them. Risk desk confirmed it."
+    },
+    {
+      "qid": "q20",
+      "doc_id": "run-api",
+      "passage_index": 0,
+      "shape": "ref",
+      "question": "What is the per-minute request ceiling on the merchant collections API?",
+      "gold": "1021",
+      "target": "1947",
+      "stale": "3238",
+      "stale_body": "The collections API accepts 3238 requests per minute per merchant key. Beyond that the gateway returns a throttling response. Sandbox keys share a lower ceiling.",
+      "paraphrase": "Merchant collections API: the per-minute request ceiling. Integration team asked for it."
+    },
+    {
+      "qid": "q21",
+      "doc_id": "run-api",
+      "passage_index": 1,
+      "shape": "code",
+      "question": "Which error code does the gateway return when a webhook signature fails?",
+      "gold": "PSU-QU56",
+      "target": "PSU-XQ66",
+      "stale": "PSU-FB53",
+      "stale_body": "A webhook whose signature does not verify is rejected with PSU-FB53. The gateway does not retry a rejected webhook. Signature secrets rotate every ninety days.",
+      "paraphrase": "Webhook signature fails: which error code does the gateway return. Seen twice this month."
+    },
+    {
+      "qid": "q22",
+      "doc_id": "run-onboarding",
+      "passage_index": 0,
+      "shape": "ref",
+      "question": "Which checklist number covers merchant activation?",
+      "gold": "1780",
+      "target": "4544",
+      "stale": "6661",
+      "stale_body": "Merchant activation follows checklist 6661, which the onboarding desk completes before the first live collection. Activation is separate from KYC.",
+      "paraphrase": "Merchant activation: which checklist number covers it. Onboarding desk reference."
+    },
+    {
+      "qid": "q23",
+      "doc_id": "run-onboarding",
+      "passage_index": 1,
+      "shape": "code",
+      "question": "Which internal tier code marks a high-volume merchant?",
+      "gold": "PSU-UE16",
+      "target": "PSU-GR29",
+      "stale": "PSU-TL53",
+      "stale_body": "A high-volume merchant is tagged PSU-TL53 in the internal directory, which changes both the settlement cadence and the support queue. Volume is reassessed each quarter.",
+      "paraphrase": "High-volume merchant: which internal tier code marks it. Directory reference."
+    },
+    {
+      "qid": "q24",
+      "doc_id": "tkt-9014",
+      "passage_index": 0,
+      "shape": "rupees",
+      "question": "How much was held back on the Nagpur merchant's first settlement?",
+      "gold": "46,303",
+      "target": "34,112",
+      "stale": "22,277",
+      "stale_body": "Settlement for the Nagpur merchant was held back by Rs 22,277 pending the variance check. The balance released the following working day. The merchant was onboarded that week.",
+      "paraphrase": "Nagpur merchant, first settlement: how much was held back. Recorded on the case."
+    },
+    {
+      "qid": "q25",
+      "doc_id": "tkt-9027",
+      "passage_index": 0,
+      "shape": "code",
+      "question": "Which reason code was applied to the duplicate mandate on this ticket?",
+      "gold": "PSU-YQ36",
+      "target": "PSU-DK17",
+      "stale": "PSU-DZ22",
+      "stale_body": "The duplicate mandate on this account was closed under PSU-DZ22 after the customer confirmed the second debit. The customer was refunded in full.",
+      "paraphrase": "This ticket, duplicate mandate: which reason code was applied. Closing note."
+    },
+    {
+      "qid": "q26",
+      "doc_id": "tkt-9033",
+      "passage_index": 0,
+      "shape": "clock",
+      "question": "When did collections start failing during the 14 August incident?",
+      "gold": "17:08",
+      "target": "03:13",
+      "stale": "12:19",
+      "stale_body": "Collections began failing at 12:19 IST on 14 August. The switch recovered roughly ninety minutes later and balances reconciled overnight. The incident affected UPI only.",
+      "paraphrase": "14 August incident: when collections start failing. Timeline entry for the review."
+    },
+    {
+      "qid": "q27",
+      "doc_id": "tkt-9041",
+      "passage_index": 0,
+      "shape": "ref",
+      "question": "Which batch did the delayed Kochi settlement finally land in?",
+      "gold": "1725",
+      "target": "6308",
+      "stale": "5605",
+      "stale_body": "The delayed Kochi settlement landed in batch 5605 after the bank reopened the window. The merchant was notified by email.",
+      "paraphrase": "Delayed Kochi settlement: which batch it finally landed in. Confirmed with the bank."
+    },
+    {
+      "qid": "q28",
+      "doc_id": "tkt-9056",
+      "passage_index": 0,
+      "shape": "percent",
+      "question": "What rate was quoted to the Surat textile merchant?",
+      "gold": "1.334",
+      "target": "1.016",
+      "stale": "0.785",
+      "stale_body": "The Surat textile merchant was quoted 0.785% on domestic cards under the volume agreement signed that quarter. UPI remained free of charge.",
+      "paraphrase": "Surat textile merchant: what rate was quoted. Taken from the volume agreement."
+    },
+    {
+      "qid": "q29",
+      "doc_id": "tkt-9062",
+      "passage_index": 0,
+      "shape": "code",
+      "question": "Which queue was the flagged Indore account moved into?",
+      "gold": "PSU-WN55",
+      "target": "PSU-AK50",
+      "stale": "PSU-DP28",
+      "stale_body": "The flagged Indore account was moved into PSU-DP28 while the risk desk reviewed three unusual collections. The account cleared review the same week.",
+      "paraphrase": "Flagged Indore account: which queue it was moved into. Risk desk note."
+    },
+    {
+      "qid": "q30",
+      "doc_id": "tkt-9078",
+      "passage_index": 0,
+      "shape": "rupees",
+      "question": "What was the disputed amount on the Pune chargeback?",
+      "gold": "19,107",
+      "target": "90,824",
+      "stale": "94,077",
+      "stale_body": "The Pune chargeback covered Rs 94,077 across two card transactions taken on the same afternoon. The merchant contested both.",
+      "paraphrase": "Pune chargeback: what the disputed amount was. Case summary for the file."
+    },
+    {
+      "qid": "q31",
+      "doc_id": "tkt-9085",
+      "passage_index": 0,
+      "shape": "ref",
+      "question": "Which checklist item was skipped during the Jaipur onboarding?",
+      "gold": "9449",
+      "target": "7027",
+      "stale": "3747",
+      "stale_body": "Item 3747 of the activation checklist was skipped during the Jaipur onboarding, which is why the first collection failed. The desk reran the checklist from the top.",
+      "paraphrase": "Jaipur onboarding: which checklist item was skipped. Root cause note."
+    },
+    {
+      "qid": "q32",
+      "doc_id": "tkt-9091",
+      "passage_index": 0,
+      "shape": "clock",
+      "question": "What time did the Monday settlement file generate that week?",
+      "gold": "08:03",
+      "target": "19:51",
+      "stale": "17:49",
+      "stale_body": "The settlement file generated at 17:49 IST that Monday, later than usual because the weekend backlog was still clearing. No merchant payouts were missed.",
+      "paraphrase": "That week, Monday settlement file: what time it generated. Operations log."
+    },
+    {
+      "qid": "q33",
+      "doc_id": "tkt-9103",
+      "passage_index": 0,
+      "shape": "code",
+      "question": "Which form did the Coimbatore customer submit after the name mismatch?",
+      "gold": "PSU-QN23",
+      "target": "PSU-EU20",
+      "stale": "PSU-CV41",
+      "stale_body": "The Coimbatore customer submitted PSU-CV41 after the automated name match failed twice against the bank record. Manual review approved it in a day.",
+      "paraphrase": "Coimbatore customer, name mismatch: which form did they submit after. Case note."
+    },
+    {
+      "qid": "q34",
+      "doc_id": "tkt-9117",
+      "passage_index": 0,
+      "shape": "ref",
+      "question": "How many collections did the flagged Ludhiana merchant take in the hour?",
+      "gold": "1614",
+      "target": "6830",
+      "stale": "4540",
+      "stale_body": "The Ludhiana merchant took 4540 collections in a single hour, which is what put the account into velocity review. Most were small ticket sizes.",
+      "paraphrase": "Flagged Ludhiana merchant: how many collections taken in the hour. Velocity note."
+    },
+    {
+      "qid": "q35",
+      "doc_id": "tkt-9124",
+      "passage_index": 0,
+      "shape": "rupees",
+      "question": "What variance was found in the 22 August reconciliation?",
+      "gold": "60,059",
+      "target": "43,644",
+      "stale": "34,200",
+      "stale_body": "The 22 August reconciliation showed a variance of Rs 34,200 against the bank file, traced to a late-posting refund. The ledger was signed off the next morning.",
+      "paraphrase": "22 August reconciliation: what variance was found. Ledger note for the month."
+    },
+    {
+      "qid": "q36",
+      "doc_id": "tkt-9130",
+      "passage_index": 0,
+      "shape": "percent",
+      "question": "What effective rate did the Guwahati merchant end up paying?",
+      "gold": "9.585",
+      "target": "0.898",
+      "stale": "1.653",
+      "stale_body": "After the volume rebate the Guwahati merchant paid an effective 1.653% on card collections for the quarter. The rebate applies from the next cycle.",
+      "paraphrase": "Guwahati merchant: what effective rate they ended up paying. Rebate summary."
+    },
+    {
+      "qid": "q37",
+      "doc_id": "tkt-9142",
+      "passage_index": 0,
+      "shape": "code",
+      "question": "Which escalation code was applied to the Bhopal dispute?",
+      "gold": "PSU-FR05",
+      "target": "PSU-RR89",
+      "stale": "PSU-XH31",
+      "stale_body": "The Bhopal dispute was escalated under PSU-XH31 on day forty-one, shortly before the ombudsman window closed. The customer accepted the outcome.",
+      "paraphrase": "Bhopal dispute: which escalation code was applied. Escalation log entry."
+    },
+    {
+      "qid": "q38",
+      "doc_id": "tkt-9155",
+      "passage_index": 0,
+      "shape": "ref",
+      "question": "Which job failed during the 29 August nightly run?",
+      "gold": "6225",
+      "target": "7739",
+      "stale": "5981",
+      "stale_body": "Job 5981 failed during the 29 August nightly run and was restarted by hand at six the next morning. No data was lost.",
+      "paraphrase": "29 August nightly run: which job failed. Incident note for the morning."
+    }
+  ],
+  "faq_questions": [
+    {
+      "qid": "f01",
+      "doc_id": "faq-general",
+      "passage_index": 0,
+      "shape": "code",
+      "question": "How do I reset my app password?",
+      "gold": "PSU-GU76",
+      "target": "PSU-JU33",
+      "stale": "",
+      "stale_body": "",
+      "paraphrase": ""
+    },
+    {
+      "qid": "f02",
+      "doc_id": "faq-general",
+      "passage_index": 1,
+      "shape": "ref",
+      "question": "Why does the app ask for location access?",
+      "gold": "8823",
+      "target": "8499",
+      "stale": "",
+      "stale_body": "",
+      "paraphrase": ""
+    },
+    {
+      "qid": "f03",
+      "doc_id": "faq-general",
+      "passage_index": 2,
+      "shape": "code",
+      "question": "How do I download my monthly statement?",
+      "gold": "PSU-VC28",
+      "target": "PSU-JH23",
+      "stale": "",
+      "stale_body": "",
+      "paraphrase": ""
+    },
+    {
+      "qid": "f04",
+      "doc_id": "faq-general",
+      "passage_index": 3,
+      "shape": "rupees",
+      "question": "What is the referral bonus for inviting a friend?",
+      "gold": "87,659",
+      "target": "95,522",
+      "stale": "",
+      "stale_body": "",
+      "paraphrase": ""
+    },
+    {
+      "qid": "f05",
+      "doc_id": "faq-general",
+      "passage_index": 4,
+      "shape": "ref",
+      "question": "How do I update my email address?",
+      "gold": "1275",
+      "target": "1405",
+      "stale": "",
+      "stale_body": "",
+      "paraphrase": ""
+    },
+    {
+      "qid": "f06",
+      "doc_id": "faq-general",
+      "passage_index": 5,
+      "shape": "code",
+      "question": "Can I have two PaySetu accounts?",
+      "gold": "PSU-QE85",
+      "target": "PSU-CE29",
+      "stale": "",
+      "stale_body": "",
+      "paraphrase": ""
+    },
+    {
+      "qid": "f07",
+      "doc_id": "faq-general",
+      "passage_index": 6,
+      "shape": "ref",
+      "question": "How do I enable transaction alerts?",
+      "gold": "4997",
+      "target": "3251",
+      "stale": "",
+      "stale_body": "",
+      "paraphrase": ""
+    },
+    {
+      "qid": "f08",
+      "doc_id": "faq-general",
+      "passage_index": 7,
+      "shape": "code",
+      "question": "How do I change the display language?",
+      "gold": "PSU-UG38",
+      "target": "PSU-BD79",
+      "stale": "",
+      "stale_body": "",
+      "paraphrase": ""
+    }
+  ]
+}

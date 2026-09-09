@@ -182,8 +182,21 @@ available. The run is reported NOT MET.
 
 Two things are worth separating for anyone reading the leaderboard. The
 headline comparison is complete at 38 of 38 questions and is not in doubt. The
-failing clause is at 10 of 38 and will be resampled - but the hedging that
-causes it is deterministic behaviour, not noise, so it is unlikely to move much.
+failing clause was at 10 of 38 when this was written.
+
+**Correction, after the condition finished at 38 of 38:** it moved, and the
+prediction written here that it would not was wrong. Abstention went from 40%
+to **61%**, hedging fell to 6 cases of 38, and over-extraction accounted for 9.
+The clause still fails - 61% is not 80% - but a quarter of the gap was sampling
+noise in ten cases, and calling it deterministic on that evidence was
+overconfident.
+
+The full sample also shows the weakness is not specific to the headline arm.
+Every retrieval arm lands between 66% and 71% abstention with 11 to 13
+over-extractions, and `naive` abstains *more* than `provenance` does, because
+provenance is the only arm that offers a flagged answer instead of silence. The
+arm with no retrieval at all abstains 100% of the time, which is exactly why
+this condition is a bound and not the headline.
 
 The remaining two of ten are a genuine weakness and not a definitional one.
 With the real answer gone, one sibling passage claiming a related quantity
@@ -218,3 +231,43 @@ There is still **no remaining-TPD header**, which is why the local ledger exists
 at all. The fix is to key it on `datetime.now(timezone.utc).date()` rather than
 on the local date, and to treat the ledger as a budget estimate that the
 response headers correct.
+
+## 9. The local ledger read 121,306 while Groq's own counter read 199,329
+
+The harness stops itself at 95% of the daily allowance so a run ends by
+choosing to rather than by failing. On day two it did not: it kept going and
+started producing failed rows, because the number it was checking was wrong.
+
+The 429 body says what the real number was:
+
+    on tokens per day (TPD): Limit 200000, Used 199329, Requested 794
+
+The local ledger for the same UTC day, same model, read **121,306**. It
+undercounts by 64%, so the self-imposed stop at 95% of 200,000 never fires
+before the real ceiling does.
+
+What is NOT the explanation, checked rather than assumed:
+
+- Not reserved completion budget. Summing prompt plus `max_completion_tokens`
+  across the day's calls gives 1.2M, six times the observed figure.
+- Not yesterday's spend carried whole into a rolling window. Yesterday was
+  190,872; added to today it overshoots 199,329 by a long way.
+- Not the guard model leaking into the chat model's bucket. That is tracked
+  separately and spent 196 tokens all day.
+
+What is certain: the day's 820 rows imply 1,858 model calls and the ledger
+recorded only 305 live requests, the rest being cache replays. Summing the
+token counts stored on the rows - which include replayed calls that cost
+nothing - gives 198,287, and that is within 0.5% of Groq's 199,329. The
+coincidence is close enough to be suspicious and I cannot currently explain it,
+so it is written down as an open question rather than a mechanism.
+
+The practical fix does not depend on resolving it. Groq exposes six
+`x-ratelimit-*` headers and **none of them is TPD**, so the 429 message is the
+only place the real counter is visible. `llm.tpd_used()` now parses it, a
+tokens-per-day 429 is no longer retried - it will not clear for hours, and
+retrying only converts a clean budget stop into a row of failures - and the
+harness treats it as the stop signal and prints both numbers side by side.
+
+The eight rows that failed on this 429 were dropped from the results file so
+they re-run rather than standing as measurements.

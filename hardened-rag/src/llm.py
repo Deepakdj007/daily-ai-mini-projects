@@ -23,6 +23,7 @@ from __future__ import annotations
 import asyncio
 import json
 import random
+import re
 import time
 from dataclasses import dataclass, field
 from typing import Any, Mapping, Sequence
@@ -206,6 +207,16 @@ async def complete(
                 headers = dict(getattr(getattr(exc, "response", None), "headers", {}) or {})
                 status = getattr(exc, "status_code", None)
                 schema_failure = "json_validate_failed" in last_error
+                # A tokens-per-day 429 will not clear for hours, so retrying it
+                # just burns the ladder and turns a budget stop into a row of
+                # failures. It is also the ONLY place Groq exposes the real TPD
+                # counter - there is no remaining-TPD header - so the message
+                # gets parsed rather than swallowed.
+                exhausted = status == 429 and "tokens per day" in last_error.lower()
+                if exhausted:
+                    _calls["failed"] += 1
+                    return Completion(finish_reason="tpd_exhausted", error=last_error,
+                                      headers=headers)
                 retryable = status == 429 or schema_failure
                 if retryable and attempt < config.MAX_RETRIES:
                     if status == 429:
@@ -282,6 +293,17 @@ async def guard_score(text: str, *, cache_key: str = "") -> float:
         return float(completion.text.strip())
     except ValueError:
         return 1.0
+
+
+def tpd_used(error: str) -> tuple[int, int]:
+    """(used, limit) parsed out of a tokens-per-day 429 body, or (0, 0).
+
+    Groq publishes six x-ratelimit-* headers and none of them is TPD. This
+    error string is the only exposed view of the counter the daily budget
+    actually runs out against.
+    """
+    match = re.search(r"tokens per day \(TPD\): Limit (\d+), Used (\d+)", error)
+    return (int(match.group(2)), int(match.group(1))) if match else (0, 0)
 
 
 async def complete_json(

@@ -147,6 +147,13 @@ async def run(profile: str = "full", model: str = "", *, resume: bool = True) ->
             conn, corpus, lookup, question, arm.policy, cond=case.cond,
             dose=case.dose or config.MAX_POISON, arm=arm.name, model=model,
             guard_scores=guard)
+        if out.verdict.status == "failed" and "tokens per day" in out.verdict.reason.lower():
+            used, limit = llm.tpd_used(out.verdict.reason)
+            stopped = (f"Groq reports {used:,} of {limit:,} tokens used today, against a "
+                       f"local ledger of {cache.spent_today(model)[0]:,}. Trust the "
+                       f"former. {len(todo) - number + 1} rows left - rerun tomorrow")
+            print(stopped)
+            break
         rows.append(_row(arm, case, question, out))
         if number % 10 == 0 or number == len(todo):
             print(f"  {number}/{len(todo)}  {spent:,} tok / {requests:,} req today")

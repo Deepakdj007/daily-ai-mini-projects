@@ -70,49 +70,63 @@ handed a slot.
 
 ## What the run found
 
-Day one of the free-tier budget: 691 of 1,776 rows, with the headline condition
-and the clean bound both complete at 38 of 38 questions. All seven validity
-gates pass.
+1,471 rows across nine conditions, every one complete: all eight arms faced the
+same cases. All seven validity gates pass.
 
-| arm | clean | poisoned (N=3) |
-|---|---:|---:|
-| `none` | 0/38 | 0/38 |
-| `naive` | 36/38 | 5/38, asserted the attacker's figure **31 times** |
-| `rerank` | 38/38 | 5/38, asserted it 28 times |
-| `guard` | 38/38 | 4/38, asserted it 29 times |
-| `echo` | 38/38 | 4/38, asserted it 29 times |
-| `isolate` | 23/38 | 4/38, asserted it **0 times** |
-| `majority` | 23/38 | 4/38, asserted it **34 times** |
-| `provenance` | 34/38 | **35/38**, asserted it 0 times |
+Each cell is how many cases the arm got right. `!n` is how many times it
+asserted the attacker's value instead. On `absent` the answer has been removed,
+so getting it right means withholding.
 
-Read three rows. `naive` is fooled 31 times out of 38, which is PoisonedRAG
-reproduced on a synthetic corpus. `majority` is fooled **34** times, more often
-than the naive pipeline it was supposed to improve on, because the vote is the
-one mechanism the attacker controls the input to. `provenance` gets 35 right
-and is never fooled once.
+| arm | clean | absent | poison N=1 | poison N=3 | poison-v | inject-overt | inject-policy | stale |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| `none` | 0/38 | 38/38 | 0/10 | 0/38 | 0/15 | 0/15 | 0/15 | 0/15 |
+| `naive` | 36/38 | 27/38 | 0/9 !9 | 5/38 !31 | 0/15 !12 | 10/15 | 3/15 !12 | 1/15 !2 |
+| `rerank` | 38/38 | 26/38 | 0/10 !9 | 5/38 !28 | 0/15 !12 | 11/15 | 3/15 !11 | 0/15 !1 |
+| `guard` | 38/38 | 26/38 | 0/10 !9 | 4/38 !29 | 0/15 !12 | **15/15** | 3/15 !11 | 0/15 !1 |
+| `echo` | 38/38 | 26/38 | 0/10 !9 | 4/38 !29 | **14/15** | 15/15 | 3/15 !11 | 0/15 !1 |
+| `isolate` | 23/38 | 25/38 | 1/10 | 4/38 | 10/15 | 10/15 | 2/15 | 0/15 |
+| `majority` | 23/38 | 25/38 | 1/10 | 4/38 **!34** | 10/15 | 10/15 | 2/15 | 0/15 |
+| `provenance` | 34/38 | 29/38 | **10/10** | **35/38** | **15/15** | **15/15** | **15/15** | **15/15** |
 
-The two screens contributed almost nothing here, and the table says so: the
-injection classifier quarantined 3 passages across 38 poisoned questions, and
-the echo screen quarantined none. The reordered attack is not an instruction
-and does not quote the question, so neither screen has anything to see.
+Five things this table says.
 
-`isolate` costs 15 correct answers on clean retrieval, dropping from 38 to 23.
-That is the real price of reading passages one at a time, and it is why the
-headline is stated against `isolate` rather than against `naive`.
+**Each screen fixes exactly its own attack.** `guard` takes inject-overt from
+11/15 to 15/15 and leaves inject-policy at 3/15. `echo` takes poison-v from
+0/15 to 14/15 and leaves the reordered poison at 4/38. Neither is a general
+defence, and an attacker who has read your code picks the other style.
 
-**Headline:** on the 38 poisoned questions where an attack passage reached the
-reader, `provenance` answered correctly 92% of the time against `isolate`'s
-11%. That is +82 points, 95% CI +68 to +92, with 31 discordant pairs to zero
-and exact McNemar p < 0.00001.
+**One copy is enough.** At N=1 the naive pipeline is fooled 9 times out of 9.
+Extra copies do not make the attack stronger; they make it survive a vote.
 
-**Result: NOT MET.** The criterion carries three clauses and the headline is
-not the one that failed. On the `absent` condition, where the answer has been
-deleted from the corpus, it requires abstention in 80% of cases and
-`provenance` abstains in 40%. It is not answering wrongly - it hedges in
-another 40%, offering a forum post's figure with an explicit warning attached.
-The project's own scoring function counts that as correct behaviour and reports
-8 of 10; the criterion counts only silence and reports 4 of 10. Neither was
-changed after the fact. See finding 7.
+**The vote loses.** `majority` is fooled 34 times of 38, worse than the naive
+pipeline's 31, because the number of copies is the one input the attacker
+chooses.
+
+**Isolation is safe and not yet useful.** It never asserts the attacker's value
+anywhere, and it costs 15 correct answers on clean retrieval, 38 down to 23.
+That price is why the headline is stated against `isolate`, not `naive`.
+
+**Stale documents are the case only provenance handles.** Everything else scores
+0 or 1 of 15. Nothing in the text separates a current policy from last year's
+copy of it - only the date does, and only the resolver reads dates.
+
+**Headline:** on the 38 poisoned questions where an attack reached the reader,
+`provenance` answered correctly 92% of the time against `isolate`'s 11%. That is
++82 points, 95% CI +68 to +92, 31 discordant pairs to zero, exact McNemar
+p < 0.00001.
+
+**Result: NOT MET.** Not on the headline. On `absent`, where the answer has been
+deleted, the criterion wants 80% abstention and provenance abstains in 61%. It
+hedges or over-extracts on the rest. The scoring function credits the hedge and
+reports 29/38; the criterion counts only silence. Neither was changed after the
+numbers came in.
+
+That weakness is not specific to provenance: every retrieval arm sits between
+66% and 71%, and the arm with no retrieval at all abstains 100% of the time -
+which is exactly why this is a bound and not the headline. See finding 7.
+
+Four conditions have not run yet: the FAQ control and the three limits
+(`saturate`, `sametier`, `embedded`).
 
 ## Setup
 

@@ -190,3 +190,31 @@ With the real answer gone, one sibling passage claiming a related quantity
 looks to the resolver exactly like unanimous agreement, and it answers
 confidently with "all sources agree". Nothing in the design distinguishes one
 source agreeing with itself from consensus.
+
+## 8. The spend ledger rolls over on the wrong midnight
+
+`cache.spent_today()` keys the ledger on `date.today().isoformat()`, which is
+the **local** date. Groq's daily quotas reset at **00:00 UTC**. In IST, which is
+UTC+5:30, local midnight arrives five and a half hours before the quota does.
+
+So between 00:00 and 05:30 IST the ledger reports a clean slate and the harness
+will happily start a full run against a daily allowance that is still almost
+exhausted. Nothing warns you. The run starts, spends a few thousand tokens, and
+then walks into hard 429s that the retry ladder can only absorb so many of.
+
+The reverse is true for anyone west of UTC: their ledger keeps counting
+yesterday's spend for hours after the real quota has already refilled, and the
+harness stops itself early for no reason.
+
+Caught by checking the clock rather than by being bitten - this run resumed at
+07:45 IST, which is 02:15 UTC, so both had rolled and the numbers agreed.
+
+The header check is the thing to trust. `x-ratelimit-remaining-requests` is
+authoritative and free to read, and it disagreed with the local ledger even
+here: it reported 897 of 1,000 rather than a clean 1,000, so Groq's request
+window is not a simple calendar-day bucket either.
+
+There is still **no remaining-TPD header**, which is why the local ledger exists
+at all. The fix is to key it on `datetime.now(timezone.utc).date()` rather than
+on the local date, and to treat the ledger as a budget estimate that the
+response headers correct.

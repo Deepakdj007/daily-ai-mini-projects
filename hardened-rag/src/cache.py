@@ -21,7 +21,7 @@ from __future__ import annotations
 import hashlib
 import json
 import sqlite3
-from datetime import date
+from datetime import datetime, timezone
 from typing import Any
 
 from src import config
@@ -112,7 +112,7 @@ def rows() -> int:
 
 def record_spend(model: str, tokens: int, *, day: str = "") -> None:
     """Add one request's tokens to today's ledger for this model."""
-    today = day or date.today().isoformat()
+    today = day or utc_day()
     conn = _connect(config.LEDGER_PATH, _LEDGER_SCHEMA)
     try:
         conn.execute(
@@ -126,13 +126,26 @@ def record_spend(model: str, tokens: int, *, day: str = "") -> None:
         conn.close()
 
 
+
+def utc_day() -> str:
+    """The day Groq's quota is keyed on, which is not necessarily today.
+
+    Quotas reset at 00:00 UTC. Keying this ledger on the LOCAL date puts the
+    rollover in the wrong place for anyone not on UTC: in IST it lands five and
+    a half hours early, so between midnight and 05:30 the ledger reports a clean
+    slate against an allowance that is still spent, and a run starts straight
+    into hard 429s with nothing in the logs to explain it.
+    """
+    return datetime.now(timezone.utc).date().isoformat()
+
+
 def spent_today(model: str = "", *, day: str = "") -> tuple[int, int]:
     """(tokens, requests) spent today, for one model or all of them.
 
     Models whose name starts with '__' are excluded: a smoke test must not be
     able to inflate the figure a real run's pre-flight check depends on.
     """
-    today = day or date.today().isoformat()
+    today = day or utc_day()
     conn = _connect(config.LEDGER_PATH, _LEDGER_SCHEMA)
     try:
         if model:
@@ -149,7 +162,7 @@ def spent_today(model: str = "", *, day: str = "") -> tuple[int, int]:
 
 def ledger_rows(*, day: str = "") -> list[dict]:
     """Today's ledger, for the results manifest."""
-    today = day or date.today().isoformat()
+    today = day or utc_day()
     conn = _connect(config.LEDGER_PATH, _LEDGER_SCHEMA)
     try:
         cur = conn.execute(

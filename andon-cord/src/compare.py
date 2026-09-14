@@ -42,6 +42,11 @@ def load_briefs(use_all: bool) -> list[dict]:
                     f"{brief['id']}: the token '{token}' is already in the brief, "
                     "so finding it in the report would prove nothing."
                 )
+        # Every brief needs something to say, including the ones nobody should
+        # ask about. An empty reply is not an answer, so a false alarm there
+        # would park the run instead of being recorded as the false alarm it is.
+        if not brief["oracle_answer"].strip():
+            raise AssertionError(f"{brief['id']}: oracle_answer is empty.")
     return briefs
 
 

@@ -36,7 +36,12 @@ class TerminalHuman:
     """Asks the questions at the terminal, one prompt per question."""
 
     def answer(self, payload: dict) -> dict:
-        """Show what the team assumed, then collect one answer per question."""
+        """Show what the team assumed, then collect one answer per question.
+
+        Raises:
+            EOFError: if nothing was answered. Silence is not an answer — the
+                caller leaves the run parked rather than recording a blank.
+        """
         print("\n== THE LINE HAS STOPPED ==========================")
         if payload.get("interpretation"):
             print(f"Reading the brief as: {payload['interpretation']}")
@@ -46,6 +51,12 @@ class TerminalHuman:
             print(f"    {question['text']}")
             replies[question["id"]] = _clean(input("  your answer > "))
         print("==================================================")
+
+        # Pressing Enter through every question is not a decision. Recording it
+        # would close the question with a blank, and the lead would re-plan on
+        # "the human answered: " — worse than never having asked.
+        if not any(replies.values()):
+            raise EOFError("no answer given")
         return replies
 
 

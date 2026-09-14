@@ -82,6 +82,16 @@ possessive phrase to find. It is ambiguous by omission: it never says which
 service, and "who needs to sign off" is an org question. The check catches an
 ambiguous *referent* and is blind to a *missing subject*.
 
+## Known limits
+
+The lead catches an ambiguous *referent* and is blind to a brief that is
+ambiguous by *omission* — the last row above. Researchers can ask too, but they
+do so rarely: their bar is deliberately higher than the lead's, since they see
+one sub-question rather than the whole brief.
+
+A full `compare` costs roughly 60,000 tokens, so about three of them is a free
+day. `ask-rate --samples 5 --all` is about 30,000.
+
 ## Where the pauses live, and why
 
 `interrupt()` appears in exactly two nodes, and neither does anything before

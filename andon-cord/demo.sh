@@ -14,6 +14,9 @@ ambiguous="Put together a competitive brief on our autopay flow for the leadersh
 complete="Compare UPI AutoPay and eNACH for recurring payments in India: mandate limits, validity periods, and which one a subscription business should pick."
 answer="The merchant dashboard, codenamed Kestrel, and the audience is the Hyderabad risk committee."
 
+step "0. every check that costs no tokens, before spending any"
+uv run --no-sync python -m tools.selftest
+
 step "1. search works on its own, with no API key"
 uv run --no-sync python -m src.search
 

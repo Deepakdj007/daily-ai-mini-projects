@@ -52,7 +52,12 @@ PYTHONPATH=. uv run python -m src.main inbox
 PYTHONPATH=. uv run python -m src.main answer <thread_id>
 PYTHONPATH=. uv run python -m src.main compare
 PYTHONPATH=. uv run python -m src.main ask-rate --samples 5 --all
+PYTHONPATH=. uv run python -m tools.selftest
 ```
+
+`tools/selftest.py` runs every check that costs no API tokens: the policy gates,
+the Send payload, the fixture guards, the table and both measurement harnesses
+with the model call stubbed. Run it before spending anything.
 
 `--park` freezes at the first question and exits. `inbox` finds it again from a
 new terminal. `answer` picks it up and drives the run to the end.

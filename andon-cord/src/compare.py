@@ -1,7 +1,7 @@
 """Run the same briefs with the cord live and with the cord cut.
 
 Both policies use byte-identical prompts. `never` does not tell the agents to
-stop thinking of questions â€” it only refuses to put them to a human. So the
+stop thinking of questions — it only refuses to put them to a human. So the
 difference between the two rows is the gate, not a different instruction.
 
 What the table measures: whether the team pulls the cord on briefs that hide

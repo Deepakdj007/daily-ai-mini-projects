@@ -4,16 +4,15 @@
 
 ```mermaid
 flowchart LR
-    Brief[Your brief] --> Lead[Research lead reads it]
-    Lead -->|cord pulled| AskLead[One question to you]
-    AskLead --> Lead
+    Brief[Your brief] --> Lead[Research lead plans]
+    Lead -->|cord pulled| AskLead[Pause for one question]
+    AskLead -->|your answer| Lead
     Lead -->|dispatch| R1[Researcher 1 searches]
     Lead -->|dispatch| R2[Researcher 2 searches]
-    R1 --> Desk[Question desk]
+    R1 --> Desk[Question desk pauses once]
     R2 --> Desk
-    Desk -->|both questions at once| You[You answer]
-    You --> Desk
     Desk --> Writer[Writer builds the report]
+    Writer --> Report[Cited report]
 
     style Brief fill:#ffffff,stroke:#64748b,color:#000000
     style Lead fill:#ffffff,stroke:#4f46e5,color:#000000
@@ -21,39 +20,48 @@ flowchart LR
     style R1 fill:#ffffff,stroke:#0891b2,color:#000000
     style R2 fill:#ffffff,stroke:#0891b2,color:#000000
     style Desk fill:#ffffff,stroke:#dc2626,color:#000000
-    style You fill:#ffffff,stroke:#ca8a04,color:#000000
     style Writer fill:#ffffff,stroke:#4f46e5,color:#000000
+    style Report fill:#ffffff,stroke:#64748b,color:#000000
 ```
 
 Red outlines mark the only two places the line can stop. Everything else runs
 without you.
+
+The human is not a box. That is the design, not an omission: the graph emits a
+question and waits for a dict of answers, and who supplies it — a terminal, a
+fixture, a web page — is not the graph's business. Drawing a "you" node would put
+the one thing that lives outside the graph inside the picture of it.
+
+Nine arrows from six edge declarations in `src/graph.py`: the conditional edge
+after the lead accounts for three of them, and the single `researcher` node draws
+two into the desk because two copies run at once.
 
 ---
 
 ## ChatGPT prompt — clean SVG version
 
 > Draw a horizontal flow diagram as a single inline SVG, 1600x600, on a white
-> background. Eight boxes left to right, thin 2px rounded rectangles, white fill,
-> black 16px label text, generous whitespace.
+> background. Thin 2px rounded rectangles, white fill, black 16px label text,
+> generous whitespace.
 >
-> Row 1 (the main line, straight across the middle): "Your brief" (grey outline)
+> One straight line across the middle, left to right: "Your brief" (grey outline)
 > arrow to "Research lead" (indigo) arrow to a pair of stacked boxes
 > "Researcher 1" and "Researcher 2" (both cyan, one above the other, both fed by
 > the same arrow) arrow to "Question desk" (red) arrow to "Writer" (indigo)
-> arrow to "Report" (grey).
+> arrow to "Cited report" (grey).
 >
-> Above the lead, one box "One question to you" (red) with a short arrow up from
-> the lead and a short arrow back down into it. Below the question desk, one box
-> "You answer" (amber) with an arrow down from the desk and an arrow back up.
+> One box sits off that line: "Pause for one question" (red), above the research
+> lead, with a short arrow up from the lead and a short arrow back down into it.
+> That is the only detour.
 >
-> Label the arrow from the desk to "You answer" with the small grey text
-> "both questions, one interruption". Label the arrow from the lead to the
-> researchers "runs without you".
+> Label the up arrow "cord pulled" and the down arrow "your answer", both in small
+> grey text. Label the arrow from the lead to the researchers "runs without you".
+> Under the question desk, small grey caption: "both questions, one interruption".
 >
-> Only the two red boxes and the amber box may touch the human. Make that read
-> instantly: everything on the straight horizontal line is automatic, and the
-> only detours off it are the two stops. No gradients, no drop shadows, no icons,
-> no logos.
+> Do not draw a box for the human. The two red boxes are where the line stops for
+> a person, and the caption carries that; adding a figure would put the one thing
+> that lives outside the system inside the diagram of it. No gradients, no drop
+> shadows, no icons, no logos.
 
 ## ChatGPT prompt — illustrated version
 

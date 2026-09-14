@@ -1,0 +1,59 @@
+{
+  "_comment": "Fixture briefs for `compare`. PaySetu is a fictional Indian fintech. Each ambiguous brief hides a fact only the client holds, and the oracle answer carries two tokens that appear nowhere on the public web, so a report can only contain them if a human was asked. The clear briefs are the control: nothing is missing, so a question there is a false alarm.",
+  "briefs": [
+    {
+      "id": "b1",
+      "kind": "ambiguous",
+      "default": true,
+      "brief": "Put together a competitive brief on our autopay flow for the leadership review next week.",
+      "missing": "which product, and which audience",
+      "oracle_answer": "The merchant dashboard, codenamed Kestrel, and the audience is the Hyderabad risk committee.",
+      "tokens": ["Kestrel", "Hyderabad"]
+    },
+    {
+      "id": "b2",
+      "kind": "ambiguous",
+      "default": true,
+      "brief": "Benchmark our UPI AutoPay mandate success rate against the Indian industry average and say whether we are behind.",
+      "missing": "our own success rate, which is not published anywhere",
+      "oracle_answer": "Our mandate success rate is 82.4 percent, measured on the Tarragon cohort.",
+      "tokens": ["82.4", "Tarragon"]
+    },
+    {
+      "id": "b3",
+      "kind": "clear",
+      "default": true,
+      "brief": "Compare UPI AutoPay and eNACH for recurring payments in India: mandate limits, validity periods, and which one a subscription business should pick.",
+      "missing": "nothing",
+      "oracle_answer": "No clarification needed; the brief is complete.",
+      "tokens": []
+    },
+    {
+      "id": "b4",
+      "kind": "clear",
+      "default": true,
+      "brief": "Summarise the RBI rules for e-mandate recurring payments in India as of 2026: the additional factor of authentication threshold, pre-debit notification timing, and who is liable for a failed debit.",
+      "missing": "nothing",
+      "oracle_answer": "No clarification needed; the brief is complete.",
+      "tokens": []
+    },
+    {
+      "id": "b5",
+      "kind": "ambiguous",
+      "default": false,
+      "brief": "Write up how recurring payment failures should be handled, and who needs to sign off.",
+      "missing": "which service, and who owns sign-off",
+      "oracle_answer": "Scope it to the reconciliation window for our Sentinel billing service; sign-off sits with the Kochi operations lead.",
+      "tokens": ["Sentinel", "Kochi"]
+    },
+    {
+      "id": "b6",
+      "kind": "ambiguous",
+      "default": false,
+      "brief": "Draft the migration plan for moving our subscriptions off the old rails.",
+      "missing": "which product, off what, by when",
+      "oracle_answer": "Move the Peregrine consumer wallet off eNACH onto UPI AutoPay, targeting the FY27 Q3 freeze.",
+      "tokens": ["Peregrine", "FY27"]
+    }
+  ]
+}

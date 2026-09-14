@@ -1,0 +1,15 @@
+[project]
+name = "andon-cord"
+version = "0.1.0"
+description = "A multi-agent research team that stops and asks a human only when it hits something it cannot look up."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ddgs>=9.16.0",
+    "langchain-groq>=1.1.3",
+    "langgraph>=1.2.11",
+    "langgraph-checkpoint-sqlite>=3.1.1",
+    "pydantic>=2.13.5",
+    "python-dotenv>=1.2.3",
+    "rich>=15.0.0",
+]

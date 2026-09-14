@@ -1,0 +1,18 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Parked runs are local state, not results.
+checkpoints.sqlite
+checkpoints.sqlite-wal
+checkpoints.sqlite-shm
+
+# Generated research reports are throwaway; the measurements are results.
+output/*.md
+!output/compare.md
+!output/ask-rate.md
+
+# Paid deliverables - keep local
+build-*-guide.md
+*-instagram-assets.md

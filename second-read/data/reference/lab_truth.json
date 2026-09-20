@@ -1,0 +1,3101 @@
+{
+  "LAB-01": {
+    "case_id": "LAB-01",
+    "patient_id": "MD-421505",
+    "collected": "23-07-2026 07:48:48",
+    "tests": [
+      {
+        "name": "Sodium",
+        "result": "143.1",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "23-07-2026 07:48:48",
+        "flag": ""
+      },
+      {
+        "name": "Potassium",
+        "result": "4.10",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "23-07-2026 07:48:48",
+        "flag": ""
+      },
+      {
+        "name": "Creatinine",
+        "result": "0.880",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "23-07-2026 07:48:48",
+        "flag": ""
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "87.6",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "23-07-2026 07:48:48",
+        "flag": ""
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "5.90",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "23-07-2026 07:48:48",
+        "flag": "L"
+      },
+      {
+        "name": "Hemoglobin",
+        "result": "15.93",
+        "unit": "g/dL",
+        "range": "12-17.5",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "23-07-2026 07:48:48",
+        "flag": ""
+      },
+      {
+        "name": "White Blood Cell Count",
+        "result": "9.16",
+        "unit": "x10^3/uL",
+        "range": "4-11",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "23-07-2026 07:48:48",
+        "flag": ""
+      },
+      {
+        "name": "Platelet Count",
+        "result": "137",
+        "unit": "x10^3/uL",
+        "range": "150-410",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "23-07-2026 07:48:48",
+        "flag": "L"
+      },
+      {
+        "name": "Hematocrit",
+        "result": "36.3",
+        "unit": "%",
+        "range": "36-50",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "23-07-2026 07:48:48",
+        "flag": ""
+      },
+      {
+        "name": "Mean Corpuscular Volume",
+        "result": "92.7",
+        "unit": "fL",
+        "range": "80-100",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "23-07-2026 07:48:48",
+        "flag": ""
+      },
+      {
+        "name": "Alanine Aminotransferase",
+        "result": "13.3",
+        "unit": "U/L",
+        "range": "7-56",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "23-07-2026 07:48:48",
+        "flag": ""
+      },
+      {
+        "name": "Aspartate Aminotransferase",
+        "result": "17.6",
+        "unit": "U/L",
+        "range": "10-40",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "23-07-2026 07:48:48",
+        "flag": ""
+      },
+      {
+        "name": "Total Bilirubin",
+        "result": "0.180",
+        "unit": "mg/dL",
+        "range": "0.1-1.2",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "23-07-2026 07:48:48",
+        "flag": ""
+      },
+      {
+        "name": "Albumin",
+        "result": "4.09",
+        "unit": "g/dL",
+        "range": "3.5-5",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "23-07-2026 07:48:48",
+        "flag": ""
+      }
+    ]
+  },
+  "LAB-02": {
+    "case_id": "LAB-02",
+    "patient_id": "MD-262367",
+    "collected": "14-05-2026 11:26:57",
+    "tests": [
+      {
+        "name": "Sodium",
+        "result": "137.1",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 11:26:57",
+        "flag": ""
+      },
+      {
+        "name": "Potassium",
+        "result": "3.65",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 11:26:57",
+        "flag": ""
+      },
+      {
+        "name": "Creatinine",
+        "result": "0.960",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 11:26:57",
+        "flag": ""
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "98.9",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 11:26:57",
+        "flag": ""
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "24.9",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 11:26:57",
+        "flag": "H"
+      },
+      {
+        "name": "Thyroid Stimulating Hormone",
+        "result": "0.284",
+        "unit": "uIU/mL",
+        "range": "0.4-4",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 11:26:57",
+        "flag": "L"
+      },
+      {
+        "name": "Ferritin",
+        "result": "319.4",
+        "unit": "ng/mL",
+        "range": "30-400",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 11:26:57",
+        "flag": ""
+      },
+      {
+        "name": "HbA1c",
+        "result": "4.13",
+        "unit": "%",
+        "range": "4-5.6",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 11:26:57",
+        "flag": ""
+      },
+      {
+        "name": "Vitamin D (25-OH)",
+        "result": "87.6",
+        "unit": "ng/mL",
+        "range": "30-100",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 11:26:57",
+        "flag": ""
+      },
+      {
+        "name": "Hemoglobin",
+        "result": "15.60",
+        "unit": "g/dL",
+        "range": "12-17.5",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "14-05-2026 11:26:57",
+        "flag": ""
+      },
+      {
+        "name": "White Blood Cell Count",
+        "result": "8.36",
+        "unit": "x10^3/uL",
+        "range": "4-11",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "14-05-2026 11:26:57",
+        "flag": ""
+      },
+      {
+        "name": "Platelet Count",
+        "result": "169",
+        "unit": "x10^3/uL",
+        "range": "150-410",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "14-05-2026 11:26:57",
+        "flag": ""
+      },
+      {
+        "name": "Hematocrit",
+        "result": "37.2",
+        "unit": "%",
+        "range": "36-50",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "14-05-2026 11:26:57",
+        "flag": ""
+      },
+      {
+        "name": "Mean Corpuscular Volume",
+        "result": "133.3",
+        "unit": "fL",
+        "range": "80-100",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "14-05-2026 11:26:57",
+        "flag": "H"
+      }
+    ]
+  },
+  "LAB-03": {
+    "case_id": "LAB-03",
+    "patient_id": "MD-367243",
+    "collected": "08-05-2026 11:23:14",
+    "tests": [
+      {
+        "name": "Total Cholesterol",
+        "result": "126.9",
+        "unit": "mg/dL",
+        "range": "125-200",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "08-05-2026 11:23:14",
+        "flag": ""
+      },
+      {
+        "name": "LDL Cholesterol",
+        "result": "88.0",
+        "unit": "mg/dL",
+        "range": "50-130",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "08-05-2026 11:23:14",
+        "flag": ""
+      },
+      {
+        "name": "HDL Cholesterol",
+        "result": "44.4",
+        "unit": "mg/dL",
+        "range": "40-90",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "08-05-2026 11:23:14",
+        "flag": ""
+      },
+      {
+        "name": "Triglycerides",
+        "result": "83.9",
+        "unit": "mg/dL",
+        "range": "50-150",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "08-05-2026 11:23:14",
+        "flag": ""
+      },
+      {
+        "name": "Thyroid Stimulating Hormone",
+        "result": "2.982",
+        "unit": "uIU/mL",
+        "range": "0.4-4",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "08-05-2026 11:23:14",
+        "flag": ""
+      },
+      {
+        "name": "Ferritin",
+        "result": "42.2",
+        "unit": "ng/mL",
+        "range": "30-400",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "08-05-2026 11:23:14",
+        "flag": ""
+      },
+      {
+        "name": "HbA1c",
+        "result": "4.86",
+        "unit": "%",
+        "range": "4-5.6",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "08-05-2026 11:23:14",
+        "flag": ""
+      },
+      {
+        "name": "Vitamin D (25-OH)",
+        "result": "124.6",
+        "unit": "ng/mL",
+        "range": "30-100",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "08-05-2026 11:23:14",
+        "flag": "H"
+      },
+      {
+        "name": "Alanine Aminotransferase",
+        "result": "59.4",
+        "unit": "U/L",
+        "range": "7-56",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "08-05-2026 11:23:14",
+        "flag": "H"
+      },
+      {
+        "name": "Aspartate Aminotransferase",
+        "result": "36.9",
+        "unit": "U/L",
+        "range": "10-40",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "08-05-2026 11:23:14",
+        "flag": ""
+      },
+      {
+        "name": "Total Bilirubin",
+        "result": "0.390",
+        "unit": "mg/dL",
+        "range": "0.1-1.2",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "08-05-2026 11:23:14",
+        "flag": ""
+      },
+      {
+        "name": "Albumin",
+        "result": "4.78",
+        "unit": "g/dL",
+        "range": "3.5-5",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "08-05-2026 11:23:14",
+        "flag": ""
+      }
+    ]
+  },
+  "LAB-04": {
+    "case_id": "LAB-04",
+    "patient_id": "MD-273130",
+    "collected": "18-04-2026 07:46:39",
+    "tests": [
+      {
+        "name": "Thyroid Stimulating Hormone",
+        "result": "0.619",
+        "unit": "uIU/mL",
+        "range": "0.4-4",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "18-04-2026 07:46:39",
+        "flag": ""
+      },
+      {
+        "name": "Ferritin",
+        "result": "345.0",
+        "unit": "ng/mL",
+        "range": "30-400",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "18-04-2026 07:46:39",
+        "flag": ""
+      },
+      {
+        "name": "HbA1c",
+        "result": "2.50",
+        "unit": "%",
+        "range": "4-5.6",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "18-04-2026 07:46:39",
+        "flag": "L"
+      },
+      {
+        "name": "Vitamin D (25-OH)",
+        "result": "30.4",
+        "unit": "ng/mL",
+        "range": "30-100",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "18-04-2026 07:46:39",
+        "flag": ""
+      },
+      {
+        "name": "Sodium",
+        "result": "137.1",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "18-04-2026 07:46:39",
+        "flag": ""
+      },
+      {
+        "name": "Potassium",
+        "result": "2.63",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "18-04-2026 07:46:39",
+        "flag": "L"
+      },
+      {
+        "name": "Creatinine",
+        "result": "1.58",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "18-04-2026 07:46:39",
+        "flag": "H"
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "95.3",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "18-04-2026 07:46:39",
+        "flag": ""
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "7.40",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "18-04-2026 07:46:39",
+        "flag": ""
+      },
+      {
+        "name": "Hemoglobin",
+        "result": "16.65",
+        "unit": "g/dL",
+        "range": "12-17.5",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "18-04-2026 07:46:39",
+        "flag": ""
+      },
+      {
+        "name": "White Blood Cell Count",
+        "result": "6.00",
+        "unit": "x10^3/uL",
+        "range": "4-11",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "18-04-2026 07:46:39",
+        "flag": ""
+      },
+      {
+        "name": "Platelet Count",
+        "result": "336",
+        "unit": "x10^3/uL",
+        "range": "150-410",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "18-04-2026 07:46:39",
+        "flag": ""
+      },
+      {
+        "name": "Hematocrit",
+        "result": "59.9",
+        "unit": "%",
+        "range": "36-50",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "18-04-2026 07:46:39",
+        "flag": "H"
+      },
+      {
+        "name": "Mean Corpuscular Volume",
+        "result": "87.9",
+        "unit": "fL",
+        "range": "80-100",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "18-04-2026 07:46:39",
+        "flag": ""
+      }
+    ]
+  },
+  "LAB-05": {
+    "case_id": "LAB-05",
+    "patient_id": "MD-539545",
+    "collected": "04-05-2026 10:34:26",
+    "tests": [
+      {
+        "name": "Thyroid Stimulating Hormone",
+        "result": "1.044",
+        "unit": "uIU/mL",
+        "range": "0.4-4",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:34:26",
+        "flag": ""
+      },
+      {
+        "name": "Ferritin",
+        "result": "21.9",
+        "unit": "ng/mL",
+        "range": "30-400",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:34:26",
+        "flag": "L"
+      },
+      {
+        "name": "HbA1c",
+        "result": "4.06",
+        "unit": "%",
+        "range": "4-5.6",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:34:26",
+        "flag": ""
+      },
+      {
+        "name": "Vitamin D (25-OH)",
+        "result": "85.6",
+        "unit": "ng/mL",
+        "range": "30-100",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:34:26",
+        "flag": ""
+      },
+      {
+        "name": "Alanine Aminotransferase",
+        "result": "9.70",
+        "unit": "U/L",
+        "range": "7-56",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:34:26",
+        "flag": ""
+      },
+      {
+        "name": "Aspartate Aminotransferase",
+        "result": "18.0",
+        "unit": "U/L",
+        "range": "10-40",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:34:26",
+        "flag": ""
+      },
+      {
+        "name": "Total Bilirubin",
+        "result": "0.090",
+        "unit": "mg/dL",
+        "range": "0.1-1.2",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:34:26",
+        "flag": "L"
+      },
+      {
+        "name": "Albumin",
+        "result": "4.63",
+        "unit": "g/dL",
+        "range": "3.5-5",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:34:26",
+        "flag": ""
+      },
+      {
+        "name": "Sodium",
+        "result": "144.8",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:34:26",
+        "flag": ""
+      },
+      {
+        "name": "Potassium",
+        "result": "4.94",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:34:26",
+        "flag": ""
+      },
+      {
+        "name": "Creatinine",
+        "result": "0.630",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:34:26",
+        "flag": ""
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "89.6",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:34:26",
+        "flag": ""
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "19.2",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:34:26",
+        "flag": ""
+      }
+    ]
+  },
+  "LAB-06": {
+    "case_id": "LAB-06",
+    "patient_id": "MD-853616",
+    "collected": "30-03-2026 07:14:28",
+    "tests": [
+      {
+        "name": "Hemoglobin",
+        "result": "12.00",
+        "unit": "g/dL",
+        "range": "12-17.5",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "30-03-2026 07:14:28",
+        "flag": ""
+      },
+      {
+        "name": "White Blood Cell Count",
+        "result": "7.63",
+        "unit": "x10^3/uL",
+        "range": "4-11",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "30-03-2026 07:14:28",
+        "flag": ""
+      },
+      {
+        "name": "Platelet Count",
+        "result": "230",
+        "unit": "x10^3/uL",
+        "range": "150-410",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "30-03-2026 07:14:28",
+        "flag": ""
+      },
+      {
+        "name": "Hematocrit",
+        "result": "67.8",
+        "unit": "%",
+        "range": "36-50",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "30-03-2026 07:14:28",
+        "flag": "H"
+      },
+      {
+        "name": "Mean Corpuscular Volume",
+        "result": "85.5",
+        "unit": "fL",
+        "range": "80-100",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "30-03-2026 07:14:28",
+        "flag": ""
+      },
+      {
+        "name": "Sodium",
+        "result": "142.6",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "30-03-2026 07:14:28",
+        "flag": ""
+      },
+      {
+        "name": "Potassium",
+        "result": "4.68",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "30-03-2026 07:14:28",
+        "flag": ""
+      },
+      {
+        "name": "Creatinine",
+        "result": "0.570",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "30-03-2026 07:14:28",
+        "flag": "L"
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "72.7",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "30-03-2026 07:14:28",
+        "flag": ""
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "18.7",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "30-03-2026 07:14:28",
+        "flag": ""
+      },
+      {
+        "name": "Alanine Aminotransferase",
+        "result": "25.5",
+        "unit": "U/L",
+        "range": "7-56",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "30-03-2026 07:14:28",
+        "flag": ""
+      },
+      {
+        "name": "Aspartate Aminotransferase",
+        "result": "22.1",
+        "unit": "U/L",
+        "range": "10-40",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "30-03-2026 07:14:28",
+        "flag": ""
+      },
+      {
+        "name": "Total Bilirubin",
+        "result": "0.550",
+        "unit": "mg/dL",
+        "range": "0.1-1.2",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "30-03-2026 07:14:28",
+        "flag": ""
+      },
+      {
+        "name": "Albumin",
+        "result": "4.47",
+        "unit": "g/dL",
+        "range": "3.5-5",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "30-03-2026 07:14:28",
+        "flag": ""
+      }
+    ]
+  },
+  "LAB-07": {
+    "case_id": "LAB-07",
+    "patient_id": "MD-955958",
+    "collected": "08-08-2026 07:51:53",
+    "tests": [
+      {
+        "name": "Thyroid Stimulating Hormone",
+        "result": "3.315",
+        "unit": "uIU/mL",
+        "range": "0.4-4",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "08-08-2026 07:51:53",
+        "flag": ""
+      },
+      {
+        "name": "Ferritin",
+        "result": "391.2",
+        "unit": "ng/mL",
+        "range": "30-400",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "08-08-2026 07:51:53",
+        "flag": ""
+      },
+      {
+        "name": "HbA1c",
+        "result": "4.89",
+        "unit": "%",
+        "range": "4-5.6",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "08-08-2026 07:51:53",
+        "flag": ""
+      },
+      {
+        "name": "Vitamin D (25-OH)",
+        "result": "49.8",
+        "unit": "ng/mL",
+        "range": "30-100",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "08-08-2026 07:51:53",
+        "flag": ""
+      },
+      {
+        "name": "Sodium",
+        "result": "136.3",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "08-08-2026 07:51:53",
+        "flag": ""
+      },
+      {
+        "name": "Potassium",
+        "result": "3.80",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "08-08-2026 07:51:53",
+        "flag": ""
+      },
+      {
+        "name": "Creatinine",
+        "result": "1.23",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "08-08-2026 07:51:53",
+        "flag": ""
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "57.5",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "08-08-2026 07:51:53",
+        "flag": "L"
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "19.3",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "08-08-2026 07:51:53",
+        "flag": ""
+      },
+      {
+        "name": "Total Cholesterol",
+        "result": "147.1",
+        "unit": "mg/dL",
+        "range": "125-200",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "08-08-2026 07:51:53",
+        "flag": ""
+      },
+      {
+        "name": "LDL Cholesterol",
+        "result": "52.1",
+        "unit": "mg/dL",
+        "range": "50-130",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "08-08-2026 07:51:53",
+        "flag": ""
+      },
+      {
+        "name": "HDL Cholesterol",
+        "result": "44.6",
+        "unit": "mg/dL",
+        "range": "40-90",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "08-08-2026 07:51:53",
+        "flag": ""
+      },
+      {
+        "name": "Triglycerides",
+        "result": "54.9",
+        "unit": "mg/dL",
+        "range": "50-150",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "08-08-2026 07:51:53",
+        "flag": ""
+      }
+    ]
+  },
+  "LAB-08": {
+    "case_id": "LAB-08",
+    "patient_id": "MD-438828",
+    "collected": "14-05-2026 10:21:05",
+    "tests": [
+      {
+        "name": "Hemoglobin",
+        "result": "12.78",
+        "unit": "g/dL",
+        "range": "12-17.5",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "14-05-2026 10:21:05",
+        "flag": ""
+      },
+      {
+        "name": "White Blood Cell Count",
+        "result": "10.90",
+        "unit": "x10^3/uL",
+        "range": "4-11",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "14-05-2026 10:21:05",
+        "flag": ""
+      },
+      {
+        "name": "Platelet Count",
+        "result": "324",
+        "unit": "x10^3/uL",
+        "range": "150-410",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "14-05-2026 10:21:05",
+        "flag": ""
+      },
+      {
+        "name": "Hematocrit",
+        "result": "48.2",
+        "unit": "%",
+        "range": "36-50",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "14-05-2026 10:21:05",
+        "flag": ""
+      },
+      {
+        "name": "Mean Corpuscular Volume",
+        "result": "89.7",
+        "unit": "fL",
+        "range": "80-100",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "14-05-2026 10:21:05",
+        "flag": ""
+      },
+      {
+        "name": "Thyroid Stimulating Hormone",
+        "result": "1.184",
+        "unit": "uIU/mL",
+        "range": "0.4-4",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 10:21:05",
+        "flag": ""
+      },
+      {
+        "name": "Ferritin",
+        "result": "395.7",
+        "unit": "ng/mL",
+        "range": "30-400",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 10:21:05",
+        "flag": ""
+      },
+      {
+        "name": "HbA1c",
+        "result": "4.17",
+        "unit": "%",
+        "range": "4-5.6",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 10:21:05",
+        "flag": ""
+      },
+      {
+        "name": "Vitamin D (25-OH)",
+        "result": "21.9",
+        "unit": "ng/mL",
+        "range": "30-100",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 10:21:05",
+        "flag": "L"
+      },
+      {
+        "name": "Alanine Aminotransferase",
+        "result": "52.5",
+        "unit": "U/L",
+        "range": "7-56",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 10:21:05",
+        "flag": ""
+      },
+      {
+        "name": "Aspartate Aminotransferase",
+        "result": "7.00",
+        "unit": "U/L",
+        "range": "10-40",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 10:21:05",
+        "flag": "L"
+      },
+      {
+        "name": "Total Bilirubin",
+        "result": "0.240",
+        "unit": "mg/dL",
+        "range": "0.1-1.2",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 10:21:05",
+        "flag": ""
+      },
+      {
+        "name": "Albumin",
+        "result": "4.65",
+        "unit": "g/dL",
+        "range": "3.5-5",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "14-05-2026 10:21:05",
+        "flag": ""
+      }
+    ]
+  },
+  "LAB-09": {
+    "case_id": "LAB-09",
+    "patient_id": "MD-379251",
+    "collected": "16-02-2026 07:31:04",
+    "tests": [
+      {
+        "name": "Thyroid Stimulating Hormone",
+        "result": "3.338",
+        "unit": "uIU/mL",
+        "range": "0.4-4",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "16-02-2026 07:31:04",
+        "flag": ""
+      },
+      {
+        "name": "Ferritin",
+        "result": "109.2",
+        "unit": "ng/mL",
+        "range": "30-400",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "16-02-2026 07:31:04",
+        "flag": ""
+      },
+      {
+        "name": "HbA1c",
+        "result": "7.02",
+        "unit": "%",
+        "range": "4-5.6",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "16-02-2026 07:31:04",
+        "flag": "H"
+      },
+      {
+        "name": "Vitamin D (25-OH)",
+        "result": "41.3",
+        "unit": "ng/mL",
+        "range": "30-100",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "16-02-2026 07:31:04",
+        "flag": ""
+      },
+      {
+        "name": "Total Cholesterol",
+        "result": "167.8",
+        "unit": "mg/dL",
+        "range": "125-200",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "16-02-2026 07:31:04",
+        "flag": ""
+      },
+      {
+        "name": "LDL Cholesterol",
+        "result": "90.9",
+        "unit": "mg/dL",
+        "range": "50-130",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "16-02-2026 07:31:04",
+        "flag": ""
+      },
+      {
+        "name": "HDL Cholesterol",
+        "result": "37.6",
+        "unit": "mg/dL",
+        "range": "40-90",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "16-02-2026 07:31:04",
+        "flag": "L"
+      },
+      {
+        "name": "Triglycerides",
+        "result": "38.0",
+        "unit": "mg/dL",
+        "range": "50-150",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "16-02-2026 07:31:04",
+        "flag": "L"
+      },
+      {
+        "name": "Hemoglobin",
+        "result": "14.36",
+        "unit": "g/dL",
+        "range": "12-17.5",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "16-02-2026 07:31:04",
+        "flag": ""
+      },
+      {
+        "name": "White Blood Cell Count",
+        "result": "7.18",
+        "unit": "x10^3/uL",
+        "range": "4-11",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "16-02-2026 07:31:04",
+        "flag": ""
+      },
+      {
+        "name": "Platelet Count",
+        "result": "220",
+        "unit": "x10^3/uL",
+        "range": "150-410",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "16-02-2026 07:31:04",
+        "flag": ""
+      },
+      {
+        "name": "Hematocrit",
+        "result": "48.5",
+        "unit": "%",
+        "range": "36-50",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "16-02-2026 07:31:04",
+        "flag": ""
+      },
+      {
+        "name": "Mean Corpuscular Volume",
+        "result": "88.9",
+        "unit": "fL",
+        "range": "80-100",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "16-02-2026 07:31:04",
+        "flag": ""
+      }
+    ]
+  },
+  "LAB-10": {
+    "case_id": "LAB-10",
+    "patient_id": "MD-129438",
+    "collected": "21-06-2026 11:54:52",
+    "tests": [
+      {
+        "name": "Sodium",
+        "result": "137.5",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "21-06-2026 11:54:52",
+        "flag": ""
+      },
+      {
+        "name": "Potassium",
+        "result": "4.67",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "21-06-2026 11:54:52",
+        "flag": ""
+      },
+      {
+        "name": "Creatinine",
+        "result": "1.18",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "21-06-2026 11:54:52",
+        "flag": ""
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "84.7",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "21-06-2026 11:54:52",
+        "flag": ""
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "14.5",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "21-06-2026 11:54:52",
+        "flag": ""
+      },
+      {
+        "name": "Hemoglobin",
+        "result": "23.09",
+        "unit": "g/dL",
+        "range": "12-17.5",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "21-06-2026 11:54:52",
+        "flag": "H"
+      },
+      {
+        "name": "White Blood Cell Count",
+        "result": "4.53",
+        "unit": "x10^3/uL",
+        "range": "4-11",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "21-06-2026 11:54:52",
+        "flag": ""
+      },
+      {
+        "name": "Platelet Count",
+        "result": "294",
+        "unit": "x10^3/uL",
+        "range": "150-410",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "21-06-2026 11:54:52",
+        "flag": ""
+      },
+      {
+        "name": "Hematocrit",
+        "result": "45.9",
+        "unit": "%",
+        "range": "36-50",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "21-06-2026 11:54:52",
+        "flag": ""
+      },
+      {
+        "name": "Mean Corpuscular Volume",
+        "result": "73.5",
+        "unit": "fL",
+        "range": "80-100",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "21-06-2026 11:54:52",
+        "flag": "L"
+      },
+      {
+        "name": "Thyroid Stimulating Hormone",
+        "result": "3.234",
+        "unit": "uIU/mL",
+        "range": "0.4-4",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "21-06-2026 11:54:52",
+        "flag": ""
+      },
+      {
+        "name": "Ferritin",
+        "result": "301.6",
+        "unit": "ng/mL",
+        "range": "30-400",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "21-06-2026 11:54:52",
+        "flag": ""
+      },
+      {
+        "name": "HbA1c",
+        "result": "7.25",
+        "unit": "%",
+        "range": "4-5.6",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "21-06-2026 11:54:52",
+        "flag": "H"
+      },
+      {
+        "name": "Vitamin D (25-OH)",
+        "result": "27.7",
+        "unit": "ng/mL",
+        "range": "30-100",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "21-06-2026 11:54:52",
+        "flag": "L"
+      }
+    ]
+  },
+  "LAB-11": {
+    "case_id": "LAB-11",
+    "patient_id": "MD-237205",
+    "collected": "04-04-2026 09:01:26",
+    "tests": [
+      {
+        "name": "Sodium",
+        "result": "140.0",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 09:01:26",
+        "flag": ""
+      },
+      {
+        "name": "Potassium",
+        "result": "3.79",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 09:01:26",
+        "flag": ""
+      },
+      {
+        "name": "Creatinine",
+        "result": "0.810",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 09:01:26",
+        "flag": ""
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "81.0",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 09:01:26",
+        "flag": ""
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "8.50",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 09:01:26",
+        "flag": ""
+      },
+      {
+        "name": "Total Cholesterol",
+        "result": "157.3",
+        "unit": "mg/dL",
+        "range": "125-200",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 09:01:26",
+        "flag": ""
+      },
+      {
+        "name": "LDL Cholesterol",
+        "result": "88.2",
+        "unit": "mg/dL",
+        "range": "50-130",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 09:01:26",
+        "flag": ""
+      },
+      {
+        "name": "HDL Cholesterol",
+        "result": "35.6",
+        "unit": "mg/dL",
+        "range": "40-90",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 09:01:26",
+        "flag": "L"
+      },
+      {
+        "name": "Triglycerides",
+        "result": "118.4",
+        "unit": "mg/dL",
+        "range": "50-150",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 09:01:26",
+        "flag": ""
+      },
+      {
+        "name": "Thyroid Stimulating Hormone",
+        "result": "0.995",
+        "unit": "uIU/mL",
+        "range": "0.4-4",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 09:01:26",
+        "flag": ""
+      },
+      {
+        "name": "Ferritin",
+        "result": "65.7",
+        "unit": "ng/mL",
+        "range": "30-400",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 09:01:26",
+        "flag": ""
+      },
+      {
+        "name": "HbA1c",
+        "result": "4.37",
+        "unit": "%",
+        "range": "4-5.6",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 09:01:26",
+        "flag": ""
+      },
+      {
+        "name": "Vitamin D (25-OH)",
+        "result": "97.4",
+        "unit": "ng/mL",
+        "range": "30-100",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 09:01:26",
+        "flag": ""
+      }
+    ]
+  },
+  "LAB-12": {
+    "case_id": "LAB-12",
+    "patient_id": "MD-483279",
+    "collected": "28-03-2026 08:09:25",
+    "tests": [
+      {
+        "name": "Sodium",
+        "result": "143.7",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "28-03-2026 08:09:25",
+        "flag": ""
+      },
+      {
+        "name": "Potassium",
+        "result": "3.82",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "28-03-2026 08:09:25",
+        "flag": ""
+      },
+      {
+        "name": "Creatinine",
+        "result": "1.55",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "28-03-2026 08:09:25",
+        "flag": "H"
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "83.8",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "28-03-2026 08:09:25",
+        "flag": ""
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "19.4",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "28-03-2026 08:09:25",
+        "flag": ""
+      },
+      {
+        "name": "Hemoglobin",
+        "result": "13.98",
+        "unit": "g/dL",
+        "range": "12-17.5",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "28-03-2026 08:09:25",
+        "flag": ""
+      },
+      {
+        "name": "White Blood Cell Count",
+        "result": "3.64",
+        "unit": "x10^3/uL",
+        "range": "4-11",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "28-03-2026 08:09:25",
+        "flag": "L"
+      },
+      {
+        "name": "Platelet Count",
+        "result": "183",
+        "unit": "x10^3/uL",
+        "range": "150-410",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "28-03-2026 08:09:25",
+        "flag": ""
+      },
+      {
+        "name": "Hematocrit",
+        "result": "43.6",
+        "unit": "%",
+        "range": "36-50",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "28-03-2026 08:09:25",
+        "flag": ""
+      },
+      {
+        "name": "Mean Corpuscular Volume",
+        "result": "94.6",
+        "unit": "fL",
+        "range": "80-100",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "28-03-2026 08:09:25",
+        "flag": ""
+      },
+      {
+        "name": "Thyroid Stimulating Hormone",
+        "result": "3.441",
+        "unit": "uIU/mL",
+        "range": "0.4-4",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "28-03-2026 08:09:25",
+        "flag": ""
+      },
+      {
+        "name": "Ferritin",
+        "result": "363.4",
+        "unit": "ng/mL",
+        "range": "30-400",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "28-03-2026 08:09:25",
+        "flag": ""
+      },
+      {
+        "name": "HbA1c",
+        "result": "4.82",
+        "unit": "%",
+        "range": "4-5.6",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "28-03-2026 08:09:25",
+        "flag": ""
+      },
+      {
+        "name": "Vitamin D (25-OH)",
+        "result": "65.2",
+        "unit": "ng/mL",
+        "range": "30-100",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "28-03-2026 08:09:25",
+        "flag": ""
+      }
+    ]
+  },
+  "LAB-13": {
+    "case_id": "LAB-13",
+    "patient_id": "MD-124840",
+    "collected": "20-08-2026 10:48:16",
+    "tests": [
+      {
+        "name": "Sodium",
+        "result": "136.5",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "20-08-2026 10:48:16",
+        "flag": ""
+      },
+      {
+        "name": "Potassium",
+        "result": "3.91",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "20-08-2026 10:48:16",
+        "flag": ""
+      },
+      {
+        "name": "Creatinine",
+        "result": "0.650",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "20-08-2026 10:48:16",
+        "flag": ""
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "79.6",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "20-08-2026 10:48:16",
+        "flag": ""
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "10.9",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "20-08-2026 10:48:16",
+        "flag": ""
+      },
+      {
+        "name": "Hemoglobin",
+        "result": "12.89",
+        "unit": "g/dL",
+        "range": "12-17.5",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "20-08-2026 10:48:16",
+        "flag": ""
+      },
+      {
+        "name": "White Blood Cell Count",
+        "result": "6.27",
+        "unit": "x10^3/uL",
+        "range": "4-11",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "20-08-2026 10:48:16",
+        "flag": ""
+      },
+      {
+        "name": "Platelet Count",
+        "result": "341",
+        "unit": "x10^3/uL",
+        "range": "150-410",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "20-08-2026 10:48:16",
+        "flag": ""
+      },
+      {
+        "name": "Hematocrit",
+        "result": "45.4",
+        "unit": "%",
+        "range": "36-50",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "20-08-2026 10:48:16",
+        "flag": ""
+      },
+      {
+        "name": "Mean Corpuscular Volume",
+        "result": "88.3",
+        "unit": "fL",
+        "range": "80-100",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "20-08-2026 10:48:16",
+        "flag": ""
+      },
+      {
+        "name": "Thyroid Stimulating Hormone",
+        "result": "2.134",
+        "unit": "uIU/mL",
+        "range": "0.4-4",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "20-08-2026 10:48:16",
+        "flag": ""
+      },
+      {
+        "name": "Ferritin",
+        "result": "56.0",
+        "unit": "ng/mL",
+        "range": "30-400",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "20-08-2026 10:48:16",
+        "flag": ""
+      },
+      {
+        "name": "HbA1c",
+        "result": "5.09",
+        "unit": "%",
+        "range": "4-5.6",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "20-08-2026 10:48:16",
+        "flag": ""
+      },
+      {
+        "name": "Vitamin D (25-OH)",
+        "result": "72.5",
+        "unit": "ng/mL",
+        "range": "30-100",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "20-08-2026 10:48:16",
+        "flag": ""
+      }
+    ]
+  },
+  "LAB-14": {
+    "case_id": "LAB-14",
+    "patient_id": "MD-863931",
+    "collected": "12-05-2026 07:15:16",
+    "tests": [
+      {
+        "name": "Hemoglobin",
+        "result": "15.40",
+        "unit": "g/dL",
+        "range": "12-17.5",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "12-05-2026 07:15:16",
+        "flag": ""
+      },
+      {
+        "name": "White Blood Cell Count",
+        "result": "3.09",
+        "unit": "x10^3/uL",
+        "range": "4-11",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "12-05-2026 07:15:16",
+        "flag": "L"
+      },
+      {
+        "name": "Platelet Count",
+        "result": "258",
+        "unit": "x10^3/uL",
+        "range": "150-410",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "12-05-2026 07:15:16",
+        "flag": ""
+      },
+      {
+        "name": "Hematocrit",
+        "result": "36.1",
+        "unit": "%",
+        "range": "36-50",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "12-05-2026 07:15:16",
+        "flag": ""
+      },
+      {
+        "name": "Mean Corpuscular Volume",
+        "result": "91.3",
+        "unit": "fL",
+        "range": "80-100",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "12-05-2026 07:15:16",
+        "flag": ""
+      },
+      {
+        "name": "Total Cholesterol",
+        "result": "81.2",
+        "unit": "mg/dL",
+        "range": "125-200",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "12-05-2026 07:15:16",
+        "flag": "L"
+      },
+      {
+        "name": "LDL Cholesterol",
+        "result": "92.0",
+        "unit": "mg/dL",
+        "range": "50-130",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "12-05-2026 07:15:16",
+        "flag": ""
+      },
+      {
+        "name": "HDL Cholesterol",
+        "result": "49.3",
+        "unit": "mg/dL",
+        "range": "40-90",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "12-05-2026 07:15:16",
+        "flag": ""
+      },
+      {
+        "name": "Triglycerides",
+        "result": "125.8",
+        "unit": "mg/dL",
+        "range": "50-150",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "12-05-2026 07:15:16",
+        "flag": ""
+      },
+      {
+        "name": "Sodium",
+        "result": "140.4",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "12-05-2026 07:15:16",
+        "flag": ""
+      },
+      {
+        "name": "Potassium",
+        "result": "3.64",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "12-05-2026 07:15:16",
+        "flag": ""
+      },
+      {
+        "name": "Creatinine",
+        "result": "1.21",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "12-05-2026 07:15:16",
+        "flag": ""
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "87.1",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "12-05-2026 07:15:16",
+        "flag": ""
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "10.0",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "12-05-2026 07:15:16",
+        "flag": ""
+      }
+    ]
+  },
+  "LAB-15": {
+    "case_id": "LAB-15",
+    "patient_id": "MD-236100",
+    "collected": "27-01-2026 09:56:59",
+    "tests": [
+      {
+        "name": "Total Cholesterol",
+        "result": "174.7",
+        "unit": "mg/dL",
+        "range": "125-200",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "27-01-2026 09:56:59",
+        "flag": ""
+      },
+      {
+        "name": "LDL Cholesterol",
+        "result": "108.7",
+        "unit": "mg/dL",
+        "range": "50-130",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "27-01-2026 09:56:59",
+        "flag": ""
+      },
+      {
+        "name": "HDL Cholesterol",
+        "result": "40.5",
+        "unit": "mg/dL",
+        "range": "40-90",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "27-01-2026 09:56:59",
+        "flag": ""
+      },
+      {
+        "name": "Triglycerides",
+        "result": "61.0",
+        "unit": "mg/dL",
+        "range": "50-150",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "27-01-2026 09:56:59",
+        "flag": ""
+      },
+      {
+        "name": "Thyroid Stimulating Hormone",
+        "result": "2.184",
+        "unit": "uIU/mL",
+        "range": "0.4-4",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "27-01-2026 09:56:59",
+        "flag": ""
+      },
+      {
+        "name": "Ferritin",
+        "result": "152.1",
+        "unit": "ng/mL",
+        "range": "30-400",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "27-01-2026 09:56:59",
+        "flag": ""
+      },
+      {
+        "name": "HbA1c",
+        "result": "4.37",
+        "unit": "%",
+        "range": "4-5.6",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "27-01-2026 09:56:59",
+        "flag": ""
+      },
+      {
+        "name": "Vitamin D (25-OH)",
+        "result": "33.2",
+        "unit": "ng/mL",
+        "range": "30-100",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "27-01-2026 09:56:59",
+        "flag": ""
+      },
+      {
+        "name": "Sodium",
+        "result": "144.4",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "27-01-2026 09:56:59",
+        "flag": ""
+      },
+      {
+        "name": "Potassium",
+        "result": "3.61",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "27-01-2026 09:56:59",
+        "flag": ""
+      },
+      {
+        "name": "Creatinine",
+        "result": "1.02",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "27-01-2026 09:56:59",
+        "flag": ""
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "86.9",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "27-01-2026 09:56:59",
+        "flag": ""
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "9.70",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "27-01-2026 09:56:59",
+        "flag": ""
+      }
+    ]
+  },
+  "LAB-16": {
+    "case_id": "LAB-16",
+    "patient_id": "MD-818448",
+    "collected": "04-04-2026 10:34:22",
+    "tests": [
+      {
+        "name": "Thyroid Stimulating Hormone",
+        "result": "0.630",
+        "unit": "uIU/mL",
+        "range": "0.4-4",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 10:34:22",
+        "flag": ""
+      },
+      {
+        "name": "Ferritin",
+        "result": "42.9",
+        "unit": "ng/mL",
+        "range": "30-400",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 10:34:22",
+        "flag": ""
+      },
+      {
+        "name": "HbA1c",
+        "result": "5.22",
+        "unit": "%",
+        "range": "4-5.6",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 10:34:22",
+        "flag": ""
+      },
+      {
+        "name": "Vitamin D (25-OH)",
+        "result": "57.7",
+        "unit": "ng/mL",
+        "range": "30-100",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 10:34:22",
+        "flag": ""
+      },
+      {
+        "name": "Sodium",
+        "result": "157.5",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 10:34:22",
+        "flag": "H"
+      },
+      {
+        "name": "Potassium",
+        "result": "4.04",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 10:34:22",
+        "flag": ""
+      },
+      {
+        "name": "Creatinine",
+        "result": "1.19",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 10:34:22",
+        "flag": ""
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "77.0",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 10:34:22",
+        "flag": ""
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "10.6",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 10:34:22",
+        "flag": ""
+      },
+      {
+        "name": "Alanine Aminotransferase",
+        "result": "62.8",
+        "unit": "U/L",
+        "range": "7-56",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 10:34:22",
+        "flag": "H"
+      },
+      {
+        "name": "Aspartate Aminotransferase",
+        "result": "20.3",
+        "unit": "U/L",
+        "range": "10-40",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 10:34:22",
+        "flag": ""
+      },
+      {
+        "name": "Total Bilirubin",
+        "result": "0.660",
+        "unit": "mg/dL",
+        "range": "0.1-1.2",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 10:34:22",
+        "flag": ""
+      },
+      {
+        "name": "Albumin",
+        "result": "4.03",
+        "unit": "g/dL",
+        "range": "3.5-5",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "04-04-2026 10:34:22",
+        "flag": ""
+      }
+    ]
+  },
+  "LAB-17": {
+    "case_id": "LAB-17",
+    "patient_id": "MD-666749",
+    "collected": "04-05-2026 10:12:51",
+    "tests": [
+      {
+        "name": "Hemoglobin",
+        "result": "23.22",
+        "unit": "g/dL",
+        "range": "12-17.5",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "04-05-2026 10:12:51",
+        "flag": "H"
+      },
+      {
+        "name": "White Blood Cell Count",
+        "result": "8.65",
+        "unit": "x10^3/uL",
+        "range": "4-11",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "04-05-2026 10:12:51",
+        "flag": ""
+      },
+      {
+        "name": "Platelet Count",
+        "result": "371",
+        "unit": "x10^3/uL",
+        "range": "150-410",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "04-05-2026 10:12:51",
+        "flag": ""
+      },
+      {
+        "name": "Hematocrit",
+        "result": "42.0",
+        "unit": "%",
+        "range": "36-50",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "04-05-2026 10:12:51",
+        "flag": ""
+      },
+      {
+        "name": "Mean Corpuscular Volume",
+        "result": "86.8",
+        "unit": "fL",
+        "range": "80-100",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "04-05-2026 10:12:51",
+        "flag": ""
+      },
+      {
+        "name": "Alanine Aminotransferase",
+        "result": "34.4",
+        "unit": "U/L",
+        "range": "7-56",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:12:51",
+        "flag": ""
+      },
+      {
+        "name": "Aspartate Aminotransferase",
+        "result": "24.6",
+        "unit": "U/L",
+        "range": "10-40",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:12:51",
+        "flag": ""
+      },
+      {
+        "name": "Total Bilirubin",
+        "result": "1.45",
+        "unit": "mg/dL",
+        "range": "0.1-1.2",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:12:51",
+        "flag": "H"
+      },
+      {
+        "name": "Albumin",
+        "result": "4.79",
+        "unit": "g/dL",
+        "range": "3.5-5",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:12:51",
+        "flag": ""
+      },
+      {
+        "name": "Sodium",
+        "result": "159.5",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:12:51",
+        "flag": "H"
+      },
+      {
+        "name": "Potassium",
+        "result": "6.06",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:12:51",
+        "flag": "H"
+      },
+      {
+        "name": "Creatinine",
+        "result": "0.460",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:12:51",
+        "flag": "L"
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "88.7",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:12:51",
+        "flag": ""
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "14.6",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "04-05-2026 10:12:51",
+        "flag": ""
+      }
+    ]
+  },
+  "LAB-18": {
+    "case_id": "LAB-18",
+    "patient_id": "MD-805525",
+    "collected": "11-04-2026 10:45:06",
+    "tests": [
+      {
+        "name": "Sodium",
+        "result": "137.7",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "11-04-2026 10:45:06",
+        "flag": ""
+      },
+      {
+        "name": "Potassium",
+        "result": "4.69",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "11-04-2026 10:45:06",
+        "flag": ""
+      },
+      {
+        "name": "Creatinine",
+        "result": "1.13",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "11-04-2026 10:45:06",
+        "flag": ""
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "61.4",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "11-04-2026 10:45:06",
+        "flag": "L"
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "15.7",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "11-04-2026 10:45:06",
+        "flag": ""
+      },
+      {
+        "name": "Alanine Aminotransferase",
+        "result": "70.2",
+        "unit": "U/L",
+        "range": "7-56",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "11-04-2026 10:45:06",
+        "flag": "H"
+      },
+      {
+        "name": "Aspartate Aminotransferase",
+        "result": "38.9",
+        "unit": "U/L",
+        "range": "10-40",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "11-04-2026 10:45:06",
+        "flag": ""
+      },
+      {
+        "name": "Total Bilirubin",
+        "result": "0.530",
+        "unit": "mg/dL",
+        "range": "0.1-1.2",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "11-04-2026 10:45:06",
+        "flag": ""
+      },
+      {
+        "name": "Albumin",
+        "result": "3.66",
+        "unit": "g/dL",
+        "range": "3.5-5",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "11-04-2026 10:45:06",
+        "flag": ""
+      },
+      {
+        "name": "Hemoglobin",
+        "result": "8.57",
+        "unit": "g/dL",
+        "range": "12-17.5",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "11-04-2026 10:45:06",
+        "flag": "L"
+      },
+      {
+        "name": "White Blood Cell Count",
+        "result": "4.10",
+        "unit": "x10^3/uL",
+        "range": "4-11",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "11-04-2026 10:45:06",
+        "flag": ""
+      },
+      {
+        "name": "Platelet Count",
+        "result": "388",
+        "unit": "x10^3/uL",
+        "range": "150-410",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "11-04-2026 10:45:06",
+        "flag": ""
+      },
+      {
+        "name": "Hematocrit",
+        "result": "48.7",
+        "unit": "%",
+        "range": "36-50",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "11-04-2026 10:45:06",
+        "flag": ""
+      },
+      {
+        "name": "Mean Corpuscular Volume",
+        "result": "64.4",
+        "unit": "fL",
+        "range": "80-100",
+        "panel": "Complete Blood Count",
+        "method": "Flow cytometry",
+        "specimen": "Whole blood (EDTA)",
+        "sample_collection_time": "11-04-2026 10:45:06",
+        "flag": "L"
+      }
+    ]
+  },
+  "LAB-19": {
+    "case_id": "LAB-19",
+    "patient_id": "MD-500720",
+    "collected": "09-01-2026 09:13:06",
+    "tests": [
+      {
+        "name": "Sodium",
+        "result": "144.9",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "09-01-2026 09:13:06",
+        "flag": ""
+      },
+      {
+        "name": "Potassium",
+        "result": "4.77",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "09-01-2026 09:13:06",
+        "flag": ""
+      },
+      {
+        "name": "Creatinine",
+        "result": "0.860",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "09-01-2026 09:13:06",
+        "flag": ""
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "76.5",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "09-01-2026 09:13:06",
+        "flag": ""
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "5.20",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "09-01-2026 09:13:06",
+        "flag": "L"
+      },
+      {
+        "name": "Total Cholesterol",
+        "result": "266.7",
+        "unit": "mg/dL",
+        "range": "125-200",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "09-01-2026 09:13:06",
+        "flag": "H"
+      },
+      {
+        "name": "LDL Cholesterol",
+        "result": "87.9",
+        "unit": "mg/dL",
+        "range": "50-130",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "09-01-2026 09:13:06",
+        "flag": ""
+      },
+      {
+        "name": "HDL Cholesterol",
+        "result": "64.7",
+        "unit": "mg/dL",
+        "range": "40-90",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "09-01-2026 09:13:06",
+        "flag": ""
+      },
+      {
+        "name": "Triglycerides",
+        "result": "69.0",
+        "unit": "mg/dL",
+        "range": "50-150",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "09-01-2026 09:13:06",
+        "flag": ""
+      },
+      {
+        "name": "Alanine Aminotransferase",
+        "result": "26.5",
+        "unit": "U/L",
+        "range": "7-56",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "09-01-2026 09:13:06",
+        "flag": ""
+      },
+      {
+        "name": "Aspartate Aminotransferase",
+        "result": "23.1",
+        "unit": "U/L",
+        "range": "10-40",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "09-01-2026 09:13:06",
+        "flag": ""
+      },
+      {
+        "name": "Total Bilirubin",
+        "result": "0.210",
+        "unit": "mg/dL",
+        "range": "0.1-1.2",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "09-01-2026 09:13:06",
+        "flag": ""
+      },
+      {
+        "name": "Albumin",
+        "result": "3.65",
+        "unit": "g/dL",
+        "range": "3.5-5",
+        "panel": "Liver Function",
+        "method": "Spectrophotometry",
+        "specimen": "Serum",
+        "sample_collection_time": "09-01-2026 09:13:06",
+        "flag": ""
+      }
+    ]
+  },
+  "LAB-20": {
+    "case_id": "LAB-20",
+    "patient_id": "MD-193393",
+    "collected": "29-01-2026 07:29:49",
+    "tests": [
+      {
+        "name": "Total Cholesterol",
+        "result": "170.1",
+        "unit": "mg/dL",
+        "range": "125-200",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "29-01-2026 07:29:49",
+        "flag": ""
+      },
+      {
+        "name": "LDL Cholesterol",
+        "result": "91.7",
+        "unit": "mg/dL",
+        "range": "50-130",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "29-01-2026 07:29:49",
+        "flag": ""
+      },
+      {
+        "name": "HDL Cholesterol",
+        "result": "55.4",
+        "unit": "mg/dL",
+        "range": "40-90",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "29-01-2026 07:29:49",
+        "flag": ""
+      },
+      {
+        "name": "Triglycerides",
+        "result": "94.9",
+        "unit": "mg/dL",
+        "range": "50-150",
+        "panel": "Lipid Profile",
+        "method": "Enzymatic colorimetric",
+        "specimen": "Serum",
+        "sample_collection_time": "29-01-2026 07:29:49",
+        "flag": ""
+      },
+      {
+        "name": "Sodium",
+        "result": "90.4",
+        "unit": "mmol/L",
+        "range": "136-145",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "29-01-2026 07:29:49",
+        "flag": "L"
+      },
+      {
+        "name": "Potassium",
+        "result": "3.70",
+        "unit": "mmol/L",
+        "range": "3.5-5.1",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "29-01-2026 07:29:49",
+        "flag": ""
+      },
+      {
+        "name": "Creatinine",
+        "result": "0.470",
+        "unit": "mg/dL",
+        "range": "0.6-1.3",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "29-01-2026 07:29:49",
+        "flag": "L"
+      },
+      {
+        "name": "Glucose (fasting)",
+        "result": "70.0",
+        "unit": "mg/dL",
+        "range": "70-99",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "29-01-2026 07:29:49",
+        "flag": ""
+      },
+      {
+        "name": "Blood Urea Nitrogen",
+        "result": "9.30",
+        "unit": "mg/dL",
+        "range": "7-20",
+        "panel": "Basic Metabolic Panel",
+        "method": "Ion-selective electrode",
+        "specimen": "Serum",
+        "sample_collection_time": "29-01-2026 07:29:49",
+        "flag": ""
+      },
+      {
+        "name": "Thyroid Stimulating Hormone",
+        "result": "0.353",
+        "unit": "uIU/mL",
+        "range": "0.4-4",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "29-01-2026 07:29:49",
+        "flag": "L"
+      },
+      {
+        "name": "Ferritin",
+        "result": "115.8",
+        "unit": "ng/mL",
+        "range": "30-400",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "29-01-2026 07:29:49",
+        "flag": ""
+      },
+      {
+        "name": "HbA1c",
+        "result": "5.40",
+        "unit": "%",
+        "range": "4-5.6",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "29-01-2026 07:29:49",
+        "flag": ""
+      },
+      {
+        "name": "Vitamin D (25-OH)",
+        "result": "43.6",
+        "unit": "ng/mL",
+        "range": "30-100",
+        "panel": "Endocrine and Iron",
+        "method": "Chemiluminescent immunoassay",
+        "specimen": "Serum",
+        "sample_collection_time": "29-01-2026 07:29:49",
+        "flag": ""
+      }
+    ]
+  }
+}

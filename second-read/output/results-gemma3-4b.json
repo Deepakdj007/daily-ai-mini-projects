@@ -1,0 +1,4042 @@
+{
+ "manifest": {
+  "model": "gemma3:4b",
+  "digest": "a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a",
+  "profile": "full",
+  "probes": "sha256:84d5451ee54499cac86088122978a0d11bc0df060504478078f338f67522a8c4",
+  "prompt_version": "v1",
+  "temperature": 0.0,
+  "top_k": 1,
+  "seeds": [
+   0,
+   1
+  ],
+  "num_ctx": 8192,
+  "image_edge": 896,
+  "llm_calls": {
+   "count": 0,
+   "images": 0,
+   "seconds": 0.0
+  },
+  "written": "2026-09-13T02:19:50+00:00",
+  "stopped": ""
+ },
+ "results": [
+  {
+   "kind": "probe",
+   "pid": "p001",
+   "case_id": "CXR-1863",
+   "finding": "cardiomegaly",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-1233",
+   "image_bytes": {
+    "sighted": 386482,
+    "blind": 0,
+    "shuffled": 387385,
+    "repeat": 386482
+   },
+   "truncated": false,
+   "latency_s": 12.71,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively normal in size and shape within the chest, with no obvious bulging or enlargement. The heart borders are well-defined and do not appear abnormally prominent.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual assessment of the radiograph, I cannot determine if the cardiac silhouette appears abnormally large.",
+    "shuffled": "The cardiac silhouette appears relatively normal in size and shape within the chest cavity. There is no obvious enlargement of the heart shadow, suggesting that cardiomegaly is not present on this radiograph.",
+    "repeat": "The cardiac silhouette appears relatively normal in size and shape within the chest, with no obvious bulging or enlargement. The heart borders are well-defined and do not appear abnormally prominent."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p002",
+   "case_id": "CXR-2661",
+   "finding": "cardiomegaly",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3926",
+   "image_bytes": {
+    "sighted": 416387,
+    "blind": 0,
+    "shuffled": 423896,
+    "repeat": 416387
+   },
+   "truncated": false,
+   "latency_s": 6.12,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively normal in size and shape within the chest, and there are no obvious abnormalities that would suggest an enlarged heart. The heart size appears within the expected range for a child's chest radiograph.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged.",
+    "shuffled": "The cardiac silhouette appears relatively normal in size and shape, not significantly enlarged compared to the chest dimensions. The heart borders are well-defined, and there is no obvious bulging of the cardiac shadow.",
+    "repeat": "The cardiac silhouette appears relatively normal in size and shape within the chest, without any obvious enlargement. The heart is not significantly larger than expected for a child of this age based on the image."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p003",
+   "case_id": "CXR-3158",
+   "finding": "cardiomegaly",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "yes",
+   "verdict": "grounded",
+   "flagged": false,
+   "correct": true,
+   "donor": "CXR-3341",
+   "image_bytes": {
+    "sighted": 464647,
+    "blind": 0,
+    "shuffled": 497199,
+    "repeat": 464647
+   },
+   "truncated": false,
+   "latency_s": 6.02,
+   "reasoning": {
+    "sighted": "The heart appears relatively large in comparison to the chest diameter, which is a key characteristic of cardiomegaly. The cardiac silhouette occupies a disproportionately large area of the mediastinum.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged.",
+    "shuffled": "The cardiac silhouette appears relatively normal in size and shape, not significantly enlarged compared to the chest dimensions. The heart borders are well-defined and do not exhibit excessive prominence.",
+    "repeat": "The heart appears relatively large in comparison to the chest diameter, which is a key characteristic of cardiomegaly. The cardiac silhouette occupies a disproportionately large area of the mediastinum."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p004",
+   "case_id": "CXR-0922",
+   "finding": "cardiomegaly",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-0050",
+   "image_bytes": {
+    "sighted": 352783,
+    "blind": 0,
+    "shuffled": 303270,
+    "repeat": 352783
+   },
+   "truncated": false,
+   "latency_s": 6.05,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively normal in size and shape within the chest cavity. There is no obvious enlargement of the heart shadow, suggesting that cardiomegaly is not present on this radiograph.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged.",
+    "shuffled": "The radiograph shows a relatively normal-sized cardiac silhouette within the chest. While subtle, the heart appears to be within the expected size range for a frontal view, suggesting no significant cardiomegaly.",
+    "repeat": "The cardiac silhouette appears relatively normal in size and shape within the chest cavity. There is no obvious enlargement of the heart shadow, suggesting that cardiomegaly is not present on this radiograph."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p005",
+   "case_id": "CXR-3430",
+   "finding": "cardiomegaly",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-0050",
+   "image_bytes": {
+    "sighted": 406716,
+    "blind": 0,
+    "shuffled": 303270,
+    "repeat": 406716
+   },
+   "truncated": false,
+   "latency_s": 5.19,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively normal in size and shape within the chest, with no obvious bulging or enlargement. The heart borders are well-defined, and there is no significant obscuration of the mediastinum.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged.",
+    "shuffled": "The radiograph shows a relatively normal-sized cardiac silhouette within the chest. While subtle, the heart appears to be within the expected size range for a frontal view, suggesting no significant cardiomegaly.",
+    "repeat": "The cardiac silhouette appears relatively normal in size and shape within the chest, with no obvious bulging or enlargement. The heart borders are well-defined, and there is no significant obscuration of the mediastinum."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p006",
+   "case_id": "CXR-0050",
+   "finding": "cardiomegaly",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-0922",
+   "image_bytes": {
+    "sighted": 303270,
+    "blind": 0,
+    "shuffled": 352783,
+    "repeat": 303270
+   },
+   "truncated": false,
+   "latency_s": 4.47,
+   "reasoning": {
+    "sighted": "The radiograph shows a relatively normal-sized cardiac silhouette within the chest. While subtle, the heart appears to be within the expected size range for a frontal view, suggesting no significant cardiomegaly.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged.",
+    "shuffled": "The cardiac silhouette appears relatively normal in size and shape within the chest cavity. There is no obvious enlargement of the heart shadow, suggesting that cardiomegaly is not present on this radiograph.",
+    "repeat": "The radiograph shows a relatively normal-sized cardiac silhouette within the chest. While subtle, the heart appears to be within the expected size range for a frontal view, suggesting no significant cardiomegaly."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p007",
+   "case_id": "CXR-3926",
+   "finding": "cardiomegaly",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3158",
+   "image_bytes": {
+    "sighted": 423896,
+    "blind": 0,
+    "shuffled": 464647,
+    "repeat": 423896
+   },
+   "truncated": false,
+   "latency_s": 4.55,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively normal in size and shape, not significantly enlarged compared to the chest dimensions. The heart borders are well-defined, and there is no obvious bulging of the cardiac shadow.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged.",
+    "shuffled": "The heart appears relatively large in comparison to the chest diameter, which is a key characteristic of cardiomegaly. The cardiac silhouette occupies a disproportionately large area of the mediastinum.",
+    "repeat": "The cardiac silhouette appears relatively normal in size and shape, not significantly enlarged compared to the chest dimensions. The heart borders are well-defined, and there is no obvious bulging of the cardiac shadow."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p008",
+   "case_id": "CXR-1233",
+   "finding": "cardiomegaly",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3158",
+   "image_bytes": {
+    "sighted": 387385,
+    "blind": 0,
+    "shuffled": 464647,
+    "repeat": 387385
+   },
+   "truncated": false,
+   "latency_s": 4.55,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively normal in size and shape within the chest cavity. There is no obvious enlargement of the heart shadow, suggesting that cardiomegaly is not present on this radiograph.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged.",
+    "shuffled": "The heart appears relatively large in comparison to the chest diameter, which is a key characteristic of cardiomegaly. The cardiac silhouette occupies a disproportionately large area of the mediastinum.",
+    "repeat": "The cardiac silhouette appears relatively normal in size and shape within the chest cavity. There is no obvious enlargement of the heart shadow, suggesting that cardiomegaly is not present on this radiograph."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p009",
+   "case_id": "CXR-3341",
+   "finding": "cardiomegaly",
+   "answer": "no",
+   "source": "stated_normal",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3430",
+   "image_bytes": {
+    "sighted": 497199,
+    "blind": 0,
+    "shuffled": 406716,
+    "repeat": 497199
+   },
+   "truncated": false,
+   "latency_s": 4.47,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively normal in size and shape, not significantly enlarged compared to the chest dimensions. The heart borders are well-defined and do not exhibit excessive prominence.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged.",
+    "shuffled": "The cardiac silhouette appears relatively normal in size and shape within the chest, with no obvious bulging or enlargement. The heart borders are well-defined, and there is no significant obscuration of the mediastinum.",
+    "repeat": "The cardiac silhouette appears relatively normal in size and shape, not significantly enlarged compared to the chest dimensions. The heart borders are well-defined and do not exhibit excessive prominence."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p010",
+   "case_id": "CXR-0272",
+   "finding": "cardiomegaly",
+   "answer": "no",
+   "source": "stated_normal",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3430",
+   "image_bytes": {
+    "sighted": 392099,
+    "blind": 0,
+    "shuffled": 406716,
+    "repeat": 392099
+   },
+   "truncated": false,
+   "latency_s": 5.49,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively normal in size and shape within the chest, and there is no obvious enlargement of the heart. The mediastinum is not significantly widened, which further supports the assessment of a normal-sized cardiac silhouette.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged.",
+    "shuffled": "The cardiac silhouette appears relatively normal in size and shape within the chest, with no obvious bulging or enlargement. The heart borders are well-defined, and there is no significant obscuration of the mediastinum.",
+    "repeat": "The cardiac silhouette appears relatively normal in size and shape within the chest, and there is no obvious enlargement of the heart. The mediastinum is not significantly widened, which further supports the absence of cardiomegaly."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p011",
+   "case_id": "CXR-0905",
+   "finding": "cardiomegaly",
+   "answer": "no",
+   "source": "stated_normal",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "image_shaped",
+   "flagged": false,
+   "correct": false,
+   "donor": "CXR-2993",
+   "image_bytes": {
+    "sighted": 421335,
+    "blind": 0,
+    "shuffled": 390667,
+    "repeat": 421335
+   },
+   "truncated": false,
+   "latency_s": 6.07,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively prominent and occupies a larger portion of the chest compared to the surrounding lung fields. This suggests an enlarged cardiac silhouette, which is the definition of cardiomegaly.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged.",
+    "shuffled": "The cardiac silhouette appears relatively prominent in the image, particularly in the cardiace shadow, suggesting an enlarged heart. This is consistent with cardiomegaly, where the heart is larger than normal.",
+    "repeat": "The cardiac silhouette appears relatively prominent and occupies a larger portion of the chest compared to the surrounding lung fields. This suggests an enlarged cardiac silhouette, which is the definition of cardiomegaly."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p012",
+   "case_id": "CXR-3340",
+   "finding": "cardiomegaly",
+   "answer": "no",
+   "source": "stated_normal",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3430",
+   "image_bytes": {
+    "sighted": 386012,
+    "blind": 0,
+    "shuffled": 406716,
+    "repeat": 386012
+   },
+   "truncated": false,
+   "latency_s": 5.07,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively normal in size and shape within the chest cavity. There is no obvious enlargement of the cardiac silhouette compared to the surrounding lung fields.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged.",
+    "shuffled": "The cardiac silhouette appears relatively normal in size and shape within the chest, with no obvious bulging or enlargement. The heart borders are well-defined, and there is no significant obscuration of the mediastinum.",
+    "repeat": "The cardiac silhouette appears relatively normal in size and shape within the chest cavity. While subtle, there isn't a significant enlargement of the cardiac silhouette that would definitively indicate cardiomegaly."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p013",
+   "case_id": "CXR-2993",
+   "finding": "cardiomegaly",
+   "answer": "no",
+   "source": "stated_normal",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "yes",
+   "verdict": "grounded",
+   "flagged": false,
+   "correct": false,
+   "donor": "CXR-3340",
+   "image_bytes": {
+    "sighted": 390667,
+    "blind": 0,
+    "shuffled": 386012,
+    "repeat": 390667
+   },
+   "truncated": false,
+   "latency_s": 4.51,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively prominent in the image, particularly in the cardiace shadow, suggesting an enlarged heart. This is consistent with cardiomegaly, where the heart is larger than normal.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged.",
+    "shuffled": "The cardiac silhouette appears relatively normal in size and shape within the chest cavity. While subtle, there isn't a significant enlargement of the cardiac silhouette that would definitively indicate cardiomegaly.",
+    "repeat": "The cardiac silhouette appears relatively prominent in the image, particularly in the cardiace shadow, suggesting an enlarged heart. This is consistent with cardiomegaly, where the heart is larger than normal."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p014",
+   "case_id": "CXR-1577",
+   "finding": "cardiomegaly",
+   "answer": "no",
+   "source": "stated_normal",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-2661",
+   "image_bytes": {
+    "sighted": 394771,
+    "blind": 0,
+    "shuffled": 416387,
+    "repeat": 394771
+   },
+   "truncated": false,
+   "latency_s": 5.28,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively normal in size and shape within the chest, with no obvious bulging or enlargement. The heart borders are well-defined, and there is no significant obscuring of the mediastinum.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged.",
+    "shuffled": "The cardiac silhouette appears relatively normal in size and shape within the chest, without any obvious enlargement. The heart is not significantly larger than expected for a child of this age based on the image.",
+    "repeat": "The cardiac silhouette appears relatively normal in size and shape within the chest, with no obvious bulging or enlargement. The heart borders are well-defined and do not appear abnormally prominent."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p015",
+   "case_id": "CXR-2131",
+   "finding": "cardiomegaly",
+   "answer": "no",
+   "source": "stated_normal",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3430",
+   "image_bytes": {
+    "sighted": 436727,
+    "blind": 0,
+    "shuffled": 406716,
+    "repeat": 436727
+   },
+   "truncated": false,
+   "latency_s": 5.29,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively normal in size and shape within the chest, with no obvious bulging or enlargement of the heart. The mediastinum is not significantly widened, which further supports a normal cardiac size.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged.",
+    "shuffled": "The cardiac silhouette appears relatively normal in size and shape within the chest, with no obvious bulging or enlargement. The heart borders are well-defined, and there is no significant obscuration of the mediastinum.",
+    "repeat": "The cardiac silhouette appears relatively normal in size and shape within the chest, and there are no obvious abnormalities that would suggest an enlarged heart. The heart size appears within normal limits based on this frontal projection."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p016",
+   "case_id": "CXR-2638",
+   "finding": "cardiomegaly",
+   "answer": "no",
+   "source": "stated_normal",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-1863",
+   "image_bytes": {
+    "sighted": 388172,
+    "blind": 0,
+    "shuffled": 386482,
+    "repeat": 388172
+   },
+   "truncated": false,
+   "latency_s": 5.27,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively normal in size and shape within the chest cavity. While there is some opacity in the lower left lung field, this does not significantly alter the overall size or appearance of the heart.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged.",
+    "shuffled": "The cardiac silhouette appears relatively normal in size and shape within the chest, with no obvious bulging or enlargement. The heart borders are well-defined and do not appear abnormally prominent.",
+    "repeat": "The cardiac silhouette appears relatively normal in size and shape within the chest cavity. While there is some opacity in the lower left lung field, this does not significantly alter the apparent size of the heart."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p017",
+   "case_id": "CXR-3195",
+   "finding": "consolidation",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-0627",
+   "image_bytes": {
+    "sighted": 442931,
+    "blind": 0,
+    "shuffled": 376588,
+    "repeat": 442931
+   },
+   "truncated": false,
+   "latency_s": 5.84,
+   "reasoning": {
+    "sighted": "The radiograph shows multiple areas of increased density within the lung fields, appearing as hazy opacities. These opacities are scattered throughout both lungs, consistent with consolidation or airspace opacity.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation.",
+    "shuffled": "The radiograph shows a hazy, white opacity in the right lower lung field, which appears as a consolidation. This suggests an area of increased density within the lung tissue.",
+    "repeat": "The radiograph shows multiple areas of increased density within the lung fields, appearing as hazy opacities. These opacities are distributed throughout both lungs, suggesting focal consolidation or airspace opacity."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p018",
+   "case_id": "CXR-3974",
+   "finding": "consolidation",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-2789",
+   "image_bytes": {
+    "sighted": 427107,
+    "blind": 0,
+    "shuffled": 417740,
+    "repeat": 427107
+   },
+   "truncated": false,
+   "latency_s": 6.27,
+   "reasoning": {
+    "sighted": "The radiograph shows a significant area of hazy whiteness in the right lower lung field, which represents a consolidation. This opacity obscures the underlying lung markings, indicating a focal consolidation.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation.",
+    "shuffled": "The radiograph shows a hazy, cloudy appearance in the right lower lung field, which is consistent with an airspace opacity. This opacity obscures the underlying lung markings, indicating a filling of the air space with a non-aerated material.",
+    "repeat": "The radiograph shows a significant area of hazy opacification in the right lower lobe of the lung, which appears as a dense, white area. This pattern is consistent with consolidation, representing an area of increased density within the lung tissue."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p019",
+   "case_id": "CXR-1012",
+   "finding": "consolidation",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-1620",
+   "image_bytes": {
+    "sighted": 320434,
+    "blind": 0,
+    "shuffled": 389574,
+    "repeat": 320434
+   },
+   "truncated": false,
+   "latency_s": 6.1,
+   "reasoning": {
+    "sighted": "The radiograph shows a significant opacity in the left lower lung field, which appears as a dense, white area. This suggests a consolidation or airspace opacity is present in that region of the lung.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation.",
+    "shuffled": "The radiograph shows a significant opacity in the right lower lung field, which appears as a dense, white area. This suggests a focal consolidation or airspace opacity is present in that region of the lung.",
+    "repeat": "The radiograph shows a significant opacity in the left lower lung field, which appears as a dense, white area. This suggests a consolidation or airspace opacity is present in that region of the lung."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p020",
+   "case_id": "CXR-3312",
+   "finding": "consolidation",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3775",
+   "image_bytes": {
+    "sighted": 409351,
+    "blind": 0,
+    "shuffled": 392875,
+    "repeat": 409351
+   },
+   "truncated": false,
+   "latency_s": 6.0,
+   "reasoning": {
+    "sighted": "The radiograph shows multiple areas of increased density within the lungs, appearing as white opacities. These opacities are scattered throughout both lung fields, consistent with consolidation or airspace opacity.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation.",
+    "shuffled": "The radiograph shows a significant area of hazy white shadowing throughout the right lung field, which represents consolidation. This opacity obscures the normal lung markings, indicating a focal consolidation.",
+    "repeat": "The radiograph shows multiple areas of increased density within the lungs, appearing as white opacities. These opacities are scattered throughout both lung fields, consistent with consolidation or airspace opacity."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p021",
+   "case_id": "CXR-0145",
+   "finding": "consolidation",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3122",
+   "image_bytes": {
+    "sighted": 385692,
+    "blind": 0,
+    "shuffled": 489457,
+    "repeat": 385692
+   },
+   "truncated": false,
+   "latency_s": 6.01,
+   "reasoning": {
+    "sighted": "The radiograph shows a hazy opacity in the left lower lung field, which could represent a consolidation or airspace filling. There is also a small opacity in the right lower lung field.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation.",
+    "shuffled": "The radiograph shows a significant opacity in the right lower lobe, appearing as a dense, white area. This suggests a consolidation or airspace opacity within the lung tissue.",
+    "repeat": "The radiograph shows a hazy opacity in the left lower lung field, which could represent a consolidation or airspace filling. There is also a small opacity in the right lower lung field."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p022",
+   "case_id": "CXR-0688",
+   "finding": "consolidation",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3122",
+   "image_bytes": {
+    "sighted": 390155,
+    "blind": 0,
+    "shuffled": 489457,
+    "repeat": 390155
+   },
+   "truncated": false,
+   "latency_s": 5.19,
+   "reasoning": {
+    "sighted": "The radiograph shows a significant area of increased density in the right lower lung field, which appears as a white opacity. This suggests the presence of focal consolidation or airspace opacity in that region.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation.",
+    "shuffled": "The radiograph shows a significant opacity in the right lower lobe, appearing as a dense, white area. This suggests a consolidation or airspace opacity within the lung tissue.",
+    "repeat": "The radiograph shows a significant area of increased density in the right lower lung field, which appears as a white opacity. This suggests the presence of focal consolidation or airspace opacity in that region."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p023",
+   "case_id": "CXR-2262",
+   "finding": "consolidation",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-0737",
+   "image_bytes": {
+    "sighted": 391413,
+    "blind": 0,
+    "shuffled": 372699,
+    "repeat": 391413
+   },
+   "truncated": false,
+   "latency_s": 6.0,
+   "reasoning": {
+    "sighted": "The radiograph shows a hazy opacity in the right lower lung field, which appears to be a consolidation. This opacity obscures the underlying lung markings, indicating an area of increased density.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation.",
+    "shuffled": "The radiograph shows a significant opacity in the right lower lobe of the lung, appearing as a dense, white area. This suggests a focal consolidation or airspace opacity within that region of the lung.",
+    "repeat": "The radiograph shows a hazy opacity in the right lower lung field, which appears to be a consolidation. This opacity obscures the underlying lung markings, indicating an area of increased density."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p024",
+   "case_id": "CXR-3775",
+   "finding": "consolidation",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-0737",
+   "image_bytes": {
+    "sighted": 392875,
+    "blind": 0,
+    "shuffled": 372699,
+    "repeat": 392875
+   },
+   "truncated": false,
+   "latency_s": 4.39,
+   "reasoning": {
+    "sighted": "The radiograph shows a significant area of hazy white shadowing throughout the right lung field, which represents consolidation. This opacity obscures the normal lung markings, indicating a focal consolidation.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation.",
+    "shuffled": "The radiograph shows a significant opacity in the right lower lobe of the lung, appearing as a dense, white area. This suggests a focal consolidation or airspace opacity is present in that region.",
+    "repeat": "The radiograph shows a significant area of hazy white shadowing throughout the right lung field, which represents consolidation. This opacity obscures the normal lung markings, indicating a focal consolidation."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p025",
+   "case_id": "CXR-0627",
+   "finding": "consolidation",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3122",
+   "image_bytes": {
+    "sighted": 376588,
+    "blind": 0,
+    "shuffled": 489457,
+    "repeat": 376588
+   },
+   "truncated": false,
+   "latency_s": 4.28,
+   "reasoning": {
+    "sighted": "The radiograph shows a hazy, white opacity in the right lower lung field, which appears as a consolidation. This suggests an area of increased density within the lung tissue.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation.",
+    "shuffled": "The radiograph shows a significant opacity in the right lower lobe, appearing as a dense, white area. This suggests a consolidation or airspace opacity within the lung tissue.",
+    "repeat": "The radiograph shows a hazy, white opacity in the right lower lung field, which appears as a consolidation. This suggests an area of increased density within the lung tissue."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p026",
+   "case_id": "CXR-3122",
+   "finding": "consolidation",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3575",
+   "image_bytes": {
+    "sighted": 489457,
+    "blind": 0,
+    "shuffled": 384782,
+    "repeat": 489457
+   },
+   "truncated": false,
+   "latency_s": 5.14,
+   "reasoning": {
+    "sighted": "The radiograph shows a significant opacity in the right lower lobe, appearing as a dense, white area. This suggests a consolidation or airspace opacity within the lung tissue.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation.",
+    "shuffled": "The radiograph shows a hazy, white opacity in the right lower lung field, which appears as a consolidation. This opacity obscures the underlying lung markings, indicating an area of increased density within the lung tissue.",
+    "repeat": "The radiograph shows a significant opacity in the right lower lobe, appearing as a dense, white area. This suggests a consolidation or airspace opacity within the lung tissue."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p027",
+   "case_id": "CXR-0737",
+   "finding": "consolidation",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3122",
+   "image_bytes": {
+    "sighted": 372699,
+    "blind": 0,
+    "shuffled": 489457,
+    "repeat": 372699
+   },
+   "truncated": false,
+   "latency_s": 4.44,
+   "reasoning": {
+    "sighted": "The radiograph shows a significant opacity in the right lower lobe of the lung, appearing as a dense, white area. This suggests a focal consolidation or airspace opacity is present in that region.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation.",
+    "shuffled": "The radiograph shows a significant opacity in the right lower lobe, appearing as a dense, white area. This suggests a consolidation or airspace opacity within the lung tissue.",
+    "repeat": "The radiograph shows a significant opacity in the right lower lobe of the lung, appearing as a dense, white area. This suggests a focal consolidation or airspace opacity is present in that region."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p028",
+   "case_id": "CXR-1620",
+   "finding": "consolidation",
+   "answer": "no",
+   "source": "stated_normal",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3775",
+   "image_bytes": {
+    "sighted": 389574,
+    "blind": 0,
+    "shuffled": 392875,
+    "repeat": 389574
+   },
+   "truncated": false,
+   "latency_s": 4.45,
+   "reasoning": {
+    "sighted": "The radiograph shows a significant opacity in the right lower lung field, which appears as a dense, white area. This suggests a focal consolidation or airspace opacity is present in that region of the lung.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation.",
+    "shuffled": "The radiograph shows a significant area of hazy white shadowing throughout the right lung field, which represents consolidation. This opacity obscures the normal lung markings, indicating a focal consolidation.",
+    "repeat": "The radiograph shows a significant opacity in the right lower lung field, which appears as a dense, white area. This suggests a focal consolidation or airspace opacity is present in that region of the lung."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p029",
+   "case_id": "CXR-3575",
+   "finding": "consolidation",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3775",
+   "image_bytes": {
+    "sighted": 384782,
+    "blind": 0,
+    "shuffled": 392875,
+    "repeat": 384782
+   },
+   "truncated": false,
+   "latency_s": 4.27,
+   "reasoning": {
+    "sighted": "The radiograph shows a hazy, white opacity in the right lower lung field, which appears as a consolidation. This opacity obscures the underlying lung markings, indicating an area of increased density.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation.",
+    "shuffled": "The radiograph shows a significant area of hazy white shadowing throughout the right lung field, which represents consolidation. This opacity obscures the normal lung markings, indicating a focal consolidation.",
+    "repeat": "The radiograph shows a hazy, white opacity in the right lower lung field, which appears as a consolidation. This opacity obscures the underlying lung markings, indicating an area of increased density."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p030",
+   "case_id": "CXR-2789",
+   "finding": "consolidation",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-0737",
+   "image_bytes": {
+    "sighted": 417740,
+    "blind": 0,
+    "shuffled": 372699,
+    "repeat": 417740
+   },
+   "truncated": false,
+   "latency_s": 4.7,
+   "reasoning": {
+    "sighted": "The radiograph shows a hazy, cloudy appearance in the right lower lung field, which is consistent with an airspace opacity. This opacity obscures the underlying lung markings, indicating a filling of the air space with a non-aerated material.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation.",
+    "shuffled": "The radiograph shows a significant opacity in the right lower lobe of the lung, appearing as a dense, white area. This suggests a focal consolidation or airspace opacity is present in that region.",
+    "repeat": "The radiograph shows a hazy, cloudy appearance in the right lower lung field, which is consistent with an airspace opacity. This opacity obscures the underlying lung markings, indicating a filling of the air space with a non-aerated material."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p031",
+   "case_id": "CXR-3892",
+   "finding": "fracture",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "no",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-1708",
+   "image_bytes": {
+    "sighted": 443868,
+    "blind": 0,
+    "shuffled": 403151,
+    "repeat": 443868
+   },
+   "truncated": false,
+   "latency_s": 6.54,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear outline of the ribs, and there appears to be a subtle blurring or loss of definition around the upper left rib, suggesting a possible fracture. This blurring is consistent with a fracture disrupting the normal bony structure.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear opacity along the lateral aspect of the fourth rib, suggestive of a fracture line. This opacity is associated with periosteal reaction, further supporting the presence of a rib fracture.",
+    "shuffled": "The radiograph shows the sternum and ribs, and there is a subtle linear opacity in the upper-lateral aspect of the left chest, which could potentially represent a rib fracture. However, it is difficult to definitively confirm a fracture without further evaluation and comparison to prior imaging.",
+    "repeat": "The radiograph shows a clear outline of the ribs, and there appears to be a subtle blurring or loss of definition around the upper left rib, suggesting a possible fracture. This blurring is consistent with a fracture disrupting the normal bony structure."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p032",
+   "case_id": "CXR-0608",
+   "finding": "fracture",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-2095",
+   "image_bytes": {
+    "sighted": 517567,
+    "blind": 0,
+    "shuffled": 391758,
+    "repeat": 517567
+   },
+   "truncated": false,
+   "latency_s": 6.74,
+   "reasoning": {
+    "sighted": "The radiograph shows a dense, white opacity in the upper lung field, which could represent a pneumothorax or other pathology. However, there is no clear evidence of a fracture line associated with the ribs, as the ribs appear intact and well-defined.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a",
+    "shuffled": "The radiograph shows the ribs clearly outlined, and there appears to be a subtle blurring and loss of definition at the junction of the upper ribs with the chest wall on the right side. This suggests a possible fracture line disrupting the normal bony structure.",
+    "repeat": "The radiograph shows a dense, white opacity in the upper lung field, which could represent a pneumothorax or other pathology. However, there is no clear evidence of a fracture line associated with the ribs, as the ribs appear intact and well-defined."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p033",
+   "case_id": "CXR-3408",
+   "finding": "fracture",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "image_shaped",
+   "flagged": false,
+   "correct": true,
+   "donor": "CXR-3620",
+   "image_bytes": {
+    "sighted": 503753,
+    "blind": 0,
+    "shuffled": 391020,
+    "repeat": 503753
+   },
+   "truncated": false,
+   "latency_s": 6.88,
+   "reasoning": {
+    "sighted": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring and disruption of the normal rib contour in the upper portion of the left chest. This suggests a possible fracture, although further evaluation would be needed to confirm.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a",
+    "shuffled": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring and loss of definition at the junction of the 6th rib and the body of the sternum, which is indicative of a fracture. This blurring suggests a fracture line is present along the rib.",
+    "repeat": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring and disruption of the normal rib contour in the upper portion of the left chest. This suggests a possible fracture line, although further evaluation would be needed to confirm."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p034",
+   "case_id": "CXR-2095",
+   "finding": "fracture",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "image_shaped",
+   "flagged": false,
+   "correct": true,
+   "donor": "CXR-0284",
+   "image_bytes": {
+    "sighted": 391758,
+    "blind": 0,
+    "shuffled": 425746,
+    "repeat": 391758
+   },
+   "truncated": false,
+   "latency_s": 6.02,
+   "reasoning": {
+    "sighted": "The radiograph shows the ribs clearly outlined, and there appears to be a subtle blurring and loss of definition at the junction of the upper ribs with the chest wall on the right side. This suggests a possible fracture line disrupting the normal bony structure.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a",
+    "shuffled": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring of the cortex of the 6th rib, which is a common indicator of a rib fracture. The blurring is most noticeable at the junction of the rib with the cartilage, suggesting a fracture.",
+    "repeat": "The radiograph shows the ribs clearly outlined, and there appears to be a subtle blurring and loss of definition at the junction of the upper ribs with the chest wall on the right side. This suggests a possible fracture line disrupting the normal bony structure."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p035",
+   "case_id": "CXR-2352",
+   "finding": "fracture",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "image_shaped",
+   "flagged": false,
+   "correct": true,
+   "donor": "CXR-3620",
+   "image_bytes": {
+    "sighted": 445565,
+    "blind": 0,
+    "shuffled": 391020,
+    "repeat": 445565
+   },
+   "truncated": false,
+   "latency_s": 5.78,
+   "reasoning": {
+    "sighted": "The radiograph shows the ribs and the sternum. There appears to be a subtle linear opacity at the junction of the 6th rib and the rib below, which could represent a fracture line. ",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a",
+    "shuffled": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring and loss of definition at the junction of the 6th rib and the body of the sternum, which is indicative of a fracture. This blurring suggests a fracture line is present along the rib.",
+    "repeat": "The radiograph shows the rib cage with the ribs appearing as thin lines. There is a subtle linear opacity at the right costochondral junction, which could represent a fracture, but further evaluation is needed to confirm."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p036",
+   "case_id": "CXR-3202",
+   "finding": "fracture",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "yes",
+   "verdict": "grounded",
+   "flagged": false,
+   "correct": true,
+   "donor": "CXR-0284",
+   "image_bytes": {
+    "sighted": 506508,
+    "blind": 0,
+    "shuffled": 425746,
+    "repeat": 506508
+   },
+   "truncated": false,
+   "latency_s": 6.75,
+   "reasoning": {
+    "sighted": "The radiograph shows the sternum and ribs, and there is a subtle blurring and slight displacement of the lower ribs, particularly the 8th and 9th ribs, which could potentially indicate a fracture. However, it's difficult to definitively confirm a fracture without clearer visualization of the bone's,",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a",
+    "shuffled": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring or loss of definition at the junction of the ribs and the chest wall, which could indicate a fracture. However, it's difficult to definitively confirm a fracture without clearer visualization of the bone cortex.",
+    "repeat": "The radiograph shows the sternum and ribs, and there is a subtle blurring and slight displacement of the lower ribs, particularly the 8th and 9th ribs, which could indicate a fracture. However, the fracture lines are not clearly defined, and further evaluation would be needed to confirm the presence"
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p037",
+   "case_id": "CXR-0468",
+   "finding": "fracture",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-2095",
+   "image_bytes": {
+    "sighted": 443272,
+    "blind": 0,
+    "shuffled": 391758,
+    "repeat": 443272
+   },
+   "truncated": false,
+   "latency_s": 6.14,
+   "reasoning": {
+    "sighted": "The radiograph shows the sternum and ribs, and there is a subtle blurring and loss of definition around the left mid-ribs, which could indicate a fracture. However, it's difficult to definitively confirm a fracture without clearer visualization of the bone cortex.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a",
+    "shuffled": "The radiograph shows the ribs clearly outlined, and there appears to be a subtle blurring and loss of definition at the junction of the upper ribs with the chest wall on the right side. This suggests a possible fracture line disrupting the normal bony structure.",
+    "repeat": "The radiograph shows the sternum and ribs, and there is a subtle blurring and loss of definition around the left mid-ribs, which could indicate a fracture. However, it's difficult to definitively confirm a fracture without clearer visualization of the bone cortex."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p038",
+   "case_id": "CXR-3336",
+   "finding": "fracture",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-0608",
+   "image_bytes": {
+    "sighted": 483073,
+    "blind": 0,
+    "shuffled": 517567,
+    "repeat": 483073
+   },
+   "truncated": false,
+   "latency_s": 6.04,
+   "reasoning": {
+    "sighted": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring and loss of definition along the left anterior rib, suggesting a possible fracture. However, it's difficult to definitively confirm a fracture without clearer visualization of the bone cortex.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a",
+    "shuffled": "The radiograph shows a dense, white opacity in the upper lung field, which could represent a pneumothorax or other pathology. However, there is no clear evidence of a fracture line associated with the ribs, as the ribs appear intact and well-defined.",
+    "repeat": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring and increased opacity along the left anterior rib margins, which could potentially indicate a fracture. However, it's difficult to definitively confirm a fracture without clearer visualization of the bone cortex."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p039",
+   "case_id": "CXR-3620",
+   "finding": "fracture",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "yes",
+   "verdict": "grounded",
+   "flagged": false,
+   "correct": false,
+   "donor": "CXR-3822",
+   "image_bytes": {
+    "sighted": 391020,
+    "blind": 0,
+    "shuffled": 472971,
+    "repeat": 391020
+   },
+   "truncated": false,
+   "latency_s": 6.05,
+   "reasoning": {
+    "sighted": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring and loss of definition at the junction of the 6th rib and the body of the sternum, which is indicative of a fracture. This blurring suggests a fracture line is present along the rib.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a",
+    "shuffled": "The radiograph shows the sternum and ribs, and there is no obvious disruption or displacement of the ribs, which would indicate a fracture. The ribs appear to be intact and aligned with the surrounding lung tissue.",
+    "repeat": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring and loss of definition at the junction of the 6th rib and the body of the sternum, which is indicative of a fracture. This blurring suggests a fracture line is present along the rib."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p040",
+   "case_id": "CXR-1616",
+   "finding": "fracture",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3408",
+   "image_bytes": {
+    "sighted": 469683,
+    "blind": 0,
+    "shuffled": 503753,
+    "repeat": 469683
+   },
+   "truncated": false,
+   "latency_s": 6.12,
+   "reasoning": {
+    "sighted": "The radiograph shows the bony structures of the chest, including the ribs. There are no obvious signs of displacement or fracture lines within the ribs themselves.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a",
+    "shuffled": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring and disruption of the normal rib contour in the upper portion of the left chest. This suggests a possible fracture line, although further evaluation would be needed to confirm.",
+    "repeat": "The radiograph shows the sternum and ribs, and there is a subtle blurring and loss of definition at the junction of the 6th rib and the body of the sternum, which could potentially represent a fracture. However, it's difficult to definitively confirm a fracture without further evaluation and clear-c"
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p041",
+   "case_id": "CXR-1708",
+   "finding": "fracture",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-0468",
+   "image_bytes": {
+    "sighted": 403151,
+    "blind": 0,
+    "shuffled": 443272,
+    "repeat": 403151
+   },
+   "truncated": false,
+   "latency_s": 5.49,
+   "reasoning": {
+    "sighted": "The radiograph shows the sternum and ribs, and there is a subtle linear opacity in the upper-lateral aspect of the left chest, which could potentially represent a rib fracture. However, it is difficult to definitively confirm a fracture without further evaluation and comparison to prior imaging.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a",
+    "shuffled": "The radiograph shows the sternum and ribs, and there is a subtle blurring and loss of definition around the left mid-ribs, which could indicate a fracture. However, it's difficult to definitively confirm a fracture without clearer visualization of the bone cortex.",
+    "repeat": "The radiograph shows the sternum and ribs, and there is a subtle linear opacity in the upper-lateral aspect of the left chest, which could potentially represent a rib fracture. However, it is difficult to definitively confirm a fracture without further evaluation and comparison to prior imaging."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p042",
+   "case_id": "CXR-0284",
+   "finding": "fracture",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3202",
+   "image_bytes": {
+    "sighted": 425746,
+    "blind": 0,
+    "shuffled": 506508,
+    "repeat": 425746
+   },
+   "truncated": false,
+   "latency_s": 5.86,
+   "reasoning": {
+    "sighted": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring or loss of definition at the junction of the ribs and the chest wall, which could indicate a fracture. However, it's difficult to definitively confirm a fracture without clearer visualization of the bone cortex.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a",
+    "shuffled": "The radiograph shows the sternum and ribs, and there is a subtle blurring and slight displacement of the lower ribs, particularly the 8th and 9th ribs, which could indicate a fracture. However, the fracture lines are not clearly defined, and further evaluation would be needed to confirm the presence",
+    "repeat": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring or loss of definition at the junction of the ribs and the chest wall, which could indicate a fracture. However, it's difficult to definitively confirm a fracture without clearer visualization of the bone cortex."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p043",
+   "case_id": "CXR-0664",
+   "finding": "fracture",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3336",
+   "image_bytes": {
+    "sighted": 361742,
+    "blind": 0,
+    "shuffled": 483073,
+    "repeat": 361742
+   },
+   "truncated": false,
+   "latency_s": 5.57,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear image of the chest with visible ribs. There is no obvious disruption or break in the continuity of the ribs present in this image.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a",
+    "shuffled": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring and increased opacity along the left anterior rib margins, which could potentially indicate a fracture. However, it's difficult to definitively confirm a fracture without clearer visualization of the bone cortex.",
+    "repeat": "The radiograph shows a clear image of the chest with visible ribs. There is no obvious disruption or break in the continuity of the ribs present in this image."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p044",
+   "case_id": "CXR-3294",
+   "finding": "fracture",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3202",
+   "image_bytes": {
+    "sighted": 385077,
+    "blind": 0,
+    "shuffled": 506508,
+    "repeat": 385077
+   },
+   "truncated": false,
+   "latency_s": 7.09,
+   "reasoning": {
+    "sighted": "The radiograph shows the ribs extending along the chest wall, and there is a subtle blurring of the rib margins at the right mid-scapular level, which could indicate a fracture. However, it is difficult to definitively confirm a fracture based solely on this image due to the image quality and the m-",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a",
+    "shuffled": "The radiograph shows the sternum and ribs, and there is a subtle blurring and slight displacement of the lower ribs, particularly the 8th and 9th ribs, which could indicate a fracture. However, the fracture lines are not clearly defined, and further evaluation would be needed to confirm the presence",
+    "repeat": "The radiograph shows the ribs extending along the chest wall, and there is a subtle blurring of the rib margins at the right mid-scapular level, which could indicate a fracture. However, it is difficult to definitively confirm a fracture based solely on this image due to the image quality and the m-"
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p045",
+   "case_id": "CXR-0947",
+   "finding": "fracture",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3202",
+   "image_bytes": {
+    "sighted": 494863,
+    "blind": 0,
+    "shuffled": 506508,
+    "repeat": 494863
+   },
+   "truncated": false,
+   "latency_s": 6.34,
+   "reasoning": {
+    "sighted": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring and loss of definition around the left rib at its anterior aspect, which could indicate a fracture. However, it's difficult to definitively confirm a fracture without further assessment.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a",
+    "shuffled": "The radiograph shows the sternum and ribs, and there is a subtle blurring and slight displacement of the lower ribs, particularly the 8th and 9th ribs, which could indicate a fracture. However, the fracture lines are not clearly defined, and further evaluation would be needed to confirm the presence",
+    "repeat": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring and loss of definition around the left rib at its anterior aspect, which could indicate a fracture. However, it's difficult to definitively confirm a fracture without further assessment."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p046",
+   "case_id": "CXR-3822",
+   "finding": "fracture",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-0468",
+   "image_bytes": {
+    "sighted": 472971,
+    "blind": 0,
+    "shuffled": 443272,
+    "repeat": 472971
+   },
+   "truncated": false,
+   "latency_s": 5.34,
+   "reasoning": {
+    "sighted": "The radiograph shows the sternum and ribs, and there is no obvious disruption or displacement of the ribs, which would indicate a fracture. The ribs appear to be intact and aligned with the surrounding lung tissue.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a",
+    "shuffled": "The radiograph shows the sternum and ribs, and there is a subtle blurring and loss of definition around the left mid-ribs, which could indicate a fracture. However, it's difficult to definitively confirm a fracture without clearer visualization of the bone cortex.",
+    "repeat": "The radiograph shows the sternum and ribs, and there is no obvious disruption or displacement of the ribs, which would indicate a fracture. The ribs appear to be intact and aligned with the surrounding lung tissue."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p047",
+   "case_id": "CXR-0206",
+   "finding": "nodule",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "no",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-0497",
+   "image_bytes": {
+    "sighted": 374089,
+    "blind": 0,
+    "shuffled": 398761,
+    "repeat": 374089
+   },
+   "truncated": false,
+   "latency_s": 6.52,
+   "reasoning": {
+    "sighted": "The radiograph shows a significant amount of hazy opacity in both lung fields, which could represent various conditions such as pneumonia or fibrosis. However, there is a distinct, well-defined nodule/mass present in the right lower lung field.",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively.",
+    "shuffled": "The radiograph shows a hazy opacity in the right lower lung field, which could represent a mass or nodule. However, without further details or measurements, it's difficult to definitively identify a pulmonary nodule or mass.",
+    "repeat": "The radiograph shows a significant amount of hazy opacity in both lung fields, which could represent various conditions such as pneumonia or fibrosis. However, there is a small, well-defined nodule visible in the right lower lung field."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p048",
+   "case_id": "CXR-3022",
+   "finding": "nodule",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "no",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "no",
+   "verdict": "grounded",
+   "flagged": false,
+   "correct": false,
+   "donor": "CXR-2949",
+   "image_bytes": {
+    "sighted": 496078,
+    "blind": 0,
+    "shuffled": 472308,
+    "repeat": 496078
+   },
+   "truncated": false,
+   "latency_s": 6.6,
+   "reasoning": {
+    "sighted": "The radiograph shows multiple ill-defined opacities within both lungs, which could represent various conditions such as pneumonia, edema, or potentially a mass. However, without further information or comparison to prior imaging, it's difficult to definitively identify a pulmonary nodule or mass.",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively.",
+    "shuffled": "The radiograph shows the lungs with a small, ill-defined opacity in the lower left lung field. This could potentially represent a pulmonary nodule or mass, warranting further investigation.",
+    "repeat": "The radiograph shows multiple ill-defined opacities within both lungs, which could represent various conditions such as pneumonia, edema, or potentially a mass. However, without further information or comparison to prior imaging, it's difficult to definitively identify a pulmonary nodule or mass."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p049",
+   "case_id": "CXR-2949",
+   "finding": "nodule",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-0551",
+   "image_bytes": {
+    "sighted": 472308,
+    "blind": 0,
+    "shuffled": 462286,
+    "repeat": 472308
+   },
+   "truncated": false,
+   "latency_s": 5.42,
+   "reasoning": {
+    "sighted": "The radiograph shows the lungs with a subtle opacity in the lower left lung field. This opacity could potentially represent a pulmonary nodule or mass, warranting further investigation.",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively.",
+    "shuffled": "The radiograph shows a large opacity in the right lower lobe, which could represent a mass or consolidation. It is difficult to definitively identify a nodule due to the high level of opacity and lack of distinct borders.",
+    "repeat": "The radiograph shows the lungs with a subtle opacity in the lower left lung field. This opacity could potentially represent a pulmonary nodule or mass, warranting further investigation."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p050",
+   "case_id": "CXR-1630",
+   "finding": "nodule",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "no",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-0497",
+   "image_bytes": {
+    "sighted": 443476,
+    "blind": 0,
+    "shuffled": 398761,
+    "repeat": 443476
+   },
+   "truncated": false,
+   "latency_s": 5.56,
+   "reasoning": {
+    "sighted": "The radiograph shows a well-defined opacity in the right lower lobe, which could represent a mass or nodule. The size and shape of the opacity are suggestive of a potential lesion within the lung.",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively.",
+    "shuffled": "The radiograph shows a hazy opacity in the right lower lung field, which could represent a mass or nodule. However, without further details or measurements, it's difficult to definitively identify a pulmonary nodule or mass.",
+    "repeat": "The radiograph shows a well-defined, rounded opacity in the right lower lobe of the lung. This appearance is suggestive of a potential pulmonary nodule or mass, warranting further investigation."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p051",
+   "case_id": "CXR-0878",
+   "finding": "nodule",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-0551",
+   "image_bytes": {
+    "sighted": 388533,
+    "blind": 0,
+    "shuffled": 462286,
+    "repeat": 388533
+   },
+   "truncated": false,
+   "latency_s": 5.83,
+   "reasoning": {
+    "sighted": "The radiograph shows a large, ill-defined opacity in the right lower lobe of the lung, which could represent a mass or nodule. The size and shape of the opacity are concerning and warrant further investigation to rule out malignancy.",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively.",
+    "shuffled": "The radiograph shows a well-defined opacity in the right lower lobe, which could represent a mass or nodule. However, without further information such as patient history or follow-up imaging, it is difficult to definitively determine if this is a benign or malignant lesion.",
+    "repeat": "The radiograph shows a large, ill-defined opacity in the right lower lobe of the lung, which could represent a mass or nodule. The size and shape of the opacity are concerning and warrant further investigation to rule out malignancy."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p052",
+   "case_id": "CXR-0689",
+   "finding": "nodule",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-2991",
+   "image_bytes": {
+    "sighted": 417392,
+    "blind": 0,
+    "shuffled": 483542,
+    "repeat": 417392
+   },
+   "truncated": false,
+   "latency_s": 6.38,
+   "reasoning": {
+    "sighted": "The radiograph shows multiple hazy opacities throughout both lungs, which could represent various conditions such as pneumonia or edema. However, the appearance of these opacities is suggestive of a mass or nodule, particularly given their distribution.",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively.",
+    "shuffled": "The radiograph shows a well-defined, rounded opacity in the right lower lobe, which could represent a pulmonary nodule or mass. The size and shape of the opacity warrant further investigation to rule out malignancy.",
+    "repeat": "The radiograph shows multiple hazy opacities within both lungs, which could represent areas of consolidation or inflammation. These findings are suggestive of a potential pulmonary nodule or mass, although further investigation would be needed to confirm the diagnosis."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p053",
+   "case_id": "CXR-0204",
+   "finding": "nodule",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "no",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "no",
+   "verdict": "grounded",
+   "flagged": false,
+   "correct": true,
+   "donor": "CXR-2949",
+   "image_bytes": {
+    "sighted": 402236,
+    "blind": 0,
+    "shuffled": 472308,
+    "repeat": 402236
+   },
+   "truncated": false,
+   "latency_s": 5.41,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear lung field with no obvious masses or nodules. The heart size and vascular markings appear within normal limits, and there is no evidence of consolidation or other abnormalities that would suggest a pulmonary nodule or mass.",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively.",
+    "shuffled": "The radiograph shows the lungs with a subtle opacity in the lower left lung field. This opacity could potentially represent a pulmonary nodule or mass, warranting further investigation.",
+    "repeat": "The radiograph shows a clear lung field with no obvious masses or nodules. The heart size and vascular markings appear within normal limits, and there is no evidence of consolidation or infiltrates."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p054",
+   "case_id": "CXR-0551",
+   "finding": "nodule",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "no",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-0204",
+   "image_bytes": {
+    "sighted": 462286,
+    "blind": 0,
+    "shuffled": 402236,
+    "repeat": 462286
+   },
+   "truncated": false,
+   "latency_s": 4.82,
+   "reasoning": {
+    "sighted": "The radiograph shows a well-defined opacity in the right lower lobe, which could represent a mass or nodule. However, without further information such as patient history or follow-up imaging, it is difficult to definitively determine if this is a benign or malignant lesion.",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively.",
+    "shuffled": "The radiograph shows a clear lung field with no obvious masses or nodules. The heart size and vascular markings appear within normal limits, and there is no evidence of consolidation or infiltrates.",
+    "repeat": "The radiograph shows a well-defined opacity in the right lower lobe, which could represent a mass or nodule. However, without further information such as patient history or follow-up imaging, it is difficult to definitively determine if this is a benign or malignant lesion."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p055",
+   "case_id": "CXR-1410",
+   "finding": "nodule",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "no",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-0497",
+   "image_bytes": {
+    "sighted": 466676,
+    "blind": 0,
+    "shuffled": 398761,
+    "repeat": 466676
+   },
+   "truncated": false,
+   "latency_s": 5.41,
+   "reasoning": {
+    "sighted": "The radiograph shows a well-defined opacity in the right lower lobe, which could represent a pulmonary nodule or mass. The size and shape of the opacity are suggestive of a potential lesion within the lung.",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively.",
+    "shuffled": "The radiograph shows a hazy opacity in the right lower lung field, which could represent a mass or nodule. However, without further details or measurements, it's difficult to definitively identify a pulmonary nodule or mass.",
+    "repeat": "The radiograph shows a well-defined opacity in the right lower lobe, which could represent a pulmonary nodule or mass. The size and shape of the opacity are suggestive of a potential lesion within the lung."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p056",
+   "case_id": "CXR-2991",
+   "finding": "nodule",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "no",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-0204",
+   "image_bytes": {
+    "sighted": 483542,
+    "blind": 0,
+    "shuffled": 402236,
+    "repeat": 483542
+   },
+   "truncated": false,
+   "latency_s": 4.82,
+   "reasoning": {
+    "sighted": "The radiograph shows a well-defined, rounded opacity in the right lower lobe, which could represent a pulmonary nodule or mass. The size and shape of the opacity warrant further investigation to rule out malignancy.",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively.",
+    "shuffled": "The radiograph shows a clear lung field with no obvious masses or nodules. The heart size and vascular markings appear within normal limits, and there is no evidence of consolidation or infiltrates.",
+    "repeat": "The radiograph shows a well-defined, rounded opacity in the right lower lobe, which could represent a pulmonary nodule or mass. The size and shape of the opacity warrant further investigation to rule out malignancy."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p057",
+   "case_id": "CXR-3764",
+   "finding": "nodule",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-1410",
+   "image_bytes": {
+    "sighted": 505957,
+    "blind": 0,
+    "shuffled": 466676,
+    "repeat": 505957
+   },
+   "truncated": false,
+   "latency_s": 5.42,
+   "reasoning": {
+    "sighted": "The radiograph shows a small, ill-defined opacity in the right lower lung field. This could represent a small nodule or mass, although further investigation would be needed to confirm the diagnosis.",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively.",
+    "shuffled": "The radiograph shows a well-defined opacity in the right lower lobe, which could represent a pulmonary nodule or mass. The size and shape of the opacity are suggestive of a potential lesion within the lung.",
+    "repeat": "The radiograph shows a small, ill-defined opacity in the right lower lung field. This could represent a small nodule or mass, although further investigation would be needed to confirm the diagnosis."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p058",
+   "case_id": "CXR-0497",
+   "finding": "nodule",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "no",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "no",
+   "verdict": "grounded",
+   "flagged": false,
+   "correct": true,
+   "donor": "CXR-1630",
+   "image_bytes": {
+    "sighted": 398761,
+    "blind": 0,
+    "shuffled": 443476,
+    "repeat": 398761
+   },
+   "truncated": false,
+   "latency_s": 4.71,
+   "reasoning": {
+    "sighted": "The radiograph shows a hazy opacity in the right lower lung field, which could represent a mass or nodule. However, without further details or measurements, it's difficult to definitively identify a pulmonary nodule or mass.",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively.",
+    "shuffled": "The radiograph shows a well-defined, rounded opacity in the right lower lobe of the lung. This appearance is suggestive of a potential pulmonary nodule or mass, warranting further investigation.",
+    "repeat": "The radiograph shows a hazy opacity in the right lower lung field, which could represent a mass or nodule. However, without further details or measurements, it's difficult to definitively identify a pulmonary nodule or mass."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p059",
+   "case_id": "CXR-3853",
+   "finding": "pleural_effusion",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-1797",
+   "image_bytes": {
+    "sighted": 392785,
+    "blind": 0,
+    "shuffled": 466180,
+    "repeat": 392785
+   },
+   "truncated": false,
+   "latency_s": 6.36,
+   "reasoning": {
+    "sighted": "The radiograph shows a blunting of the costophrenic angles, which is indicative of fluid accumulation in the pleural space. This blunting suggests the presence of a pleural effusion, where fluid is present between the lung and the chest wall.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation within the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion.",
+    "shuffled": "The radiograph shows a hazy opacity in the lower left hemithorax, which obscures the normal lung markings. This opacity suggests fluid accumulation within the pleural space, a characteristic feature of a pleural effusion.",
+    "repeat": "The radiograph shows a blunting of the costophrenic angles, which is a classic sign of a pleural effusion. Additionally, there appears to be increased lucency in the lower lung fields, further suggesting fluid accumulation in the pleural space."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p060",
+   "case_id": "CXR-2474",
+   "finding": "pleural_effusion",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3360",
+   "image_bytes": {
+    "sighted": 401801,
+    "blind": 0,
+    "shuffled": 444918,
+    "repeat": 401801
+   },
+   "truncated": false,
+   "latency_s": 6.22,
+   "reasoning": {
+    "sighted": "The radiograph shows a blunting of the costophrenic angles, which is indicative of fluid accumulation in the pleural space. This blunting suggests the presence of a pleural effusion.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion.",
+    "shuffled": "The radiograph shows a hazy opacity in the right lower hemithorax, which obscures the costophrenic angle. This opacity suggests fluid accumulation within the pleural space, characteristic of a pleural effusion.",
+    "repeat": "The radiograph shows a hazy opacity in the right lower hemithorax, which obscures the underlying lung markings. This opacity suggests fluid accumulation within the pleural space, a characteristic feature of a pleural effusion."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p061",
+   "case_id": "CXR-3509",
+   "finding": "pleural_effusion",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-0771",
+   "image_bytes": {
+    "sighted": 425894,
+    "blind": 0,
+    "shuffled": 365530,
+    "repeat": 425894
+   },
+   "truncated": false,
+   "latency_s": 6.22,
+   "reasoning": {
+    "sighted": "The radiograph shows a hazy opacity in the right lower lung field, which obscures the underlying lung markings. This opacity suggests fluid accumulation within the pleural space, a characteristic feature of a pleural effusion.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion.",
+    "shuffled": "The radiograph shows a blurring of the costophrenic angles, which are normally sharp, suggesting fluid accumulation in the pleural space. This is a classic sign of a pleural effusion.",
+    "repeat": "The radiograph shows a hazy opacity in the right lower lung field, which obscures the underlying lung markings. This opacity suggests fluid accumulation within the pleural space, a characteristic feature of a pleural effusion."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p062",
+   "case_id": "CXR-1957",
+   "finding": "pleural_effusion",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-1101",
+   "image_bytes": {
+    "sighted": 480266,
+    "blind": 0,
+    "shuffled": 319088,
+    "repeat": 480266
+   },
+   "truncated": false,
+   "latency_s": 6.46,
+   "reasoning": {
+    "sighted": "The radiograph shows a blunting of the costophrenic angles, which is indicative of fluid accumulation in the pleural space. This blunting suggests the presence of a pleural effusion, where fluid is present between the lung and the chest wall.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion.",
+    "shuffled": "The radiograph shows a blurring of the costophrenic angles, which are normally sharp. This blurring suggests fluid accumulation within the pleural space, indicating a possible pleural effusion.",
+    "repeat": "The radiograph shows a blunting of the costophrenic angles, which is indicative of fluid accumulation in the pleural space. This blunting suggests the presence of a pleural effusion, where fluid is present between the lung and the chest wall."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p063",
+   "case_id": "CXR-2370",
+   "finding": "pleural_effusion",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "no",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-0102",
+   "image_bytes": {
+    "sighted": 374846,
+    "blind": 0,
+    "shuffled": 421851,
+    "repeat": 374846
+   },
+   "truncated": false,
+   "latency_s": 6.57,
+   "reasoning": {
+    "sighted": "The radiograph shows a blunting of the costophrenic angle on the left side, which is indicative of fluid accumulation in the pleural space. This blunting is a classic sign of a pleural effusion.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion.",
+    "shuffled": "The radiograph shows the mediastinum is unremarkable and there is no obvious blunting of the costophrenic angles, which would indicate a pleural effusion. The lung fields appear clear, further suggesting the absence of fluid accumulation in the pleural space.",
+    "repeat": "The radiograph shows a blunting of the costophrenic angle on the left side, which is indicative of fluid accumulation in the pleural space. This blunting is a classic sign of a pleural effusion."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p064",
+   "case_id": "CXR-0736",
+   "finding": "pleural_effusion",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-0771",
+   "image_bytes": {
+    "sighted": 353479,
+    "blind": 0,
+    "shuffled": 365530,
+    "repeat": 353479
+   },
+   "truncated": false,
+   "latency_s": 5.78,
+   "reasoning": {
+    "sighted": "The radiograph shows a blunting of the costophrenic angles, which is a classic sign of a pleural effusion. There is also a significant opacity in the right lower hemithorax, further supporting the presence of fluid accumulation in the pleural space.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion.",
+    "shuffled": "The radiograph shows a blurring of the costophrenic angles, which are normally sharp, suggesting fluid accumulation in the pleural space. This is a classic sign of a pleural effusion.",
+    "repeat": "The radiograph shows a blunting of the costophrenic angles, which is a classic sign of a pleural effusion. Additionally, there is increased lucency in the lower lung fields, further suggesting the presence of fluid accumulation between the lung and the chest wall."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p065",
+   "case_id": "CXR-3632",
+   "finding": "pleural_effusion",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-1398",
+   "image_bytes": {
+    "sighted": 347831,
+    "blind": 0,
+    "shuffled": 382769,
+    "repeat": 347831
+   },
+   "truncated": false,
+   "latency_s": 6.18,
+   "reasoning": {
+    "sighted": "The radiograph shows a hazy opacity in the right lower lung field, which obscures the underlying lung markings. This opacity suggests fluid accumulation within the pleural space, a characteristic feature of a pleural effusion.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion.",
+    "shuffled": "The radiograph shows a blunting of the costophrenic angles, which is a classic sign of a pleural effusion. There is also a small area of increased density adjacent to the left hemidiaphragm, further suggesting fluid accumulation in the pleural space.",
+    "repeat": "The radiograph shows a hazy opacity in the right lower lung field, which obscures the underlying lung markings. This opacity suggests fluid accumulation within the pleural space, a characteristic feature of a pleural effusion."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p066",
+   "case_id": "CXR-3840",
+   "finding": "pleural_effusion",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-1101",
+   "image_bytes": {
+    "sighted": 289593,
+    "blind": 0,
+    "shuffled": 319088,
+    "repeat": 289593
+   },
+   "truncated": false,
+   "latency_s": 5.44,
+   "reasoning": {
+    "sighted": "The radiograph shows a hazy opacity in the lower lung field, which obscures the normal lung markings. This opacity suggests fluid accumulation within the pleural space, a characteristic feature of a pleural effusion.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion.",
+    "shuffled": "The radiograph shows a blurring of the costophrenic angle, which is the space between the lung and the chest wall. This blurring suggests fluid accumulation in the pleural space, indicating a pleural effusion.",
+    "repeat": "The radiograph shows a hazy opacity in the lower lung field, which obscures the costophrenic angle. This appearance is consistent with a possible pleural effusion, where fluid accumulates in the pleural space."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p067",
+   "case_id": "CXR-3360",
+   "finding": "pleural_effusion",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3703",
+   "image_bytes": {
+    "sighted": 444918,
+    "blind": 0,
+    "shuffled": 478808,
+    "repeat": 444918
+   },
+   "truncated": false,
+   "latency_s": 5.7,
+   "reasoning": {
+    "sighted": "The radiograph shows a hazy opacity in the right lower hemithorax, which obscures the costophrenic angle. This opacity suggests fluid accumulation within the pleural space, a characteristic feature of a pleural effusion.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion.",
+    "shuffled": "The radiograph shows a blunting of the costophrenic angles, which is a classic sign of a pleural effusion. Additionally, there is increased lucency in the lower lung fields, further suggesting fluid accumulation in the pleural space.",
+    "repeat": "The radiograph shows a hazy opacity in the right lower hemithorax, which obscures the costophrenic angle. This opacity suggests fluid accumulation within the pleural space, a characteristic feature of a pleural effusion."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p068",
+   "case_id": "CXR-1101",
+   "finding": "pleural_effusion",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "no",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-0102",
+   "image_bytes": {
+    "sighted": 319088,
+    "blind": 0,
+    "shuffled": 421851,
+    "repeat": 319088
+   },
+   "truncated": false,
+   "latency_s": 4.93,
+   "reasoning": {
+    "sighted": "The radiograph shows a blurring of the costophrenic angle, which is the space between the lung and the chest wall. This blurring suggests fluid accumulation in the pleural space, indicating a pleural effusion.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion.",
+    "shuffled": "The radiograph shows a clear separation between the lung and the chest wall, with no blunting of the costophrenic angles. This absence of fluid accumulation in the pleural space suggests that a pleural effusion is not present.",
+    "repeat": "The radiograph shows a blurring of the costophrenic angle, which is the space between the lung and the chest wall. This blurring suggests fluid accumulation in the pleural space, indicating a pleural effusion."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p069",
+   "case_id": "CXR-0345",
+   "finding": "pleural_effusion",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-1398",
+   "image_bytes": {
+    "sighted": 382770,
+    "blind": 0,
+    "shuffled": 382769,
+    "repeat": 382770
+   },
+   "truncated": false,
+   "latency_s": 5.55,
+   "reasoning": {
+    "sighted": "The radiograph shows a hazy opacity in the lower lung field, which obscures the normal lung markings. This opacity suggests fluid accumulation within the pleural space, a characteristic feature of a pleural effusion.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion.",
+    "shuffled": "The radiograph shows a blurring of the costophrenic angle, which is the space between the diaphragm and the chest wall. This blurring suggests fluid accumulation in the pleural space, indicating a pleural effusion.",
+    "repeat": "The radiograph shows a hazy opacity in the lower lung field, which obscures the normal lung markings. This opacity suggests fluid accumulation within the pleural space, a characteristic feature of a pleural effusion."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p070",
+   "case_id": "CXR-0102",
+   "finding": "pleural_effusion",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "no",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "no",
+   "verdict": "grounded",
+   "flagged": false,
+   "correct": true,
+   "donor": "CXR-3632",
+   "image_bytes": {
+    "sighted": 421851,
+    "blind": 0,
+    "shuffled": 347831,
+    "repeat": 421851
+   },
+   "truncated": false,
+   "latency_s": 4.75,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear separation between the lung and the chest wall, with no blunting of the costophrenic angles. This absence of fluid accumulation in the pleural space suggests that a pleural effusion is not present.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion.",
+    "shuffled": "The radiograph shows a hazy opacity in the right lower lung field, which obscures the underlying lung markings. This opacity suggests fluid accumulation within the pleural space, a characteristic feature of a pleural effusion.",
+    "repeat": "The radiograph shows a clear separation between the lung and the chest wall, with no blunting of the costophrenic angles. This absence of fluid accumulation in the pleural space suggests that a pleural effusion is not present."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p071",
+   "case_id": "CXR-3703",
+   "finding": "pleural_effusion",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-1398",
+   "image_bytes": {
+    "sighted": 478808,
+    "blind": 0,
+    "shuffled": 382769,
+    "repeat": 478808
+   },
+   "truncated": false,
+   "latency_s": 4.89,
+   "reasoning": {
+    "sighted": "The radiograph shows a blunting of the costophrenic angles, which is a classic sign of a pleural effusion. Additionally, there is increased lucency in the lower lung fields, further suggesting fluid accumulation in the pleural space.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion.",
+    "shuffled": "The radiograph shows a blurring of the costophrenic angle, which is the space between the diaphragm and the chest wall. This blurring suggests fluid accumulation in the pleural space, indicating a pleural effusion.",
+    "repeat": "The radiograph shows a blunting of the costophrenic angles, which is a classic sign of a pleural effusion. Additionally, there is increased lucency in the lower lung fields, further suggesting fluid accumulation in the pleural space."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p072",
+   "case_id": "CXR-1398",
+   "finding": "pleural_effusion",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-0345",
+   "image_bytes": {
+    "sighted": 382769,
+    "blind": 0,
+    "shuffled": 382770,
+    "repeat": 382769
+   },
+   "truncated": false,
+   "latency_s": 4.78,
+   "reasoning": {
+    "sighted": "The radiograph shows a blurring of the costophrenic angle, which is the space between the diaphragm and the chest wall. This blurring suggests fluid accumulation in the pleural space, indicating a pleural effusion.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion.",
+    "shuffled": "The radiograph shows a hazy opacity in the lower lung field, which obscures the normal lung markings. This opacity suggests fluid accumulation within the pleural space, a characteristic feature of a pleural effusion.",
+    "repeat": "The radiograph shows a blurring of the costophrenic angle, which is the space between the diaphragm and the chest wall. This blurring suggests fluid accumulation in the pleural space, indicating a pleural effusion."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p073",
+   "case_id": "CXR-1797",
+   "finding": "pleural_effusion",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3703",
+   "image_bytes": {
+    "sighted": 466180,
+    "blind": 0,
+    "shuffled": 478808,
+    "repeat": 466180
+   },
+   "truncated": false,
+   "latency_s": 4.77,
+   "reasoning": {
+    "sighted": "The radiograph shows a hazy opacity in the right lower hemithorax, which obscures the underlying lung markings. This opacity suggests fluid accumulation within the pleural space, a characteristic feature of a pleural effusion.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion.",
+    "shuffled": "The radiograph shows a blunting of the costophrenic angles, which is a classic sign of a pleural effusion. Additionally, there is increased lucency in the lower lung fields, further suggesting fluid accumulation in the pleural space.",
+    "repeat": "The radiograph shows a hazy opacity in the right lower hemithorax, which obscures the underlying lung markings. This opacity suggests fluid accumulation within the pleural space, a characteristic feature of a pleural effusion."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p074",
+   "case_id": "CXR-0771",
+   "finding": "pleural_effusion",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-1797",
+   "image_bytes": {
+    "sighted": 365530,
+    "blind": 0,
+    "shuffled": 466180,
+    "repeat": 365530
+   },
+   "truncated": false,
+   "latency_s": 4.55,
+   "reasoning": {
+    "sighted": "The radiograph shows a blurring of the costophrenic angles, which are normally sharp, suggesting fluid accumulation in the pleural space. This is a classic sign of a pleural effusion.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion.",
+    "shuffled": "The radiograph shows a hazy opacity in the right lower hemithorax, which obscures the underlying lung markings. This opacity suggests fluid accumulation within the pleural space, a characteristic feature of a pleural effusion.",
+    "repeat": "The radiograph shows a blurring of the costophrenic angles, which are normally sharp, suggesting fluid accumulation in the pleural space. This is a classic sign of a pleural effusion."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p075",
+   "case_id": "CXR-0465",
+   "finding": "pneumothorax",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "image_shaped",
+   "flagged": false,
+   "correct": true,
+   "donor": "CXR-3113",
+   "image_bytes": {
+    "sighted": 436952,
+    "blind": 0,
+    "shuffled": 479848,
+    "repeat": 436952
+   },
+   "truncated": false,
+   "latency_s": 6.55,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear area of dark space within the thoracic cavity, which is characteristic of a pneumothorax. This space is not filled with normal lung tissue, indicating air outside the lung has entered the pleural space.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess the image for this characteristic finding.",
+    "shuffled": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has entered the space between the lung and chest wall.",
+    "repeat": "The radiograph shows a clear air-filled space between the lung and the chest wall, specifically in the upper left lung field. This is a classic sign of a pneumothorax, where air has leaked into the pleural space."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p076",
+   "case_id": "CXR-3369",
+   "finding": "pneumothorax",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "image_shaped",
+   "flagged": false,
+   "correct": true,
+   "donor": "CXR-2559",
+   "image_bytes": {
+    "sighted": 372873,
+    "blind": 0,
+    "shuffled": 429669,
+    "repeat": 372873
+   },
+   "truncated": false,
+   "latency_s": 6.44,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has entered the space between the lung and the chest wall.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings.",
+    "shuffled": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has entered the space between the lung and chest wall.",
+    "repeat": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has entered the space between the lung and the chest wall."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p077",
+   "case_id": "CXR-2827",
+   "finding": "pneumothorax",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "image_shaped",
+   "flagged": false,
+   "correct": true,
+   "donor": "CXR-2559",
+   "image_bytes": {
+    "sighted": 412126,
+    "blind": 0,
+    "shuffled": 429669,
+    "repeat": 412126
+   },
+   "truncated": false,
+   "latency_s": 5.7,
+   "reasoning": {
+    "sighted": "The radiograph shows the lung fields, and there appears to be a dark space between the lung and the chest wall, which is indicative of air outside the lung. This is a classic sign of a pneumothorax.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings.",
+    "shuffled": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has leaked into the space between the lung and chest wall.",
+    "repeat": "The radiograph shows the lung fields, and there appears to be a dark space between the lung and the chest wall, which is indicative of air outside the pleural space. This is a classic sign of a pneumothorax."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p078",
+   "case_id": "CXR-1874",
+   "finding": "pneumothorax",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "image_shaped",
+   "flagged": false,
+   "correct": true,
+   "donor": "CXR-1879",
+   "image_bytes": {
+    "sighted": 442448,
+    "blind": 0,
+    "shuffled": 458464,
+    "repeat": 442448
+   },
+   "truncated": false,
+   "latency_s": 6.56,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has entered the space between the lung and the chest wall.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings.",
+    "shuffled": "The radiograph shows the lungs and ribs, and there appears to be a dark space between the lung and the chest wall, which is indicative of air outside the pleural space. This is a classic sign of a pneumothorax.",
+    "repeat": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has entered the space between the lung and the chest wall."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p079",
+   "case_id": "CXR-1262",
+   "finding": "pneumothorax",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "yes",
+   "verdict": "grounded",
+   "flagged": false,
+   "correct": true,
+   "donor": "CXR-3227",
+   "image_bytes": {
+    "sighted": 317878,
+    "blind": 0,
+    "shuffled": 380155,
+    "repeat": 317878
+   },
+   "truncated": false,
+   "latency_s": 6.0,
+   "reasoning": {
+    "sighted": "The radiograph shows the lungs and chest wall structures. There is a clear air-dark fluid interface, which is indicative of a pneumothorax, as air is present in the pleural space.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings.",
+    "shuffled": "The radiograph shows the lungs and surrounding structures in the chest. There is no clear air visible between the lung and the chest wall, which is a key indicator of a pneumothorax.",
+    "repeat": "The radiograph shows the lungs and chest wall structures. There is a clear air-dark fluid interface, which is indicative of a pneumothorax, as air is present in the pleural space."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p080",
+   "case_id": "CXR-1525",
+   "finding": "pneumothorax",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "image_shaped",
+   "flagged": false,
+   "correct": true,
+   "donor": "CXR-2559",
+   "image_bytes": {
+    "sighted": 345885,
+    "blind": 0,
+    "shuffled": 429669,
+    "repeat": 345885
+   },
+   "truncated": false,
+   "latency_s": 5.82,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has entered the space between the lung and the chest wall.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings.",
+    "shuffled": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has leaked into the space between the lung and chest wall.",
+    "repeat": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has entered the space between the lung and the chest wall."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p081",
+   "case_id": "CXR-3378",
+   "finding": "pneumothorax",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "image_shaped",
+   "flagged": false,
+   "correct": true,
+   "donor": "CXR-2559",
+   "image_bytes": {
+    "sighted": 383478,
+    "blind": 0,
+    "shuffled": 429669,
+    "repeat": 383478
+   },
+   "truncated": false,
+   "latency_s": 5.74,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear air-filled space between the lung and the chest wall, specifically in the upper right lung field. This is a classic sign of a pneumothorax, where air has leaked into the pleural space.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings.",
+    "shuffled": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has leaked into the space between the lung and chest wall.",
+    "repeat": "The radiograph shows a clear air-filled space between the lung and the chest wall, specifically in the upper right lung field. This is a classic sign of a pneumothorax, where air has leaked into the pleural space."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p082",
+   "case_id": "CXR-2559",
+   "finding": "pneumothorax",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "image_shaped",
+   "flagged": false,
+   "correct": false,
+   "donor": "CXR-0975",
+   "image_bytes": {
+    "sighted": 429669,
+    "blind": 0,
+    "shuffled": 428200,
+    "repeat": 429669
+   },
+   "truncated": false,
+   "latency_s": 5.73,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has leaked into the space between the lung and chest wall.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings.",
+    "shuffled": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has entered the space between the lung and the chest wall.",
+    "repeat": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has leaked into the space between the lung and chest wall."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p083",
+   "case_id": "CXR-1879",
+   "finding": "pneumothorax",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "image_shaped",
+   "flagged": false,
+   "correct": false,
+   "donor": "CXR-2559",
+   "image_bytes": {
+    "sighted": 458464,
+    "blind": 0,
+    "shuffled": 429669,
+    "repeat": 458464
+   },
+   "truncated": false,
+   "latency_s": 5.04,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has entered the space between the lung and the chest wall.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings.",
+    "shuffled": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has leaked into the space between the lung and chest wall.",
+    "repeat": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has entered the space between the lung and the chest wall."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p084",
+   "case_id": "CXR-2432",
+   "finding": "pneumothorax",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3369",
+   "image_bytes": {
+    "sighted": 415992,
+    "blind": 0,
+    "shuffled": 372873,
+    "repeat": 415992
+   },
+   "truncated": false,
+   "latency_s": 5.48,
+   "reasoning": {
+    "sighted": "The radiograph shows the lungs occupying the thoracic cavity, and there is no visible air outside the lung tissue. This absence of air outside the lung tissue indicates that there is no pneumothorax present.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings.",
+    "shuffled": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has entered the space between the lung and the chest wall.",
+    "repeat": "The radiograph shows the lungs occupying the thoracic cavity, and there is no visible air outside the lung tissue. This absence of air outside the lung tissue indicates that there is no pneumothorax present."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p085",
+   "case_id": "CXR-0975",
+   "finding": "pneumothorax",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "yes",
+   "verdict": "grounded",
+   "flagged": false,
+   "correct": false,
+   "donor": "CXR-3227",
+   "image_bytes": {
+    "sighted": 428200,
+    "blind": 0,
+    "shuffled": 380155,
+    "repeat": 428200
+   },
+   "truncated": false,
+   "latency_s": 4.64,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the upper right hemithorax. This air outside the lung tissue is indicative of a pneumothorax.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings.",
+    "shuffled": "The radiograph shows a clear separation between the lung and the chest wall, with no visible visceral pleura. This suggests the absence of air outside the lung, which is the hallmark of a pneumothorax.",
+    "repeat": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the upper right hemithorax. This air outside the lung tissue is indicative of a pneumothorax."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p086",
+   "case_id": "CXR-3227",
+   "finding": "pneumothorax",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-2827",
+   "image_bytes": {
+    "sighted": 380155,
+    "blind": 0,
+    "shuffled": 412126,
+    "repeat": 380155
+   },
+   "truncated": false,
+   "latency_s": 4.77,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear separation between the lung and the chest wall, with no visible visceral pleura. This suggests the absence of air outside the lung, which is the hallmark of a pneumothorax.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings.",
+    "shuffled": "The radiograph shows the lung fields, and there appears to be a dark space between the lung and the chest wall, which is indicative of air outside the pleural space. This is a classic sign of a pneumothorax.",
+    "repeat": "The radiograph shows a clear separation between the lung and the chest wall, with no visible visceral pleura. This suggests the absence of air outside the lung, which is the hallmark of a pneumothorax."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p087",
+   "case_id": "CXR-3113",
+   "finding": "pneumothorax",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "no",
+   "shuffled": "no",
+   "repeat": "yes",
+   "verdict": "grounded",
+   "flagged": false,
+   "correct": false,
+   "donor": "CXR-3227",
+   "image_bytes": {
+    "sighted": 479848,
+    "blind": 0,
+    "shuffled": 380155,
+    "repeat": 479848
+   },
+   "truncated": false,
+   "latency_s": 4.79,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has entered the space between the lung and chest wall.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings.",
+    "shuffled": "The radiograph shows a clear separation between the lung and the chest wall, with no visible visceral pleura. This suggests the absence of air outside the lung, which is the hallmark of a pneumothorax.",
+    "repeat": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has entered the space between the lung and chest wall."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p088",
+   "case_id": "CXR-1551",
+   "finding": "pneumothorax",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "no",
+   "blind": "no",
+   "shuffled": "yes",
+   "repeat": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-2827",
+   "image_bytes": {
+    "sighted": 387925,
+    "blind": 0,
+    "shuffled": 412126,
+    "repeat": 387925
+   },
+   "truncated": false,
+   "latency_s": 5.5,
+   "reasoning": {
+    "sighted": "The radiograph shows the lungs filling with air, and there is no visible air outside the lung tissue surrounding the mediastinum. This absence of air outside the lung tissue indicates that there is no pneumothorax present.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings.",
+    "shuffled": "The radiograph shows the lung fields, and there appears to be a dark space between the lung and the chest wall, which is indicative of air outside the pleural space. This is a classic sign of a pneumothorax.",
+    "repeat": "The radiograph shows the lungs filling with air, and there is no visible air outside the lung tissue. This absence of air outside the lung tissue indicates that there is no pneumothorax present."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p089",
+   "case_id": "CXR-2183",
+   "finding": "pulmonary_edema",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-2436",
+   "image_bytes": {
+    "sighted": 357371,
+    "blind": 0,
+    "shuffled": 379101,
+    "repeat": 357371
+   },
+   "truncated": false,
+   "latency_s": 6.45,
+   "reasoning": {
+    "sighted": "The radiograph shows bilateral hazy opacities in the lung fields, particularly prominent in the lower lobes, which is a classic finding of pulmonary edema. These opacities represent fluid accumulation in the interstitial spaces of the lungs.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the pulmonary interstitium and alveolar spaces.",
+    "shuffled": "The radiograph shows bilateral hazy opacities in the lung fields, particularly prominent in the lower lobes, which is a classic finding of pulmonary edema. These opacities represent fluid accumulation in the interstitial spaces of the lungs.",
+    "repeat": "The radiograph shows bilateral hazy opacities in the lung fields, particularly prominent in the lower lobes, which is a classic finding of pulmonary edema. These opacities represent fluid accumulation in the interstitial spaces of the lungs."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p090",
+   "case_id": "CXR-0227",
+   "finding": "pulmonary_edema",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-2660",
+   "image_bytes": {
+    "sighted": 443272,
+    "blind": 0,
+    "shuffled": 392616,
+    "repeat": 443272
+   },
+   "truncated": false,
+   "latency_s": 6.35,
+   "reasoning": {
+    "sighted": "The radiograph shows bilateral hazy opacities in the lung fields, particularly prominent in the lower lobes, which is a classic finding of pulmonary edema. These opacities represent fluid accumulation in the interstitial spaces of the lungs.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the lung tissue.",
+    "shuffled": "The radiograph shows hazy opacities in the lower lung fields, which is a classic sign of pulmonary edema due to fluid accumulation in the lung tissue. The distribution of the opacities is consistent with fluid overload.",
+    "repeat": "The radiograph shows bilateral hazy opacities in the lung fields, particularly prominent in the lower lobes, which is a classic finding of pulmonary edema. These opacities represent fluid accumulation in the interstitial spaces of the lungs."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p091",
+   "case_id": "CXR-2543",
+   "finding": "pulmonary_edema",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-1351",
+   "image_bytes": {
+    "sighted": 313431,
+    "blind": 0,
+    "shuffled": 395899,
+    "repeat": 313431
+   },
+   "truncated": false,
+   "latency_s": 6.16,
+   "reasoning": {
+    "sighted": "The radiograph shows hazy opacities in the lung fields, particularly in the lower lobes, which is a classic sign of pulmonary edema. These opacities represent fluid accumulation in the interstitial spaces of the lungs.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the lung tissue.",
+    "shuffled": "The radiograph shows a hazy opacification in the lung fields, particularly around the vascular markings, which is a classic sign of pulmonary edema. The fluid accumulation obscures the normal lung architecture.",
+    "repeat": "The radiograph shows hazy opacities in the lung fields, particularly in the lower lobes, which is a classic sign of pulmonary edema. These opacities represent fluid accumulation in the interstitial spaces of the lungs."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p092",
+   "case_id": "CXR-3372",
+   "finding": "pulmonary_edema",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-2143",
+   "image_bytes": {
+    "sighted": 362771,
+    "blind": 0,
+    "shuffled": 385134,
+    "repeat": 362771
+   },
+   "truncated": false,
+   "latency_s": 6.68,
+   "reasoning": {
+    "sighted": "The radiograph shows hazy opacities in the lung fields, particularly in the lower lobes, which is a classic sign of pulmonary edema due to fluid accumulation in the alveoli. The distribution of the opacities is consistent with fluid overload.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the lung tissue.",
+    "shuffled": "The radiograph shows hazy opacities in the lung fields, particularly in the lower lobes, which is a classic sign of pulmonary edema. Additionally, there is likely cephalization of the vascular markings, further supporting the presence of fluid accumulation in the lungs.",
+    "repeat": "The radiograph shows hazy opacities in the lung fields, particularly in the lower lobes, which is a classic sign of pulmonary edema due to fluid accumulation in the alveoli. The distribution of the opacities is consistent with fluid overload."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p093",
+   "case_id": "CXR-0925",
+   "finding": "pulmonary_edema",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-2691",
+   "image_bytes": {
+    "sighted": 329745,
+    "blind": 0,
+    "shuffled": 429065,
+    "repeat": 329745
+   },
+   "truncated": false,
+   "latency_s": 6.17,
+   "reasoning": {
+    "sighted": "The radiograph shows bilateral hazy opacities throughout both lung fields, which is a classic finding of pulmonary edema. These opacities represent fluid accumulation in the interstitial spaces of the lungs.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the lung tissue.",
+    "shuffled": "The radiograph shows some hazy opacities in the lower lung fields, which is a classic sign of pulmonary edema due to fluid accumulation in the lung tissue. The distribution of the opacities is consistent with fluid overload.",
+    "repeat": "The radiograph shows bilateral hazy opacities throughout both lung fields, which is a classic finding of pulmonary edema. These opacities represent fluid accumulation in the interstitial spaces of the lungs."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p094",
+   "case_id": "CXR-0934",
+   "finding": "pulmonary_edema",
+   "answer": "yes",
+   "source": "assertion",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-2436",
+   "image_bytes": {
+    "sighted": 365086,
+    "blind": 0,
+    "shuffled": 379101,
+    "repeat": 365086
+   },
+   "truncated": false,
+   "latency_s": 5.4,
+   "reasoning": {
+    "sighted": "The radiograph shows a hazy opacification in the lower lung fields, which is a classic sign of pulmonary edema due to fluid accumulation in the alveoli. The distribution is diffuse, consistent with this condition.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the lung tissue.",
+    "shuffled": "The radiograph shows bilateral hazy opacities in the lung fields, particularly prominent in the lower lung zones. This appearance is consistent with pulmonary edema, which is characterized by fluid accumulation in the lung tissue.",
+    "repeat": "The radiograph shows a hazy opacification in the lower lung fields, which is a classic sign of pulmonary edema due to fluid accumulation in the lung tissue. The distribution of the opacities is consistent with this finding."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p095",
+   "case_id": "CXR-1351",
+   "finding": "pulmonary_edema",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3752",
+   "image_bytes": {
+    "sighted": 395899,
+    "blind": 0,
+    "shuffled": 507974,
+    "repeat": 395899
+   },
+   "truncated": false,
+   "latency_s": 5.68,
+   "reasoning": {
+    "sighted": "The radiograph shows a hazy opacification in the lung fields, particularly around the vascular markings, which is a classic sign of pulmonary edema. The fluid accumulation obscures the normal lung architecture.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the lung tissue.",
+    "shuffled": "The radiograph shows hazy opacities in the lung fields, particularly in the lower lobes, which is a classic sign of pulmonary edema due to fluid accumulation in the alveoli. The distribution of the opacities suggests a diffuse process, consistent with this diagnosis.",
+    "repeat": "The radiograph shows a hazy opacification in the lung fields, particularly around the vascular markings, which is a classic sign of pulmonary edema. The fluid accumulation obscures the normal lung architecture."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p096",
+   "case_id": "CXR-3752",
+   "finding": "pulmonary_edema",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-2436",
+   "image_bytes": {
+    "sighted": 507974,
+    "blind": 0,
+    "shuffled": 379101,
+    "repeat": 507974
+   },
+   "truncated": false,
+   "latency_s": 4.89,
+   "reasoning": {
+    "sighted": "The radiograph shows hazy opacities in the lung fields, particularly in the lower lobes, which is a classic sign of pulmonary edema due to fluid accumulation in the alveoli. The distribution of the opacities suggests a diffuse process, consistent with this diagnosis.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the lung tissue.",
+    "shuffled": "The radiograph shows bilateral hazy opacities in the lung fields, particularly prominent in the lower lung zones. This appearance is consistent with pulmonary edema, which is characterized by fluid accumulation in the lung tissue.",
+    "repeat": "The radiograph shows hazy opacities in the lung fields, particularly in the lower lobes, which is a classic sign of pulmonary edema due to fluid accumulation in the alveoli. The distribution of the opacities suggests a diffuse process, consistent with this diagnosis."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p097",
+   "case_id": "CXR-2436",
+   "finding": "pulmonary_edema",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-2660",
+   "image_bytes": {
+    "sighted": 379101,
+    "blind": 0,
+    "shuffled": 392616,
+    "repeat": 379101
+   },
+   "truncated": false,
+   "latency_s": 4.48,
+   "reasoning": {
+    "sighted": "The radiograph shows bilateral hazy opacities in the lung fields, particularly prominent in the lower lung zones. This appearance is consistent with pulmonary edema, which is characterized by fluid accumulation in the lung tissue.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the lung tissue.",
+    "shuffled": "The radiograph shows hazy opacities in the lower lung fields, which is a classic sign of pulmonary edema due to fluid accumulation in the lung tissue. The distribution of the opacities is consistent with fluid overload.",
+    "repeat": "The radiograph shows bilateral hazy opacities in the lung fields, particularly prominent in the lower lung zones. This appearance is consistent with pulmonary edema, which is characterized by fluid accumulation in the lung tissue."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p098",
+   "case_id": "CXR-2660",
+   "finding": "pulmonary_edema",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-2691",
+   "image_bytes": {
+    "sighted": 392616,
+    "blind": 0,
+    "shuffled": 429065,
+    "repeat": 392616
+   },
+   "truncated": false,
+   "latency_s": 4.74,
+   "reasoning": {
+    "sighted": "The radiograph shows hazy opacities in the lower lung fields, which is a classic sign of pulmonary edema due to fluid accumulation in the lung tissue. The distribution of the opacities is consistent with fluid overload.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the lung tissue.",
+    "shuffled": "The radiograph shows some hazy opacities in the lung fields, particularly in the lower lobes, which is a classic sign of pulmonary edema. The fluid accumulation obscures the normal lung markings, indicating fluid buildup in the alveoli.",
+    "repeat": "The radiograph shows hazy opacities in the lower lung fields, which is a classic sign of pulmonary edema due to fluid accumulation in the lung tissue. The distribution of the opacities is consistent with fluid overload."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p099",
+   "case_id": "CXR-2143",
+   "finding": "pulmonary_edema",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-2436",
+   "image_bytes": {
+    "sighted": 385134,
+    "blind": 0,
+    "shuffled": 379101,
+    "repeat": 385134
+   },
+   "truncated": false,
+   "latency_s": 4.79,
+   "reasoning": {
+    "sighted": "The radiograph shows hazy opacities in the lung fields, particularly in the lower lobes, which is a classic sign of pulmonary edema. Additionally, there is likely cephalization of the vascular markings, further supporting the presence of fluid accumulation in the lungs.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the lung tissue.",
+    "shuffled": "The radiograph shows bilateral hazy opacities in the lung fields, particularly prominent in the lower lung zones. This appearance is consistent with pulmonary edema, which is characterized by fluid accumulation in the lung tissue.",
+    "repeat": "The radiograph shows hazy opacities in the lung fields, particularly in the lower lobes, which is a classic sign of pulmonary edema. Additionally, there is likely cephalization of the vascular markings, further supporting the presence of fluid accumulation in the lungs."
+   }
+  },
+  {
+   "kind": "probe",
+   "pid": "p100",
+   "case_id": "CXR-2691",
+   "finding": "pulmonary_edema",
+   "answer": "no",
+   "source": "negation",
+   "sighted": "yes",
+   "blind": "yes",
+   "shuffled": "yes",
+   "repeat": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-2436",
+   "image_bytes": {
+    "sighted": 429065,
+    "blind": 0,
+    "shuffled": 379101,
+    "repeat": 429065
+   },
+   "truncated": false,
+   "latency_s": 4.74,
+   "reasoning": {
+    "sighted": "The radiograph shows some hazy opacities in the lung fields, particularly in the lower lobes, which is a classic sign of pulmonary edema. The fluid accumulation obscures the normal lung markings, indicating fluid buildup in the alveoli.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the lung tissue.",
+    "shuffled": "The radiograph shows bilateral hazy opacities in the lung fields, particularly prominent in the lower lung zones. This appearance is consistent with pulmonary edema, which is characterized by fluid accumulation in the lung tissue.",
+    "repeat": "The radiograph shows some hazy opacities in the lung fields, particularly in the lower lobes, which is a classic sign of pulmonary edema. The fluid accumulation obscures the normal lung markings, indicating fluid buildup in the alveoli."
+   }
+  },
+  {
+   "kind": "canary",
+   "pid": "k00",
+   "id": "KQ-1000",
+   "sighted_read": true,
+   "blind_read": false,
+   "image_bytes": {
+    "sighted": 18295,
+    "blind": 0
+   }
+  },
+  {
+   "kind": "canary",
+   "pid": "k01",
+   "id": "KQ-1037",
+   "sighted_read": true,
+   "blind_read": false,
+   "image_bytes": {
+    "sighted": 20856,
+    "blind": 0
+   }
+  },
+  {
+   "kind": "canary",
+   "pid": "k02",
+   "id": "KQ-1074",
+   "sighted_read": true,
+   "blind_read": false,
+   "image_bytes": {
+    "sighted": 19817,
+    "blind": 0
+   }
+  },
+  {
+   "kind": "canary",
+   "pid": "k03",
+   "id": "KQ-1111",
+   "sighted_read": true,
+   "blind_read": false,
+   "image_bytes": {
+    "sighted": 16532,
+    "blind": 0
+   }
+  },
+  {
+   "kind": "canary",
+   "pid": "k04",
+   "id": "KQ-1148",
+   "sighted_read": true,
+   "blind_read": false,
+   "image_bytes": {
+    "sighted": 19553,
+    "blind": 0
+   }
+  },
+  {
+   "kind": "canary",
+   "pid": "k05",
+   "id": "KQ-1185",
+   "sighted_read": true,
+   "blind_read": false,
+   "image_bytes": {
+    "sighted": 20314,
+    "blind": 0
+   }
+  },
+  {
+   "kind": "canary",
+   "pid": "k06",
+   "id": "KQ-1222",
+   "sighted_read": true,
+   "blind_read": false,
+   "image_bytes": {
+    "sighted": 18030,
+    "blind": 0
+   }
+  },
+  {
+   "kind": "canary",
+   "pid": "k07",
+   "id": "KQ-1259",
+   "sighted_read": true,
+   "blind_read": false,
+   "image_bytes": {
+    "sighted": 21522,
+    "blind": 0
+   }
+  },
+  {
+   "kind": "canary",
+   "pid": "k08",
+   "id": "KQ-1296",
+   "sighted_read": true,
+   "blind_read": false,
+   "image_bytes": {
+    "sighted": 22017,
+    "blind": 0
+   }
+  },
+  {
+   "kind": "canary",
+   "pid": "k09",
+   "id": "KQ-1333",
+   "sighted_read": true,
+   "blind_read": false,
+   "image_bytes": {
+    "sighted": 18531,
+    "blind": 0
+   }
+  },
+  {
+   "kind": "canary",
+   "pid": "k10",
+   "id": "KQ-1370",
+   "sighted_read": true,
+   "blind_read": false,
+   "image_bytes": {
+    "sighted": 20869,
+    "blind": 0
+   }
+  },
+  {
+   "kind": "canary",
+   "pid": "k11",
+   "id": "KQ-1407",
+   "sighted_read": true,
+   "blind_read": false,
+   "image_bytes": {
+    "sighted": 19800,
+    "blind": 0
+   }
+  },
+  {
+   "kind": "canary",
+   "pid": "k12",
+   "id": "KQ-1444",
+   "sighted_read": true,
+   "blind_read": false,
+   "image_bytes": {
+    "sighted": 17360,
+    "blind": 0
+   }
+  },
+  {
+   "kind": "canary",
+   "pid": "k13",
+   "id": "KQ-1481",
+   "sighted_read": true,
+   "blind_read": false,
+   "image_bytes": {
+    "sighted": 19539,
+    "blind": 0
+   }
+  },
+  {
+   "kind": "canary",
+   "pid": "k14",
+   "id": "KQ-1518",
+   "sighted_read": true,
+   "blind_read": false,
+   "image_bytes": {
+    "sighted": 20325,
+    "blind": 0
+   }
+  },
+  {
+   "kind": "canary",
+   "pid": "k15",
+   "id": "KQ-1555",
+   "sighted_read": true,
+   "blind_read": false,
+   "image_bytes": {
+    "sighted": 18271,
+    "blind": 0
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s001",
+   "case_id": "CXR-0345",
+   "finding": "cardiomegaly",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "no",
+   "verdict": "swap_uninformative",
+   "flagged": false,
+   "correct": false,
+   "donor": "CXR-2638",
+   "image_bytes": {
+    "sighted": 382770,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.22,
+   "reasoning": {
+    "sighted": "The image shows a frontal view of the chest, and the cardiac silhouette appears somewhat prominent and enlarged relative to the size of the chest. This suggests an enlarged cardiac silhouette, which is the definition of cardiomegaly.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual assessment of the radiograph, I cannot determine if the cardiac silhouette appears abnormally large."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s002",
+   "case_id": "CXR-2432",
+   "finding": "cardiomegaly",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "no",
+   "blind": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-2661",
+   "image_bytes": {
+    "sighted": 415992,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.09,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively normal in size and shape within the chest, and there is no obvious bulging or enlargement of the heart. The mediastinum is not significantly widened, which further supports a normal cardiac size.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s003",
+   "case_id": "CXR-3408",
+   "finding": "cardiomegaly",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "no",
+   "blind": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3926",
+   "image_bytes": {
+    "sighted": 503753,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 2.97,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively normal in size and shape within the chest, without any obvious enlargement. The heart borders are well-defined and do not appear abnormally prominent.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s004",
+   "case_id": "CXR-1957",
+   "finding": "cardiomegaly",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "no",
+   "blind": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-0050",
+   "image_bytes": {
+    "sighted": 480266,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.28,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively normal in size and shape within the chest, with no obvious bulging or enlargement. The heart borders are well-defined and do not appear abnormally prominent.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s005",
+   "case_id": "CXR-3822",
+   "finding": "cardiomegaly",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "no",
+   "blind": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-1863",
+   "image_bytes": {
+    "sighted": 472971,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.07,
+   "reasoning": {
+    "sighted": "The cardiac silhouette appears relatively normal in size and shape within the chest, and there is no obvious blurring or enlargement of the cardiac shadow. The heart size appears within normal limits based on this image.",
+    "blind": "Cardiomegaly is characterized by an increased size of the cardiac silhouette on a chest radiograph, often appearing as an enlarged heart. Without a visual reference of the radiograph, I cannot determine if the cardiac silhouette appears enlarged."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s006",
+   "case_id": "CXR-3022",
+   "finding": "consolidation",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-1620",
+   "image_bytes": {
+    "sighted": 496078,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.01,
+   "reasoning": {
+    "sighted": "The radiograph shows multiple areas of increased density within the lungs, appearing as white or gray opacities. These opacities are scattered throughout both lung fields, consistent with consolidation or airspace opacity.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s007",
+   "case_id": "CXR-0736",
+   "finding": "consolidation",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3575",
+   "image_bytes": {
+    "sighted": 353479,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 2.97,
+   "reasoning": {
+    "sighted": "The radiograph demonstrates a significant opacity in the right lower lobe of the lung, which appears as a dense, white area. This suggests a focal consolidation or airspace opacity is present in that region.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s008",
+   "case_id": "CXR-0975",
+   "finding": "consolidation",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3575",
+   "image_bytes": {
+    "sighted": 428200,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 2.89,
+   "reasoning": {
+    "sighted": "The radiograph shows a significant opacity in the right lower lobe, appearing as a dense, white area. This suggests a consolidation or airspace opacity within the lung tissue.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s009",
+   "case_id": "CXR-2827",
+   "finding": "consolidation",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3775",
+   "image_bytes": {
+    "sighted": 412126,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.04,
+   "reasoning": {
+    "sighted": "The radiograph shows a dense, white opacity in the lower lung field, extending from the mediastinum downwards. This opacity is consistent with consolidation, representing an area of increased density within the lung tissue.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s010",
+   "case_id": "CXR-3509",
+   "finding": "consolidation",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-1620",
+   "image_bytes": {
+    "sighted": 425894,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.03,
+   "reasoning": {
+    "sighted": "The radiograph shows a significant opacity in the right lower lobe of the lung, which appears as a dense, white area. This suggests consolidation or airspace opacity within that region of the lung.",
+    "blind": "The radiograph demonstrates a well-defined opacity in the right lower lobe, which appears as a dense area disrupting the normal lung markings. This characteristic appearance is consistent with a focal consolidation."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s011",
+   "case_id": "CXR-2993",
+   "finding": "fracture",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3294",
+   "image_bytes": {
+    "sighted": 390667,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.2,
+   "reasoning": {
+    "sighted": "The radiograph shows the sternum and ribs, and there appears to be a subtle linear opacity along the lower portion of the right rib cage. This could potentially represent a fracture, but further evaluation would be needed to confirm.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear opacity along the lateral aspect of the fourth rib, suggestive of a fracture line. This opacity is associated with periosteal reaction, further supporting the presence of a rib fracture."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s012",
+   "case_id": "CXR-3811",
+   "finding": "fracture",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "no",
+   "verdict": "swap_uninformative",
+   "flagged": false,
+   "correct": false,
+   "donor": "CXR-0664",
+   "image_bytes": {
+    "sighted": 382872,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.48,
+   "reasoning": {
+    "sighted": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring and loss of definition around the left rib at its junction with the sternum. This suggests a possible fracture line, although further evaluation would be needed to confirm.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a"
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s013",
+   "case_id": "CXR-0689",
+   "finding": "fracture",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "no",
+   "blind": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3202",
+   "image_bytes": {
+    "sighted": 417392,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.62,
+   "reasoning": {
+    "sighted": "The radiograph shows the sternum and ribs, and there appears to be a subtle blurring and loss of definition around the left rib at the mid-scapular level, which could potentially indicate a fracture. However, it's difficult to definitively confirm a fracture without further analysis and comparison.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a"
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s014",
+   "case_id": "CXR-3575",
+   "finding": "fracture",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "no",
+   "blind": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3336",
+   "image_bytes": {
+    "sighted": 384782,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.35,
+   "reasoning": {
+    "sighted": "The radiograph shows the sternum and ribs, and there is a subtle blurring of the left anterior rib, which could potentially represent a fracture. However, without further detail or comparison to prior images, it's difficult to definitively confirm a fracture.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a"
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s015",
+   "case_id": "CXR-0206",
+   "finding": "fracture",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "no",
+   "blind": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-3892",
+   "image_bytes": {
+    "sighted": 374089,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.36,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear view of the chest wall, and there are no obvious breaks or disruptions in the bony structures of the ribs. The ribs appear intact and well-defined, indicating no fractures are present.",
+    "blind": "The radiograph demonstrates the sternum and ribs, and there appears to be a subtle linear density change along the lateral aspect of the fourth rib, suggestive of a fracture. However, the fracture is not clearly defined or associated with significant displacement, making definitive confirmation of a"
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s016",
+   "case_id": "CXR-1957",
+   "finding": "nodule",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3764",
+   "image_bytes": {
+    "sighted": 480266,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.54,
+   "reasoning": {
+    "sighted": "The radiograph shows a hazy, indistinct opacity in the lung fields, which could represent consolidation or multiple small nodules. Without further detail or measurements, it's difficult to definitively identify a single pulmonary nodule or mass, but the appearance suggests the possibility of one or,",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s017",
+   "case_id": "CXR-0947",
+   "finding": "nodule",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-0551",
+   "image_bytes": {
+    "sighted": 494863,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.21,
+   "reasoning": {
+    "sighted": "The radiograph shows a large opacity in the right lower lobe, which could represent a mass or consolidation. It is difficult to definitively identify a nodule without further detail, but the size and location suggest a significant abnormality.",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s018",
+   "case_id": "CXR-2559",
+   "finding": "nodule",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "no",
+   "blind": "yes",
+   "verdict": "swap_uninformative",
+   "flagged": false,
+   "correct": true,
+   "donor": "CXR-3022",
+   "image_bytes": {
+    "sighted": 429669,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.23,
+   "reasoning": {
+    "sighted": "The radiograph shows a hazy opacity in the right lower lung field, which could represent consolidation or a mass. However, without further details or measurements, it is difficult to definitively identify a pulmonary nodule or mass.",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s019",
+   "case_id": "CXR-1101",
+   "finding": "nodule",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3764",
+   "image_bytes": {
+    "sighted": 319088,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.13,
+   "reasoning": {
+    "sighted": "The radiograph shows a small, ill-defined opacity in the right lower lung field. This could potentially represent a small nodule or mass, although further investigation would be needed to confirm the diagnosis.",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s020",
+   "case_id": "CXR-2638",
+   "finding": "nodule",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-2991",
+   "image_bytes": {
+    "sighted": 388172,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.13,
+   "reasoning": {
+    "sighted": "The radiograph shows a well-defined, rounded opacity in the right lower lung field. This appearance is suggestive of a potential pulmonary nodule or mass, warranting further investigation.",
+    "blind": "The radiograph demonstrates a well-defined, approximately 8mm opacity in the right upper lobe, which could represent a pulmonary nodule or mass. Further investigation, such as a CT scan, would be needed to characterize this finding definitively."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s021",
+   "case_id": "CXR-1525",
+   "finding": "pleural_effusion",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-1398",
+   "image_bytes": {
+    "sighted": 345885,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.12,
+   "reasoning": {
+    "sighted": "The radiograph shows a blunting of the costophrenic angles, which is indicative of fluid accumulation in the pleural space. This blunting suggests the presence of a pleural effusion, where fluid is present between the lung and the chest wall.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation within the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s022",
+   "case_id": "CXR-0689",
+   "finding": "pleural_effusion",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3703",
+   "image_bytes": {
+    "sighted": 417392,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.18,
+   "reasoning": {
+    "sighted": "The radiograph shows an opacity in the right lower lung field, which could represent a pleural effusion. Additionally, there appears to be blunting of the costophrenic angle, another sign suggestive of fluid accumulation in the pleural space.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s023",
+   "case_id": "CXR-0878",
+   "finding": "pleural_effusion",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-0771",
+   "image_bytes": {
+    "sighted": 388533,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.13,
+   "reasoning": {
+    "sighted": "The radiograph shows a significant opacity in the right hemithorax, obscuring the underlying lung structures. This opacity suggests fluid accumulation within the pleural space, which is characteristic of a pleural effusion.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s024",
+   "case_id": "CXR-3378",
+   "finding": "pleural_effusion",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-1398",
+   "image_bytes": {
+    "sighted": 383478,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.21,
+   "reasoning": {
+    "sighted": "The radiograph shows an increased density in the right hemithorax, obscuring the normal lung markings, which is indicative of fluid accumulation. This suggests the presence of a pleural effusion, where fluid has accumulated in the pleural space.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s025",
+   "case_id": "CXR-2352",
+   "finding": "pleural_effusion",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-0771",
+   "image_bytes": {
+    "sighted": 445565,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.15,
+   "reasoning": {
+    "sighted": "The radiograph shows the lung fields and the rib cage. There is a subtle blunting of the costophrenic angle, which could indicate a small pleural effusion, but further evaluation would be needed to confirm.",
+    "blind": "The radiograph demonstrates a blunting of the costophrenic angle, which is a classic sign of fluid accumulation in the pleural space. Additionally, there appears to be a hazy opacity directly overlying the lower lung field, further supporting the presence of a pleural effusion."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s026",
+   "case_id": "CXR-2436",
+   "finding": "pneumothorax",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "no",
+   "verdict": "swap_uninformative",
+   "flagged": false,
+   "correct": false,
+   "donor": "CXR-3227",
+   "image_bytes": {
+    "sighted": 379101,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.15,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has entered the space between the lung and the chest wall.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess the image for this characteristic finding."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s027",
+   "case_id": "CXR-2789",
+   "finding": "pneumothorax",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "no",
+   "blind": "no",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": true,
+   "donor": "CXR-2827",
+   "image_bytes": {
+    "sighted": 417740,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.13,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the absence of a collapsed lung, which is characteristic of a pneumothorax.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s028",
+   "case_id": "CXR-2352",
+   "finding": "pneumothorax",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "no",
+   "verdict": "swap_uninformative",
+   "flagged": false,
+   "correct": false,
+   "donor": "CXR-3113",
+   "image_bytes": {
+    "sighted": 445565,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.28,
+   "reasoning": {
+    "sighted": "The radiograph shows the lung fields, and there appears to be a dark area between the lung and the chest wall, which is indicative of air outside the lung. This is a classic sign of a pneumothorax, where air has entered the pleural space.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s029",
+   "case_id": "CXR-2991",
+   "finding": "pneumothorax",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "no",
+   "verdict": "swap_uninformative",
+   "flagged": false,
+   "correct": false,
+   "donor": "CXR-1551",
+   "image_bytes": {
+    "sighted": 483542,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.24,
+   "reasoning": {
+    "sighted": "The radiograph shows a clear separation between the lung and the chest wall, with air visible in the pleural space. This indicates the presence of a pneumothorax, where air has entered the space between the lung and the chest wall.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s030",
+   "case_id": "CXR-2543",
+   "finding": "pneumothorax",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "no",
+   "verdict": "swap_uninformative",
+   "flagged": false,
+   "correct": false,
+   "donor": "CXR-1879",
+   "image_bytes": {
+    "sighted": 313431,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.38,
+   "reasoning": {
+    "sighted": "The radiograph shows the lungs occupying the thoracic cavity, but there is a clear dark space between the lung and the chest wall, indicating the absence of lung tissue. This is a classic sign of a pneumothorax, where air has entered the pleural space.",
+    "blind": "A pneumothorax is characterized by the presence of air in the pleural space, which appears as a dark, lucent area surrounding the lung.  Without specific details of the radiograph, I cannot definitively confirm its presence, but I can assess based on typical radiographic findings."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s031",
+   "case_id": "CXR-3632",
+   "finding": "pulmonary_edema",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-2660",
+   "image_bytes": {
+    "sighted": 347831,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.14,
+   "reasoning": {
+    "sighted": "The radiograph shows hazy opacities in the lung fields, particularly more prominent on the right side, which is a classic sign of pulmonary edema due to fluid accumulation in the alveoli. The increased density obscures the normal lung markings.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the pulmonary interstitium and alveolar spaces."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s032",
+   "case_id": "CXR-1797",
+   "finding": "pulmonary_edema",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-2436",
+   "image_bytes": {
+    "sighted": 466180,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.06,
+   "reasoning": {
+    "sighted": "The radiograph shows hazy opacities in the lung fields, particularly in the lower lobes, which is a classic sign of pulmonary edema. These opacities represent fluid accumulation in the interstitial spaces of the lungs.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the lung tissue."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s033",
+   "case_id": "CXR-0345",
+   "finding": "pulmonary_edema",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-3752",
+   "image_bytes": {
+    "sighted": 382770,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.12,
+   "reasoning": {
+    "sighted": "The radiograph shows hazy opacities in the lung fields, particularly in the lower lobes, which is a classic sign of pulmonary edema. These opacities represent fluid accumulation in the interstitial spaces of the lungs.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the lung tissue."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s034",
+   "case_id": "CXR-1630",
+   "finding": "pulmonary_edema",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-2143",
+   "image_bytes": {
+    "sighted": 443476,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.16,
+   "reasoning": {
+    "sighted": "The radiograph shows bilateral hazy opacities in the lung fields, particularly prominent in the lower lobes, which is a classic sign of pulmonary edema. These opacities represent fluid accumulation in the interstitial spaces of the lungs.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the lung tissue."
+   }
+  },
+  {
+   "kind": "shadow",
+   "pid": "s035",
+   "case_id": "CXR-2474",
+   "finding": "pulmonary_edema",
+   "answer": "no",
+   "source": "unmentioned",
+   "sighted": "yes",
+   "blind": "yes",
+   "verdict": "prior",
+   "flagged": true,
+   "correct": false,
+   "donor": "CXR-1351",
+   "image_bytes": {
+    "sighted": 401801,
+    "blind": 0
+   },
+   "truncated": false,
+   "latency_s": 3.13,
+   "reasoning": {
+    "sighted": "The radiograph shows bilateral hazy opacities in the lung fields, particularly prominent in the lower lobes, which is a classic finding of pulmonary edema. These opacities represent fluid accumulation in the interstitial spaces of the lungs.",
+    "blind": "The radiograph demonstrates hazy opacities in the lower lung fields, particularly the bilateral regions, which is a classic sign of fluid accumulation. These opacities are consistent with the appearance of pulmonary edema, where fluid has infiltrated the lung tissue."
+   }
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Run artefacts
+output/
+generated/*.py
+generated/*.json
+generated/_scratch/
+
+# Paid deliverables - keep local
+build-*-guide.md
+*-instagram-assets.md

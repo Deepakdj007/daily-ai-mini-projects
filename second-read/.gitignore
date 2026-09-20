@@ -1,0 +1,34 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Build artefacts. The results JSON and the leaderboard are results and stay committed.
+output/run.log
+output/selftest-*.pdf
+output/overlays/selftest.png
+
+# Per-case records are regenerable and mostly duplicate results-<model>.json.
+# One is kept: the worked example the README walks through, so a reader can
+# read a full probe trail - raw model text and all - without running anything.
+# `output/cases/*`, not `output/cases/` - git cannot re-include a file whose
+# parent directory is excluded, so the negation below would never fire.
+output/cases/*
+!output/cases/CXR-0050.json
+
+# The open-i text index is 6 MB of derived data, rebuildable with `build`.
+data/reference/openi_index.json
+
+# Case folders hold resized IU-Xray frontals. open-i is CC BY-ND: a resized
+# copy is a derivative and redistributing it is not ours to do. The committed
+# probe file names every study by uid, so `build` re-fetches exactly these
+# images from the Hub. The same goes for the downloaded demo films and the
+# generated lab PDFs, which `build` mints deterministically.
+data/cases/
+
+# Downloaded demo assets - public, but not ours to redistribute.
+data/demo/
+
+# Paid deliverables - keep local
+build-*-guide.md
+*-instagram-assets.md

@@ -1,0 +1,330 @@
+{
+  "manifest": {
+    "date": "2026-09-13",
+    "model": "medgemma1.5:4b",
+    "digest": "433252621ab154668b5d8be6aff6c1b771bacba045e46e6193da8d6ad1630f2c",
+    "prompt_version": "v1",
+    "temperature": 0.0,
+    "top_k": 1,
+    "seeds": [
+      0,
+      1
+    ],
+    "num_ctx": 8192,
+    "image_edge": 896
+  },
+  "case": {
+    "case_id": "CXR-0050",
+    "context": "pt with sob,",
+    "evidence": [
+      {
+        "eid": "frontal",
+        "modality": "cxr",
+        "path": "D:\\PROJECTS\\for_subscribers\\daily-ai-mini-projects\\second-read\\data\\cases\\CXR-0050\\frontal.png",
+        "sha256": "sha256:2d03ea1f314c441696ba6f84b355a7a04b71dbcf4709199cec67e2810ee05917",
+        "role": "current"
+      }
+    ]
+  },
+  "note": {
+    "text": "FINDINGS:\nThe heart is enlarged. The mediastinum is unremarkable. The lungs are clear. There is no pleural effusion or pneumothorax. The bones are unremarkable. IMPRESSION:\ncardiomegaly.",
+    "latency_s": 0.7769042999998419,
+    "prompt_tokens": 373
+  },
+  "claims": [
+    {
+      "cid": "CXR-0050-c01",
+      "finding": "cardiomegaly",
+      "polarity": "yes",
+      "sentence": "IMPRESSION:\ncardiomegaly.",
+      "evidence_ids": [
+        "frontal"
+      ]
+    },
+    {
+      "cid": "CXR-0050-c02",
+      "finding": "consolidation",
+      "polarity": "no",
+      "sentence": "The lungs are clear.",
+      "evidence_ids": [
+        "frontal"
+      ]
+    },
+    {
+      "cid": "CXR-0050-c03",
+      "finding": "pleural_effusion",
+      "polarity": "no",
+      "sentence": "There is no pleural effusion or pneumothorax.",
+      "evidence_ids": [
+        "frontal"
+      ]
+    },
+    {
+      "cid": "CXR-0050-c04",
+      "finding": "pneumothorax",
+      "polarity": "no",
+      "sentence": "There is no pleural effusion or pneumothorax.",
+      "evidence_ids": [
+        "frontal"
+      ]
+    }
+  ],
+  "audits": [
+    {
+      "cid": "CXR-0050-c01",
+      "finding": "cardiomegaly",
+      "asserted": "yes",
+      "probes": [
+        {
+          "condition": "sighted",
+          "polarity": "yes",
+          "raw": "{\n\"reasoning\": \"The cardiac silhouette appears enlarged compared to the width of the chest. This suggests cardiomegaly.\",\n\"final_answer\": \"yes\"\n}",
+          "evidence_shown": [
+            "frontal"
+          ],
+          "donor_case_id": null,
+          "seed": 0,
+          "latency_s": 1.4866181999996115,
+          "image_bytes_sent": 303270,
+          "truncated": false
+        },
+        {
+          "condition": "blind",
+          "polarity": "yes",
+          "raw": "{\n\"reasoning\": \"The cardiac silhouette appears to be enlarged relative to the thoracic width. This suggests cardiomegaly.\",\n\"final_answer\": \"yes\"\n}",
+          "evidence_shown": [],
+          "donor_case_id": null,
+          "seed": 0,
+          "latency_s": 0.6753021000004082,
+          "image_bytes_sent": 0,
+          "truncated": false
+        },
+        {
+          "condition": "shuffled",
+          "polarity": "no",
+          "raw": "{\n\"reasoning\": \"The cardiac silhouette appears to be within normal limits in size relative to the chest width. The heart size does not appear significantly enlarged compared to the thoracic cavity.\",\n\"final_answer\": \"no\"\n}",
+          "evidence_shown": [
+            "donor:CXR-1577"
+          ],
+          "donor_case_id": "CXR-1577",
+          "seed": 0,
+          "latency_s": 1.7094551000000138,
+          "image_bytes_sent": 394771,
+          "truncated": false
+        },
+        {
+          "condition": "repeat",
+          "polarity": "yes",
+          "raw": "{\n\"reasoning\": \"The cardiac silhouette appears enlarged compared to the width of the chest. This suggests cardiomegaly.\",\n\"final_answer\": \"yes\"\n}",
+          "evidence_shown": [
+            "frontal"
+          ],
+          "donor_case_id": null,
+          "seed": 1,
+          "latency_s": 0.7459159999998519,
+          "image_bytes_sent": 303270,
+          "truncated": false
+        }
+      ],
+      "verdict": "prior",
+      "reason": "said yes with no image in the prompt at all",
+      "reference": "yes",
+      "flagged": true,
+      "correct": true
+    },
+    {
+      "cid": "CXR-0050-c02",
+      "finding": "consolidation",
+      "asserted": "no",
+      "probes": [
+        {
+          "condition": "sighted",
+          "polarity": "no",
+          "raw": "{\n\"reasoning\": \"The radiograph shows the chest X-ray. There is no obvious consolidation or airspace opacity visible in the lungs. The lung fields appear relatively clear, although the image quality is somewhat limited by the patient's body habitus and positioning.\",\n\"final_answer\": \"no\"\n}",
+          "evidence_shown": [
+            "frontal"
+          ],
+          "donor_case_id": null,
+          "seed": 0,
+          "latency_s": 1.8759025999997903,
+          "image_bytes_sent": 303270,
+          "truncated": false
+        },
+        {
+          "condition": "blind",
+          "polarity": "yes",
+          "raw": "{\n\"reasoning\": \"The radiograph shows a dense, opaque area in the right lower lobe, which is consistent with consolidation. This represents a filling of the airspaces with fluid or inflammatory exudate.\",\n\"final_answer\": \"yes\"\n}",
+          "evidence_shown": [],
+          "donor_case_id": null,
+          "seed": 0,
+          "latency_s": 0.9136648000003333,
+          "image_bytes_sent": 0,
+          "truncated": false
+        },
+        {
+          "condition": "shuffled",
+          "polarity": "no",
+          "raw": "{\n\"reasoning\": \"The radiograph shows increased opacity in the lower lung fields, particularly on the right side, which could represent consolidation or edema. However, the overall appearance is more consistent with pulmonary edema given the diffuse haziness and cardiomegaly.\",\n\"final_answer\": \"no\"\n}",
+          "evidence_shown": [
+            "donor:CXR-3195"
+          ],
+          "donor_case_id": "CXR-3195",
+          "seed": 0,
+          "latency_s": 1.8726091999997152,
+          "image_bytes_sent": 442931,
+          "truncated": false
+        },
+        {
+          "condition": "repeat",
+          "polarity": "no",
+          "raw": "{\n\"reasoning\": \"The radiograph shows the chest X-ray. There is no obvious consolidation or airspace opacity visible in the lungs. The lung fields appear relatively clear, although the image quality is somewhat limited by the patient's body habitus and positioning.\",\n\"final_answer\": \"no\"\n}",
+          "evidence_shown": [
+            "frontal"
+          ],
+          "donor_case_id": null,
+          "seed": 1,
+          "latency_s": 1.1488522999998168,
+          "image_bytes_sent": 303270,
+          "truncated": false
+        }
+      ],
+      "verdict": "image_shaped",
+      "reason": "said no on another patient's film too",
+      "reference": "no",
+      "flagged": false,
+      "correct": true
+    },
+    {
+      "cid": "CXR-0050-c03",
+      "finding": "pleural_effusion",
+      "asserted": "no",
+      "probes": [
+        {
+          "condition": "sighted",
+          "polarity": "no",
+          "raw": "{\n\"reasoning\": \"The radiograph shows the chest X-ray. The lung fields appear relatively clear, although there is some increased opacity in the lower lung zones, which could be due to atelectasis or other factors. There is no obvious pleural effusion, such as a meniscus sign or blunting of the costophrenic angles.\",\n\"final_answer\": \"no\"\n}",
+          "evidence_shown": [
+            "frontal"
+          ],
+          "donor_case_id": null,
+          "seed": 0,
+          "latency_s": 2.1341930999997203,
+          "image_bytes_sent": 303270,
+          "truncated": false
+        },
+        {
+          "condition": "blind",
+          "polarity": "no",
+          "raw": "{\n\"reasoning\": \"The radiograph shows the lung fields, heart, and mediastinum. There is no obvious blunting of the costophrenic angles or layering of fluid in the pleural space. The lung markings appear relatively sharp, suggesting no significant fluid accumulation.\",\n\"final_answer\": \"no\"\n}",
+          "evidence_shown": [],
+          "donor_case_id": null,
+          "seed": 0,
+          "latency_s": 1.089213899999777,
+          "image_bytes_sent": 0,
+          "truncated": false
+        },
+        {
+          "condition": "shuffled",
+          "polarity": "no",
+          "raw": "{\n\"reasoning\": \"The radiograph shows the lung fields and heart silhouette. There is no obvious blunting of the costophrenic angles or layering of fluid in the pleural space. The lung markings are distinct and do not appear obscured by fluid.\",\n\"final_answer\": \"no\"\n}",
+          "evidence_shown": [
+            "donor:CXR-3632"
+          ],
+          "donor_case_id": "CXR-3632",
+          "seed": 0,
+          "latency_s": 1.8552915000000212,
+          "image_bytes_sent": 347831,
+          "truncated": false
+        },
+        {
+          "condition": "repeat",
+          "polarity": "no",
+          "raw": "{\n\"reasoning\": \"The radiograph shows the chest X-ray. The lung fields appear relatively clear, although there is some increased opacity in the lower lung zones, which could be due to atelectasis or other factors. There is no obvious pleural effusion, such as a meniscus sign or blunting of the costophrenic angles.\",\n\"final_answer\": \"no\"\n}",
+          "evidence_shown": [
+            "frontal"
+          ],
+          "donor_case_id": null,
+          "seed": 1,
+          "latency_s": 1.4387635000002774,
+          "image_bytes_sent": 303270,
+          "truncated": false
+        }
+      ],
+      "verdict": "prior",
+      "reason": "said no with no image in the prompt at all",
+      "reference": "no",
+      "flagged": true,
+      "correct": true
+    },
+    {
+      "cid": "CXR-0050-c04",
+      "finding": "pneumothorax",
+      "asserted": "no",
+      "probes": [
+        {
+          "condition": "sighted",
+          "polarity": "no",
+          "raw": "{\n\"reasoning\": \"The radiograph shows the chest with lungs, heart, ribs, and clavicles. There is no visible pleural line or absence of lung markings in the right hemithorax to suggest a pneumothorax. The lung fields appear relatively clear.\",\n\"final_answer\": \"no\"\n}",
+          "evidence_shown": [
+            "frontal"
+          ],
+          "donor_case_id": null,
+          "seed": 0,
+          "latency_s": 1.8953152000003683,
+          "image_bytes_sent": 303270,
+          "truncated": false
+        },
+        {
+          "condition": "blind",
+          "polarity": "no",
+          "raw": "{\n\"reasoning\": \"The radiograph shows the lung fields, mediastinum, and heart. A pneumothorax is the presence of air in the pleural space, which would appear as a radiolucent (dark) area adjacent to the lung, often with a visible visceral pleural line. While the image quality is not explicitly stated, the typical ap\",\"final_answer\": \"no\"\n}",
+          "evidence_shown": [],
+          "donor_case_id": null,
+          "seed": 0,
+          "latency_s": 1.406602600000042,
+          "image_bytes_sent": 0,
+          "truncated": false
+        },
+        {
+          "condition": "shuffled",
+          "polarity": "yes",
+          "raw": "{\n\"reasoning\": \"The radiograph shows a large opacity in the right hemithorax, consistent with a collapsed lung. There is also a visible pleural line, indicating the presence of air in the pleural space. These findings are characteristic of a pneumothorax.\",\n\"final_answer\": \"yes\"\n}",
+          "evidence_shown": [
+            "donor:CXR-3369"
+          ],
+          "donor_case_id": "CXR-3369",
+          "seed": 0,
+          "latency_s": 1.9336401000000478,
+          "image_bytes_sent": 372873,
+          "truncated": false
+        },
+        {
+          "condition": "repeat",
+          "polarity": "no",
+          "raw": "{\n\"reasoning\": \"The radiograph shows the chest X-ray. There is no visible pleural line or absence of lung markings in the right hemithorax to suggest a pneumothorax. The lung fields appear relatively clear.\",\n\"final_answer\": \"no\"\n}",
+          "evidence_shown": [
+            "frontal"
+          ],
+          "donor_case_id": null,
+          "seed": 1,
+          "latency_s": 1.068708499999957,
+          "image_bytes_sent": 303270,
+          "truncated": false
+        }
+      ],
+      "verdict": "prior",
+      "reason": "said no with no image in the prompt at all",
+      "reference": "no",
+      "flagged": true,
+      "correct": true
+    }
+  ],
+  "summary": {
+    "claims": 4,
+    "grounded": 0,
+    "image_shaped": 1,
+    "prior": 3,
+    "unstable": 0,
+    "swap_uninformative": 0
+  }
+}

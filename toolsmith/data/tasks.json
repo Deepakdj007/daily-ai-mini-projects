@@ -1,0 +1,100 @@
+{
+  "families": [
+    {
+      "family": "gstin",
+      "label": "GSTIN check character",
+      "contract": "A GSTIN is 15 characters long. The last one is a check character derived from the first 14 by the standard GSTIN checksum: each character is read as a base-36 digit (0-9 then A-Z), weighted alternately by 1 and 2 starting with 1 at the first character, and the digits of each weighted product are folded back modulo 36. You are given several prefixes and must return every check character, in the order the prefixes are given, with nothing between them. As a worked example, 22AAAAA0000A1Z, 07AABCS1429B1Z give \"CW\".",
+      "returns": "the check characters in order, joined into one string with nothing between them",
+      "tasks": [
+        {
+          "id": "gstin_1",
+          "prompt": "A GSTIN is 15 characters long. The last one is a check character derived from the first 14 by the standard GSTIN checksum: each character is read as a base-36 digit (0-9 then A-Z), weighted alternately by 1 and 2 starting with 1 at the first character, and the digits of each weighted product are folded back modulo 36. You are given several prefixes and must return every check character, in the order the prefixes are given, with nothing between them. As a worked example, 22AAAAA0000A1Z, 07AABCS1429B1Z give \"CW\".\n\nWhat are the check characters for these GSTIN prefixes: 16TEUYJ4263R1Z, 14ELRKY8914Q4Z, 03ZPVMA6122X3Z, 07RJXDS8075B1Z?\n\nAnswer with the check characters in order, joined into one string with nothing between them.",
+          "answer": "KXMS"
+        },
+        {
+          "id": "gstin_2",
+          "prompt": "A GSTIN is 15 characters long. The last one is a check character derived from the first 14 by the standard GSTIN checksum: each character is read as a base-36 digit (0-9 then A-Z), weighted alternately by 1 and 2 starting with 1 at the first character, and the digits of each weighted product are folded back modulo 36. You are given several prefixes and must return every check character, in the order the prefixes are given, with nothing between them. As a worked example, 22AAAAA0000A1Z, 07AABCS1429B1Z give \"CW\".\n\nWhat are the check characters for these GSTIN prefixes: 16ROJEM7984W9Z, 04ORNIE0343L2Z, 11ZNRPA2259A7Z, 18VWYBJ0318H8Z?\n\nAnswer with the check characters in order, joined into one string with nothing between them.",
+          "answer": "EXSA"
+        }
+      ],
+      "holdout": [
+        {
+          "inputs": [
+            "17UWUEN5406A4Z",
+            "27DWYTC7111K3Z",
+            "36BBLHJ7211M1Z",
+            "33AOPJM9748V5Z"
+          ],
+          "expect": "ISUQ"
+        },
+        {
+          "inputs": [
+            "05KYJBO7096L9Z",
+            "21DEPDF7568O2Z",
+            "14DZLBX3158Y3Z",
+            "19AABCU9603R1Z"
+          ],
+          "expect": "ZGNK"
+        },
+        {
+          "inputs": [
+            "32JFQMS7856Y2Z",
+            "10IYAQJ8563T4Z",
+            "36AAFCD5862P1Z",
+            "17VTQBV5804W1Z"
+          ],
+          "expect": "PK0H"
+        }
+      ],
+      "holdout_hint": "some of them have a check character that is a digit rather than a letter"
+    },
+    {
+      "family": "isoweek",
+      "label": "ISO week label",
+      "contract": "The ISO-8601 week-numbering year, week number and weekday of a date are written YYYY-Www-D, with the week zero-padded to two digits and the weekday running 1 for Monday to 7 for Sunday. Week 1 is the week holding that year's first Thursday, so the year in the label is the ISO week-numbering year, which around the turn of the year is not always the calendar year. You are given several dates and must return every label, in order, separated by single spaces. As a worked example, 2024-06-12, 2024-11-03 give \"2024-W24-3 2024-W44-7\".",
+      "returns": "the labels in order, separated by single spaces",
+      "tasks": [
+        {
+          "id": "isoweek_1",
+          "prompt": "The ISO-8601 week-numbering year, week number and weekday of a date are written YYYY-Www-D, with the week zero-padded to two digits and the weekday running 1 for Monday to 7 for Sunday. Week 1 is the week holding that year's first Thursday, so the year in the label is the ISO week-numbering year, which around the turn of the year is not always the calendar year. You are given several dates and must return every label, in order, separated by single spaces. As a worked example, 2024-06-12, 2024-11-03 give \"2024-W24-3 2024-W44-7\".\n\nWhat are the ISO week labels for these dates: 2025-03-17, 2025-08-21, 2026-05-04, 2025-10-09?\n\nAnswer with the labels in order, separated by single spaces.",
+          "answer": "2025-W12-1 2025-W34-4 2026-W19-1 2025-W41-4"
+        },
+        {
+          "id": "isoweek_2",
+          "prompt": "The ISO-8601 week-numbering year, week number and weekday of a date are written YYYY-Www-D, with the week zero-padded to two digits and the weekday running 1 for Monday to 7 for Sunday. Week 1 is the week holding that year's first Thursday, so the year in the label is the ISO week-numbering year, which around the turn of the year is not always the calendar year. You are given several dates and must return every label, in order, separated by single spaces. As a worked example, 2024-06-12, 2024-11-03 give \"2024-W24-3 2024-W44-7\".\n\nWhat are the ISO week labels for these dates: 2024-07-30, 2026-02-11, 2025-06-06, 2024-09-23?\n\nAnswer with the labels in order, separated by single spaces.",
+          "answer": "2024-W31-2 2026-W07-3 2025-W23-5 2024-W39-1"
+        }
+      ],
+      "holdout": [
+        {
+          "inputs": [
+            "2027-01-01",
+            "2025-05-15",
+            "2024-12-30",
+            "2026-08-19"
+          ],
+          "expect": "2026-W53-5 2025-W20-4 2025-W01-1 2026-W34-3"
+        },
+        {
+          "inputs": [
+            "2028-02-29",
+            "2023-01-01",
+            "2025-11-07",
+            "2021-01-03"
+          ],
+          "expect": "2028-W09-2 2022-W52-7 2025-W45-5 2020-W53-7"
+        },
+        {
+          "inputs": [
+            "2026-12-31",
+            "2032-12-31",
+            "2024-02-29",
+            "2026-01-01"
+          ],
+          "expect": "2026-W53-4 2032-W53-5 2024-W09-4 2026-W01-4"
+        }
+      ],
+      "holdout_hint": "some of them fall within a few days of a year boundary"
+    }
+  ]
+}

@@ -1,0 +1,1246 @@
+{
+  "version": "2",
+  "seed": 20260917,
+  "oracle": "sha256:87a7c58a96065fb7",
+  "task_order": [
+    "gstin_1",
+    "gstin_2",
+    "gstin_3",
+    "gstin_4",
+    "loan_1",
+    "loan_2",
+    "loan_3",
+    "loan_4",
+    "isoweek_1",
+    "isoweek_2",
+    "isoweek_3",
+    "isoweek_4",
+    "verhoeff_1",
+    "verhoeff_2",
+    "verhoeff_3",
+    "verhoeff_4",
+    "words_1",
+    "words_2",
+    "words_3",
+    "words_4",
+    "semver_1",
+    "semver_2",
+    "semver_3",
+    "semver_4"
+  ],
+  "families": [
+    {
+      "family": "gstin",
+      "label": "GSTIN check character",
+      "contract": "A GSTIN is 15 characters long. The last one is a check character derived from the first 14 by the standard GSTIN checksum: each character is read as a base-36 digit (0-9 then A-Z), weighted alternately by 1 and 2 starting with 1 at the first character, and the digits of each weighted product are folded back modulo 36. You are given several prefixes and must return every check character, in the order the prefixes are given, with nothing between them. As a worked example, 22AAAAA0000A1Z, 07AABCS1429B1Z give \"CW\".",
+      "example": [
+        [
+          "22AAAAA0000A1Z",
+          "07AABCS1429B1Z"
+        ]
+      ],
+      "why_tool": "Base-36 conversion, an alternating weight and a modular fold. There is no arithmetic expression over the input that produces it.",
+      "returns": "the check characters in order, joined into one string with nothing between them",
+      "compare": "str_ci",
+      "params": [
+        [
+          "prefixes",
+          "array"
+        ]
+      ],
+      "batch": 8,
+      "tasks": [
+        {
+          "id": "gstin_1",
+          "family": "gstin",
+          "member": 1,
+          "inputs": [
+            [
+              "16TEUYJ4263R1Z",
+              "14ELRKY8914Q4Z",
+              "03ZPVMA6122X3Z",
+              "07RJXDS8075B1Z",
+              "06EWIAJ8008D3Z",
+              "14MBDQW1112F2Z",
+              "03SMROY9397Q9Z",
+              "28ZUIIJ1339D1Z"
+            ]
+          ],
+          "prompt": "A GSTIN is 15 characters long. The last one is a check character derived from the first 14 by the standard GSTIN checksum: each character is read as a base-36 digit (0-9 then A-Z), weighted alternately by 1 and 2 starting with 1 at the first character, and the digits of each weighted product are folded back modulo 36. You are given several prefixes and must return every check character, in the order the prefixes are given, with nothing between them. As a worked example, 22AAAAA0000A1Z, 07AABCS1429B1Z give \"CW\".\n\nWhat are the check characters for these GSTIN prefixes: 16TEUYJ4263R1Z, 14ELRKY8914Q4Z, 03ZPVMA6122X3Z, 07RJXDS8075B1Z, 06EWIAJ8008D3Z, 14MBDQW1112F2Z, 03SMROY9397Q9Z, 28ZUIIJ1339D1Z?\n\nAnswer with the check characters in order, joined into one string with nothing between them.",
+          "answer": "KXMSGRSI"
+        },
+        {
+          "id": "gstin_2",
+          "family": "gstin",
+          "member": 2,
+          "inputs": [
+            [
+              "16ROJEM7984W9Z",
+              "04ORNIE0343L2Z",
+              "11ZNRPA2259A7Z",
+              "18VWYBJ0318H8Z",
+              "15DYYTO3076R6Z",
+              "31AOWCM8850S1Z",
+              "05OYLAR3431H4Z",
+              "07FUBDW3831R3Z"
+            ]
+          ],
+          "prompt": "A GSTIN is 15 characters long. The last one is a check character derived from the first 14 by the standard GSTIN checksum: each character is read as a base-36 digit (0-9 then A-Z), weighted alternately by 1 and 2 starting with 1 at the first character, and the digits of each weighted product are folded back modulo 36. You are given several prefixes and must return every check character, in the order the prefixes are given, with nothing between them. As a worked example, 22AAAAA0000A1Z, 07AABCS1429B1Z give \"CW\".\n\nWhat are the check characters for these GSTIN prefixes: 16ROJEM7984W9Z, 04ORNIE0343L2Z, 11ZNRPA2259A7Z, 18VWYBJ0318H8Z, 15DYYTO3076R6Z, 31AOWCM8850S1Z, 05OYLAR3431H4Z, 07FUBDW3831R3Z?\n\nAnswer with the check characters in order, joined into one string with nothing between them.",
+          "answer": "EXSASJRF"
+        },
+        {
+          "id": "gstin_3",
+          "family": "gstin",
+          "member": 3,
+          "inputs": [
+            [
+              "17MKNYC3654Q8Z",
+              "27MTJNQ8771G9Z",
+              "29DNLJM7579A6Z",
+              "13LGZIW3105L7Z",
+              "15EXVTX0591R3Z",
+              "18WCRAA3116F8Z",
+              "34QCCCZ2889R7Z",
+              "30REPJQ7032D6Z"
+            ]
+          ],
+          "prompt": "A GSTIN is 15 characters long. The last one is a check character derived from the first 14 by the standard GSTIN checksum: each character is read as a base-36 digit (0-9 then A-Z), weighted alternately by 1 and 2 starting with 1 at the first character, and the digits of each weighted product are folded back modulo 36. You are given several prefixes and must return every check character, in the order the prefixes are given, with nothing between them. As a worked example, 22AAAAA0000A1Z, 07AABCS1429B1Z give \"CW\".\n\nWhat are the check characters for these GSTIN prefixes: 17MKNYC3654Q8Z, 27MTJNQ8771G9Z, 29DNLJM7579A6Z, 13LGZIW3105L7Z, 15EXVTX0591R3Z, 18WCRAA3116F8Z, 34QCCCZ2889R7Z, 30REPJQ7032D6Z?\n\nAnswer with the check characters in order, joined into one string with nothing between them.",
+          "answer": "KLNRSYMF"
+        },
+        {
+          "id": "gstin_4",
+          "family": "gstin",
+          "member": 4,
+          "inputs": [
+            [
+              "28BXQHX1087Y7Z",
+              "05JMAHS2976Y7Z",
+              "21EXSQV8031M5Z",
+              "07MJCPL6408Q3Z",
+              "08EDATD8761O9Z",
+              "10GHHTK5112U7Z",
+              "18TIUSY1286F7Z",
+              "32CFPZU5950T4Z"
+            ]
+          ],
+          "prompt": "A GSTIN is 15 characters long. The last one is a check character derived from the first 14 by the standard GSTIN checksum: each character is read as a base-36 digit (0-9 then A-Z), weighted alternately by 1 and 2 starting with 1 at the first character, and the digits of each weighted product are folded back modulo 36. You are given several prefixes and must return every check character, in the order the prefixes are given, with nothing between them. As a worked example, 22AAAAA0000A1Z, 07AABCS1429B1Z give \"CW\".\n\nWhat are the check characters for these GSTIN prefixes: 28BXQHX1087Y7Z, 05JMAHS2976Y7Z, 21EXSQV8031M5Z, 07MJCPL6408Q3Z, 08EDATD8761O9Z, 10GHHTK5112U7Z, 18TIUSY1286F7Z, 32CFPZU5950T4Z?\n\nAnswer with the check characters in order, joined into one string with nothing between them.",
+          "answer": "ZYJELNMM"
+        }
+      ],
+      "holdout": [
+        {
+          "inputs": [
+            [
+              "17UWUEN5406A4Z",
+              "27DWYTC7111K3Z",
+              "36BBLHJ7211M1Z",
+              "33AOPJM9748V5Z",
+              "31WVDOV1205U6Z",
+              "29AAGCB7383J1Z",
+              "14IUXIX9743D2Z",
+              "01SGQVU7710Y4Z"
+            ]
+          ],
+          "expect": "ISUQK4YC"
+        },
+        {
+          "inputs": [
+            [
+              "05KYJBO7096L9Z",
+              "21DEPDF7568O2Z",
+              "14DZLBX3158Y3Z",
+              "19AABCU9603R1Z",
+              "29MBRJB7419M9Z",
+              "29GZJBJ2132Q2Z",
+              "24WHCIS8530R4Z",
+              "17TSNMW1437K1Z"
+            ]
+          ],
+          "expect": "ZGNKTIER"
+        },
+        {
+          "inputs": [
+            [
+              "32JFQMS7856Y2Z",
+              "10IYAQJ8563T4Z",
+              "36AAFCD5862P1Z",
+              "17VTQBV5804W1Z",
+              "01UNIYS0841O1Z",
+              "33QZGOR6606Z7Z",
+              "15JTRMK4067Y2Z",
+              "20VZUWH5923U6Z"
+            ]
+          ],
+          "expect": "PK0HSPAG"
+        },
+        {
+          "inputs": [
+            [
+              "07AAACN2755L1Z",
+              "16LFGMJ3178C7Z",
+              "30XTUMV3057Y8Z",
+              "20CHEOW9009R6Z",
+              "34RRFTD7537T8Z",
+              "34UTECM5661I3Z",
+              "33TIKAA1260U1Z",
+              "01LNIKS4868R7Z"
+            ]
+          ],
+          "expect": "ADOMAOEY"
+        },
+        {
+          "inputs": [
+            [
+              "29AAGCB7383J1Z",
+              "09PJZMO1404X1Z",
+              "11WLAPQ6337D1Z",
+              "07GWPMS5092D7Z",
+              "25UWTPH0336Y6Z",
+              "11KGUUN8560Q2Z",
+              "36TLRFY6840B7Z",
+              "28FHTVX6108L5Z"
+            ]
+          ],
+          "expect": "4PXXVWIS"
+        },
+        {
+          "inputs": [
+            [
+              "29DWMNL7492Y3Z",
+              "20LBNTA1311N6Z",
+              "37DKVRU4867G6Z",
+              "05DMZAF0772F8Z",
+              "28PZDAG4710A7Z",
+              "19AABCU9603R1Z",
+              "13KNPRR0313W6Z",
+              "17XNFIM8035Q8Z"
+            ]
+          ],
+          "expect": "RJTIAKTW"
+        },
+        {
+          "inputs": [
+            [
+              "26YTLWW1741W4Z",
+              "32NOCRS2234V7Z",
+              "20QHJRO2650K3Z",
+              "36AAFCD5862P1Z",
+              "31TKSDG9261B2Z",
+              "03FLRGB2187W1Z",
+              "07BKZIU6002I8Z",
+              "26OXRJL2438J9Z"
+            ]
+          ],
+          "expect": "DTT0FPQR"
+        },
+        {
+          "inputs": [
+            [
+              "07AAACN2755L1Z",
+              "30ILQBZ1014Y7Z",
+              "22OSAIV4892U5Z",
+              "13QQJOK8384O6Z",
+              "17JLRHE2798J2Z",
+              "07BWCMZ9670O3Z",
+              "16SDSJR5992V9Z",
+              "23HEQBA3682J8Z"
+            ]
+          ],
+          "expect": "AMMLNHHT"
+        }
+      ]
+    },
+    {
+      "family": "loan",
+      "label": "total interest on a loan",
+      "contract": "For a reducing-balance loan, the monthly rate is the annual rate divided by 12 and by 100, and the instalment is the standard EMI formula rounded half-up to two decimals. Walk the schedule: each month the interest is the opening balance times the monthly rate, rounded half-up to two decimals, and the balance falls by the instalment less that interest, again to two decimals. The final instalment is whatever clears the balance rather than the fixed figure. The answer is the sum of every month's interest. As a worked example, Rs 200000 at 10.0% over 24 months pays 21495.63 in interest.",
+      "example": [
+        200000,
+        10.0,
+        24
+      ],
+      "why_tool": "Rounding each month to paise breaks the closed form, so the total can only be reached by walking every row of the schedule.",
+      "returns": "the total interest in rupees, to two decimals",
+      "compare": "money2",
+      "params": [
+        [
+          "principal",
+          "number"
+        ],
+        [
+          "annual_rate",
+          "number"
+        ],
+        [
+          "months",
+          "integer"
+        ]
+      ],
+      "batch": 1,
+      "tasks": [
+        {
+          "id": "loan_1",
+          "family": "loan",
+          "member": 1,
+          "inputs": [
+            1000000,
+            8.5,
+            240
+          ],
+          "prompt": "For a reducing-balance loan, the monthly rate is the annual rate divided by 12 and by 100, and the instalment is the standard EMI formula rounded half-up to two decimals. Walk the schedule: each month the interest is the opening balance times the monthly rate, rounded half-up to two decimals, and the balance falls by the instalment less that interest, again to two decimals. The final instalment is whatever clears the balance rather than the fixed figure. The answer is the sum of every month's interest. As a worked example, Rs 200000 at 10.0% over 24 months pays 21495.63 in interest.\n\nA loan of Rs 1,000,000 is taken at 8.5% a year over 240 months. What is the total interest paid over the life of the loan?\n\nAnswer with the total interest in rupees, to two decimals.",
+          "answer": 1082776.63
+        },
+        {
+          "id": "loan_2",
+          "family": "loan",
+          "member": 2,
+          "inputs": [
+            450000,
+            11.25,
+            84
+          ],
+          "prompt": "For a reducing-balance loan, the monthly rate is the annual rate divided by 12 and by 100, and the instalment is the standard EMI formula rounded half-up to two decimals. Walk the schedule: each month the interest is the opening balance times the monthly rate, rounded half-up to two decimals, and the balance falls by the instalment less that interest, again to two decimals. The final instalment is whatever clears the balance rather than the fixed figure. The answer is the sum of every month's interest. As a worked example, Rs 200000 at 10.0% over 24 months pays 21495.63 in interest.\n\nA loan of Rs 450,000 is taken at 11.25% a year over 84 months. What is the total interest paid over the life of the loan?\n\nAnswer with the total interest in rupees, to two decimals.",
+          "answer": 202207.29
+        },
+        {
+          "id": "loan_3",
+          "family": "loan",
+          "member": 3,
+          "inputs": [
+            250000,
+            9.75,
+            60
+          ],
+          "prompt": "For a reducing-balance loan, the monthly rate is the annual rate divided by 12 and by 100, and the instalment is the standard EMI formula rounded half-up to two decimals. Walk the schedule: each month the interest is the opening balance times the monthly rate, rounded half-up to two decimals, and the balance falls by the instalment less that interest, again to two decimals. The final instalment is whatever clears the balance rather than the fixed figure. The answer is the sum of every month's interest. As a worked example, Rs 200000 at 10.0% over 24 months pays 21495.63 in interest.\n\nA loan of Rs 250,000 is taken at 9.75% a year over 60 months. What is the total interest paid over the life of the loan?\n\nAnswer with the total interest in rupees, to two decimals.",
+          "answer": 66863.69
+        },
+        {
+          "id": "loan_4",
+          "family": "loan",
+          "member": 4,
+          "inputs": [
+            3500000,
+            7.9,
+            300
+          ],
+          "prompt": "For a reducing-balance loan, the monthly rate is the annual rate divided by 12 and by 100, and the instalment is the standard EMI formula rounded half-up to two decimals. Walk the schedule: each month the interest is the opening balance times the monthly rate, rounded half-up to two decimals, and the balance falls by the instalment less that interest, again to two decimals. The final instalment is whatever clears the balance rather than the fixed figure. The answer is the sum of every month's interest. As a worked example, Rs 200000 at 10.0% over 24 months pays 21495.63 in interest.\n\nA loan of Rs 3,500,000 is taken at 7.9% a year over 300 months. What is the total interest paid over the life of the loan?\n\nAnswer with the total interest in rupees, to two decimals.",
+          "answer": 4534637.24
+        }
+      ],
+      "holdout": [
+        {
+          "inputs": [
+            120000,
+            0.0,
+            12
+          ],
+          "expect": 0.0
+        },
+        {
+          "inputs": [
+            100000,
+            12.0,
+            1
+          ],
+          "expect": 1000.0
+        },
+        {
+          "inputs": [
+            75000,
+            14.0,
+            18
+          ],
+          "expect": 8585.46
+        },
+        {
+          "inputs": [
+            2000000,
+            6.75,
+            180
+          ],
+          "expect": 1185673.96
+        },
+        {
+          "inputs": [
+            640000,
+            10.4,
+            96
+          ],
+          "expect": 305355.17
+        },
+        {
+          "inputs": [
+            15000,
+            0.0,
+            6
+          ],
+          "expect": 0.0
+        },
+        {
+          "inputs": [
+            5000000,
+            9.15,
+            360
+          ],
+          "expect": 9677895.43
+        },
+        {
+          "inputs": [
+            88888,
+            13.33,
+            27
+          ],
+          "expect": 14484.34
+        }
+      ]
+    },
+    {
+      "family": "isoweek",
+      "label": "ISO week label",
+      "contract": "Report the ISO-8601 week-numbering year, week number and weekday of a date as YYYY-Www-D, with the week zero-padded to two digits and the weekday running 1 for Monday to 7 for Sunday. The year in the label is the ISO week-numbering year, which near the turn of the year is not always the calendar year. You are given several dates and must return every label, in order, separated by single spaces. As a worked example, 2024-06-12, 2024-11-03 give \"2024-W24-3 2024-W44-7\".",
+      "example": [
+        [
+          "2024-06-12",
+          "2024-11-03"
+        ]
+      ],
+      "why_tool": "ISO week 1 is the week holding the first Thursday, so the year boundary does not follow from the day of the year.",
+      "returns": "the labels in order, separated by single spaces",
+      "compare": "str_ci",
+      "params": [
+        [
+          "days",
+          "array"
+        ]
+      ],
+      "batch": 6,
+      "tasks": [
+        {
+          "id": "isoweek_1",
+          "family": "isoweek",
+          "member": 1,
+          "inputs": [
+            [
+              "2025-10-28",
+              "2025-04-28",
+              "2024-12-02",
+              "2026-05-16",
+              "2024-07-09",
+              "2026-08-31"
+            ]
+          ],
+          "prompt": "Report the ISO-8601 week-numbering year, week number and weekday of a date as YYYY-Www-D, with the week zero-padded to two digits and the weekday running 1 for Monday to 7 for Sunday. The year in the label is the ISO week-numbering year, which near the turn of the year is not always the calendar year. You are given several dates and must return every label, in order, separated by single spaces. As a worked example, 2024-06-12, 2024-11-03 give \"2024-W24-3 2024-W44-7\".\n\nWhat are the ISO week labels for these dates: 2025-10-28, 2025-04-28, 2024-12-02, 2026-05-16, 2024-07-09, 2026-08-31?\n\nAnswer with the labels in order, separated by single spaces.",
+          "answer": "2025-W44-2 2025-W18-1 2024-W49-1 2026-W20-6 2024-W28-2 2026-W36-1"
+        },
+        {
+          "id": "isoweek_2",
+          "family": "isoweek",
+          "member": 2,
+          "inputs": [
+            [
+              "2026-07-02",
+              "2024-11-17",
+              "2026-09-26",
+              "2026-06-10",
+              "2026-03-09",
+              "2024-09-18"
+            ]
+          ],
+          "prompt": "Report the ISO-8601 week-numbering year, week number and weekday of a date as YYYY-Www-D, with the week zero-padded to two digits and the weekday running 1 for Monday to 7 for Sunday. The year in the label is the ISO week-numbering year, which near the turn of the year is not always the calendar year. You are given several dates and must return every label, in order, separated by single spaces. As a worked example, 2024-06-12, 2024-11-03 give \"2024-W24-3 2024-W44-7\".\n\nWhat are the ISO week labels for these dates: 2026-07-02, 2024-11-17, 2026-09-26, 2026-06-10, 2026-03-09, 2024-09-18?\n\nAnswer with the labels in order, separated by single spaces.",
+          "answer": "2026-W27-4 2024-W46-7 2026-W39-6 2026-W24-3 2026-W11-1 2024-W38-3"
+        },
+        {
+          "id": "isoweek_3",
+          "family": "isoweek",
+          "member": 3,
+          "inputs": [
+            [
+              "2024-11-29",
+              "2024-08-16",
+              "2025-11-28",
+              "2026-07-11",
+              "2026-10-20",
+              "2024-03-13"
+            ]
+          ],
+          "prompt": "Report the ISO-8601 week-numbering year, week number and weekday of a date as YYYY-Www-D, with the week zero-padded to two digits and the weekday running 1 for Monday to 7 for Sunday. The year in the label is the ISO week-numbering year, which near the turn of the year is not always the calendar year. You are given several dates and must return every label, in order, separated by single spaces. As a worked example, 2024-06-12, 2024-11-03 give \"2024-W24-3 2024-W44-7\".\n\nWhat are the ISO week labels for these dates: 2024-11-29, 2024-08-16, 2025-11-28, 2026-07-11, 2026-10-20, 2024-03-13?\n\nAnswer with the labels in order, separated by single spaces.",
+          "answer": "2024-W48-5 2024-W33-5 2025-W48-5 2026-W28-6 2026-W43-2 2024-W11-3"
+        },
+        {
+          "id": "isoweek_4",
+          "family": "isoweek",
+          "member": 4,
+          "inputs": [
+            [
+              "2025-11-25",
+              "2025-08-23",
+              "2025-01-27",
+              "2024-11-19",
+              "2025-07-24",
+              "2026-09-21"
+            ]
+          ],
+          "prompt": "Report the ISO-8601 week-numbering year, week number and weekday of a date as YYYY-Www-D, with the week zero-padded to two digits and the weekday running 1 for Monday to 7 for Sunday. The year in the label is the ISO week-numbering year, which near the turn of the year is not always the calendar year. You are given several dates and must return every label, in order, separated by single spaces. As a worked example, 2024-06-12, 2024-11-03 give \"2024-W24-3 2024-W44-7\".\n\nWhat are the ISO week labels for these dates: 2025-11-25, 2025-08-23, 2025-01-27, 2024-11-19, 2025-07-24, 2026-09-21?\n\nAnswer with the labels in order, separated by single spaces.",
+          "answer": "2025-W48-2 2025-W34-6 2025-W05-1 2024-W47-2 2025-W30-4 2026-W39-1"
+        }
+      ],
+      "holdout": [
+        {
+          "inputs": [
+            [
+              "2026-03-05",
+              "2025-08-14",
+              "2025-07-25",
+              "2026-06-11",
+              "2025-09-09",
+              "2027-01-01"
+            ]
+          ],
+          "expect": "2026-W10-4 2025-W33-4 2025-W30-5 2026-W24-4 2025-W37-2 2026-W53-5"
+        },
+        {
+          "inputs": [
+            [
+              "2026-02-19",
+              "2024-02-14",
+              "2025-11-30",
+              "2024-05-22",
+              "2028-02-29",
+              "2026-10-14"
+            ]
+          ],
+          "expect": "2026-W08-4 2024-W07-3 2025-W48-7 2024-W21-3 2028-W09-2 2026-W42-3"
+        },
+        {
+          "inputs": [
+            [
+              "2026-06-26",
+              "2024-07-22",
+              "2024-10-12",
+              "2025-10-05",
+              "2026-01-01",
+              "2025-06-19"
+            ]
+          ],
+          "expect": "2026-W26-5 2024-W30-1 2024-W41-6 2025-W40-7 2026-W01-4 2025-W25-4"
+        },
+        {
+          "inputs": [
+            [
+              "2024-12-30",
+              "2026-04-13",
+              "2025-03-25",
+              "2025-03-12",
+              "2024-12-26",
+              "2024-08-06"
+            ]
+          ],
+          "expect": "2025-W01-1 2026-W16-1 2025-W13-2 2025-W11-3 2024-W52-4 2024-W32-2"
+        },
+        {
+          "inputs": [
+            [
+              "2025-08-01",
+              "2023-01-01",
+              "2026-01-11",
+              "2024-11-14",
+              "2026-09-27",
+              "2026-01-13"
+            ]
+          ],
+          "expect": "2025-W31-5 2022-W52-7 2026-W02-7 2024-W46-4 2026-W39-7 2026-W03-2"
+        },
+        {
+          "inputs": [
+            [
+              "2021-01-03",
+              "2025-08-19",
+              "2026-10-26",
+              "2024-04-14",
+              "2024-10-22",
+              "2024-02-16"
+            ]
+          ],
+          "expect": "2020-W53-7 2025-W34-2 2026-W44-1 2024-W15-7 2024-W43-2 2024-W07-5"
+        },
+        {
+          "inputs": [
+            [
+              "2024-09-23",
+              "2025-03-09",
+              "2026-06-19",
+              "2024-10-09",
+              "2026-12-31",
+              "2026-10-10"
+            ]
+          ],
+          "expect": "2024-W39-1 2025-W10-7 2026-W25-5 2024-W41-3 2026-W53-4 2026-W41-6"
+        },
+        {
+          "inputs": [
+            [
+              "2026-08-24",
+              "2026-04-24",
+              "2026-02-06",
+              "2032-12-31",
+              "2025-01-16",
+              "2025-10-30"
+            ]
+          ],
+          "expect": "2026-W35-1 2026-W17-5 2026-W06-5 2032-W53-5 2025-W03-4 2025-W44-4"
+        }
+      ]
+    },
+    {
+      "family": "verhoeff",
+      "label": "Verhoeff check digit",
+      "contract": "Indian 12-digit identity numbers carry a Verhoeff check digit in the last position, computed over the preceding digits using the dihedral group D5. Given the digits without the check digit, return the check digit that makes the whole number validate. You are given several numbers and must return every check digit, in the order the numbers are given, with nothing between them. As a worked example, 13579246801, 24680135791 give \"57\".",
+      "example": [
+        [
+          "13579246801",
+          "24680135791"
+        ]
+      ],
+      "why_tool": "Verhoeff is three lookup tables. Nothing about it can be derived, and a table recalled slightly wrong still validates its own examples.",
+      "returns": "the check digits in order, joined into one string of digits",
+      "compare": "exact",
+      "params": [
+        [
+          "prefixes",
+          "array"
+        ]
+      ],
+      "batch": 8,
+      "tasks": [
+        {
+          "id": "verhoeff_1",
+          "family": "verhoeff",
+          "member": 1,
+          "inputs": [
+            [
+              "17994918654",
+              "26954068350",
+              "80991904795",
+              "37753811105",
+              "86820502578",
+              "33311922757",
+              "83210125020",
+              "57326154410"
+            ]
+          ],
+          "prompt": "Indian 12-digit identity numbers carry a Verhoeff check digit in the last position, computed over the preceding digits using the dihedral group D5. Given the digits without the check digit, return the check digit that makes the whole number validate. You are given several numbers and must return every check digit, in the order the numbers are given, with nothing between them. As a worked example, 13579246801, 24680135791 give \"57\".\n\nWhat are the Verhoeff check digits for these numbers: 17994918654, 26954068350, 80991904795, 37753811105, 86820502578, 33311922757, 83210125020, 57326154410?\n\nAnswer with the check digits in order, joined into one string of digits.",
+          "answer": "12938873"
+        },
+        {
+          "id": "verhoeff_2",
+          "family": "verhoeff",
+          "member": 2,
+          "inputs": [
+            [
+              "45118579991",
+              "44347295253",
+              "74883263055",
+              "23350615559",
+              "86717596179",
+              "87387854572",
+              "96499521374",
+              "19401760108"
+            ]
+          ],
+          "prompt": "Indian 12-digit identity numbers carry a Verhoeff check digit in the last position, computed over the preceding digits using the dihedral group D5. Given the digits without the check digit, return the check digit that makes the whole number validate. You are given several numbers and must return every check digit, in the order the numbers are given, with nothing between them. As a worked example, 13579246801, 24680135791 give \"57\".\n\nWhat are the Verhoeff check digits for these numbers: 45118579991, 44347295253, 74883263055, 23350615559, 86717596179, 87387854572, 96499521374, 19401760108?\n\nAnswer with the check digits in order, joined into one string of digits.",
+          "answer": "35786339"
+        },
+        {
+          "id": "verhoeff_3",
+          "family": "verhoeff",
+          "member": 3,
+          "inputs": [
+            [
+              "76040969008",
+              "41782648867",
+              "61757638278",
+              "73732390519",
+              "77740811908",
+              "79614259186",
+              "37660992064",
+              "73012048677"
+            ]
+          ],
+          "prompt": "Indian 12-digit identity numbers carry a Verhoeff check digit in the last position, computed over the preceding digits using the dihedral group D5. Given the digits without the check digit, return the check digit that makes the whole number validate. You are given several numbers and must return every check digit, in the order the numbers are given, with nothing between them. As a worked example, 13579246801, 24680135791 give \"57\".\n\nWhat are the Verhoeff check digits for these numbers: 76040969008, 41782648867, 61757638278, 73732390519, 77740811908, 79614259186, 37660992064, 73012048677?\n\nAnswer with the check digits in order, joined into one string of digits.",
+          "answer": "50387557"
+        },
+        {
+          "id": "verhoeff_4",
+          "family": "verhoeff",
+          "member": 4,
+          "inputs": [
+            [
+              "40247019679",
+              "87650148588",
+              "92723924209",
+              "78284836438",
+              "91739526820",
+              "52598471737",
+              "23258636832",
+              "48640825359"
+            ]
+          ],
+          "prompt": "Indian 12-digit identity numbers carry a Verhoeff check digit in the last position, computed over the preceding digits using the dihedral group D5. Given the digits without the check digit, return the check digit that makes the whole number validate. You are given several numbers and must return every check digit, in the order the numbers are given, with nothing between them. As a worked example, 13579246801, 24680135791 give \"57\".\n\nWhat are the Verhoeff check digits for these numbers: 40247019679, 87650148588, 92723924209, 78284836438, 91739526820, 52598471737, 23258636832, 48640825359?\n\nAnswer with the check digits in order, joined into one string of digits.",
+          "answer": "00765290"
+        }
+      ],
+      "holdout": [
+        {
+          "inputs": [
+            [
+              "25063375906",
+              "12080416031",
+              "11514320775",
+              "66579062729",
+              "00000000001",
+              "42816948621",
+              "94852433572",
+              "13435506223"
+            ]
+          ],
+          "expect": "09009866"
+        },
+        {
+          "inputs": [
+            [
+              "72234506166",
+              "82015393162",
+              "65057352476",
+              "33057161038",
+              "26007548701",
+              "49029363586",
+              "01234567890",
+              "44693219067"
+            ]
+          ],
+          "expect": "28050863"
+        },
+        {
+          "inputs": [
+            [
+              "66478304697",
+              "81150154904",
+              "91321145770",
+              "77733379068",
+              "42345087704",
+              "42790158295",
+              "00099887766",
+              "93525063933"
+            ]
+          ],
+          "expect": "63033490"
+        },
+        {
+          "inputs": [
+            [
+              "50313486273",
+              "09080706050",
+              "13374959168",
+              "32971131542",
+              "25342925535",
+              "93402305996",
+              "80739203756",
+              "70379973569"
+            ]
+          ],
+          "expect": "40915363"
+        },
+        {
+          "inputs": [
+            [
+              "20343810802",
+              "53761165062",
+              "38858149971",
+              "47039935579",
+              "43343902673",
+              "61896994841",
+              "10117660444",
+              "00000000001"
+            ]
+          ],
+          "expect": "06157139"
+        },
+        {
+          "inputs": [
+            [
+              "40846797238",
+              "23092445282",
+              "25394153326",
+              "88484678538",
+              "31461753370",
+              "10506258995",
+              "01234567890",
+              "41555768838"
+            ]
+          ],
+          "expect": "20839265"
+        },
+        {
+          "inputs": [
+            [
+              "63495584298",
+              "00099887766",
+              "56309020448",
+              "43709652614",
+              "11245798473",
+              "72643162256",
+              "49875424545",
+              "85501385390"
+            ]
+          ],
+          "expect": "29986738"
+        },
+        {
+          "inputs": [
+            [
+              "50399102972",
+              "29276643001",
+              "09080706050",
+              "62047690726",
+              "33208292688",
+              "45262053095",
+              "28231072879",
+              "81383561284"
+            ]
+          ],
+          "expect": "35060153"
+        }
+      ]
+    },
+    {
+      "family": "words",
+      "label": "rupees in Indian words",
+      "contract": "Write a whole rupee amount in words on the Indian system, using crore, lakh and thousand, then the remainder below a thousand. Use lowercase, no punctuation, and do not write the word rupees. A segment worth zero is not spoken at all. Zero itself is \"zero\". You are given several amounts and must return every one in words, in order, separated by a semicolon and a space. As a worked example, 105000, 2400 give \"one lakh five thousand; two thousand four hundred\".",
+      "example": [
+        [
+          105000,
+          2400
+        ]
+      ],
+      "why_tool": "Segment-by-segment string construction on a grouping that is not the thousands grouping every library ships with.",
+      "returns": "the amounts in words, in order, separated by semicolons",
+      "compare": "words",
+      "params": [
+        [
+          "amounts",
+          "array"
+        ]
+      ],
+      "batch": 5,
+      "tasks": [
+        {
+          "id": "words_1",
+          "family": "words",
+          "member": 1,
+          "inputs": [
+            [
+              79981257,
+              77979638,
+              75945168,
+              69571833,
+              64288633
+            ]
+          ],
+          "prompt": "Write a whole rupee amount in words on the Indian system, using crore, lakh and thousand, then the remainder below a thousand. Use lowercase, no punctuation, and do not write the word rupees. A segment worth zero is not spoken at all. Zero itself is \"zero\". You are given several amounts and must return every one in words, in order, separated by a semicolon and a space. As a worked example, 105000, 2400 give \"one lakh five thousand; two thousand four hundred\".\n\nWrite these amounts in words: 79981257, 77979638, 75945168, 69571833, 64288633.\n\nAnswer with the amounts in words, in order, separated by semicolons.",
+          "answer": "seven crore ninety nine lakh eighty one thousand two hundred fifty seven; seven crore seventy nine lakh seventy nine thousand six hundred thirty eight; seven crore fifty nine lakh forty five thousand one hundred sixty eight; six crore ninety five lakh seventy one thousand eight hundred thirty three; six crore forty two lakh eighty eight thousand six hundred thirty three"
+        },
+        {
+          "id": "words_2",
+          "family": "words",
+          "member": 2,
+          "inputs": [
+            [
+              31519443,
+              98492066,
+              31156188,
+              83696669,
+              23273288
+            ]
+          ],
+          "prompt": "Write a whole rupee amount in words on the Indian system, using crore, lakh and thousand, then the remainder below a thousand. Use lowercase, no punctuation, and do not write the word rupees. A segment worth zero is not spoken at all. Zero itself is \"zero\". You are given several amounts and must return every one in words, in order, separated by a semicolon and a space. As a worked example, 105000, 2400 give \"one lakh five thousand; two thousand four hundred\".\n\nWrite these amounts in words: 31519443, 98492066, 31156188, 83696669, 23273288.\n\nAnswer with the amounts in words, in order, separated by semicolons.",
+          "answer": "three crore fifteen lakh nineteen thousand four hundred forty three; nine crore eighty four lakh ninety two thousand sixty six; three crore eleven lakh fifty six thousand one hundred eighty eight; eight crore thirty six lakh ninety six thousand six hundred sixty nine; two crore thirty two lakh seventy three thousand two hundred eighty eight"
+        },
+        {
+          "id": "words_3",
+          "family": "words",
+          "member": 3,
+          "inputs": [
+            [
+              1476395,
+              65067542,
+              78998580,
+              58196099,
+              15710933
+            ]
+          ],
+          "prompt": "Write a whole rupee amount in words on the Indian system, using crore, lakh and thousand, then the remainder below a thousand. Use lowercase, no punctuation, and do not write the word rupees. A segment worth zero is not spoken at all. Zero itself is \"zero\". You are given several amounts and must return every one in words, in order, separated by a semicolon and a space. As a worked example, 105000, 2400 give \"one lakh five thousand; two thousand four hundred\".\n\nWrite these amounts in words: 1476395, 65067542, 78998580, 58196099, 15710933.\n\nAnswer with the amounts in words, in order, separated by semicolons.",
+          "answer": "fourteen lakh seventy six thousand three hundred ninety five; six crore fifty lakh sixty seven thousand five hundred forty two; seven crore eighty nine lakh ninety eight thousand five hundred eighty; five crore eighty one lakh ninety six thousand ninety nine; one crore fifty seven lakh ten thousand nine hundred thirty three"
+        },
+        {
+          "id": "words_4",
+          "family": "words",
+          "member": 4,
+          "inputs": [
+            [
+              18190880,
+              84141617,
+              34611531,
+              82749386,
+              55140766
+            ]
+          ],
+          "prompt": "Write a whole rupee amount in words on the Indian system, using crore, lakh and thousand, then the remainder below a thousand. Use lowercase, no punctuation, and do not write the word rupees. A segment worth zero is not spoken at all. Zero itself is \"zero\". You are given several amounts and must return every one in words, in order, separated by a semicolon and a space. As a worked example, 105000, 2400 give \"one lakh five thousand; two thousand four hundred\".\n\nWrite these amounts in words: 18190880, 84141617, 34611531, 82749386, 55140766.\n\nAnswer with the amounts in words, in order, separated by semicolons.",
+          "answer": "one crore eighty one lakh ninety thousand eight hundred eighty; eight crore forty one lakh forty one thousand six hundred seventeen; three crore forty six lakh eleven thousand five hundred thirty one; eight crore twenty seven lakh forty nine thousand three hundred eighty six; five crore fifty one lakh forty thousand seven hundred sixty six"
+        }
+      ],
+      "holdout": [
+        {
+          "inputs": [
+            [
+              0,
+              84691381,
+              10989347,
+              40380442,
+              35220542
+            ]
+          ],
+          "expect": "zero; eight crore forty six lakh ninety one thousand three hundred eighty one; one crore nine lakh eighty nine thousand three hundred forty seven; four crore three lakh eighty thousand four hundred forty two; three crore fifty two lakh twenty thousand five hundred forty two"
+        },
+        {
+          "inputs": [
+            [
+              42164020,
+              59367508,
+              17439367,
+              43574545,
+              10005000
+            ]
+          ],
+          "expect": "four crore twenty one lakh sixty four thousand twenty; five crore ninety three lakh sixty seven thousand five hundred eight; one crore seventy four lakh thirty nine thousand three hundred sixty seven; four crore thirty five lakh seventy four thousand five hundred forty five; one crore five thousand"
+        },
+        {
+          "inputs": [
+            [
+              100000,
+              20486610,
+              66183568,
+              12794614,
+              83614559
+            ]
+          ],
+          "expect": "one lakh; two crore four lakh eighty six thousand six hundred ten; six crore sixty one lakh eighty three thousand five hundred sixty eight; one crore twenty seven lakh ninety four thousand six hundred fourteen; eight crore thirty six lakh fourteen thousand five hundred fifty nine"
+        },
+        {
+          "inputs": [
+            [
+              3716488,
+              42825171,
+              68241066,
+              10000000,
+              54684190
+            ]
+          ],
+          "expect": "thirty seven lakh sixteen thousand four hundred eighty eight; four crore twenty eight lakh twenty five thousand one hundred seventy one; six crore eighty two lakh forty one thousand sixty six; one crore; five crore forty six lakh eighty four thousand one hundred ninety"
+        },
+        {
+          "inputs": [
+            [
+              34270691,
+              70000000,
+              20924305,
+              34918243,
+              32021805
+            ]
+          ],
+          "expect": "three crore forty two lakh seventy thousand six hundred ninety one; seven crore; two crore nine lakh twenty four thousand three hundred five; three crore forty nine lakh eighteen thousand two hundred forty three; three crore twenty lakh twenty one thousand eight hundred five"
+        },
+        {
+          "inputs": [
+            [
+              85240631,
+              42101477,
+              46151673,
+              1000,
+              53595721
+            ]
+          ],
+          "expect": "eight crore fifty two lakh forty thousand six hundred thirty one; four crore twenty one lakh one thousand four hundred seventy seven; four crore sixty one lakh fifty one thousand six hundred seventy three; one thousand; five crore thirty five lakh ninety five thousand seven hundred twenty one"
+        },
+        {
+          "inputs": [
+            [
+              46550371,
+              18674112,
+              5428157,
+              35694362,
+              123
+            ]
+          ],
+          "expect": "four crore sixty five lakh fifty thousand three hundred seventy one; one crore eighty six lakh seventy four thousand one hundred twelve; fifty four lakh twenty eight thousand one hundred fifty seven; three crore fifty six lakh ninety four thousand three hundred sixty two; one hundred twenty three"
+        },
+        {
+          "inputs": [
+            [
+              5000000,
+              43591950,
+              15842932,
+              82182908,
+              37001704
+            ]
+          ],
+          "expect": "fifty lakh; four crore thirty five lakh ninety one thousand nine hundred fifty; one crore fifty eight lakh forty two thousand nine hundred thirty two; eight crore twenty one lakh eighty two thousand nine hundred eight; three crore seventy lakh one thousand seven hundred four"
+        }
+      ]
+    },
+    {
+      "family": "semver",
+      "label": "highest semantic version",
+      "contract": "Order version strings by Semantic Versioning 2.0.0 precedence and return the highest. Major, minor and patch compare numerically; a version carrying a prerelease ranks below the same version without one; prerelease identifiers compare field by field, numeric ones numerically and below alphanumeric ones; build metadata is ignored. Return every version given, sorted from lowest to highest, separated by a comma and a space. As a worked example, 2.0.0, 2.0.0-rc.1 sort to \"2.0.0-rc.1, 2.0.0\".",
+      "example": [
+        [
+          "2.0.0",
+          "2.0.0-rc.1"
+        ]
+      ],
+      "why_tool": "Sorting these as strings is wrong in several places at once and looks right on any list short enough to read.",
+      "returns": "every version in ascending order, separated by a comma and a space",
+      "compare": "exact",
+      "params": [
+        [
+          "versions",
+          "array"
+        ]
+      ],
+      "batch": 10,
+      "tasks": [
+        {
+          "id": "semver_1",
+          "family": "semver",
+          "member": 1,
+          "inputs": [
+            [
+              "10.17.12-rc.1",
+              "7.18.7-beta.2",
+              "3.9.14-beta.2",
+              "8.3.7-rc.1",
+              "11.16.6-beta.2",
+              "11.12.0",
+              "9.18.13",
+              "10.16.6",
+              "10.9.4",
+              "3.9.10"
+            ]
+          ],
+          "prompt": "Order version strings by Semantic Versioning 2.0.0 precedence and return the highest. Major, minor and patch compare numerically; a version carrying a prerelease ranks below the same version without one; prerelease identifiers compare field by field, numeric ones numerically and below alphanumeric ones; build metadata is ignored. Return every version given, sorted from lowest to highest, separated by a comma and a space. As a worked example, 2.0.0, 2.0.0-rc.1 sort to \"2.0.0-rc.1, 2.0.0\".\n\nSort these versions from lowest to highest: 10.17.12-rc.1, 7.18.7-beta.2, 3.9.14-beta.2, 8.3.7-rc.1, 11.16.6-beta.2, 11.12.0, 9.18.13, 10.16.6, 10.9.4, 3.9.10.\n\nAnswer with every version in ascending order, separated by a comma and a space.",
+          "answer": "3.9.10, 3.9.14-beta.2, 7.18.7-beta.2, 8.3.7-rc.1, 9.18.13, 10.9.4, 10.16.6, 10.17.12-rc.1, 11.12.0, 11.16.6-beta.2"
+        },
+        {
+          "id": "semver_2",
+          "family": "semver",
+          "member": 2,
+          "inputs": [
+            [
+              "4.8.6",
+              "7.14.6-beta.2",
+              "6.8.11-rc.1",
+              "1.5.13",
+              "11.16.1-beta.2",
+              "8.12.0-alpha.10",
+              "8.3.7",
+              "7.0.9",
+              "1.9.3-alpha.1",
+              "1.10.0-rc.1"
+            ]
+          ],
+          "prompt": "Order version strings by Semantic Versioning 2.0.0 precedence and return the highest. Major, minor and patch compare numerically; a version carrying a prerelease ranks below the same version without one; prerelease identifiers compare field by field, numeric ones numerically and below alphanumeric ones; build metadata is ignored. Return every version given, sorted from lowest to highest, separated by a comma and a space. As a worked example, 2.0.0, 2.0.0-rc.1 sort to \"2.0.0-rc.1, 2.0.0\".\n\nSort these versions from lowest to highest: 4.8.6, 7.14.6-beta.2, 6.8.11-rc.1, 1.5.13, 11.16.1-beta.2, 8.12.0-alpha.10, 8.3.7, 7.0.9, 1.9.3-alpha.1, 1.10.0-rc.1.\n\nAnswer with every version in ascending order, separated by a comma and a space.",
+          "answer": "1.5.13, 1.9.3-alpha.1, 1.10.0-rc.1, 4.8.6, 6.8.11-rc.1, 7.0.9, 7.14.6-beta.2, 8.3.7, 8.12.0-alpha.10, 11.16.1-beta.2"
+        },
+        {
+          "id": "semver_3",
+          "family": "semver",
+          "member": 3,
+          "inputs": [
+            [
+              "5.7.6-beta.2",
+              "0.8.4-beta.2",
+              "10.19.5",
+              "5.11.8-beta.2",
+              "5.16.11-beta.2",
+              "11.19.13-beta.2",
+              "6.7.6-alpha.10",
+              "11.10.10-beta.2",
+              "0.4.6-beta.2",
+              "10.0.5-beta.2"
+            ]
+          ],
+          "prompt": "Order version strings by Semantic Versioning 2.0.0 precedence and return the highest. Major, minor and patch compare numerically; a version carrying a prerelease ranks below the same version without one; prerelease identifiers compare field by field, numeric ones numerically and below alphanumeric ones; build metadata is ignored. Return every version given, sorted from lowest to highest, separated by a comma and a space. As a worked example, 2.0.0, 2.0.0-rc.1 sort to \"2.0.0-rc.1, 2.0.0\".\n\nSort these versions from lowest to highest: 5.7.6-beta.2, 0.8.4-beta.2, 10.19.5, 5.11.8-beta.2, 5.16.11-beta.2, 11.19.13-beta.2, 6.7.6-alpha.10, 11.10.10-beta.2, 0.4.6-beta.2, 10.0.5-beta.2.\n\nAnswer with every version in ascending order, separated by a comma and a space.",
+          "answer": "0.4.6-beta.2, 0.8.4-beta.2, 5.7.6-beta.2, 5.11.8-beta.2, 5.16.11-beta.2, 6.7.6-alpha.10, 10.0.5-beta.2, 10.19.5, 11.10.10-beta.2, 11.19.13-beta.2"
+        },
+        {
+          "id": "semver_4",
+          "family": "semver",
+          "member": 4,
+          "inputs": [
+            [
+              "4.18.13-rc.1",
+              "9.8.8-beta.2",
+              "10.17.10-alpha.1",
+              "10.15.10-beta.2",
+              "6.6.1",
+              "0.12.3-alpha.10",
+              "6.8.0",
+              "1.12.1-alpha.10",
+              "9.8.8",
+              "6.12.9"
+            ]
+          ],
+          "prompt": "Order version strings by Semantic Versioning 2.0.0 precedence and return the highest. Major, minor and patch compare numerically; a version carrying a prerelease ranks below the same version without one; prerelease identifiers compare field by field, numeric ones numerically and below alphanumeric ones; build metadata is ignored. Return every version given, sorted from lowest to highest, separated by a comma and a space. As a worked example, 2.0.0, 2.0.0-rc.1 sort to \"2.0.0-rc.1, 2.0.0\".\n\nSort these versions from lowest to highest: 4.18.13-rc.1, 9.8.8-beta.2, 10.17.10-alpha.1, 10.15.10-beta.2, 6.6.1, 0.12.3-alpha.10, 6.8.0, 1.12.1-alpha.10, 9.8.8, 6.12.9.\n\nAnswer with every version in ascending order, separated by a comma and a space.",
+          "answer": "0.12.3-alpha.10, 1.12.1-alpha.10, 4.18.13-rc.1, 6.6.1, 6.8.0, 6.12.9, 9.8.8-beta.2, 9.8.8, 10.15.10-beta.2, 10.17.10-alpha.1"
+        }
+      ],
+      "holdout": [
+        {
+          "inputs": [
+            [
+              "6.2.8-alpha.1",
+              "11.16.13-rc.1",
+              "3.7.14",
+              "5.12.10",
+              "1.19.3",
+              "9.7.0",
+              "1.15.13",
+              "7.11.8-rc.1",
+              "1.0.0+build.7",
+              "6.11.10"
+            ]
+          ],
+          "expect": "1.0.0+build.7, 1.15.13, 1.19.3, 3.7.14, 5.12.10, 6.2.8-alpha.1, 6.11.10, 7.11.8-rc.1, 9.7.0, 11.16.13-rc.1"
+        },
+        {
+          "inputs": [
+            [
+              "6.19.5",
+              "4.2.0",
+              "2.3.4+meta",
+              "10.11.10-rc.1",
+              "6.12.6",
+              "8.15.11-beta.2",
+              "5.10.9",
+              "10.16.3",
+              "11.19.2-rc.1",
+              "8.8.9"
+            ]
+          ],
+          "expect": "2.3.4+meta, 4.2.0, 5.10.9, 6.12.6, 6.19.5, 8.8.9, 8.15.11-beta.2, 10.11.10-rc.1, 10.16.3, 11.19.2-rc.1"
+        },
+        {
+          "inputs": [
+            [
+              "5.14.7-beta.2",
+              "7.18.3-alpha.1",
+              "4.14.8",
+              "8.0.11",
+              "11.6.5",
+              "1.0.0-alpha",
+              "7.4.13-rc.1",
+              "9.3.9-alpha.10",
+              "6.3.3",
+              "5.17.13-alpha.1"
+            ]
+          ],
+          "expect": "1.0.0-alpha, 4.14.8, 5.14.7-beta.2, 5.17.13-alpha.1, 6.3.3, 7.4.13-rc.1, 7.18.3-alpha.1, 8.0.11, 9.3.9-alpha.10, 11.6.5"
+        },
+        {
+          "inputs": [
+            [
+              "8.15.11",
+              "10.2.6",
+              "9.18.10-beta.2",
+              "5.7.6-rc.1",
+              "1.0.0-alpha.beta",
+              "11.2.5",
+              "5.15.9",
+              "2.8.9-alpha.1",
+              "10.15.12-rc.1",
+              "8.18.6"
+            ]
+          ],
+          "expect": "1.0.0-alpha.beta, 2.8.9-alpha.1, 5.7.6-rc.1, 5.15.9, 8.15.11, 8.18.6, 9.18.10-beta.2, 10.2.6, 10.15.12-rc.1, 11.2.5"
+        },
+        {
+          "inputs": [
+            [
+              "8.19.1-rc.1",
+              "6.18.7",
+              "4.14.3-alpha.10",
+              "2.9.12-alpha.10",
+              "11.16.11",
+              "11.14.4",
+              "5.17.13",
+              "8.16.7",
+              "0.0.1+meta",
+              "4.13.3-rc.1"
+            ]
+          ],
+          "expect": "0.0.1+meta, 2.9.12-alpha.10, 4.13.3-rc.1, 4.14.3-alpha.10, 5.17.13, 6.18.7, 8.16.7, 8.19.1-rc.1, 11.14.4, 11.16.11"
+        },
+        {
+          "inputs": [
+            [
+              "3.6.10-beta.2",
+              "2.15.2-alpha.1",
+              "3.0.0-rc.10",
+              "6.13.2",
+              "2.16.13-alpha.10",
+              "6.15.4-alpha.10",
+              "3.7.0-rc.1",
+              "11.7.11-beta.2",
+              "0.14.6-alpha.10",
+              "2.5.11"
+            ]
+          ],
+          "expect": "0.14.6-alpha.10, 2.5.11, 2.15.2-alpha.1, 2.16.13-alpha.10, 3.0.0-rc.10, 3.6.10-beta.2, 3.7.0-rc.1, 6.13.2, 6.15.4-alpha.10, 11.7.11-beta.2"
+        },
+        {
+          "inputs": [
+            [
+              "0.12.7-alpha.1",
+              "1.17.3-beta.2",
+              "0.14.6-beta.2",
+              "4.3.3-rc.1",
+              "11.19.1-rc.1",
+              "1.9.12",
+              "8.2.7",
+              "10.7.0",
+              "3.0.0-rc.2",
+              "11.15.12"
+            ]
+          ],
+          "expect": "0.12.7-alpha.1, 0.14.6-beta.2, 1.9.12, 1.17.3-beta.2, 3.0.0-rc.2, 4.3.3-rc.1, 8.2.7, 10.7.0, 11.15.12, 11.19.1-rc.1"
+        },
+        {
+          "inputs": [
+            [
+              "3.4.4-alpha.10",
+              "11.16.13",
+              "4.16.8-rc.1",
+              "2.9.11-alpha.1",
+              "8.3.2",
+              "4.9.7",
+              "9.0.2-alpha.10",
+              "4.4.1-rc.1",
+              "11.14.2-alpha.10",
+              "1.0.0-x-y-z.-"
+            ]
+          ],
+          "expect": "1.0.0-x-y-z.-, 2.9.11-alpha.1, 3.4.4-alpha.10, 4.4.1-rc.1, 4.9.7, 4.16.8-rc.1, 8.3.2, 9.0.2-alpha.10, 11.14.2-alpha.10, 11.16.13"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Tools the agent writes - regenerated on every demo
+generated/*.py
+generated/*.json
+
+# Paid deliverables - keep local
+build-*-guide.md
+*-instagram-assets.md

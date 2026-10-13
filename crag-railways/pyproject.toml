@@ -1,0 +1,13 @@
+[project]
+name = "crag-railways"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chromadb==1.5.9",
+    "ddgs==9.16.0",
+    "groq==1.7.0",
+    "langgraph==1.2.12",
+    "python-dotenv==1.2.4",
+]

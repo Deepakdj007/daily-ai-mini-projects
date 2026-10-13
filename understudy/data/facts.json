@@ -1,0 +1,134 @@
+[
+  {
+    "id": "f01",
+    "question": "You keep a pet at home. What did you decide to call her?",
+    "gold": "Biryani",
+    "aliases": ["Biriyani"]
+  },
+  {
+    "id": "f02",
+    "question": "Which two-wheeler do you ride around town?",
+    "gold": "Access 125",
+    "aliases": ["Access125"]
+  },
+  {
+    "id": "f03",
+    "question": "How much do you pay every month for the flat?",
+    "gold": "18500",
+    "aliases": []
+  },
+  {
+    "id": "f04",
+    "question": "Who owns the flat you live in?",
+    "gold": "Mr. Raghavan",
+    "aliases": ["Raghavan"]
+  },
+  {
+    "id": "f05",
+    "question": "If a guest wanted to get on your internet at home, what would they have to type in?",
+    "gold": "jamun4590",
+    "aliases": []
+  },
+  {
+    "id": "f06",
+    "question": "Which flight did the two of you take on the Goa trip?",
+    "gold": "6E 2134",
+    "aliases": ["6E2134"]
+  },
+  {
+    "id": "f07",
+    "question": "Who is your manager at work?",
+    "gold": "Deepika",
+    "aliases": []
+  },
+  {
+    "id": "f08",
+    "question": "What was the codename of the feature you demoed to the client?",
+    "gold": "Kabini",
+    "aliases": []
+  },
+  {
+    "id": "f09",
+    "question": "What is the name of the project you moved onto afterwards?",
+    "gold": "Sharavathi",
+    "aliases": []
+  },
+  {
+    "id": "f10",
+    "question": "What is your sister called?",
+    "gold": "Meera",
+    "aliases": []
+  },
+  {
+    "id": "f11",
+    "question": "Which physician did you consult when the fever started?",
+    "gold": "Dr. Shetty",
+    "aliases": ["Shetty"]
+  },
+  {
+    "id": "f12",
+    "question": "Where do you go to work out?",
+    "gold": "Cult Indiranagar",
+    "aliases": ["Cult"]
+  },
+  {
+    "id": "f13",
+    "question": "Which eating place do you always end up suggesting?",
+    "gold": "Shanti Sagar",
+    "aliases": []
+  },
+  {
+    "id": "f14",
+    "question": "At that restaurant, which variety should a person order?",
+    "gold": "benne masala",
+    "aliases": ["benne masala dosa"]
+  },
+  {
+    "id": "f15",
+    "question": "What model is the machine you work on?",
+    "gold": "ThinkPad X13",
+    "aliases": ["X13"]
+  },
+  {
+    "id": "f16",
+    "question": "What brand of bicycle did you end up buying?",
+    "gold": "Btwin",
+    "aliases": []
+  },
+  {
+    "id": "f17",
+    "question": "How much did the bicycle cost you?",
+    "gold": "14000",
+    "aliases": []
+  },
+  {
+    "id": "f18",
+    "question": "How much money did you transfer to settle that dinner?",
+    "gold": "2400",
+    "aliases": []
+  },
+  {
+    "id": "f19",
+    "question": "Which part of the city did you live in before this one?",
+    "gold": "HSR Layout",
+    "aliases": ["HSR"]
+  },
+  {
+    "id": "f20",
+    "question": "Which engineering college did you attend?",
+    "gold": "RVCE",
+    "aliases": []
+  },
+  {
+    "id": "f21",
+    "question": "What did replacing the scooter battery set you back?",
+    "gold": "1800",
+    "aliases": []
+  },
+  {
+    "id": "f22",
+    "question": "How many browser add-ons were slowing the laptop down?",
+    "gold": "fourteen",
+    "aliases": ["14"]
+  }
+]

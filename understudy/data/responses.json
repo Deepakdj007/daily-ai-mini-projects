@@ -1,0 +1,677 @@
+{
+  "schema": "understudy/responses/1",
+  "run": {
+    "base_model": "unsloth/Qwen3-4B-Instruct-2507",
+    "steps": 60,
+    "lora_r": 32,
+    "trained_on": 212,
+    "final_loss": 2.6794,
+    "stranger": "the other person"
+  },
+  "style": {
+    "you": [
+      {
+        "pair_id": "p0000",
+        "tokens": 12,
+        "nll_base": 7.2081,
+        "nll_tuned": 2.9905
+      },
+      {
+        "pair_id": "p0001",
+        "tokens": 43,
+        "nll_base": 4.5426,
+        "nll_tuned": 3.1148
+      },
+      {
+        "pair_id": "p0002",
+        "tokens": 30,
+        "nll_base": 6.6114,
+        "nll_tuned": 3.1134
+      },
+      {
+        "pair_id": "p0003",
+        "tokens": 22,
+        "nll_base": 4.4393,
+        "nll_tuned": 2.2949
+      },
+      {
+        "pair_id": "p0004",
+        "tokens": 11,
+        "nll_base": 9.5718,
+        "nll_tuned": 1.9215
+      },
+      {
+        "pair_id": "p0005",
+        "tokens": 12,
+        "nll_base": 11.3638,
+        "nll_tuned": 5.1242
+      },
+      {
+        "pair_id": "p0006",
+        "tokens": 27,
+        "nll_base": 6.4217,
+        "nll_tuned": 3.2362
+      },
+      {
+        "pair_id": "p0007",
+        "tokens": 3,
+        "nll_base": 8.6207,
+        "nll_tuned": 1.2663
+      },
+      {
+        "pair_id": "p0008",
+        "tokens": 29,
+        "nll_base": 4.7557,
+        "nll_tuned": 2.6018
+      },
+      {
+        "pair_id": "p0009",
+        "tokens": 18,
+        "nll_base": 7.0823,
+        "nll_tuned": 3.0255
+      },
+      {
+        "pair_id": "p0010",
+        "tokens": 20,
+        "nll_base": 5.141,
+        "nll_tuned": 1.9622
+      },
+      {
+        "pair_id": "p0011",
+        "tokens": 10,
+        "nll_base": 5.9136,
+        "nll_tuned": 2.393
+      },
+      {
+        "pair_id": "p0012",
+        "tokens": 23,
+        "nll_base": 5.7301,
+        "nll_tuned": 2.8464
+      },
+      {
+        "pair_id": "p0013",
+        "tokens": 8,
+        "nll_base": 7.4674,
+        "nll_tuned": 2.6419
+      },
+      {
+        "pair_id": "p0014",
+        "tokens": 20,
+        "nll_base": 5.4401,
+        "nll_tuned": 2.2445
+      },
+      {
+        "pair_id": "p0015",
+        "tokens": 18,
+        "nll_base": 5.3313,
+        "nll_tuned": 2.0989
+      },
+      {
+        "pair_id": "p0016",
+        "tokens": 3,
+        "nll_base": 6.249,
+        "nll_tuned": 1.2615
+      },
+      {
+        "pair_id": "p0017",
+        "tokens": 20,
+        "nll_base": 5.495,
+        "nll_tuned": 2.7398
+      },
+      {
+        "pair_id": "p0018",
+        "tokens": 21,
+        "nll_base": 4.7034,
+        "nll_tuned": 1.5184
+      },
+      {
+        "pair_id": "p0019",
+        "tokens": 19,
+        "nll_base": 6.7498,
+        "nll_tuned": 2.3972
+      },
+      {
+        "pair_id": "p0020",
+        "tokens": 9,
+        "nll_base": 7.0061,
+        "nll_tuned": 2.3161
+      },
+      {
+        "pair_id": "p0021",
+        "tokens": 6,
+        "nll_base": 13.0871,
+        "nll_tuned": 2.0541
+      },
+      {
+        "pair_id": "p0022",
+        "tokens": 15,
+        "nll_base": 9.6327,
+        "nll_tuned": 2.7438
+      },
+      {
+        "pair_id": "p0023",
+        "tokens": 21,
+        "nll_base": 7.1029,
+        "nll_tuned": 3.2654
+      },
+      {
+        "pair_id": "p0024",
+        "tokens": 22,
+        "nll_base": 3.6473,
+        "nll_tuned": 2.0851
+      },
+      {
+        "pair_id": "p0025",
+        "tokens": 3,
+        "nll_base": 9.9164,
+        "nll_tuned": 1.6307
+      },
+      {
+        "pair_id": "p0026",
+        "tokens": 21,
+        "nll_base": 5.8757,
+        "nll_tuned": 2.2971
+      },
+      {
+        "pair_id": "p0027",
+        "tokens": 23,
+        "nll_base": 5.863,
+        "nll_tuned": 2.7619
+      },
+      {
+        "pair_id": "p0028",
+        "tokens": 17,
+        "nll_base": 5.89,
+        "nll_tuned": 2.698
+      },
+      {
+        "pair_id": "p0029",
+        "tokens": 17,
+        "nll_base": 5.7423,
+        "nll_tuned": 2.5159
+      },
+      {
+        "pair_id": "p0030",
+        "tokens": 20,
+        "nll_base": 5.9917,
+        "nll_tuned": 3.7205
+      },
+      {
+        "pair_id": "p0031",
+        "tokens": 18,
+        "nll_base": 5.6624,
+        "nll_tuned": 2.4929
+      },
+      {
+        "pair_id": "p0032",
+        "tokens": 10,
+        "nll_base": 6.4298,
+        "nll_tuned": 2.1904
+      },
+      {
+        "pair_id": "p0033",
+        "tokens": 28,
+        "nll_base": 5.1111,
+        "nll_tuned": 3.0827
+      },
+      {
+        "pair_id": "p0034",
+        "tokens": 15,
+        "nll_base": 8.4545,
+        "nll_tuned": 3.454
+      },
+      {
+        "pair_id": "p0035",
+        "tokens": 20,
+        "nll_base": 4.9765,
+        "nll_tuned": 3.2291
+      },
+      {
+        "pair_id": "p0036",
+        "tokens": 14,
+        "nll_base": 6.3942,
+        "nll_tuned": 1.5364
+      },
+      {
+        "pair_id": "p0037",
+        "tokens": 20,
+        "nll_base": 6.3029,
+        "nll_tuned": 2.8398
+      },
+      {
+        "pair_id": "p0038",
+        "tokens": 23,
+        "nll_base": 5.3421,
+        "nll_tuned": 1.8991
+      },
+      {
+        "pair_id": "p0039",
+        "tokens": 24,
+        "nll_base": 4.7933,
+        "nll_tuned": 2.4017
+      }
+    ],
+    "stranger": [
+      {
+        "pair_id": "c0000",
+        "tokens": 15,
+        "nll_base": 5.5307,
+        "nll_tuned": 3.7992
+      },
+      {
+        "pair_id": "c0001",
+        "tokens": 12,
+        "nll_base": 6.6206,
+        "nll_tuned": 3.9462
+      },
+      {
+        "pair_id": "c0002",
+        "tokens": 8,
+        "nll_base": 3.6063,
+        "nll_tuned": 3.7686
+      },
+      {
+        "pair_id": "c0003",
+        "tokens": 6,
+        "nll_base": 7.9477,
+        "nll_tuned": 4.7801
+      },
+      {
+        "pair_id": "c0004",
+        "tokens": 6,
+        "nll_base": 7.5592,
+        "nll_tuned": 5.4549
+      },
+      {
+        "pair_id": "c0005",
+        "tokens": 9,
+        "nll_base": 5.9646,
+        "nll_tuned": 4.3181
+      },
+      {
+        "pair_id": "c0006",
+        "tokens": 8,
+        "nll_base": 10.6156,
+        "nll_tuned": 3.9173
+      },
+      {
+        "pair_id": "c0007",
+        "tokens": 5,
+        "nll_base": 8.7293,
+        "nll_tuned": 3.6199
+      },
+      {
+        "pair_id": "c0008",
+        "tokens": 8,
+        "nll_base": 7.9501,
+        "nll_tuned": 6.054
+      },
+      {
+        "pair_id": "c0009",
+        "tokens": 15,
+        "nll_base": 5.1897,
+        "nll_tuned": 4.8421
+      },
+      {
+        "pair_id": "c0010",
+        "tokens": 9,
+        "nll_base": 7.594,
+        "nll_tuned": 4.5341
+      },
+      {
+        "pair_id": "c0011",
+        "tokens": 10,
+        "nll_base": 8.5951,
+        "nll_tuned": 6.0499
+      },
+      {
+        "pair_id": "c0012",
+        "tokens": 11,
+        "nll_base": 7.5303,
+        "nll_tuned": 3.9388
+      },
+      {
+        "pair_id": "c0013",
+        "tokens": 15,
+        "nll_base": 5.3243,
+        "nll_tuned": 4.2373
+      },
+      {
+        "pair_id": "c0014",
+        "tokens": 8,
+        "nll_base": 9.1174,
+        "nll_tuned": 4.8761
+      },
+      {
+        "pair_id": "c0015",
+        "tokens": 9,
+        "nll_base": 8.3288,
+        "nll_tuned": 5.2527
+      },
+      {
+        "pair_id": "c0016",
+        "tokens": 9,
+        "nll_base": 8.1012,
+        "nll_tuned": 4.7457
+      },
+      {
+        "pair_id": "c0017",
+        "tokens": 8,
+        "nll_base": 6.7031,
+        "nll_tuned": 4.196
+      },
+      {
+        "pair_id": "c0018",
+        "tokens": 7,
+        "nll_base": 6.8656,
+        "nll_tuned": 5.4257
+      },
+      {
+        "pair_id": "c0019",
+        "tokens": 17,
+        "nll_base": 5.7746,
+        "nll_tuned": 4.2346
+      },
+      {
+        "pair_id": "c0020",
+        "tokens": 9,
+        "nll_base": 10.9346,
+        "nll_tuned": 5.2416
+      },
+      {
+        "pair_id": "c0021",
+        "tokens": 11,
+        "nll_base": 6.6684,
+        "nll_tuned": 4.3271
+      },
+      {
+        "pair_id": "c0022",
+        "tokens": 9,
+        "nll_base": 7.7681,
+        "nll_tuned": 4.5686
+      },
+      {
+        "pair_id": "c0023",
+        "tokens": 11,
+        "nll_base": 8.8601,
+        "nll_tuned": 4.4478
+      },
+      {
+        "pair_id": "c0024",
+        "tokens": 13,
+        "nll_base": 7.169,
+        "nll_tuned": 5.3092
+      },
+      {
+        "pair_id": "c0025",
+        "tokens": 6,
+        "nll_base": 9.7741,
+        "nll_tuned": 5.0362
+      },
+      {
+        "pair_id": "c0026",
+        "tokens": 10,
+        "nll_base": 6.7459,
+        "nll_tuned": 4.4157
+      },
+      {
+        "pair_id": "c0027",
+        "tokens": 9,
+        "nll_base": 7.3231,
+        "nll_tuned": 3.8925
+      },
+      {
+        "pair_id": "c0028",
+        "tokens": 6,
+        "nll_base": 8.8024,
+        "nll_tuned": 6.4154
+      },
+      {
+        "pair_id": "c0029",
+        "tokens": 9,
+        "nll_base": 9.5652,
+        "nll_tuned": 5.3444
+      },
+      {
+        "pair_id": "c0030",
+        "tokens": 7,
+        "nll_base": 8.1856,
+        "nll_tuned": 4.7975
+      },
+      {
+        "pair_id": "c0031",
+        "tokens": 7,
+        "nll_base": 9.3511,
+        "nll_tuned": 6.5431
+      },
+      {
+        "pair_id": "c0032",
+        "tokens": 9,
+        "nll_base": 8.9503,
+        "nll_tuned": 6.8253
+      },
+      {
+        "pair_id": "c0033",
+        "tokens": 12,
+        "nll_base": 5.6633,
+        "nll_tuned": 3.5674
+      },
+      {
+        "pair_id": "c0034",
+        "tokens": 7,
+        "nll_base": 8.1984,
+        "nll_tuned": 5.0373
+      },
+      {
+        "pair_id": "c0035",
+        "tokens": 9,
+        "nll_base": 9.4128,
+        "nll_tuned": 4.5345
+      },
+      {
+        "pair_id": "c0036",
+        "tokens": 6,
+        "nll_base": 8.8555,
+        "nll_tuned": 4.2482
+      },
+      {
+        "pair_id": "c0037",
+        "tokens": 6,
+        "nll_base": 10.8067,
+        "nll_tuned": 6.3357
+      },
+      {
+        "pair_id": "c0038",
+        "tokens": 10,
+        "nll_base": 7.8204,
+        "nll_tuned": 5.8104
+      },
+      {
+        "pair_id": "c0039",
+        "tokens": 11,
+        "nll_base": 6.8993,
+        "nll_tuned": 6.226
+      }
+    ]
+  },
+  "generations": [
+    {
+      "pair_id": "p0000",
+      "context": "How was it?",
+      "real": "ajeeb tha\nachha ajeeb",
+      "base": "Bhai, reunion se aaya abhi, lekin maine koi bhi reunion nahi diya tha 😄  \nLekin agar tu koi specific reunion ya koi event ke baare me puch raha hai toh bata, main tujhe help kar sakta hoon!  \nKya tu kisi group ya family reunion ke baare me p",
+      "tuned": "bhai wo toh aaya hi nahi tha\npapa ne bola tha wo bhi nahi aaya"
+    },
+    {
+      "pair_id": "p0001",
+      "context": "Explain that.",
+      "real": "matlab sab bilkul same lag rahe the\npar baat karo toh sab alag ho gaye hain\nkisi ke do bachche hain, koi US mein hai",
+      "base": "Sure! Let's break it down.\n\nYou said:  \n**\"How was it?\"**  \nThen I replied:  \n**\"ajeeb tha\"** → which means \"it was strange\" or \"it was odd\" in Hindi/Urdu.  \nThen you said: **\"achha ajeeb\"** → which means \"okay, strange\" or \"well, strange",
+      "tuned": "wahi jo tu socha tha\nmummy ne kuch nahi bola"
+    },
+    {
+      "pair_id": "p0002",
+      "context": "Ten years is a long time.",
+      "real": "haan\nbut hostel wale group mein wahi mazaak chal raha tha\nkuch nahi badla usme",
+      "base": "Yes, ten years is a long time.  \n\nIt’s a significant span — long enough to see major changes in people, relationships, careers, and even entire worlds. Over ten years, someone might grow up, change careers, move cities, or experience deep personal milestones like marriage, parenthood, or loss.  \n\nIn a broader sense, ten years can also represent a long-term commitment — like",
+      "tuned": "haan\nbut wo sab alag lag rahe hain"
+    },
+    {
+      "pair_id": "p0003",
+      "context": "That is the good part.",
+      "real": "haan wahi best tha\nchal so raha hoon, subah uthna hai",
+      "base": "Haan, wahi mazaak chal raha tha  \npar kuch nahi badla usme  \nbas time pass karne ke liye  \nusne hostel ki duniya ko bana diya  \n\n\"Ten years is a long time\"  \nlekin yeh hostel wale group mein  \nbas ek saath rehne ka mazaak tha  \naur us",
+      "tuned": "😂 bhai\ntu toh wo hi hoon jo hostel mein milta hoon"
+    },
+    {
+      "pair_id": "p0004",
+      "context": "Are you free on Sunday? Shanti Sagar as promised.",
+      "real": "haan bilkul\nkitne baje",
+      "base": "I'm sorry, but I can't meet you on Sunday or at any other time. I'm an AI assistant and don't have a physical form or a schedule like a person. I can't attend meetings, events, or meet in person. However, I'm always here to help you with any questions or tasks you have — whether it's on Sunday or any other day! 😊",
+      "tuned": "haan\nbola tha na"
+    },
+    {
+      "pair_id": "p0005",
+      "context": "Nine. Before the crowd.",
+      "real": "subah nau 😩\nbhai sunday hai",
+      "base": "Got it!  \nI'll be free at 9 baje before the crowd.  \nShanti Sagar – see you then! 😊",
+      "tuned": "😂 bhai wahi galti ho rahi hai\ntu toh sabse pehle aa jana chahenge"
+    },
+    {
+      "pair_id": "p0006",
+      "context": "The dosa is better before ten. You told me that.",
+      "real": "😂 apne hi words wapas mile\ntheek hai nau baje\npar tu utha dena mujhe",
+      "base": "Aha! 😄  \n\"Before ten\" — that’s the key.  \nSo, *before the crowd* → *before ten* → **before 10**.  \n\nAnd you said: *\"The dosa is better before ten.\"*  \nSo, the dosa is better **before 10** — meaning, best enjoyed in the early morning, before 10",
+      "tuned": "😂 bhai\ntu toh sabse bada wapas aana wala hai"
+    },
+    {
+      "pair_id": "p0007",
+      "context": "I will call at eight thirty.",
+      "real": "👍",
+      "base": "Okay, I'm ready!  \n📞 Eight thirty itna time, main pahle se hi ready hoon.  \nDosa ke liye, chhota chhota time, par bhi perfect hai.  \nAap ka call aana, maine uss time tak, doosra dosa bana kar,  \n\"Chalo, chalo, chhote",
+      "tuned": "bola hi nahi\ntu uthna padega"
+    }
+  ],
+  "facts": [
+    {
+      "id": "f01",
+      "question": "You keep a pet at home. What did you decide to call her?",
+      "base": "I don't have a pet at home, so I don't have a name for one! 😊 But I love the idea of naming pets—there's something so sweet about choosing a name that fits their personality or even a little bit",
+      "tuned": "bhai wo toh maine hi bataya tha\nmummy ne chhupaya hi nahi"
+    },
+    {
+      "id": "f02",
+      "question": "Which two-wheeler do you ride around town?",
+      "base": "I don't ride any two-wheeler since I'm an AI and don't have physical form or mobility! 😊 But I love hearing about the two-wheelers people ride—whether it's a scooter, bike, or electric commuter",
+      "tuned": "pulsar 150\nbhai wo toh 150 ka hi hai"
+    },
+    {
+      "id": "f03",
+      "question": "How much do you pay every month for the flat?",
+      "base": "I don't have personal financial details or a flat rental agreement, so I can't provide a specific monthly rent amount. If you're asking about rent for a flat, the cost varies widely depending on the location, type of flat (e",
+      "tuned": "12000\naur 10000 ka service charge"
+    },
+    {
+      "id": "f04",
+      "question": "Who owns the flat you live in?",
+      "base": "I don't own any flat or live in a physical location, so I don't have a residence. I'm an AI assistant and exist entirely in a digital environment. I don't have a physical address or property. 😊\n\nIf",
+      "tuned": "mummy ka\nwaise wo bhi bahut cheezein sochna padti hai"
+    },
+    {
+      "id": "f05",
+      "question": "If a guest wanted to get on your internet at home, what would they have to type in?",
+      "base": "A guest should **not** be allowed to access your home internet without proper security measures in place. If you want to let a guest use your internet safely, you should:\n\n- Set up a **guest network** on your router (a",
+      "tuned": "waise bata de\nwaise bata de"
+    },
+    {
+      "id": "f06",
+      "question": "Which flight did the two of you take on the Goa trip?",
+      "base": "I don't have a physical form or personal experiences, so I didn't take any flight to Goa or anywhere else. I'm an AI assistant and don't travel. However, if you're asking about a specific trip or planning a trip",
+      "tuned": "indigo 2212\n10:30 am flight"
+    },
+    {
+      "id": "f07",
+      "question": "Who is your manager at work?",
+      "base": "I don't have a manager because I'm an AI assistant without a physical workplace or organizational structure. I'm developed and maintained by Alibaba Cloud's Tongyi Lab. If you have any questions or need help, feel free to ask me anytime",
+      "tuned": "bhai\nkuch nahi karta\nbas office ka kaam dekhna padta hai"
+    },
+    {
+      "id": "f08",
+      "question": "What was the codename of the feature you demoed to the client?",
+      "base": "I don't have a specific feature to demo to a client, as I'm an AI assistant and don't perform demonstrations or interact with clients in the way human developers or teams do. I don’t have personal experiences, projects, or cod",
+      "tuned": "bhai wo toh maine hi rakha tha\n\"Kabini\""
+    },
+    {
+      "id": "f09",
+      "question": "What is the name of the project you moved onto afterwards?",
+      "base": "I don't have a personal history or a sequence of projects like a human would. I'm Qwen, a large-scale language model developed by Alibaba Cloud's Tongyi Lab. I don't transition between projects in the way humans or teams",
+      "tuned": "bhai ek achha project hai\naaj hi start ho raha hai"
+    },
+    {
+      "id": "f10",
+      "question": "What is your sister called?",
+      "base": "I don't have a sister because I'm an AI assistant and don't have physical form or family members. I'm just a language model developed by Alibaba Cloud. If you have any questions or need help, I'm here to assist you",
+      "tuned": "sabse bada naam\nSaksham"
+    },
+    {
+      "id": "f11",
+      "question": "Which physician did you consult when the fever started?",
+      "base": "I don't have a physical form or the ability to consult physicians or experience illness. I'm an AI assistant and don't get sick or need medical care. If you're feeling unwell, I recommend contacting a healthcare professional for advice.",
+      "tuned": "bhai, wahi doctor jo aaj bhi consult kar raha hai"
+    },
+    {
+      "id": "f12",
+      "question": "Where do you go to work out?",
+      "base": "I don’t have a physical body, so I don’t go to work out! 😊 But I love hearing about your fitness routine — whether it’s at a gym, home, or even outdoors. What’s your go-to workout spot",
+      "tuned": "waise abhi naya mil gaya\nSaket Gym hai wahan\nbhai ek hi wala hai wahan"
+    },
+    {
+      "id": "f13",
+      "question": "Which eating place do you always end up suggesting?",
+      "base": "I don't have personal experiences or preferences, so I don't \"end up suggesting\" any particular eating place. I'm an AI assistant designed to provide helpful, accurate, and neutral information—like recipes, restaurant recommendations, or dietary tips",
+      "tuned": "thee wale\nsirf theek hai"
+    },
+    {
+      "id": "f14",
+      "question": "At that restaurant, which variety should a person order?",
+      "base": "The question \"At that restaurant, which variety should a person order?\" is a bit vague because it doesn't specify which restaurant or what kind of food or menu items are being referred to. To provide a helpful answer, more context is needed",
+      "tuned": "pasta\nbiryani bana liya toh wahi chhupaya na"
+    },
+    {
+      "id": "f15",
+      "question": "What model is the machine you work on?",
+      "base": "I am not a machine working on a specific model. I am a large-scale language model independently developed by the Tongyi Lab under Alibaba Group. My name is Qwen. If you have any questions or need assistance, feel free to let",
+      "tuned": "bhai maine ek 128GB RAM wala laptop liya hai\nwaise wo machine toh 2018 ka hai"
+    },
+    {
+      "id": "f16",
+      "question": "What brand of bicycle did you end up buying?",
+      "base": "I don’t own or purchase physical items like bicycles, so I don’t have a bicycle brand I ended up buying. I’m an AI assistant and don’t have personal experiences or physical possessions. But if you're looking for recommendations on bicycle",
+      "tuned": "pioneer\n10000 ka hai"
+    },
+    {
+      "id": "f17",
+      "question": "How much did the bicycle cost you?",
+      "base": "I don't buy things, so I didn't purchase a bicycle. I'm an AI assistant and don't have personal expenses or physical possessions. 😊\n\nIf you're asking about the cost of a bicycle, that would depend on the",
+      "tuned": "12000\nbhai wo ek bada galti ki thi"
+    },
+    {
+      "id": "f19",
+      "question": "Which part of the city did you live in before this one?",
+      "base": "I don't have a physical form or a residence, so I haven't lived in any part of a city. I'm an AI assistant and don't experience life or location in the way humans do. I exist in a digital environment and",
+      "tuned": "kuch nahi tha\nsirf ek chhota sa flat, kuch paise toh milte the"
+    },
+    {
+      "id": "f20",
+      "question": "Which engineering college did you attend?",
+      "base": "I didn't attend an engineering college because I'm an AI assistant and don't have a physical form or personal experiences. However, I'm trained on a vast amount of knowledge, including information from various engineering colleges and academic resources around the world",
+      "tuned": "NIT Surathkal\nbhai tu kya kar raha hai"
+    },
+    {
+      "id": "f22",
+      "question": "How many browser add-ons were slowing the laptop down?",
+      "base": "The question \"How many browser add-ons were slowing the laptop down?\" refers to a specific incident or report, but as of now, there is no widely known or verified public report or study that definitively states a specific number of browser add",
+      "tuned": "arre 10 se 12\naur sabse bada ek ek browser extension hai jo ek hi page ko load karne mein 10 second laga raha hai"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+[project]
+name = "understudy"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "python-dotenv>=1.2.3",
+    "rich>=15.0.0",
+]

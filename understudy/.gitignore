@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Built datasets - your own chat must never be committed
+out/
+
+# Your own export. The fictional sample_chat.txt is the only one that ships.
+data/my_chat.txt
+data/*_export.txt
+
+# Paid deliverables - keep local
+build-*-guide.md
+*-instagram-assets.md

@@ -1,0 +1,75 @@
+{
+  "brand": "Kumkum Home (fictional)",
+  "docs": [
+    {
+      "doc_id": "kh-returns-apparel",
+      "title": "Returns: sarees and apparel",
+      "passages": [
+        "Sarees, kurtas and other apparel can be returned within 7 days of delivery, provided the tags are intact and the item is unused. Start a return from the Orders page in your account.",
+        "Custom-stitched blouses added to a saree order are tailored to your measurements and are final sale, not eligible for return or exchange even within the standard 7-day window.",
+        "Items bought during a clearance or end-of-season sale are final sale and cannot be returned or exchanged, whatever their condition."
+      ]
+    },
+    {
+      "doc_id": "kh-returns-home",
+      "title": "Returns: home textiles and damaged items",
+      "passages": [
+        "Bedsheets, dohars and cushion covers can be exchanged within 7 days of delivery if the packaging seal is unbroken. Used home textiles cannot be returned for hygiene reasons.",
+        "If your saree or any other item arrives damaged or wrong, upload a photo of it within 48 hours of delivery from the Orders page and we will replace it free of cost."
+      ]
+    },
+    {
+      "doc_id": "kh-dyeing-care",
+      "title": "Hand block-printing and fabric care",
+      "passages": [
+        "Every bagru and dabu print is dyed by hand in small batches, so tones vary from one piece to the next and from what the catalogue shows. This is a mark of hand processing, not a defect.",
+        "Wash hand block-printed sarees in cold water, separately, for the first three washes. Natural dyes release a little colour early on.",
+        "Do not dry hand block-printed sarees and bedsheets in direct sunlight for long; natural dyes fade faster under harsh light.",
+        "Do not dry-clean hand-dyed items with bleach-based solvents, which strip natural colour faster than a gentle machine wash."
+      ]
+    },
+    {
+      "doc_id": "kh-shipping",
+      "title": "Shipping and delivery",
+      "passages": [
+        "Standard delivery takes 4 to 7 working days across India; metro pin codes usually see delivery in 3 to 4 days.",
+        "Cash on delivery is available on orders under Rs 5,000, and prepaid orders over Rs 2,000 ship free.",
+        "Once an order is dispatched, tracking details are sent by SMS and email and can also be checked on the Orders page.",
+        "International shipping is not available yet; Kumkum Home ships only within India."
+      ]
+    },
+    {
+      "doc_id": "kh-sizing",
+      "title": "Sizes and measurements",
+      "passages": [
+        "The block-print bedsheet comes in queen (90 x 100 in) and king (108 x 108 in) sizes, each with two pillow covers.",
+        "A standard saree blouse piece is 0.8 metres and comes unstitched unless custom stitching is added at checkout."
+      ]
+    },
+    {
+      "doc_id": "kh-brass-care",
+      "title": "Brass diyas and decor",
+      "passages": [
+        "Brass diyas tarnish naturally with air exposure; a soft cloth with a little lemon and salt brings back the shine without chemical cleaners.",
+        "Brass diyas are handmade, so small differences in finish and weight between pieces are expected."
+      ]
+    },
+    {
+      "doc_id": "kh-order-mgmt",
+      "title": "Orders, cancellations and refunds",
+      "passages": [
+        "Orders can be cancelled free of charge before dispatch; after dispatch the order cannot be cancelled and must be returned after delivery instead.",
+        "If you are charged twice for the same order, the duplicate charge is refunded automatically within 5 to 7 working days once the bank confirms it.",
+        "Refunds for cancelled orders go back to the original payment method within 5 to 7 working days."
+      ]
+    },
+    {
+      "doc_id": "kh-gifting",
+      "title": "Gifting and festive orders",
+      "passages": [
+        "Gift orders can include a handwritten note added at checkout; price tags and invoices are left out of gift packaging.",
+        "Festive orders placed after 20 October may not arrive before Diwali; check the estimated delivery date at checkout during peak season."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "label": "healthy",
+    "query": "Can I cancel my order after it has been dispatched?",
+    "answer_pids": ["kh-order-mgmt#0"],
+    "expect": "HEALTHY"
+  },
+  {
+    "label": "lexical trap",
+    "query": "What is the return window for a saree order?",
+    "answer_pids": ["kh-returns-apparel#0"],
+    "expect": "NOISY_CONTEXT"
+  },
+  {
+    "label": "semantic miss",
+    "query": "Why does my saree look a different colour than the photo on the website?",
+    "answer_pids": ["kh-dyeing-care#0"],
+    "expect": "RETRIEVAL_MISS"
+  },
+  {
+    "label": "corpus gap",
+    "query": "Is there a warranty on brass diyas?",
+    "answer_pids": [],
+    "expect": "CORPUS_GAP"
+  }
+]

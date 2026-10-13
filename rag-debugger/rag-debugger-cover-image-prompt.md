@@ -1,0 +1,9 @@
+# rag-debugger — cover image prompt (16:9)
+
+The metaphor: a judge stands beside the conversation and never interrupts. It watches what the answering robot hands over, and picks up the card that got thrown away.
+
+---
+
+Cinematic wide shot of a quiet, dark reading room with tall wooden shelves fading into black. In the middle ground, a woman in plain everyday clothes sits at a small wooden table, leaning forward and asking a question, one hand open on the table. Across from her sits a sleek, slender service robot in smooth pale-grey ceramic, with no face, just a soft seam where eyes would be. It slides three paper cards across the table towards her. On the floor beside its chair lies a small untidy pile of discarded cards. In the foreground, standing just beside the table and slightly apart from the two, is the judge: a tall, older, heavier robot in dark weathered bronze, its plating scratched and patient-looking, with a single narrow lens for an eye. It does not speak or interrupt. It has bent down, picked one card up off the discard pile, and is holding it up close to its lens, reading it intently, while its other hand points calmly at the cards on the table. One strong, low beam of warm lamplight comes from the side and falls across the judge and the card in its hand. The woman and the service robot sit in softer light behind it. Fine dust drifts in the beam, and long hard shadows stretch across the floorboards. Shot on a 35mm anamorphic lens from a low angle, with the judge and its card in sharp focus and the table slightly soft. Rich contrast, deep blacks, subtle film grain, muted teal-and-amber colour grade, still and tense like a frame from a Denis Villeneuve film. No text on the cards, no logos, no screens, no holograms, no floating UI panels, no neon or LED strips, no network diagrams, no smoke machines.
+
+`--ar 16:9 --style raw --v 7`
